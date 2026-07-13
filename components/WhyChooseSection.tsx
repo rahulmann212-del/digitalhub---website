@@ -1,74 +1,74 @@
 'use client';
 
 import {
+  Target,
+  ShoppingBag,
+  Video,
+  BarChart,
   Code,
-  Smartphone,
-  Zap,
-  Layers,
   TrendingUp,
-  Server,
-  HeadphonesIcon,
+  Smartphone,
   ChevronRight,
   Check,
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Code,
-    title: 'Clean Code',
-    desc: 'Well-structured, maintainable code that follows best practices and scales with your business.',
+    icon: Target,
+    title: 'Performance Marketing',
+    desc: 'Laser-targeted ad campaigns designed to acquire high-value customers and maximize your ROI.',
     color: 'from-blue-500 to-blue-600',
     bg: 'bg-blue-50',
   },
   {
-    icon: Smartphone,
-    title: 'Mobile Responsive',
-    desc: 'Flawless experiences across all devices — smartphones, tablets, and desktops.',
+    icon: Video,
+    title: 'Engaging Video Campaigns',
+    desc: 'High-converting short-form video assets and promotional scripts to build strong brand identity.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
   },
   {
-    icon: Zap,
-    title: 'Fast Delivery',
-    desc: 'Efficient workflows and agile processes that get your project live without compromise.',
+    icon: ShoppingBag,
+    title: 'D2C & Marketplaces',
+    desc: 'Robust multi-vendor platforms and e-commerce websites built to scale and handle massive traffic.',
     color: 'from-blue-500 to-sky-400',
     bg: 'bg-blue-50',
   },
   {
-    icon: Layers,
-    title: 'Premium UI/UX',
-    desc: 'Beautiful interfaces crafted with user psychology in mind to maximize engagement and conversions.',
+    icon: BarChart,
+    title: 'Market Analytics',
+    desc: 'Deep data insights and performance tracking to continuously optimize your growth strategies.',
     color: 'from-blue-600 to-indigo-500',
     bg: 'bg-indigo-50',
   },
   {
     icon: TrendingUp,
-    title: 'Technical SEO',
-    desc: 'Built-in SEO architecture with schema markup, Core Web Vitals optimization, and proper HTML semantics.',
+    title: 'Advanced SEO',
+    desc: 'Technical SEO architecture and content planning to dominate search rankings and drive organic leads.',
     color: 'from-cyan-500 to-blue-500',
     bg: 'bg-cyan-50',
   },
   {
-    icon: Server,
-    title: 'Scalable Solutions',
-    desc: 'Infrastructure and architecture designed to handle growth — from launch to enterprise scale.',
+    icon: Code,
+    title: 'Scalable Architecture',
+    desc: 'Clean, maintainable code ensuring your digital platforms run flawlessly as your business expands.',
     color: 'from-blue-600 to-blue-700',
     bg: 'bg-blue-50',
   },
   {
-    icon: HeadphonesIcon,
-    title: 'Professional Support',
-    desc: 'Dedicated support team available to assist with updates, questions, and enhancements post-launch.',
+    icon: Smartphone,
+    title: 'Conversion-First UI',
+    desc: 'Mobile-responsive interfaces engineered with buyer psychology in mind to maximize sales.',
     color: 'from-sky-600 to-blue-600',
     bg: 'bg-sky-50',
   },
 ];
 
 const keyPoints = [
-  'Transparent communication & reporting',
-  'On-time delivery guaranteed',
-  'Post-launch support included',
-  '100% satisfaction focused',
+  'Data-driven market analytics & reporting',
+  'Scalable multi-vendor & D2C solutions',
+  'High-converting marketing campaigns',
+  'End-to-end business growth focus',
 ];
 
 export default function WhyChooseSection() {
@@ -89,19 +89,17 @@ export default function WhyChooseSection() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
                 <ChevronRight className="w-4 h-4" />
-                Why DigitalHub
+                Why Partner With Us
               </div>
               <h2
                 id="why-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
                 The Agency That{' '}
-                <span className="text-gradient">Delivers More</span>
+                <span className="text-gradient">Drives Revenue</span>
               </h2>
               <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-                We combine strategic thinking, beautiful design, and technical
-                excellence to create digital experiences that stand out and
-                convert visitors into loyal customers.
+                We bridge the gap between powerful technology and strategic marketing. By combining custom e-commerce development with high-performance ad campaigns, we turn your visitors into loyal customers.
               </p>
             </div>
 
@@ -120,9 +118,9 @@ export default function WhyChooseSection() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-4">
               {[
-                { value: '50+', label: 'Projects Delivered' },
-                { value: '5+', label: 'Years Experience' },
-                { value: '100%', label: 'Client Focused' },
+                { value: '50+', label: 'Campaigns Launched' },
+                { value: '₹10Cr+', label: 'Client Revenue' },
+                { value: '100%', label: 'ROI Focused' },
               ].map((stat) => (
                 <div
                   key={stat.label}
