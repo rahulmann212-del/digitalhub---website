@@ -45,23 +45,20 @@ export default function Navbar() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo - Updated for better responsiveness and size */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center group py-2"
             aria-label="Rankovio - Go to homepage"
           >
             <Image
               src="/rankoviologo.png"
               alt="Rankovio Logo"
-              width={160}
-              height={45}
-              className="object-contain h-10 w-auto"
+              width={250}
+              height={80}
+              className="w-36 md:w-44 lg:w-52 h-auto object-contain"
               priority
             />
-            {/* Note: Agar aapke logo ki PNG mein 'Rankovio' naam nahi likha hai aur aap text dikhana chahte hain, 
-                toh niche wali line ka code use karein. Agar logo mein naam pehle se hai, toh is line ki zaroorat nahi hai. */}
-            {/* <span className="text-xl font-bold text-slate-900 tracking-tight">Rankovio</span> */}
           </Link>
 
           {/* Desktop Links */}
@@ -124,7 +121,7 @@ export default function Navbar() {
                       isActive(link.href)
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-slate-700 hover:text-blue-600 hover:bg-blue-50'
-                    }`}
+                  }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
