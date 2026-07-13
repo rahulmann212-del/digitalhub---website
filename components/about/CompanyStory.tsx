@@ -5,29 +5,29 @@ import { ChevronRight, Lightbulb, Rocket, Users, TrendingUp } from 'lucide-react
 const milestones = [
   {
     year: '2019',
-    title: 'The Beginning',
-    desc: 'DigitalHub was founded with a clear purpose — to make professional digital presence accessible to every business, not just the big players.',
+    title: 'Operator Origins',
+    desc: 'Rankovio was born from the trenches. Building and scaling our own platforms like SwipeKarts taught us that standard agencies rarely understand the brutal unit economics of e-commerce.',
     icon: Lightbulb,
     color: 'from-blue-500 to-blue-600',
   },
   {
     year: '2020',
-    title: 'Growing Our Craft',
-    desc: 'We deepened our expertise in performance-first development and SEO, helping early clients achieve measurable search growth and improved conversions.',
+    title: 'Mastering Performance',
+    desc: 'We shifted our focus entirely to performance marketing and data-driven e-commerce development, helping early D2C clients slash acquisition costs and boost real ROI.',
     icon: TrendingUp,
     color: 'from-sky-500 to-blue-500',
   },
   {
     year: '2022',
-    title: 'Expanding Services',
-    desc: 'Added Google Ads management and social media marketing to our offering — giving clients a complete digital growth engine under one roof.',
+    title: 'Full-Funnel Growth',
+    desc: 'Integrated advanced SEO and short-form video campaigns into our core services, giving e-commerce brands a complete, end-to-end growth engine under one roof.',
     icon: Rocket,
     color: 'from-blue-600 to-indigo-500',
   },
   {
     year: '2024',
-    title: 'Scaling Impact',
-    desc: 'Serving clients across multiple countries, we refined our process and delivery standards — making every project a case study in what a great digital partnership looks like.',
+    title: 'Scaling Marketplaces',
+    desc: 'Now engineering multi-vendor marketplaces and scaling international brands. We treat every project as an operator, focusing strictly on metrics that impact the bottom line.',
     icon: Users,
     color: 'from-cyan-500 to-blue-500',
   },
@@ -56,40 +56,30 @@ export default function CompanyStory() {
                 id="story-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
-                Built to Help{' '}
-                <span className="text-gradient">Businesses Thrive</span>
+                Built by Operators, For{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Scaling Brands</span>
               </h2>
             </div>
 
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg">
-                DigitalHub started from a straightforward observation: too many
-                talented businesses were losing customers online simply because
-                their digital presence didn&apos;t reflect the quality of their
-                work.
+                Rankovio wasn&apos;t started by traditional agency executives. We are operators. While building and managing our own platforms, our leadership realized a massive gap in the market: most agencies talk about vanity metrics, but very few understand RTO optimization, profit margins, and true D2C brand scaling.
               </p>
               <p>
-                We set out to change that. Not with one-size-fits-all templates,
-                but with thoughtful, purpose-built digital experiences — each
-                crafted around the specific goals of the business we serve.
+                We built Rankovio to be the growth partner we always wished we had. Our approach skips the cookie-cutter templates and focuses strictly on high-converting e-commerce development and advanced SEO strategies that actually drive revenue.
               </p>
               <p>
-                From our first project to our most recent one, the commitment has
-                stayed the same: deliver honest, high-quality work that creates
-                real value. No inflated promises. No cookie-cutter solutions. Just
-                professional digital work done right.
+                Today, we engineer end-to-end growth funnels. From multi-vendor marketplaces to targeted short-form video campaigns, we treat your business like our own—because we&apos;ve been exactly where you are.
               </p>
             </div>
 
             {/* Decorative quote */}
             <blockquote className="relative pl-6 border-l-4 border-blue-500">
               <p className="text-lg font-semibold text-slate-800 italic leading-relaxed">
-                &ldquo;Great digital work is not about being flashy — it&apos;s
-                about being effective. Every decision we make is rooted in your
-                business goals.&rdquo;
+                &ldquo;Scaling an e-commerce brand isn&apos;t about running flashier ads. It&apos;s about fixing the unit economics, building a high-converting storefront, and driving profitable growth.&rdquo;
               </p>
               <footer className="mt-3 text-sm text-slate-500 font-medium not-italic">
-                — DigitalHub Founding Principle
+                — Pawan Kumar Sharma, Co-Founder
               </footer>
             </blockquote>
           </div>
@@ -113,7 +103,7 @@ export default function CompanyStory() {
 
                   {/* Content */}
                   <div
-                    className={`flex-1 p-5 bg-gradient-to-br from-slate-50 to-blue-50/30 border border-slate-100 rounded-2xl card-hover ${
+                    className={`flex-1 p-5 bg-gradient-to-br from-slate-50 to-blue-50/30 border border-slate-100 rounded-2xl transition-all duration-300 hover:shadow-md ${
                       index === milestones.length - 1 ? 'ring-2 ring-blue-500/15' : ''
                     }`}
                   >
