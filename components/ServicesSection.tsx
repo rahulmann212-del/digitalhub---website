@@ -6,66 +6,66 @@ import {
   Code2,
   ShoppingCart,
   Search,
-  MousePointerClick,
-  Share2,
-  Wrench,
+  TrendingUp,
+  Video,
+  Settings,
   ArrowRight,
   ChevronRight,
 } from 'lucide-react';
 
 const services = [
   {
-    icon: Globe,
-    title: 'Website Development',
-    desc: 'Custom, high-performance websites crafted with modern frameworks that deliver exceptional user experiences and drive measurable business results.',
+    icon: Code2,
+    title: 'Web & E-Commerce Development',
+    desc: 'Custom, high-performance websites and online stores crafted with modern frameworks to deliver exceptional user experiences and sales.',
     color: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
     tag: 'Most Popular',
   },
   {
-    icon: Code2,
-    title: 'WordPress Development',
-    desc: 'Powerful WordPress solutions with custom themes, plugins, and full CMS capabilities — easy to manage and built for scalability.',
+    icon: Search,
+    title: 'Advanced SEO Strategies',
+    desc: 'Dominating search results with technical SEO and content strategies to generate consistent, high-quality organic traffic and leads.',
     color: 'from-sky-500 to-blue-500',
     lightBg: 'bg-sky-50',
-    tag: null,
+    tag: 'Trending', // SEO ko Trending banaya gaya hai
+  },
+  {
+    icon: TrendingUp,
+    title: 'Performance Marketing',
+    desc: 'Data-driven ad campaigns focused on maximizing ROAS, reducing customer acquisition costs, and scaling revenue rapidly.',
+    color: 'from-blue-600 to-indigo-500',
+    lightBg: 'bg-blue-50',
+    tag: 'Highest ROI',
   },
   {
     icon: ShoppingCart,
-    title: 'E-Commerce Development',
-    desc: 'Conversion-optimized online stores with seamless checkout experiences, payment integrations, and inventory management.',
-    color: 'from-blue-600 to-indigo-500',
-    lightBg: 'bg-blue-50',
-    tag: null,
-  },
-  {
-    icon: Search,
-    title: 'SEO Services',
-    desc: 'Data-driven SEO strategies that improve your rankings, increase organic traffic, and generate consistent, qualified leads over time.',
+    title: 'D2C Brand Scaling',
+    desc: 'End-to-end growth strategies to scale Direct-to-Consumer brands, focusing on operations, customer retention, and profit margins.',
     color: 'from-cyan-500 to-blue-500',
     lightBg: 'bg-cyan-50',
     tag: null,
   },
   {
-    icon: MousePointerClick,
-    title: 'Google Ads',
-    desc: 'Targeted PPC campaigns designed to maximize ROI, reach your ideal audience, and deliver immediate, measurable results.',
+    icon: Globe,
+    title: 'Multi-Vendor Marketplaces',
+    desc: 'Strategic development of scalable e-commerce platforms, designed for heavy traffic, complex operations, and seamless vendor management.',
     color: 'from-blue-500 to-sky-400',
     lightBg: 'bg-blue-50',
     tag: null,
   },
   {
-    icon: Share2,
-    title: 'Social Media Marketing',
-    desc: 'Strategic social media management and campaigns that build brand authority, grow your audience, and foster community engagement.',
+    icon: Video,
+    title: 'Short-Form Video Campaigns',
+    desc: 'Engaging, viral-ready video content and promotional scripts designed specifically for high-converting brand campaigns and social media.',
     color: 'from-sky-600 to-blue-600',
     lightBg: 'bg-sky-50',
     tag: null,
   },
   {
-    icon: Wrench,
-    title: 'Website Maintenance',
-    desc: 'Proactive maintenance packages that keep your website secure, updated, fast-loading, and performing at peak efficiency.',
+    icon: Settings,
+    title: 'Technical Optimization',
+    desc: 'Proactive web maintenance, speed optimization, and security updates to keep your digital assets performing at peak efficiency.',
     color: 'from-blue-600 to-cyan-500',
     lightBg: 'bg-blue-50',
     tag: null,
@@ -89,18 +89,17 @@ export default function ServicesSection() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            What We Do
+            Our Core Expertise
           </div>
           <h2
             id="services-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            Services Built for{' '}
-            <span className="text-gradient">Real Results</span>
+            Digital Services Built for{' '}
+            <span className="text-gradient">Real Growth</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            From design to launch and beyond, we provide the full spectrum of
-            digital services your business needs to succeed online.
+            From custom web development to viral marketing campaigns, we provide the complete spectrum of technical and digital services your business needs to scale online.
           </p>
         </div>
 
@@ -158,15 +157,14 @@ export default function ServicesSection() {
                 Need a Custom Solution?
               </h3>
               <p className="text-blue-100 text-sm leading-relaxed">
-                We craft tailored digital strategies aligned with your unique
-                business goals and industry.
+                Whether you need a high-performance website or a comprehensive marketing strategy, we tailor our solutions to your business goals.
               </p>
             </div>
             <Link
               href="#contact"
               className="relative z-10 mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-white text-blue-600 text-sm font-bold rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
             >
-              Start a Project
+              Discuss Your Project
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
