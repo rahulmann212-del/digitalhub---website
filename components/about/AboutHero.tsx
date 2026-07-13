@@ -76,7 +76,7 @@ export default function AboutHero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            Our Story
+            Growth-First E-Commerce Agency
           </div>
 
           {/* Heading */}
@@ -86,14 +86,12 @@ export default function AboutHero() {
           >
             We Are{' '}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              DigitalHub
+              Rankovio
             </span>
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            A modern digital agency built on a simple belief — every business
-            deserves a powerful online presence. We combine strategy, design, and
-            technology to help you grow with confidence.
+            We are a data-driven growth marketing agency dedicated to scaling e-commerce businesses. By combining high-converting web development with advanced performance marketing, we help brands dominate their market, optimize costs, and maximize profit margins.
           </p>
 
           {/* CTA row */}
@@ -102,25 +100,25 @@ export default function AboutHero() {
               href="/#contact"
               className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-900 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
-              Work With Us
+              Start Scaling Today
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="/#services"
+              href="/services"
               className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white border-2 border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-300"
             >
-              Our Services
+              Explore Our Services
             </Link>
           </div>
         </div>
 
-        {/* Bottom pill stats row */}
+        {/* Bottom pill stats row - Updated to reflect marketing/ecommerce focus */}
         <div className="mt-14 flex flex-wrap gap-4">
           {[
-            { label: 'Founded', value: '2019' },
-            { label: 'Services', value: '7+' },
-            { label: 'Countries Served', value: '10+' },
-            { label: 'Focus', value: 'Results' },
+            { label: 'Focus', value: 'D2C Scaling' },
+            { label: 'Expertise', value: 'Performance Ads' },
+            { label: 'Platforms', value: 'Multi-Vendor' },
+            { label: 'Goal', value: 'Maximum ROI' },
           ].map((item) => (
             <div
               key={item.label}
