@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import {
-  Zap,
   Mail,
   Phone,
   MapPin,
@@ -17,7 +16,7 @@ import Image from 'next/image';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Our Process', href: '/#process' },
   { label: 'Blog', href: '/#blog' },
@@ -43,75 +42,64 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white" role="contentinfo" aria-label="Site footer">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="absolute inset-0 bg-grid opacity-5" />
-
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Brand column */}
-          <div className="lg:col-span-1 space-y-6">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <Image 
-                src="/rankoviologo.png" 
-                alt="Rankovio Logo" 
-                width={160} 
-                height={45} 
-                className="h-10 w-auto brightness-0 invert" 
-              />
+    <footer className="bg-slate-900 text-white" role="contentinfo">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand Column */}
+          <div className="space-y-6">
+            <Link href="/" className="block">
+              <Image src="/rankoviologo.png" alt="Rankovio Logo" width={180} height={50} className="h-12 w-auto brightness-0 invert" />
             </Link>
-
             <p className="text-slate-400 text-sm leading-relaxed">
               We help e-commerce businesses and brands scale through data-driven performance marketing, SEO, and high-converting web development.
             </p>
-
-            <div className="space-y-3">
-              <a href="mailto:hello@rankovio.com" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors">
-                <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" /> hello@rankovio.com
-              </a>
-              <a href="tel:+918318724647" className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors">
-                <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" /> +91-831-872-4647
-              </a>
-              <div className="flex items-start gap-2.5 text-sm text-slate-400">
-                <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>Aditya World City, Ghaziabad, 201001</span>
-              </div>
+            <div className="space-y-3 text-sm text-slate-400">
+              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-blue-500" /> hello@rankovio.com</div>
+              <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-blue-500" /> +91-831-872-4647</div>
+              <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-blue-500 mt-1" /> Aditya World City, Ghaziabad, 201001</div>
             </div>
-
-            <div className="flex gap-2.5" role="list" aria-label="Social media links">
-              {socials.map((social) => (
-                <a key={social.label} href={social.href} className="w-9 h-9 bg-slate-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300">
-                  <social.icon className="w-4 h-4 text-slate-400 hover:text-white" />
+            <div className="flex gap-3">
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <s.icon className="w-4 h-4 text-white" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links & Services column... (baaki sections waise hi rahenge) */}
-          {/* Main Quick Links */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-5">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-slate-400 hover:text-blue-400 transition-colors">{link.label}</Link>
-                </li>
-              ))}
+            <h3 className="font-bold mb-6">QUICK LINKS</h3>
+            <ul className="space-y-4 text-sm text-slate-400">
+              {quickLinks.map((l) => <li key={l.label}><Link href={l.href} className="hover:text-blue-400">{l.label}</Link></li>)}
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-5">Services</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.label}>
-                  <Link href={service.href} className="text-sm text-slate-400 hover:text-blue-400 transition-colors">{service.label}</Link>
-                </li>
-              ))}
+            <h3 className="font-bold mb-6">SERVICES</h3>
+            <ul className="space-y-4 text-sm text-slate-400">
+              {services.map((s) => <li key={s.label}><Link href={s.href} className="hover:text-blue-400">{s.label}</Link></li>)}
             </ul>
           </div>
 
-          {/* Newsletter section rahenge... */}
+          {/* Newsletter */}
+          <div>
+            <h3 className="font-bold mb-6">NEWSLETTER</h3>
+            <p className="text-sm text-slate-400 mb-4">Get weekly growth insights.</p>
+            <input type="email" placeholder="Enter your email" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-sm mb-3" />
+            <button className="w-full py-3 bg-blue-600 text-sm font-bold rounded-lg hover:bg-blue-500">Subscribe</button>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+          <p>&copy; {new Date().getFullYear()} Rankovio. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link href="#" className="hover:text-blue-400">Privacy Policy</Link>
+            <Link href="#" className="hover:text-blue-400">Terms of Service</Link>
+            <Link href="#" className="hover:text-blue-400">Cookie Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
