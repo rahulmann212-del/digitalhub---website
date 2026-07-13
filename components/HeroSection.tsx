@@ -8,7 +8,6 @@ import {
   Users,
   ArrowRight,
   Sparkles,
-  ChevronDown,
 } from 'lucide-react';
 
 const trustItems = [
@@ -46,10 +45,10 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-slate-50" // Changed background slightly for a cleaner look
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-slate-50"
       aria-labelledby="hero-heading"
     >
-      {/* Background - Kept the same for the tech/modern feel */}
+      {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 hero-glow opacity-50" />
 
@@ -58,18 +57,18 @@ export default function HeroSection() {
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-sky-400/8 rounded-full blur-3xl animate-float-delayed" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100/20 rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            {/* Badge - Changed to Digital Marketing Focus */}
+            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-200 rounded-full text-sm font-semibold text-blue-800 shadow-sm">
               <Sparkles className="w-4 h-4 text-blue-600" />
               Growth Marketing & E-commerce Agency
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             </div>
 
-            {/* Headline - Shifted to Business Growth & Revenue */}
+            {/* Headline */}
             <h1
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900"
@@ -80,12 +79,12 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            {/* Subheadline - Incorporating D2C, Marketplaces, and Marketing */}
+            {/* Subheadline */}
             <p className="text-lg text-slate-600 leading-relaxed max-w-lg font-medium">
               We specialize in performance marketing, D2C brand scaling, and high-converting e-commerce development to drive exponential revenue growth.
             </p>
 
-            {/* CTAs - Action-oriented for Marketing */}
+            {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <Link
                 href="#contact"
@@ -102,7 +101,7 @@ export default function HeroSection() {
               </Link>
             </div>
 
-            {/* Trust badges inline - Updated text */}
+            {/* Trust badges inline */}
             <div className="flex items-center gap-6 pt-4">
               <div className="flex -space-x-3">
                 {[
@@ -123,13 +122,13 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right — Illustration (Kept the layout, changed the data to show Marketing/Sales stats) */}
+          {/* Right — Illustration */}
           <div className="relative flex items-center justify-center">
             {/* Outer ring */}
             <div className="absolute w-80 h-80 lg:w-[440px] lg:h-[440px] border border-blue-200/50 rounded-full animate-spin-slow" />
             <div className="absolute w-64 h-64 lg:w-[360px] lg:h-[360px] border border-blue-100/50 rounded-full" style={{ animationDirection: 'reverse' }} />
 
-            {/* Main card - Changed from Website Mockup to Dashboard/Analytics Mockup */}
+            {/* Main card */}
             <div className="relative w-72 lg:w-96 bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/10 p-6 animate-float border border-white">
               {/* Header/Nav */}
               <div className="flex items-center justify-between mb-6">
@@ -147,7 +146,7 @@ export default function HeroSection() {
                   </div>
                 </div>
 
-                {/* Stats row - Marketing Focus */}
+                {/* Stats row */}
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
                      <div className="text-slate-500 text-[10px] font-semibold uppercase tracking-wider">ROAS</div>
@@ -176,7 +175,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Floating mini cards - Changed to Marketing Metrics */}
+            {/* Floating mini cards */}
             <div className="absolute -top-4 -left-4 lg:-left-8 bg-white backdrop-blur-md rounded-2xl px-4 py-3 shadow-xl border border-slate-100 animate-float-delayed">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
@@ -203,7 +202,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Trust Cards - Marketing Focused */}
+        {/* Trust Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
           {trustItems.map((item) => (
             <div
@@ -222,12 +221,6 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400 animate-bounce">
-        <span className="text-xs font-semibold uppercase tracking-widest">Scroll</span>
-        <ChevronDown className="w-4 h-4" />
       </div>
     </section>
   );
