@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -48,14 +49,19 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-2.5 group"
-            aria-label="DigitalHub - Go to homepage"
+            aria-label="Rankovio - Go to homepage"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-300">
-              <Zap className="w-5 h-5 text-white" fill="white" />
-            </div>
-            <span className="text-xl font-bold text-slate-900">
-              Digital<span className="text-blue-600">Hub</span>
-            </span>
+            <Image
+              src="/rankoviologo.png"
+              alt="Rankovio Logo"
+              width={160}
+              height={45}
+              className="object-contain h-10 w-auto"
+              priority
+            />
+            {/* Note: Agar aapke logo ki PNG mein 'Rankovio' naam nahi likha hai aur aap text dikhana chahte hain, 
+                toh niche wali line ka code use karein. Agar logo mein naam pehle se hai, toh is line ki zaroorat nahi hai. */}
+            {/* <span className="text-xl font-bold text-slate-900 tracking-tight">Rankovio</span> */}
           </Link>
 
           {/* Desktop Links */}
