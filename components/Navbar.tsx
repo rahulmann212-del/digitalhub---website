@@ -32,14 +32,11 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      role="banner"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'glass shadow-lg shadow-blue-500/5 border-b border-white/50'
-          : 'bg-transparent'
-      }`}
-    >
+    // Navbar.tsx ke header tag mein ye changes karein
+<header
+  role="banner"
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm border-b border-slate-100`} // 'glass' aur 'bg-transparent' hata kar 'bg-white' kiya
+>
       <nav
         aria-label="Main navigation"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"

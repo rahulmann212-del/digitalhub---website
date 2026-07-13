@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="block">
-              <Image src="/rankoviologo.png" alt="Rankovio Logo" width={180} height={50} className="h-12 w-auto brightness-0 invert" />
+              <Image src="/rankoviologo.png" alt="Rankovio Logo" width={250} height={80} className="w-40 h-auto brightness-0 invert" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               We help e-commerce businesses and brands scale through data-driven performance marketing, SEO, and high-converting web development.
