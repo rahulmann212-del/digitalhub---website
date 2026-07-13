@@ -5,8 +5,8 @@ import { ChevronRight, Lightbulb, Rocket, Users, TrendingUp } from 'lucide-react
 const milestones = [
   {
     year: '2019',
-    title: 'Operator Origins',
-    desc: 'Rankovio was born from the trenches. Building and scaling our own platforms like SwipeKarts taught us that standard agencies rarely understand the brutal unit economics of e-commerce.',
+    title: 'The Origin',
+    desc: 'Rankovio was born from the trenches of the e-commerce world. We realized that standard agencies rarely understand the brutal unit economics, RTO challenges, and profit margins required to scale a real D2C brand.',
     icon: Lightbulb,
     color: 'from-blue-500 to-blue-600',
   },
@@ -27,7 +27,7 @@ const milestones = [
   {
     year: '2024',
     title: 'Scaling Marketplaces',
-    desc: 'Now engineering multi-vendor marketplaces and scaling international brands. We treat every project as an operator, focusing strictly on metrics that impact the bottom line.',
+    desc: 'Now engineering multi-vendor marketplaces and scaling international brands. We treat every project with an operator mindset, focusing strictly on metrics that impact the bottom line.',
     icon: Users,
     color: 'from-cyan-500 to-blue-500',
   },
@@ -56,20 +56,20 @@ export default function CompanyStory() {
                 id="story-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
-                Built by Operators, For{' '}
+                Built by Experts, For{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Scaling Brands</span>
               </h2>
             </div>
 
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg">
-                Rankovio wasn&apos;t started by traditional agency executives. We are operators. While building and managing our own platforms, our leadership realized a massive gap in the market: most agencies talk about vanity metrics, but very few understand RTO optimization, profit margins, and true D2C brand scaling.
+                Rankovio wasn&apos;t started by traditional agency executives. We are e-commerce operators at heart. Our leadership realized a massive gap in the market: most agencies talk about vanity metrics, but very few understand RTO optimization, profit margins, and true D2C brand scaling.
               </p>
               <p>
                 We built Rankovio to be the growth partner we always wished we had. Our approach skips the cookie-cutter templates and focuses strictly on high-converting e-commerce development and advanced SEO strategies that actually drive revenue.
               </p>
               <p>
-                Today, we engineer end-to-end growth funnels. From multi-vendor marketplaces to targeted short-form video campaigns, we treat your business like our own—because we&apos;ve been exactly where you are.
+                Today, we engineer end-to-end growth funnels. From multi-vendor marketplaces to targeted short-form video campaigns, we treat your business like our own—because we know exactly what it takes to survive and scale in a competitive digital space.
               </p>
             </div>
 
@@ -79,7 +79,7 @@ export default function CompanyStory() {
                 &ldquo;Scaling an e-commerce brand isn&apos;t about running flashier ads. It&apos;s about fixing the unit economics, building a high-converting storefront, and driving profitable growth.&rdquo;
               </p>
               <footer className="mt-3 text-sm text-slate-500 font-medium not-italic">
-                — Pawan Kumar Sharma, Co-Founder
+                — Vijay Mishra, Founder
               </footer>
             </blockquote>
           </div>
