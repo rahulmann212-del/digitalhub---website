@@ -14,26 +14,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'DigitalHub — Premium Web Design, SEO & Digital Marketing Agency',
+  title: 'Rankovio | Growth Marketing & E-commerce Agency',
   description:
-    'DigitalHub helps startups and businesses grow online with professional website development, SEO, Google Ads, and digital marketing that generates quality leads and long-term growth.',
+    'Rankovio specializes in performance marketing, D2C brand scaling, advanced SEO, and high-converting e-commerce development to drive exponential revenue growth.',
   keywords:
-    'web design agency, website development, SEO services, digital marketing, Google Ads, WordPress development, e-commerce development, DigitalHub',
-  authors: [{ name: 'DigitalHub Agency' }],
-  metadataBase: new URL('https://digitalhub.agency'),
+    'growth marketing agency, e-commerce development, performance marketing, D2C brand scaling, multi-vendor marketplaces, SEO services, Rankovio',
+  authors: [{ name: 'Rankovio Agency' }],
+  metadataBase: new URL('https://rankovio.com'), // Yahan baad mein aap apna actual domain laga sakte hain
   openGraph: {
-    title: 'DigitalHub — Premium Web Design & Digital Marketing Agency',
+    title: 'Rankovio | Growth Marketing & E-commerce Agency',
     description:
-      'We help startups and businesses establish a strong online presence through professional website development, SEO, and digital marketing.',
+      'Scale your brand and dominate e-commerce with Rankovio. We provide data-driven marketing and high-performance development solutions.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'DigitalHub',
+    siteName: 'Rankovio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DigitalHub — Premium Digital Agency',
+    title: 'Rankovio | Growth Marketing & E-commerce Agency',
     description:
-      'Professional website development, SEO, and digital marketing for growing businesses.',
+      'Data-driven performance marketing and e-commerce development to scale your brand.',
   },
   robots: {
     index: true,
