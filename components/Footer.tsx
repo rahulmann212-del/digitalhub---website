@@ -15,22 +15,21 @@ import {
 } from 'lucide-react';
 
 const quickLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Our Process', href: '#process' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Our Process', href: '/#process' },
+  { label: 'Blog', href: '/#blog' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 const services = [
-  { label: 'Website Development', href: '#services' },
-  { label: 'WordPress Development', href: '#services' },
-  { label: 'E-Commerce Development', href: '#services' },
-  { label: 'SEO Services', href: '#services' },
-  { label: 'Google Ads', href: '#services' },
-  { label: 'Social Media Marketing', href: '#services' },
-  { label: 'Website Maintenance', href: '#services' },
+  { label: 'Performance Marketing', href: '/services' },
+  { label: 'D2C Brand Scaling', href: '/services' },
+  { label: 'E-Commerce Development', href: '/services' },
+  { label: 'Advanced SEO', href: '/services' },
+  { label: 'Short-Form Video', href: '/services' },
+  { label: 'Multi-Vendor Marketplaces', href: '/services' },
 ];
 
 const socials = [
@@ -55,7 +54,7 @@ export default function Footer() {
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1 space-y-6">
-            <Link href="#home" className="flex items-center gap-2.5 group">
+            <Link href="/" className="flex items-center gap-2.5 group">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg">
                 <Zap className="w-5 h-5 text-white" fill="white" />
               </div>
@@ -65,9 +64,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed">
-              We help startups and businesses build a powerful online presence
-              through professional web development, SEO, and digital marketing
-              that drives real growth.
+              We help e-commerce businesses and brands scale through data-driven performance marketing, SEO, and high-converting web development.
             </p>
 
             <div className="space-y-3">
@@ -79,15 +76,15 @@ export default function Footer() {
                 hello@digitalhub.agency
               </a>
               <a
-                href="tel:+15550123456"
+                href="tel:+918318724647"
                 className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                +1 (555) 012-3456
+                +91-831-872-4647
               </a>
               <div className="flex items-start gap-2.5 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>New York, NY 10001, USA</span>
+                <span>Aditya Word City, Ghaziabad, 201001</span>
               </div>
             </div>
 
@@ -152,8 +149,7 @@ export default function Footer() {
               Newsletter
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-5">
-              Get weekly insights on web design, SEO, and digital marketing
-              delivered straight to your inbox.
+              Get weekly insights on brand scaling, SEO, and performance marketing delivered straight to your inbox.
             </p>
 
             <form
