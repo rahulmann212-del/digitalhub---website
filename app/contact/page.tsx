@@ -61,8 +61,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs text-slate-400">Email</p>
-                      <a href="mailto:hello@rankovio.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
-                        hello@rankovio.com
+                      <a href="mailto:inquiry@rankovio.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
+                        inquiry@rankovio.com
                       </a>
                     </div>
                   </li>
@@ -74,8 +74,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs text-slate-400">Phone</p>
-                      <a href="tel:+15551234567" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors">
-                        +1 (555) 123-4567
+                      <a href="tel:+918318724647" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors">
+                        +91 83187 24647
                       </a>
                     </div>
                   </li>
@@ -87,8 +87,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs text-slate-400">WhatsApp</p>
-                      <a href="https://wa.me/15551234567" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors">
-                        +1 (555) 123-4567
+                      <a href="https://wa.me/918318724647" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors">
+                        +91 83187 24647
                       </a>
                     </div>
                   </li>
