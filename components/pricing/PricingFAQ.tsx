@@ -109,10 +109,10 @@ export default function PricingFAQ() {
             We are happy to answer anything not covered here.
           </p>
           <a
-            href="mailto:hello@digitalhub.agency"
+            href="mailto:inquiry@rankovio.com"
             className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            hello@digitalhub.agency
+            inquiry@rankovio.com
           </a>
         </div>
       </div>
