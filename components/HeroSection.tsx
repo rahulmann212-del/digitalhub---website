@@ -8,7 +8,6 @@ import {
   Target,
   ArrowRight,
   Sparkles,
-  ChevronDown,
 } from 'lucide-react';
 
 const trustItems = [
@@ -236,13 +235,6 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
-
-        {/* Scroll indicator - fixed overlap */}
-        <div className="mt-16 flex flex-col items-center gap-1 text-slate-400 animate-bounce w-full justify-center">
-          <span className="text-xs font-medium">Scroll</span>
-          <ChevronDown className="w-4 h-4" />
-        </div>
-        
       </div>
     </section>
   );
