@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, TrendingUp, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -50,18 +50,18 @@ export default function Navbar() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          
+          {/* Custom Logo Image */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center group"
             aria-label="Rankovio — Go to homepage"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-300">
-              <TrendingUp className="w-5 h-5 text-white" strokeWidth={2.5} />
-            </div>
-            <span className="text-xl font-bold text-slate-900">
-              Rank<span className="text-blue-600">ovio</span>
-            </span>
+            <img 
+              src="/rankoviologo.png" 
+              alt="Rankovio Logo" 
+              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            />
           </Link>
 
           {/* Desktop Links */}
@@ -88,15 +88,15 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* CTA & Phone (Desktop) */}
+          <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+15551234567"
+              href="tel:+918318724647"
               className="flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
-              aria-label="Call Rankovio at +1 555 123 4567"
+              aria-label="Call Rankovio at +91 83187 24647"
             >
               <Phone className="w-4 h-4" />
-              +1 (555) 123-4567
+              +91 83187 24647
             </a>
             <Link
               href="/contact"
@@ -146,11 +146,11 @@ export default function Navbar() {
             </ul>
             <div className="mt-3 pt-3 border-t border-slate-100 space-y-2.5">
               <a
-                href="tel:+15551234567"
+                href="tel:+918318724647"
                 className="flex items-center justify-center gap-2 text-sm font-semibold text-slate-700"
               >
                 <Phone className="w-4 h-4 text-blue-600" />
-                +1 (555) 123-4567
+                +91 83187 24647
               </a>
               <Link
                 href="/contact"
