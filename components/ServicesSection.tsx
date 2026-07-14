@@ -100,7 +100,7 @@ export default function ServicesSection() {
             <article
               key={service.title}
               className={`group relative bg-white border border-slate-100 rounded-3xl p-7 card-hover shine-border ${
-                index === 0 ? 'lg:col-span-1 ring-2 ring-blue-500/20' : ''
+                index === 0 ? 'ring-2 ring-blue-500/20' : ''
               }`}
             >
               {service.tag && (
@@ -138,25 +138,27 @@ export default function ServicesSection() {
             </article>
           ))}
 
-          {/* CTA card */}
-          <div className="relative bg-gradient-to-br from-blue-600 via-blue-500 to-sky-500 rounded-3xl p-7 flex flex-col justify-between overflow-hidden card-hover">
-            <div className="absolute inset-0 bg-grid opacity-20" />
-            <div className="absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full" />
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/10 rounded-full" />
-            <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white mb-3">
+          {/* Full-Width CTA Banner */}
+          <div className="sm:col-span-2 lg:col-span-3 mt-4 relative bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 bg-grid opacity-10" />
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-sky-500/20 rounded-full blur-3xl" />
+            
+            <div className="relative z-10 max-w-2xl text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
                 Ready to Dominate Your Market?
               </h3>
-              <p className="text-blue-100 text-sm leading-relaxed">
+              <p className="text-blue-200 text-sm md:text-base leading-relaxed">
                 Let's audit your current digital strategy and uncover the bottlenecks stopping your business from scaling profitably.
               </p>
             </div>
+            
             <Link
               href="#contact"
-              className="relative z-10 mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-white text-blue-600 text-sm font-bold rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+              className="relative z-10 shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-900 text-sm font-bold rounded-xl hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300"
             >
               Start Scaling Today
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
