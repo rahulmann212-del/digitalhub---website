@@ -46,7 +46,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white pt-32" // Added pt-32 to fix Navbar overlap
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white pt-32"
       aria-labelledby="hero-heading"
     >
       {/* Background */}
@@ -236,12 +236,13 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400 animate-bounce">
-        <span className="text-xs font-medium">Scroll</span>
-        <ChevronDown className="w-4 h-4" />
+        {/* Scroll indicator - fixed overlap */}
+        <div className="mt-16 flex flex-col items-center gap-1 text-slate-400 animate-bounce w-full justify-center">
+          <span className="text-xs font-medium">Scroll</span>
+          <ChevronDown className="w-4 h-4" />
+        </div>
+        
       </div>
     </section>
   );
