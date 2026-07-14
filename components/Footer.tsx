@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import {
-  TrendingUp, Mail, Phone, MapPin, ArrowRight, ChevronRight,
+  Mail, Phone, MapPin, ArrowRight, ChevronRight,
   Linkedin, Facebook, Instagram, MessageCircle, Send,
 } from 'lucide-react';
 
@@ -61,7 +61,7 @@ const socials = [
   { icon: Linkedin,    label: 'LinkedIn',   href: 'https://linkedin.com' },
   { icon: Facebook,   label: 'Facebook',   href: 'https://facebook.com' },
   { icon: Instagram,  label: 'Instagram',  href: 'https://instagram.com' },
-  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/15551234567' },
+  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918318724647' }, 
   { icon: Mail,       label: 'Email',      href: 'mailto:hello@rankovio.com' },
 ];
 
@@ -99,10 +99,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
           {/* Brand + contact */}
           <div className="lg:col-span-2 space-y-6">
+            
             <Link href="/" className="flex items-center gap-2.5 group" aria-label="Rankovio — Go to homepage">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <TrendingUp className="w-5 h-5 text-white" strokeWidth={2.5} />
-              </div>
+              {/* Correct Rankovio Logo Image Name */}
+              <img 
+                src="/rankoviologo.png" 
+                alt="Rankovio Logo" 
+                className="h-10 w-auto object-contain drop-shadow-md" 
+              />
               <span className="text-xl font-bold text-white">
                 Rank<span className="text-blue-400">ovio</span>
               </span>
@@ -122,16 +126,18 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
                 hello@rankovio.com
               </a>
+              
               <a
-                href="tel:+15551234567"
+                href="tel:+918318724647"
                 className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                +1 (555) 123-4567
+                +91 83187 24647
               </a>
+              
               <div className="flex items-start gap-2.5 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>123 Business Avenue, Suite 500, New York, NY 10001</span>
+                <span>Aditya World City</span>
               </div>
             </div>
 
