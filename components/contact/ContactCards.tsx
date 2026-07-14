@@ -1,11 +1,13 @@
+'use client';
+
 import { Mail, Phone, MessageCircle, Clock, MapPin } from 'lucide-react';
 
 const contactMethods = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@rankovio.com',
-    href: 'mailto:hello@rankovio.com',
+    value: 'inquiry@rankovio.com',
+    href: 'mailto:inquiry@rankovio.com',
     color: 'from-blue-500 to-blue-700',
     bg: 'bg-blue-50',
     border: 'border-blue-100',
@@ -14,8 +16,8 @@ const contactMethods = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
+    value: '+91 83187 24647',
+    href: 'tel:+918318724647',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
     border: 'border-sky-100',
@@ -24,8 +26,8 @@ const contactMethods = [
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+1 (555) 123-4567',
-    href: 'https://wa.me/15551234567',
+    value: '+91 83187 24647',
+    href: 'https://wa.me/918318724647',
     color: 'from-emerald-500 to-teal-600',
     bg: 'bg-emerald-50',
     border: 'border-emerald-100',
@@ -153,9 +155,9 @@ export default function ContactCards() {
                   <MapPin className="w-6 h-6 text-white" strokeWidth={2} />
                 </div>
               </div>
-              <div className="mt-3 px-4 py-2 bg-white rounded-xl shadow-lg border border-slate-100">
+              <div className="mt-3 px-4 py-2 bg-white rounded-xl shadow-lg border border-slate-100 text-center">
                 <p className="text-xs font-bold text-slate-800">Rankovio HQ</p>
-                <p className="text-xs text-slate-500">123 Business Avenue, Suite 500</p>
+                <p className="text-xs text-slate-500">Aditya World City</p>
               </div>
             </div>
 
