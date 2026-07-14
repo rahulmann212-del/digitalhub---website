@@ -3,26 +3,27 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import {
-  Mail, Phone, MapPin, ArrowRight, ChevronRight,
+  Mail, Phone, MapPin, ChevronRight,
   Linkedin, Facebook, Instagram, MessageCircle, Send,
 } from 'lucide-react';
 
 const footerLinks = {
-  about: {
-    title: 'Rankovio',
+  company: {
+    title: 'Company',
     links: [
       { label: 'About Rankovio', href: '/about' },
       { label: 'Our Process', href: '/about#process' },
       { label: 'Industries We Serve', href: '/industries' },
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/contact' },
     ],
   },
   marketing: {
-    title: 'Digital Marketing',
+    title: 'Marketing',
     links: [
-      { label: 'Google Ads Management', href: '/services#google-ads' },
-      { label: 'Social Media Marketing', href: '/services#social-media' },
+      { label: 'Google Ads', href: '/services#google-ads' },
+      { label: 'Social Media', href: '/services#social-media' },
       { label: 'Content Marketing', href: '/services#content-marketing' },
       { label: 'Performance Tracking', href: '/services#performance' },
     ],
@@ -30,29 +31,19 @@ const footerLinks = {
   seo: {
     title: 'SEO Services',
     links: [
-      { label: 'Search Engine Optimization', href: '/services#seo' },
+      { label: 'Search Optimization', href: '/services#seo' },
       { label: 'Local SEO', href: '/services#local-seo' },
       { label: 'Technical SEO', href: '/services#technical-seo' },
       { label: 'SEO Audits', href: '/services#seo-audit' },
     ],
   },
   web: {
-    title: 'Website Development',
+    title: 'Development',
     links: [
-      { label: 'Business Websites', href: '/services#web-dev' },
-      { label: 'Landing Page Design', href: '/services#landing-pages' },
-      { label: 'E-Commerce Websites', href: '/services#ecommerce' },
-      { label: 'Website Maintenance', href: '/services#maintenance' },
-    ],
-  },
-  resources: {
-    title: 'Resources',
-    links: [
-      { label: 'Blog', href: '/blog' },
-      { label: 'Case Studies', href: '/#case-studies' },
-      { label: 'Contact', href: '/contact' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Terms and Conditions', href: '/terms' },
+      { label: 'Custom Websites', href: '/services#web-dev' },
+      { label: 'Landing Pages', href: '/services#landing-pages' },
+      { label: 'E-Commerce Sites', href: '/services#ecommerce' },
+      { label: 'Web Maintenance', href: '/services#maintenance' },
     ],
   },
 };
@@ -62,7 +53,7 @@ const socials = [
   { icon: Facebook,   label: 'Facebook',   href: 'https://facebook.com' },
   { icon: Instagram,  label: 'Instagram',  href: 'https://instagram.com' },
   { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918318724647' }, 
-  { icon: Mail,       label: 'Email',      href: 'mailto:hello@rankovio.com' },
+  { icon: Mail,       label: 'Email',      href: 'mailto:inquiry@rankovio.com' },
 ];
 
 const legalLinks = [
@@ -97,19 +88,17 @@ export default function Footer() {
       {/* Main footer */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
-          {/* Brand + contact */}
+          
+          {/* Brand + contact (Takes 2 Columns) */}
           <div className="lg:col-span-2 space-y-6">
             
-            <Link href="/" className="flex items-center gap-2.5 group" aria-label="Rankovio — Go to homepage">
-              {/* Correct Rankovio Logo Image Name */}
+            <Link href="/" className="inline-block group" aria-label="Rankovio — Go to homepage">
+              {/* Logo with increased size and removed side text */}
               <img 
                 src="/rankoviologo.png" 
                 alt="Rankovio Logo" 
-                className="h-10 w-auto object-contain drop-shadow-md" 
+                className="h-16 lg:h-20 w-auto object-contain drop-shadow-md" 
               />
-              <span className="text-xl font-bold text-white">
-                Rank<span className="text-blue-400">ovio</span>
-              </span>
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
@@ -120,11 +109,11 @@ export default function Footer() {
 
             <div className="space-y-3">
               <a
-                href="mailto:hello@rankovio.com"
+                href="mailto:inquiry@rankovio.com"
                 className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                hello@rankovio.com
+                inquiry@rankovio.com
               </a>
               
               <a
@@ -159,7 +148,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
+          {/* Link columns (Takes 4 Columns total) */}
           {linkSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-5">
