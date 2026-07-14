@@ -40,20 +40,20 @@ export interface Article {
 }
 
 export const categories: Category[] = [
-  { id: 'web-design',       name: 'Web Design',       slug: 'web-design',       icon: LayoutTemplate, color: 'from-blue-500 to-blue-700',     bg: 'bg-blue-50',   count: 4 },
-  { id: 'development',      name: 'Development',      slug: 'development',      icon: Code2,         color: 'from-sky-500 to-blue-500',       bg: 'bg-sky-50',    count: 4 },
-  { id: 'seo',              name: 'SEO',              slug: 'seo',              icon: Search,        color: 'from-cyan-500 to-blue-500',     bg: 'bg-cyan-50',   count: 3 },
+  { id: 'web-design',       name: 'Web Design',       slug: 'web-design',       icon: LayoutTemplate, color: 'from-blue-500 to-blue-700',    bg: 'bg-blue-50',  count: 4 },
+  { id: 'development',      name: 'Development',      slug: 'development',      icon: Code2,         color: 'from-sky-500 to-blue-500',     bg: 'bg-sky-50',   count: 4 },
+  { id: 'seo',              name: 'SEO',              slug: 'seo',              icon: Search,        color: 'from-cyan-500 to-blue-500',    bg: 'bg-cyan-50',  count: 3 },
   { id: 'ecommerce',        name: 'E-Commerce',       slug: 'ecommerce',        icon: ShoppingCart, color: 'from-violet-500 to-purple-600', bg: 'bg-violet-50', count: 2 },
-  { id: 'performance',      name: 'Performance',     slug: 'performance',      icon: Gauge,         color: 'from-amber-500 to-orange-500',  bg: 'bg-amber-50',  count: 2 },
+  { id: 'performance',      name: 'Performance',      slug: 'performance',      icon: Gauge,         color: 'from-amber-500 to-orange-500',  bg: 'bg-amber-50',  count: 2 },
   { id: 'security',         name: 'Security',         slug: 'security',         icon: ShieldCheck,   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50', count: 1 },
-  { id: 'marketing',        name: 'Digital Marketing', slug: 'marketing',        icon: Share2,       color: 'from-rose-500 to-pink-600',     bg: 'bg-rose-50',   count: 3 },
+  { id: 'marketing',        name: 'Digital Marketing', slug: 'marketing',        icon: Share2,        color: 'from-rose-500 to-pink-600',    bg: 'bg-rose-50',  count: 3 },
 ];
 
 export const authors: Record<string, Author> = {
-  digitalhub: { name: 'DigitalHub Team', role: 'Editorial', initials: 'DH', color: 'from-blue-600 to-blue-500' },
+  rankovio:   { name: 'Rankovio Team', role: 'Editorial', initials: 'RT', color: 'from-blue-600 to-blue-500' },
   design:     { name: 'Studio Editorial', role: 'Design Desk', initials: 'SD', color: 'from-sky-500 to-blue-500' },
   dev:        { name: 'Engineering Desk', role: 'Engineering', initials: 'ED', color: 'from-indigo-500 to-blue-600' },
-  growth:     { name: 'Growth Desk',      role: 'Growth',     initials: 'GD', color: 'from-emerald-500 to-teal-600' },
+  growth:     { name: 'Growth Desk',      role: 'Growth',    initials: 'GD', color: 'from-emerald-500 to-teal-600' },
 };
 
 export const articles: Article[] = [

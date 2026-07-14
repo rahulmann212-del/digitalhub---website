@@ -4,19 +4,19 @@ import { ChevronRight, AlertCircle, CheckCircle2, ArrowRight } from 'lucide-reac
 import Link from 'next/link';
 
 const problems = [
-  'Generic templates that look like every other site',
-  'Agencies that disappear after launch',
-  'Slow websites that damage search rankings',
-  'Designs built for looks, not for conversions',
-  'No clear reporting or communication',
+  'Generic templates that don’t convert',
+  'Agencies that disappear after project launch',
+  'Slow websites that kill search rankings',
+  'Designs that look good but lack sales strategy',
+  'Opaque communication and zero reporting',
 ];
 
 const solutions = [
-  'Custom-designed, purpose-built digital experiences',
-  'Long-term partnerships with ongoing support',
-  'Performance-optimized, sub-2s load time targets',
-  'Conversion-focused design grounded in user psychology',
-  'Full transparency with regular updates and reporting',
+  'Conversion-first, custom digital experiences',
+  'Long-term growth partnership & scaling support',
+  'High-performance, sub-2s load time optimization',
+  'ROI-driven design grounded in data & psychology',
+  '100% transparency with clear performance reporting',
 ];
 
 export default function WhyWeStarted() {
@@ -44,13 +44,13 @@ export default function WhyWeStarted() {
                 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
                 Why We Started{' '}
-                <span className="text-gradient">DigitalHub</span>
+                <span className="text-gradient">Rankovio</span>
               </h2>
               <p className="mt-4 text-slate-500 leading-relaxed">
-                We saw the same frustrations over and over. Businesses paying for
-                digital work that didn&apos;t deliver — or working with agencies
-                that treated them like a transaction. We started DigitalHub to be
-                the alternative.
+                We saw the same frustrations over and over: businesses paying for 
+                digital work that didn't drive revenue, or working with agencies 
+                that treated them like a transaction. We started Rankovio to be the 
+                ROI-focused alternative.
               </p>
             </div>
 
@@ -77,7 +77,7 @@ export default function WhyWeStarted() {
               <div className="flex items-center gap-2 mb-4">
                 <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span className="text-sm font-bold text-blue-700">
-                  The DigitalHub Difference
+                  The Rankovio Difference
                 </span>
               </div>
               <ul className="space-y-2.5" role="list">
@@ -95,20 +95,21 @@ export default function WhyWeStarted() {
           <div className="space-y-8">
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg text-slate-700 font-medium">
-                The digital agency landscape was crowded with two extremes:
-                cheap, generic solutions and expensive agencies out of reach for
-                most businesses.
+                The digital agency landscape was crowded with two extremes: 
+                cheap, generic solutions and expensive agencies out of reach 
+                for growing businesses.
               </p>
               <p>
-                We saw a clear gap — businesses that were serious about growth
-                but needed a partner who matched that seriousness. Someone who
-                would ask the right questions, deliver quality work, and actually
-                care about the outcome.
+                We saw a clear gap — businesses that were serious about scaling 
+                revenue but needed a partner who matched that intensity. 
+                Someone who would ask the right questions, execute on data, 
+                and treat every client’s business as their own.
               </p>
               <p>
-                So we built DigitalHub to sit firmly in that space. Accessible
-                enough for startups. Capable enough for complex businesses. And
-                committed enough to treat every client as our most important one.
+                So we built Rankovio to sit firmly in that space. Capable enough 
+                to handle complex development, aggressive enough to scale your 
+                marketing, and committed enough to treat your growth as our 
+                top priority.
               </p>
             </div>
 
@@ -119,9 +120,9 @@ export default function WhyWeStarted() {
               <div className="relative z-10">
                 <div className="text-4xl text-white/30 font-serif leading-none mb-2">&ldquo;</div>
                 <p className="text-white font-semibold text-base leading-relaxed">
-                  We didn&apos;t start DigitalHub to be the biggest agency.
-                  We started it to be the most dependable one — the agency
-                  you recommend to a friend without hesitation.
+                  We didn't start Rankovio to be just another agency. 
+                  We started it to be the growth engine for your brand — 
+                  the partner you recommend when results actually matter.
                 </p>
               </div>
             </div>
@@ -130,7 +131,7 @@ export default function WhyWeStarted() {
               href="/#contact"
               className="group inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
             >
-              Start a conversation with us
+              Start a growth conversation
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
