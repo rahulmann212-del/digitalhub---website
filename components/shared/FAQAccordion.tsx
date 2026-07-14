@@ -23,7 +23,7 @@ export default function FAQAccordion({
   highlight = 'Questions',
   subtitle = 'Answers to the questions we hear most often. If yours is not here, just reach out — we are happy to talk.',
   badge = 'FAQ',
-  contactEmail = 'hello@rankovio.com',
+  contactEmail = 'inquiry@rankovio.com',
 }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
