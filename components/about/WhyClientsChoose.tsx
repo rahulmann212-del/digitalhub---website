@@ -17,57 +17,57 @@ import Link from 'next/link';
 const reasons = [
   {
     icon: MessageCircle,
-    title: 'Clear, Honest Communication',
-    desc: 'We keep you informed throughout the entire project. No jargon, no surprises — just clear updates, transparent decisions, and open dialogue at every step.',
+    title: 'Transparent Growth Communication',
+    desc: 'We speak in ROI, not just code. You will get clear, data-driven updates on how your marketing and development investments are driving revenue.',
     color: 'from-blue-500 to-blue-600',
     bg: 'bg-blue-50',
   },
   {
     icon: Clock,
-    title: 'We Respect Your Time',
-    desc: 'Deadlines are commitments, not suggestions. We plan carefully, communicate proactively, and deliver on schedule — because your time and business depend on it.',
+    title: 'Speed to Market',
+    desc: 'We know that every day without a high-converting site or active campaign is lost revenue. We prioritize efficiency to get you live and scaling fast.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
   },
   {
     icon: ShieldCheck,
-    title: 'Quality Without Compromise',
-    desc: 'Every project goes through rigorous quality checks before it ever reaches you. We hold our work to a standard we&apos;d be proud to put our name on — every time.',
+    title: 'Quality That Drives Sales',
+    desc: 'We don’t just build for aesthetics; we build for performance. Rigorous testing ensures your platform is fast, secure, and ready to handle traffic.',
     color: 'from-blue-600 to-indigo-500',
     bg: 'bg-indigo-50',
   },
   {
     icon: Search,
-    title: 'SEO Baked In From Day One',
-    desc: 'We don&apos;t treat SEO as a plugin or an afterthought. Technical SEO best practices are built into our development process from the very first line of code.',
+    title: 'Growth-First SEO',
+    desc: 'SEO isn’t a task; it’s our foundation. We build your site architecture and content strategy from day one to ensure you rank for high-intent search terms.',
     color: 'from-cyan-500 to-blue-600',
     bg: 'bg-cyan-50',
   },
   {
     icon: LayoutDashboard,
-    title: 'Business-Focused Design',
-    desc: 'Our designs aren&apos;t just aesthetically pleasing — they&apos;re built to convert. Every layout decision is informed by user psychology and your specific business goals.',
+    title: 'Conversion-Focused Design',
+    desc: 'Every pixel is placed with intent. We combine user psychology with UX best practices to turn your casual visitors into repeat paying customers.',
     color: 'from-blue-500 to-sky-400',
     bg: 'bg-blue-50',
   },
   {
     icon: RefreshCw,
-    title: 'Agile, Iterative Process',
-    desc: 'We work in iterations and share progress regularly. You&apos;re never waiting weeks to see the first result — feedback is gathered early and often.',
+    title: 'Agile, Iterative Scaling',
+    desc: 'The market moves fast, and so do we. We iterate on your campaigns and site performance regularly to ensure you stay ahead of the competition.',
     color: 'from-sky-600 to-blue-600',
     bg: 'bg-sky-50',
   },
   {
     icon: HeadphonesIcon,
-    title: 'Support After Launch',
-    desc: 'Our relationship doesn&apos;t end at go-live. We offer maintenance packages and ongoing support — because digital success is a continuous journey, not a single moment.',
+    title: 'Post-Launch Partnership',
+    desc: 'Our work doesn’t stop at deployment. We offer ongoing optimization and maintenance because digital success is a continuous process of scaling.',
     color: 'from-blue-600 to-cyan-500',
     bg: 'bg-blue-50',
   },
   {
     icon: Handshake,
-    title: 'A Partner, Not a Vendor',
-    desc: 'We invest in understanding your business deeply. Our goal is to become your most trusted digital partner — someone you call when you have a new challenge or opportunity.',
+    title: 'Your Dedicated Growth Partner',
+    desc: 'We act as an extension of your team. When you win, we win. We are fully invested in the long-term profitability of your business.',
     color: 'from-blue-700 to-blue-500',
     bg: 'bg-blue-50',
   },
@@ -89,18 +89,18 @@ export default function WhyClientsChoose() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            The DigitalHub Edge
+            The Rankovio Edge
           </div>
           <h2
             id="why-clients-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
             Why Clients Choose{' '}
-            <span className="text-gradient">DigitalHub</span>
+            <span className="text-gradient">Rankovio</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            Beyond deliverables — here is what clients actually experience when
-            they work with us and why they keep coming back.
+            Beyond deliverables — here is why e-commerce brands and businesses 
+            trust us to scale their revenue and dominate their niche.
           </p>
         </div>
 
@@ -131,13 +131,13 @@ export default function WhyClientsChoose() {
         {/* CTA nudge */}
         <div className="mt-14 text-center">
           <p className="text-slate-500 mb-4">
-            Ready to experience the DigitalHub difference?
+            Ready to experience the Rankovio difference?
           </p>
           <Link
             href="/#contact"
             className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300"
           >
-            Get a Free Consultation
+            Get a Free Growth Consultation
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

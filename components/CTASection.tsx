@@ -29,32 +29,31 @@ export default function CTASection() {
             <div className="text-center lg:text-left max-w-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-sm font-medium text-blue-300 mb-6">
                 <Rocket className="w-4 h-4" />
-                Ready to Launch
+                Ready to Scale
               </div>
 
               <h2
                 id="cta-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight"
               >
-                Ready to Grow Your{' '}
+                Ready to Turn Your{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-                  Business Online?
+                  Traffic Into Revenue?
                 </span>
               </h2>
 
               <p className="mt-5 text-lg text-blue-100/70 leading-relaxed">
-                Let&apos;s build something great together. Share your vision with
-                us and we&apos;ll craft a tailored digital strategy that delivers
-                real, measurable results.
+                Stop guessing with your digital strategy. Let&apos;s build a high-performance growth plan 
+                that scales your revenue and outperforms your competition.
               </p>
 
               {/* Key benefits */}
               <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
                 {[
-                  'Free Consultation',
-                  'No Hidden Fees',
-                  'Fast Turnaround',
-                  'Expert Team',
+                  'ROI-Focused Strategy',
+                  'High-Conversion Dev',
+                  'Rapid Growth Tactics',
+                  'Dedicated Growth Partner',
                 ].map((benefit) => (
                   <span
                     key={benefit}
@@ -69,22 +68,22 @@ export default function CTASection() {
             {/* Right — Buttons */}
             <div className="flex flex-col gap-4 flex-shrink-0">
               <Link
-                href="mailto:hello@digitalhub.agency"
+                href="mailto:inquiry@rankovio.com"
                 className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold text-base rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
-                Request Proposal
+                Get Your Growth Proposal
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="mailto:hello@digitalhub.agency"
+                href="mailto:inquiry@rankovio.com"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white font-bold text-base rounded-2xl border-2 border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300"
               >
-                Contact Us
+                Talk to an Expert
               </Link>
 
               {/* Trust micro-copy */}
               <p className="text-center text-xs text-blue-300/60 mt-1">
-                We respond within 24 hours
+                Response within 4 business hours
               </p>
             </div>
           </div>

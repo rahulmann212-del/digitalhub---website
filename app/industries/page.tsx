@@ -6,18 +6,18 @@ import IndustriesGrid from '@/components/industries/IndustriesGrid';
 import IndustriesCTA from '@/components/industries/IndustriesCTA';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve — Digital Solutions for Every Sector | DigitalHub',
+  title: 'Rankovio Industries | Expert Growth Marketing & Dev for Your Sector',
   description:
-    'DigitalHub delivers tailored web design, SEO, and digital marketing solutions for Healthcare, Education, Finance, Real Estate, Restaurants, Retail, Construction, Manufacturing, Travel, and Technology sectors.',
+    'From E-commerce and Retail to Healthcare and Finance — Rankovio delivers industry-specific marketing strategies and high-conversion web development designed to scale your revenue.',
   keywords:
-    'digital agency industries, healthcare web design, education website, finance digital marketing, real estate SEO, restaurant website, retail e-commerce, construction website, manufacturing web design, travel SEO, technology web design',
+    'growth marketing for industries, e-commerce web development, healthcare SEO, retail marketing strategies, finance digital growth, construction web design, industry-specific marketing agency, Rankovio industries',
   openGraph: {
-    title: 'Industries We Serve | DigitalHub',
+    title: 'Industries We Serve — Expert Growth Strategies by Rankovio',
     description:
-      'Tailored digital solutions for 10+ industry sectors. We understand your market and build strategies that work for your specific audience and business goals.',
+      'We don’t believe in one-size-fits-all. Get customized marketing and development solutions tailored to your specific industry’s growth metrics.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'DigitalHub',
+    siteName: 'Rankovio',
   },
 };
 

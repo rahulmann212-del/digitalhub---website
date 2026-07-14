@@ -4,18 +4,18 @@ import Footer from '@/components/Footer';
 import BlogContent from '@/components/blog/BlogContent';
 
 export const metadata: Metadata = {
-  title: 'Blog — Web Design, SEO & Digital Marketing Insights | DigitalHub',
+  title: 'Rankovio Growth Blog | E-commerce Scaling, Ads & SEO Insights',
   description:
-    'Practical, no-nonsense articles on web design, development, SEO, e-commerce, performance, and digital marketing — written for business owners who want to make smarter decisions about their online presence.',
+    'Master your digital growth with actionable insights. From high-converting e-commerce web development to aggressive Google & Meta Ads strategies—get the knowledge to scale your revenue.',
   keywords:
-    'web design blog, SEO blog, digital marketing insights, web development articles, e-commerce tips, Core Web Vitals, local SEO, Google Ads, conversion optimization, website accessibility',
+    'growth marketing blog, e-commerce scaling tips, SEO strategies for growth, Google Ads ROI, Meta Ads scaling, conversion rate optimization, Rankovio blog, digital growth insights',
   openGraph: {
-    title: 'Blog — Web Design, SEO & Digital Marketing Insights | DigitalHub',
+    title: 'Rankovio Growth Blog | Strategies to Scale Your Business Online',
     description:
-      'Practical articles on web design, development, SEO, and digital marketing for business owners. Updated weekly with actionable insights.',
+      'Practical, ROI-focused articles on marketing, e-commerce development, and SEO. Learn how to turn your website into a high-revenue machine.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'DigitalHub',
+    siteName: 'Rankovio',
   },
 };
 

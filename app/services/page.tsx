@@ -8,18 +8,18 @@ import ServicesComparison from '@/components/services/ServicesComparison';
 import ServicesCTA from '@/components/services/ServicesCTA';
 
 export const metadata: Metadata = {
-  title: 'Services — Website Design, SEO & Digital Marketing | DigitalHub',
+  title: 'Growth Services: SEO, Ads & High-Conversion Web Dev | Rankovio',
   description:
-    'Explore all 13 services offered by DigitalHub: website design, development, WordPress, e-commerce, landing pages, SEO, Google Ads, social media, speed optimization, and website security.',
+    'Scale your business with Rankovio’s result-driven services. Expert Google & Meta Ads, performance-based SEO, and high-conversion e-commerce web development to turn your traffic into profit.',
   keywords:
-    'website design services, web development, WordPress development, e-commerce websites, SEO services, Google Ads management, social media marketing, website speed optimization, website security, digital agency services',
+    'growth marketing services, high-conversion web development, e-commerce development agency, Google Ads ROI management, SEO services for scaling, lead generation agency, Rankovio digital services',
   openGraph: {
-    title: 'Services — Website Design, SEO & Digital Marketing | DigitalHub',
+    title: 'Rankovio Growth Services | Turn Your Website Into a Revenue Machine',
     description:
-      'From website design and development to SEO and paid advertising — DigitalHub offers the complete suite of digital services your business needs to grow online.',
+      'Stop settling for "just a website." Rankovio provides the complete growth suite—from aggressive marketing strategy to high-performance development—to help you scale revenue.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'DigitalHub',
+    siteName: 'Rankovio',
   },
 };
 
@@ -29,6 +29,10 @@ export default function ServicesPage() {
       <Navbar />
       <ServicesHero />
       <CategoryNav />
+      {/* 
+        Note: Ensure your ServicesGrid and ServicesComparison components 
+        also reflect this shift from 'Design' to 'Conversion/Revenue'.
+      */}
       <ServicesGrid />
       <ServicesComparison />
       <ServicesCTA />

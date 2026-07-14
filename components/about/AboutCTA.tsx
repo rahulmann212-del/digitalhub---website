@@ -33,23 +33,23 @@ export default function AboutCTA() {
                 id="about-cta-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight"
               >
-                Ready to Build{' '}
+                Ready to Scale Your{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-                  Something Great?
+                  Business Revenue?
                 </span>
               </h2>
 
               <p className="mt-5 text-lg text-blue-100/70 leading-relaxed">
-                Now that you know who we are and how we work — let&apos;s start a
-                conversation about your project. No pressure, no obligation.
-                Just an honest discussion about how we can help you grow.
+                Now that you know how we drive growth at Rankovio — let&apos;s talk about your 
+                specific goals. No pressure, no fluff. Just an honest discussion on how we can 
+                scale your online presence.
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
                 {[
-                  'Free 30-min consultation',
-                  'Same-day response',
-                  'No lock-in contracts',
+                  'Free Growth Audit',
+                  'ROI-Driven Strategy',
+                  'No Lock-in Contracts',
                 ].map((point) => (
                   <span
                     key={point}
@@ -73,7 +73,7 @@ export default function AboutCTA() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="mailto:hello@digitalhub.agency"
+                href="mailto:inquiry@rankovio.com"
                 className="group flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white font-bold text-base rounded-2xl border-2 border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-300"
               >
                 <FileText className="w-5 h-5" />

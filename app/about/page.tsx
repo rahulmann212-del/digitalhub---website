@@ -15,18 +15,18 @@ import FAQSection from '@/components/about/FAQSection';
 import AboutCTA from '@/components/about/AboutCTA';
 
 export const metadata: Metadata = {
-  title: 'About DigitalHub — Our Story, Mission & Values',
+  title: 'About Rankovio | Scaling Brands Through Data-Driven Marketing & Dev',
   description:
-    'Learn about DigitalHub — our story, mission, core values, and what makes us a trusted digital agency for startups and growing businesses worldwide.',
+    'Meet Rankovio — the growth partners for e-commerce brands. We combine high-ROI marketing with high-conversion development to scale your revenue. See how we drive results.',
   keywords:
-    'about DigitalHub, digital agency story, web development agency, our mission, core values, design philosophy',
+    'about Rankovio, growth marketing agency, e-commerce scaling, ROI-driven marketing, web development for e-commerce, digital transformation partner',
   openGraph: {
-    title: 'About DigitalHub — Our Story, Mission & Values',
+    title: 'About Rankovio — Your Partner in Explosive Brand Growth',
     description:
-      'Learn about DigitalHub — our story, mission, core values, and what makes us a trusted digital agency for startups and growing businesses.',
+      'We don’t just build websites; we build revenue engines. Learn how Rankovio helps e-commerce brands scale with data-backed marketing and expert development.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'DigitalHub',
+    siteName: 'Rankovio',
   },
 };
 
@@ -39,8 +39,9 @@ export default function AboutPage() {
       <MissionVision />
       <CoreValues />
       <WhyWeStarted />
+      {/* Note: In components, keep the focus on "Growth Scaling" rather than just "Design" */}
       <HowWeWork />
-      <DesignPhilosophy />
+      <DesignPhilosophy /> 
       <AboutDevelopmentProcess />
       <AboutTechStack />
       <WhyClientsChoose />
