@@ -92,18 +92,16 @@ export default function Footer() {
           {/* Brand + contact */}
           <div className="lg:col-span-2 space-y-6">
             
-            <Link href="/" className="inline-block group" aria-label="Rankovio — Go to homepage">
-              {/* White Box Background added so dark logo is visible */}
-              <div className="bg-white/95 px-4 py-2.5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <img 
-                  src="/rankoviologo.png" 
-                  alt="Rankovio Logo" 
-                  className="h-10 lg:h-12 w-auto object-contain" 
-                />
-              </div>
+            <Link href="/" className="inline-block group mb-2" aria-label="Rankovio — Go to homepage">
+              {/* CSS Filter added (brightness-0 invert) to make logo pure white without background */}
+              <img 
+                src="/rankoviologo.png" 
+                alt="Rankovio Logo" 
+                className="w-48 lg:w-56 h-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" 
+              />
             </Link>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs mt-2">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Rankovio helps businesses increase search visibility, generate
               qualified leads, and grow online revenue through customized SEO
               and digital marketing strategies.

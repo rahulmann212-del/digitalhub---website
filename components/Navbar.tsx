@@ -49,18 +49,18 @@ export default function Navbar() {
         aria-label="Main navigation"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
           
-          {/* Custom Logo Image - Size Increased Here */}
+          {/* Custom Logo Image - Made significantly larger using fixed width */}
           <Link
             href="/"
-            className="flex items-center group"
+            className="flex items-center group -ml-2"
             aria-label="Rankovio — Go to homepage"
           >
             <img 
               src="/rankoviologo.png" 
               alt="Rankovio Logo" 
-              className="h-14 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="w-40 md:w-56 lg:w-64 h-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
           </Link>
 
