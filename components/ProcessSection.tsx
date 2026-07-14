@@ -5,48 +5,48 @@ import { ChevronRight } from 'lucide-react';
 const steps = [
   {
     number: '01',
-    title: 'Discovery',
-    desc: 'Deep-dive consultation to understand your business goals, target audience, competitors, and project requirements.',
+    title: 'Audit & Economics',
+    desc: 'Deep-dive into your current unit economics, CAC, RTO rates, and historical data to find exact bottlenecks in your funnel.',
     color: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-600',
   },
   {
     number: '02',
-    title: 'Planning',
-    desc: 'Detailed project roadmap, site architecture, technology stack selection, and timeline with clear milestones.',
+    title: 'E-Com Infrastructure',
+    desc: 'Upgrading or developing a high-converting, lightning-fast storefront optimized specifically for seamless user checkouts.',
     color: 'from-sky-500 to-blue-500',
     lightBg: 'bg-sky-50',
     dotColor: 'bg-sky-500',
   },
   {
     number: '03',
-    title: 'Design',
-    desc: 'Wireframes and high-fidelity mockups that align with your brand, focusing on premium aesthetics and user experience.',
+    title: 'Performance Launch',
+    desc: 'Deploying highly targeted, data-driven Meta and Google Ad campaigns along with a solid technical SEO foundation.',
     color: 'from-blue-600 to-indigo-500',
     lightBg: 'bg-indigo-50',
     dotColor: 'bg-indigo-500',
   },
   {
     number: '04',
-    title: 'Development',
-    desc: 'Clean, scalable code implementation with responsive design, performance optimization, and CMS integration.',
+    title: 'CRO & Optimization',
+    desc: 'Continuous A/B testing and funnel structuring to minimize drop-offs, reduce return-to-origin (RTO), and boost ROAS.',
     color: 'from-cyan-500 to-blue-500',
     lightBg: 'bg-cyan-50',
     dotColor: 'bg-cyan-600',
   },
   {
     number: '05',
-    title: 'Testing',
-    desc: 'Rigorous QA across devices and browsers, performance audits, accessibility checks, and SEO validation.',
+    title: 'Brand Authority',
+    desc: 'Scaling organic reach through hook-driven short-form video campaigns and content that builds intense community engagement.',
     color: 'from-blue-500 to-sky-400',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-500',
   },
   {
     number: '06',
-    title: 'Launch',
-    desc: 'Smooth deployment, domain setup, analytics integration, and dedicated post-launch support to ensure success.',
+    title: 'Aggressive Scaling',
+    desc: 'Once the funnel is highly profitable, we inject strategic budgets to scale your brand locally and globally without breaking ROI.',
     color: 'from-blue-600 to-blue-700',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-700',
@@ -66,20 +66,19 @@ export default function ProcessSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-blue-700 mb-6 shadow-sm">
             <ChevronRight className="w-4 h-4" />
-            How We Work
+            Our Execution Blueprint
           </div>
           <h2
             id="process-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            Our Proven{' '}
-            <span className="text-gradient">6-Step Process</span>
+            The Exact Framework We Use To{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Scale Brands</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            A structured, transparent workflow designed to deliver exceptional
-            results on time, every time.
+            A battle-tested, transparent workflow designed to fix unit economics, increase conversions, and drive massive revenue growth.
           </p>
         </div>
 
@@ -99,7 +98,7 @@ export default function ProcessSection() {
                   {/* Dot */}
                   <div className="relative z-10 mb-6">
                     <div
-                      className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20`}
+                      className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 transition-transform duration-300 hover:scale-110`}
                     >
                       <span className="text-white font-extrabold text-sm">
                         {step.number}
@@ -112,7 +111,7 @@ export default function ProcessSection() {
 
                   {/* Content */}
                   <div
-                    className={`text-center p-4 ${step.lightBg} rounded-2xl border border-white shadow-sm w-full`}
+                    className={`text-center p-4 ${step.lightBg} rounded-2xl border border-white shadow-sm w-full h-full`}
                   >
                     <h3 className="font-bold text-slate-800 text-sm mb-2">
                       {step.title}
