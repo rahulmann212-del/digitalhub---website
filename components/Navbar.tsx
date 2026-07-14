@@ -51,7 +51,7 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between h-16 md:h-20">
           
-          {/* Custom Logo Image */}
+          {/* Custom Logo Image - Size Increased Here */}
           <Link
             href="/"
             className="flex items-center group"
@@ -60,7 +60,7 @@ export default function Navbar() {
             <img 
               src="/rankoviologo.png" 
               alt="Rankovio Logo" 
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="h-14 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
           </Link>
 

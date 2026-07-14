@@ -89,19 +89,21 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
           
-          {/* Brand + contact (Takes 2 Columns) */}
+          {/* Brand + contact */}
           <div className="lg:col-span-2 space-y-6">
             
             <Link href="/" className="inline-block group" aria-label="Rankovio — Go to homepage">
-              {/* Logo with increased size and removed side text */}
-              <img 
-                src="/rankoviologo.png" 
-                alt="Rankovio Logo" 
-                className="h-16 lg:h-20 w-auto object-contain drop-shadow-md" 
-              />
+              {/* White Box Background added so dark logo is visible */}
+              <div className="bg-white/95 px-4 py-2.5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <img 
+                  src="/rankoviologo.png" 
+                  alt="Rankovio Logo" 
+                  className="h-10 lg:h-12 w-auto object-contain" 
+                />
+              </div>
             </Link>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs mt-2">
               Rankovio helps businesses increase search visibility, generate
               qualified leads, and grow online revenue through customized SEO
               and digital marketing strategies.
@@ -148,7 +150,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns (Takes 4 Columns total) */}
+          {/* Link columns */}
           {linkSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-5">
