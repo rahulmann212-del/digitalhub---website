@@ -5,48 +5,48 @@ import { ChevronRight } from 'lucide-react';
 const steps = [
   {
     number: '01',
-    title: 'Audit & Discovery',
-    desc: 'Deep-dive analysis of your current digital presence, target audience, profit margins, and immediate e-commerce growth opportunities.',
+    title: 'Discovery',
+    desc: 'Deep-dive consultation to understand your business goals, target audience, competitors, and project requirements.',
     color: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-600',
   },
   {
     number: '02',
-    title: 'Strategy & Planning',
-    desc: 'Crafting a tailored roadmap—from performance marketing budgets to scalable multi-vendor architecture—designed to hit your specific KPIs.',
+    title: 'Planning',
+    desc: 'Detailed project roadmap, site architecture, technology stack selection, and timeline with clear milestones.',
     color: 'from-sky-500 to-blue-500',
     lightBg: 'bg-sky-50',
     dotColor: 'bg-sky-500',
   },
   {
     number: '03',
-    title: 'Creative & Assets',
-    desc: 'Developing high-converting assets, including short-form video campaigns, promotional scripts, and conversion-optimized landing pages.',
+    title: 'Design',
+    desc: 'Wireframes and high-fidelity mockups that align with your brand, focusing on premium aesthetics and user experience.',
     color: 'from-blue-600 to-indigo-500',
     lightBg: 'bg-indigo-50',
     dotColor: 'bg-indigo-500',
   },
   {
     number: '04',
-    title: 'Implementation',
-    desc: 'Execution phase where we launch your targeted ad campaigns, deploy digital platforms, and set your marketing engine in motion.',
+    title: 'Development',
+    desc: 'Clean, scalable code implementation with responsive design, performance optimization, and CMS integration.',
     color: 'from-cyan-500 to-blue-500',
     lightBg: 'bg-cyan-50',
     dotColor: 'bg-cyan-600',
   },
   {
     number: '05',
-    title: 'Optimization',
-    desc: 'Continuous A/B testing, tracking market analytics, and optimizing for maximum ROAS to reduce acquisition costs and scale sales.',
+    title: 'Testing',
+    desc: 'Rigorous QA across devices and browsers, performance audits, accessibility checks, and SEO validation.',
     color: 'from-blue-500 to-sky-400',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-500',
   },
   {
     number: '06',
-    title: 'Growth & Scaling',
-    desc: 'Transparent reporting on revenue generated and strategic planning for the next phase of your brand\'s exponential expansion.',
+    title: 'Launch',
+    desc: 'Smooth deployment, domain setup, analytics integration, and dedicated post-launch support to ensure success.',
     color: 'from-blue-600 to-blue-700',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-700',
@@ -68,17 +68,18 @@ export default function ProcessSection() {
         <div className="text-center max-w-2xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            How We Scale Brands
+            How We Work
           </div>
           <h2
             id="process-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
             Our Proven{' '}
-            <span className="text-gradient">Growth Formula</span>
+            <span className="text-gradient">6-Step Process</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            A transparent, data-driven workflow designed to optimize your operations, boost sales, and deliver exceptional ROI.
+            A structured, transparent workflow designed to deliver exceptional
+            results on time, every time.
           </p>
         </div>
 
@@ -111,7 +112,7 @@ export default function ProcessSection() {
 
                   {/* Content */}
                   <div
-                    className={`text-center p-4 ${step.lightBg} rounded-2xl border border-white shadow-sm w-full h-full`}
+                    className={`text-center p-4 ${step.lightBg} rounded-2xl border border-white shadow-sm w-full`}
                   >
                     <h3 className="font-bold text-slate-800 text-sm mb-2">
                       {step.title}

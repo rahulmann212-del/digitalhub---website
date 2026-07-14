@@ -3,16 +3,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
+import { Menu, X, TrendingUp, Phone } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Industries', href: '/industries' },
-  { label: 'Blog', href: '/#blog' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -22,40 +22,46 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
-    return pathname.startsWith(href.split('#')[0]) && href.split('#')[0] !== '/';
+    return pathname.startsWith(href);
   };
 
   return (
-    // Navbar.tsx ke header tag mein ye changes karein
-<header
-  role="banner"
-  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm border-b border-slate-100`} // 'glass' aur 'bg-transparent' hata kar 'bg-white' kiya
->
+    <header
+      role="banner"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'glass shadow-lg shadow-blue-500/5 border-b border-white/50'
+          : 'bg-transparent'
+      }`}
+    >
       <nav
         aria-label="Main navigation"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Updated for better responsiveness and size */}
+          {/* Logo */}
           <Link
             href="/"
-            className="flex items-center group py-2"
-            aria-label="Rankovio - Go to homepage"
+            className="flex items-center gap-2.5 group"
+            aria-label="Rankovio — Go to homepage"
           >
-            <Image
-              src="/rankoviologo.png"
-              alt="Rankovio Logo"
-              width={250}
-              height={80}
-              className="w-36 md:w-44 lg:w-52 h-auto object-contain"
-              priority
-            />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-300">
+              <TrendingUp className="w-5 h-5 text-white" strokeWidth={2.5} />
+            </div>
+            <span className="text-xl font-bold text-slate-900">
+              Rank<span className="text-blue-600">ovio</span>
+            </span>
           </Link>
 
           {/* Desktop Links */}
@@ -69,6 +75,7 @@ export default function Navbar() {
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-slate-600 hover:text-blue-600 hover:bg-blue-50'
                   }`}
+                  aria-current={isActive(link.href) ? 'page' : undefined}
                 >
                   {link.label}
                   <span
@@ -83,8 +90,16 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="tel:+15551234567"
+              className="flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+              aria-label="Call Rankovio at +1 555 123 4567"
+            >
+              <Phone className="w-4 h-4" />
+              +1 (555) 123-4567
+            </a>
             <Link
-              href="/#contact"
+              href="/contact"
               className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300"
             >
               Free Consultation
@@ -97,6 +112,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-label="Toggle navigation menu"
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -104,8 +120,9 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
+          id="mobile-menu"
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
+            isOpen ? 'max-h-[28rem] opacity-100 pb-4' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="glass rounded-2xl p-4 mt-2 shadow-xl">
@@ -118,17 +135,25 @@ export default function Navbar() {
                       isActive(link.href)
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-slate-700 hover:text-blue-600 hover:bg-blue-50'
-                  }`}
+                    }`}
                     onClick={() => setIsOpen(false)}
+                    aria-current={isActive(link.href) ? 'page' : undefined}
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-3 pt-3 border-t border-slate-100">
+            <div className="mt-3 pt-3 border-t border-slate-100 space-y-2.5">
+              <a
+                href="tel:+15551234567"
+                className="flex items-center justify-center gap-2 text-sm font-semibold text-slate-700"
+              >
+                <Phone className="w-4 h-4 text-blue-600" />
+                +1 (555) 123-4567
+              </a>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="block text-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl shadow-lg shadow-blue-500/25"
                 onClick={() => setIsOpen(false)}
               >

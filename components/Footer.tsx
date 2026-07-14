@@ -1,104 +1,230 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Youtube,
-  ArrowRight,
+  TrendingUp, Mail, Phone, MapPin, ArrowRight, ChevronRight,
+  Linkedin, Facebook, Instagram, MessageCircle, Send,
 } from 'lucide-react';
-import Image from 'next/image';
 
-const quickLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Services', href: '/services' },
-  { label: 'Our Process', href: '/#process' },
-  { label: 'Blog', href: '/#blog' },
-  { label: 'Contact', href: '/#contact' },
-];
-
-const services = [
-  { label: 'Performance Marketing', href: '/services' },
-  { label: 'D2C Brand Scaling', href: '/services' },
-  { label: 'E-Commerce Development', href: '/services' },
-  { label: 'Advanced SEO', href: '/services' },
-  { label: 'Short-Form Video', href: '/services' },
-  { label: 'Multi-Vendor Marketplaces', href: '/services' },
-];
+const footerLinks = {
+  about: {
+    title: 'Rankovio',
+    links: [
+      { label: 'About Rankovio', href: '/about' },
+      { label: 'Our Process', href: '/about#process' },
+      { label: 'Industries We Serve', href: '/industries' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  },
+  marketing: {
+    title: 'Digital Marketing',
+    links: [
+      { label: 'Google Ads Management', href: '/services#google-ads' },
+      { label: 'Social Media Marketing', href: '/services#social-media' },
+      { label: 'Content Marketing', href: '/services#content-marketing' },
+      { label: 'Performance Tracking', href: '/services#performance' },
+    ],
+  },
+  seo: {
+    title: 'SEO Services',
+    links: [
+      { label: 'Search Engine Optimization', href: '/services#seo' },
+      { label: 'Local SEO', href: '/services#local-seo' },
+      { label: 'Technical SEO', href: '/services#technical-seo' },
+      { label: 'SEO Audits', href: '/services#seo-audit' },
+    ],
+  },
+  web: {
+    title: 'Website Development',
+    links: [
+      { label: 'Business Websites', href: '/services#web-dev' },
+      { label: 'Landing Page Design', href: '/services#landing-pages' },
+      { label: 'E-Commerce Websites', href: '/services#ecommerce' },
+      { label: 'Website Maintenance', href: '/services#maintenance' },
+    ],
+  },
+  resources: {
+    title: 'Resources',
+    links: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'Case Studies', href: '/#case-studies' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Terms and Conditions', href: '/terms' },
+    ],
+  },
+};
 
 const socials = [
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
+  { icon: Linkedin,    label: 'LinkedIn',   href: 'https://linkedin.com' },
+  { icon: Facebook,   label: 'Facebook',   href: 'https://facebook.com' },
+  { icon: Instagram,  label: 'Instagram',  href: 'https://instagram.com' },
+  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/15551234567' },
+  { icon: Mail,       label: 'Email',      href: 'mailto:hello@rankovio.com' },
+];
+
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms and Conditions', href: '/terms' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email.trim()) {
+      setSubscribed(true);
+      setEmail('');
+      setTimeout(() => setSubscribed(false), 4000);
+    }
+  };
+
+  const linkSections = Object.values(footerLinks);
+
   return (
-    <footer className="bg-slate-900 text-white" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand Column */}
-          <div className="space-y-6">
-            <Link href="/" className="block">
-              <Image src="/rankoviologo.png" alt="Rankovio Logo" width={250} height={80} className="w-40 h-auto brightness-0 invert" />
+    <footer
+      className="relative bg-slate-900 text-white"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
+      <div className="absolute inset-0 bg-grid opacity-5" />
+
+      {/* Main footer */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
+          {/* Brand + contact */}
+          <div className="lg:col-span-2 space-y-6">
+            <Link href="/" className="flex items-center gap-2.5 group" aria-label="Rankovio — Go to homepage">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <TrendingUp className="w-5 h-5 text-white" strokeWidth={2.5} />
+              </div>
+              <span className="text-xl font-bold text-white">
+                Rank<span className="text-blue-400">ovio</span>
+              </span>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              We help e-commerce businesses and brands scale through data-driven performance marketing, SEO, and high-converting web development.
+
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+              Rankovio helps businesses increase search visibility, generate
+              qualified leads, and grow online revenue through customized SEO
+              and digital marketing strategies.
             </p>
-            <div className="space-y-3 text-sm text-slate-400">
-              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-blue-500" /> hello@rankovio.com</div>
-              <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-blue-500" /> +91-831-872-4647</div>
-              <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-blue-500 mt-1" /> Aditya World City, Ghaziabad, 201001</div>
+
+            <div className="space-y-3">
+              <a
+                href="mailto:hello@rankovio.com"
+                className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
+              >
+                <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                hello@rankovio.com
+              </a>
+              <a
+                href="tel:+15551234567"
+                className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
+              >
+                <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                +1 (555) 123-4567
+              </a>
+              <div className="flex items-start gap-2.5 text-sm text-slate-400">
+                <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                <span>123 Business Avenue, Suite 500, New York, NY 10001</span>
+              </div>
             </div>
-            <div className="flex gap-3">
-              {socials.map((s) => (
-                <a key={s.label} href={s.href} className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
-                  <s.icon className="w-4 h-4 text-white" />
-                </a>
-              ))}
+
+            {/* Social links */}
+            <div className="flex gap-2.5" role="list" aria-label="Social media links">
+              {socials.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={`Follow us on ${social.label}`}
+                    className="w-9 h-9 bg-slate-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
+                  >
+                    <Icon className="w-4 h-4 text-slate-400 hover:text-white transition-colors" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-bold mb-6">QUICK LINKS</h3>
-            <ul className="space-y-4 text-sm text-slate-400">
-              {quickLinks.map((l) => <li key={l.label}><Link href={l.href} className="hover:text-blue-400">{l.label}</Link></li>)}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-bold mb-6">SERVICES</h3>
-            <ul className="space-y-4 text-sm text-slate-400">
-              {services.map((s) => <li key={s.label}><Link href={s.href} className="hover:text-blue-400">{s.label}</Link></li>)}
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="font-bold mb-6">NEWSLETTER</h3>
-            <p className="text-sm text-slate-400 mb-4">Get weekly growth insights.</p>
-            <input type="email" placeholder="Enter your email" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-sm mb-3" />
-            <button className="w-full py-3 bg-blue-600 text-sm font-bold rounded-lg hover:bg-blue-500">Subscribe</button>
-          </div>
+          {/* Link columns */}
+          {linkSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-5">
+                {section.title}
+              </h3>
+              <ul className="space-y-3" role="list">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-1.5 group"
+                    >
+                      <ChevronRight className="w-3 h-3 text-blue-500/50 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all" />
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <p>&copy; {new Date().getFullYear()} Rankovio. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="#" className="hover:text-blue-400">Privacy Policy</Link>
-            <Link href="#" className="hover:text-blue-400">Terms of Service</Link>
-            <Link href="#" className="hover:text-blue-400">Cookie Policy</Link>
+        {/* Newsletter signup */}
+        <div className="mt-12 pt-10 border-t border-slate-800">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-lg font-extrabold text-white mb-2">
+                Get Growth Insights in Your Inbox
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Join 2,000+ business owners receiving our best articles on SEO,
+                digital marketing, and online growth. No spam, ever.
+              </p>
+            </div>
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3" aria-label="Newsletter signup">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@company.com"
+                aria-label="Email address for newsletter"
+                required
+                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+              />
+              <button
+                type="submit"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+              >
+                {subscribed ? 'Subscribed!' : 'Subscribe'}
+                {!subscribed && <Send className="w-4 h-4" />}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-500 text-center sm:text-left">
+            &copy; {new Date().getFullYear()} Rankovio. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4 text-xs text-slate-500">
+            {legalLinks.map((link, i) => (
+              <span key={link.label} className="flex items-center gap-4">
+                {i > 0 && <span className="w-1 h-1 bg-slate-600 rounded-full" />}
+                <Link href={link.href} className="hover:text-blue-400 transition-colors">
+                  {link.label}
+                </Link>
+              </span>
+            ))}
           </div>
         </div>
       </div>
