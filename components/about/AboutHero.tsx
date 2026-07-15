@@ -76,7 +76,7 @@ export default function AboutHero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            Growth-First E-Commerce Agency
+            Growth Focused Digital Marketing Agency
           </div>
 
           {/* Heading */}
@@ -84,14 +84,14 @@ export default function AboutHero() {
             id="about-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white"
           >
-            We Are{' '}
+            Helping Businesses Grow with{' '}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              Rankovio
+              Smarter Digital Strategies
             </span>
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            We are a data-driven growth marketing agency dedicated to scaling e-commerce businesses. By combining high-converting web development with advanced performance marketing, we help brands dominate their market, optimize costs, and maximize profit margins.
+            At Rankovio, we help businesses build a stronger digital presence, attract the right audience, and turn more visitors into customers. From strategy and website development to performance marketing and SEO, we create tailored solutions that support measurable growth across industries.
           </p>
 
           {/* CTA row */}
@@ -100,7 +100,7 @@ export default function AboutHero() {
               href="/#contact"
               className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-900 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
-              Start Scaling Today
+              Book a Free Consultation
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -115,10 +115,10 @@ export default function AboutHero() {
         {/* Bottom pill stats row - Updated to reflect marketing/ecommerce focus */}
         <div className="mt-14 flex flex-wrap gap-4">
           {[
-            { label: 'Focus', value: 'D2C Scaling' },
-            { label: 'Expertise', value: 'Performance Ads' },
-            { label: 'Platforms', value: 'Multi-Vendor' },
-            { label: 'Goal', value: 'Maximum ROI' },
+            { label: 'Approach', value: 'Growth Strategy' },
+            { label: 'Expertise', value: 'Performance Marketing' },
+            { label: 'Solutions', value: 'Website Development' },
+            { label: 'Outcome', value: 'Measurable Results' },
           ].map((item) => (
             <div
               key={item.label}
