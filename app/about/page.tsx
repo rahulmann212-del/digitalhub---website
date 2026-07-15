@@ -7,7 +7,6 @@ import MissionVision from '@/components/about/MissionVision';
 import CoreValues from '@/components/about/CoreValues';
 import WhyWeStarted from '@/components/about/WhyWeStarted';
 import HowWeWork from '@/components/about/HowWeWork';
-import AboutTechStack from '@/components/about/AboutTechStack';
 import WhyClientsChoose from '@/components/about/WhyClientsChoose';
 import FAQSection from '@/components/about/FAQSection';
 import AboutCTA from '@/components/about/AboutCTA';
@@ -39,7 +38,6 @@ export default function AboutPage() {
       <WhyWeStarted />
       {/* Note: In components, keep the focus on "Growth Scaling" rather than just "Design" */}
       <HowWeWork />
-      <AboutTechStack />
       <WhyClientsChoose />
       <FAQSection />
       <AboutCTA />
