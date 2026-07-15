@@ -54,9 +54,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </header>
 
         <div className="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100">
-          <div className="prose prose-lg prose-blue max-w-none text-slate-700 leading-relaxed whitespace-pre-wrap">
-            {article.content}
-          </div>
+          {/* YAHAN CHANGE HUA HAI - AB YE IMAGES AUR HTML SUPPORT KAREGA */}
+          <div 
+            className="prose prose-lg prose-blue max-w-none text-slate-700 leading-relaxed whitespace-pre-wrap"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
         </div>
         
       </article>
