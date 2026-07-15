@@ -4,19 +4,19 @@ import { ChevronRight, AlertCircle, CheckCircle2, ArrowRight } from 'lucide-reac
 import Link from 'next/link';
 
 const problems = [
-  'Generic templates that don’t convert',
-  'Agencies that disappear after project launch',
-  'Slow websites that kill search rankings',
-  'Designs that look good but lack sales strategy',
-  'Opaque communication and zero reporting',
+  'Generic strategies that don\'t reflect unique business goals',
+  'Websites that look good but fail to convert visitors',
+  'Marketing campaigns without measurable business impact',
+  'Limited communication and unclear project visibility',
+  'Multiple vendors managing disconnected digital efforts',
 ];
 
 const solutions = [
-  'Conversion-first, custom digital experiences',
-  'Long-term growth partnership & scaling support',
-  'High-performance, sub-2s load time optimization',
-  'ROI-driven design grounded in data & psychology',
-  '100% transparency with clear performance reporting',
+  'Tailored strategies aligned with your business objectives',
+  'High-performing websites built for user experience and conversions',
+  'Data-driven marketing focused on measurable growth',
+  'Transparent communication with clear performance insights',
+  'End-to-end digital solutions managed by one experienced team',
 ];
 
 export default function WhyWeStarted() {
@@ -37,20 +37,18 @@ export default function WhyWeStarted() {
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-5">
                 <ChevronRight className="w-4 h-4" />
-                The Problem We Solved
+                Why We Exist
               </div>
               <h2
                 id="why-started-heading"
                 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
-                Why We Started{' '}
-                <span className="text-gradient">Rankovio</span>
+                Built to Be the Digital Partner{' '}
+                <span className="text-gradient">Businesses Can Rely On</span>
               </h2>
               <p className="mt-4 text-slate-500 leading-relaxed">
-                We saw the same frustrations over and over: businesses paying for 
-                digital work that didn't drive revenue, or working with agencies 
-                that treated them like a transaction. We started Rankovio to be the 
-                ROI-focused alternative.
+                Many businesses invest in digital marketing without seeing meaningful progress. Campaigns lack direction, websites underperform, and reporting often fails to connect marketing efforts with real business outcomes.</p>
+                <p> We started Rankovio with a different approach. Our goal is to combine strategy, creativity, technology, and performance marketing into solutions that help businesses grow with confidence.
               </p>
             </div>
 
@@ -59,7 +57,7 @@ export default function WhyWeStarted() {
               <div className="flex items-center gap-2 mb-4">
                 <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
                 <span className="text-sm font-bold text-red-700">
-                  The Old Reality
+                  The Challenges Businesses Face
                 </span>
               </div>
               <ul className="space-y-2.5" role="list">
@@ -77,7 +75,7 @@ export default function WhyWeStarted() {
               <div className="flex items-center gap-2 mb-4">
                 <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span className="text-sm font-bold text-blue-700">
-                  The Rankovio Difference
+                  The Rankovio Approach
                 </span>
               </div>
               <ul className="space-y-2.5" role="list">
@@ -95,21 +93,13 @@ export default function WhyWeStarted() {
           <div className="space-y-8">
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg text-slate-700 font-medium">
-                The digital agency landscape was crowded with two extremes: 
-                cheap, generic solutions and expensive agencies out of reach 
-                for growing businesses.
+                Digital success isn't about using more tools or following trends. It's about understanding your business, identifying the right opportunities, and executing strategies that deliver measurable results.
               </p>
               <p>
-                We saw a clear gap — businesses that were serious about scaling 
-                revenue but needed a partner who matched that intensity. 
-                Someone who would ask the right questions, execute on data, 
-                and treat every client’s business as their own.
+                At Rankovio, we become an extension of your team. Whether you're building your online presence, generating qualified leads, or strengthening your brand, we create digital solutions designed around your goals—not a predefined template.
               </p>
               <p>
-                So we built Rankovio to sit firmly in that space. Capable enough 
-                to handle complex development, aggressive enough to scale your 
-                marketing, and committed enough to treat your growth as our 
-                top priority.
+                Every project is guided by collaboration, transparency, and continuous optimization because sustainable growth comes from making smarter decisions over time.
               </p>
             </div>
 
@@ -120,9 +110,8 @@ export default function WhyWeStarted() {
               <div className="relative z-10">
                 <div className="text-4xl text-white/30 font-serif leading-none mb-2">&ldquo;</div>
                 <p className="text-white font-semibold text-base leading-relaxed">
-                  We didn't start Rankovio to be just another agency. 
-                  We started it to be the growth engine for your brand — 
-                  the partner you recommend when results actually matter.
+                  Rankovio was built on a simple belief. Every business deserves a digital partner that listens, thinks strategically, and delivers work that creates measurable impact. 
+                  — Vijay Mishra, Founder
                 </p>
               </div>
             </div>
@@ -131,7 +120,7 @@ export default function WhyWeStarted() {
               href="/#contact"
               className="group inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
             >
-              Start a growth conversation
+              Start Your Growth Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
