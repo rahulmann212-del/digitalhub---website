@@ -12,14 +12,14 @@ const pillars = [
   {
     number: '01',
     icon: Search,
-    title: 'Research First',
-    headline: 'We understand before we create.',
-    desc: 'Every project starts with deep discovery. We study your business, your competitors, your audience, and your goals — because the right strategy starts with the right questions, not assumptions.',
+    title: 'Discover & Strategize',
+    headline: 'Every great result begins with the right strategy.',
+    desc: 'We take time to understand your business, industry, audience, competitors, and objectives before recommending any solution. This helps us create strategies built around your goals instead of assumptions.',
     points: [
-      'Stakeholder interviews & discovery sessions',
-      'Competitor and market analysis',
-      'User journey mapping',
-      'KPI definition and success metrics',
+      'Business discovery and consultation',
+      'Market and competitor research',
+      'Audience and customer insights',
+      'Goal setting and success planning',
     ],
     color: 'from-blue-500 to-blue-600',
     bg: 'bg-blue-50',
@@ -28,14 +28,14 @@ const pillars = [
   {
     number: '02',
     icon: Paintbrush,
-    title: 'Design Led',
-    headline: 'Aesthetics with a purpose.',
-    desc: 'Our design process is rooted in user experience research and conversion principles. Beautiful is a starting point — effective is the goal. Every visual decision serves your business objectives.',
+    title: 'Create & Build',
+    headline: 'Ideas become experiences that inspire action.',
+    desc: 'Whether we\'re designing your website, building your brand, or creating marketing assets, every element is crafted to deliver a seamless user experience and support your business objectives.',
     points: [
-      'Wireframes and low-fidelity prototyping',
-      'High-fidelity UI design in Figma',
-      'Accessibility and readability checks',
-      'Client feedback and iteration cycles',
+      'Website design and development',
+      'Branding and creative design',
+      'Content creation',
+      'User experience optimization',
     ],
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
@@ -44,14 +44,14 @@ const pillars = [
   {
     number: '03',
     icon: Code2,
-    title: 'Development Excellence',
-    headline: 'Code that performs, scales, and lasts.',
-    desc: 'We write clean, maintainable code built on modern frameworks. Performance, security, and SEO are baked in from day one — not bolted on at the end.',
+    title: 'Launch & Optimize',
+    headline: 'Execution backed by data and continuous improvement.',
+    desc: 'From SEO and paid advertising to social media and analytics, we launch campaigns strategically, monitor performance, and make data-driven improvements to maximize results.',
     points: [
-      'Component-based architecture',
-      'Performance-first development (Core Web Vitals)',
-      'Technical SEO implementation',
-      'Cross-browser and device testing',
+      'Search engine optimization',
+      'Performance marketing',
+      'Social media campaigns',
+      'Analytics and performance tracking',
     ],
     color: 'from-blue-600 to-indigo-500',
     bg: 'bg-indigo-50',
@@ -60,14 +60,14 @@ const pillars = [
   {
     number: '04',
     icon: BarChart2,
-    title: 'Growth Focused',
-    headline: 'Launch is the beginning, not the end.',
-    desc: 'We think beyond the build. Post-launch, we help clients attract visitors, convert leads, and optimize their digital presence continuously — because sustainable growth is a process, not a one-time event.',
+    title: 'Grow & Scale',
+    headline: 'Building momentum through long-term partnership.',
+    desc: 'Growth doesn\'t stop after launch. We continuously refine strategies, identify new opportunities, and help your business adapt to changing market trends for sustainable success.',
     points: [
-      'SEO and content strategy alignment',
-      'Analytics setup and goal tracking',
-      'Conversion rate optimization (CRO)',
-      'Ongoing maintenance and growth support',
+      'Conversion optimization',
+      'Performance reporting',
+      'Strategy refinement',
+      'Ongoing growth support',
     ],
     color: 'from-cyan-500 to-blue-600',
     bg: 'bg-cyan-50',
@@ -96,13 +96,11 @@ export default function HowWeWork() {
             id="how-we-work-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            How We{' '}
-            <span className="text-gradient">Work</span>
+            How We Turn{' '}
+            <span className="text-gradient">Strategy Into Results</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            Our four-pillar methodology ensures that every project is grounded in
-            strategy, elevated by design, built with precision, and positioned for
-            long-term growth.
+            Every successful project starts with understanding your business and ends with measurable outcomes. Our proven process keeps every strategy aligned with your goals, your audience, and your long-term growth.
           </p>
         </div>
 
