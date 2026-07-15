@@ -5,29 +5,29 @@ import { ChevronRight, Lightbulb, Rocket, Users, TrendingUp } from 'lucide-react
 const milestones = [
   {
     year: '2019',
-    title: 'The Origin',
-    desc: 'Rankovio was born from the trenches of the e-commerce world. We realized that standard agencies rarely understand the brutal unit economics, RTO challenges, and profit margins required to scale a real D2C brand.',
+    title: 'The Beginning',
+    desc: 'Rankovio was established with a vision to help businesses navigate the evolving digital landscape through practical strategies, transparent collaboration, and measurable results.',
     icon: Lightbulb,
     color: 'from-blue-500 to-blue-600',
   },
   {
-    year: '2020',
-    title: 'Mastering Performance',
-    desc: 'We shifted our focus entirely to performance marketing and data-driven e-commerce development, helping early D2C clients slash acquisition costs and boost real ROI.',
+    year: '2021',
+    title: 'Expanding Our Expertise',
+    desc: 'We broadened our capabilities across website development, SEO, and performance marketing, enabling businesses to build stronger digital foundations and reach the right audience.',
     icon: TrendingUp,
     color: 'from-sky-500 to-blue-500',
   },
   {
     year: '2022',
-    title: 'Full-Funnel Growth',
-    desc: 'Integrated advanced SEO and short-form video campaigns into our core services, giving e-commerce brands a complete, end-to-end growth engine under one roof.',
+    title: 'Delivering Integrated Growth',
+    desc: 'Our services evolved into a complete digital marketing ecosystem, bringing together branding, content, search, paid media, and analytics to create consistent growth strategies under one roof.',
     icon: Rocket,
     color: 'from-blue-600 to-indigo-500',
   },
   {
     year: '2024',
-    title: 'Scaling Marketplaces',
-    desc: 'Now engineering multi-vendor marketplaces and scaling international brands. We treat every project with an operator mindset, focusing strictly on metrics that impact the bottom line.',
+    title: 'Driving Long Term Partnerships',
+    desc: 'Today, Rankovio works with businesses across multiple industries, helping them strengthen their online presence, generate qualified leads, and achieve sustainable business growth through tailored digital solutions.',
     icon: Users,
     color: 'from-cyan-500 to-blue-500',
   },
@@ -56,27 +56,27 @@ export default function CompanyStory() {
                 id="story-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
-                Built by Experts, For{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Scaling Brands</span>
+                Built to Help Businesses Grow{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">with Confidence</span>
               </h2>
             </div>
 
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg">
-                Rankovio wasn&apos;t started by traditional agency executives. We are e-commerce operators at heart. Our leadership realized a massive gap in the market: most agencies talk about vanity metrics, but very few understand RTO optimization, profit margins, and true D2C brand scaling.
+                Rankovio was founded with a simple belief that great marketing should create measurable business impact, not just impressive reports. We saw too many businesses investing in digital marketing without a clear strategy, transparent communication, or meaningful results.
               </p>
               <p>
-                We built Rankovio to be the growth partner we always wished we had. Our approach skips the cookie-cutter templates and focuses strictly on high-converting e-commerce development and advanced SEO strategies that actually drive revenue.
+                From day one, our mission has been to build growth strategies tailored to each business. By combining creative thinking, data-driven decisions, and technical expertise, we help organizations strengthen their digital presence, attract the right audience, and achieve sustainable growth.
               </p>
               <p>
-                Today, we engineer end-to-end growth funnels. From multi-vendor marketplaces to targeted short-form video campaigns, we treat your business like our own—because we know exactly what it takes to survive and scale in a competitive digital space.
+                Today, we partner with businesses across industries to deliver websites, marketing campaigns, SEO, branding, and performance strategies that support long-term success. Every solution we create is guided by your goals, your customers, and measurable outcomes.
               </p>
             </div>
 
             {/* Decorative quote */}
             <blockquote className="relative pl-6 border-l-4 border-blue-500">
               <p className="text-lg font-semibold text-slate-800 italic leading-relaxed">
-                &ldquo;Scaling an e-commerce brand isn&apos;t about running flashier ads. It&apos;s about fixing the unit economics, building a high-converting storefront, and driving profitable growth.&rdquo;
+                &ldquo;Successful marketing isn't about chasing trends. It's about understanding your business, solving the right problems, and creating strategies that deliver lasting results.&rdquo;
               </p>
               <footer className="mt-3 text-sm text-slate-500 font-medium not-italic">
                 — Vijay Mishra, Founder
