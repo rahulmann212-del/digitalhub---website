@@ -17,57 +17,57 @@ import Link from 'next/link';
 const reasons = [
   {
     icon: MessageCircle,
-    title: 'Transparent Growth Communication',
-    desc: 'We speak in ROI, not just code. You will get clear, data-driven updates on how your marketing and development investments are driving revenue.',
+    title: 'Strategic Transparency',
+    desc: 'We believe great partnerships are built on clarity. From planning to performance, you\'ll always know what we\'re doing, why we\'re doing it, and how it\'s contributing to your business goals.',
     color: 'from-blue-500 to-blue-600',
     bg: 'bg-blue-50',
   },
   {
     icon: Clock,
-    title: 'Speed to Market',
-    desc: 'We know that every day without a high-converting site or active campaign is lost revenue. We prioritize efficiency to get you live and scaling fast.',
+    title: 'Built for Results',
+    desc: 'Every website, campaign, and strategy is designed with clear business objectives in mind, helping you attract the right audience, generate quality leads, and improve conversions.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
   },
   {
     icon: ShieldCheck,
-    title: 'Quality That Drives Sales',
-    desc: 'We don’t just build for aesthetics; we build for performance. Rigorous testing ensures your platform is fast, secure, and ready to handle traffic.',
+    title: 'Quality Without Compromise',
+    desc: 'We combine thoughtful design, reliable development, and rigorous quality assurance to deliver digital solutions that are fast, secure, and built to perform.',
     color: 'from-blue-600 to-indigo-500',
     bg: 'bg-indigo-50',
   },
   {
     icon: Search,
-    title: 'Growth-First SEO',
-    desc: 'SEO isn’t a task; it’s our foundation. We build your site architecture and content strategy from day one to ensure you rank for high-intent search terms.',
+    title: 'Growth Driven Strategy',
+    desc: 'We don\'t rely on guesswork. Every recommendation is supported by research, user behavior, and performance insights to help your business grow with confidence.',
     color: 'from-cyan-500 to-blue-600',
     bg: 'bg-cyan-50',
   },
   {
     icon: LayoutDashboard,
-    title: 'Conversion-Focused Design',
-    desc: 'Every pixel is placed with intent. We combine user psychology with UX best practices to turn your casual visitors into repeat paying customers.',
+    title: 'User First Experiences',
+    desc: 'Great digital experiences keep visitors engaged. We create intuitive websites and marketing journeys that make it easier for customers to trust your brand and take action.',
     color: 'from-blue-500 to-sky-400',
     bg: 'bg-blue-50',
   },
   {
     icon: RefreshCw,
-    title: 'Agile, Iterative Scaling',
-    desc: 'The market moves fast, and so do we. We iterate on your campaigns and site performance regularly to ensure you stay ahead of the competition.',
+    title: 'Continuous Improvement',
+    desc: 'Digital success doesn\'t end at launch. We continuously analyze, refine, and optimize your digital presence to improve performance over time.',
     color: 'from-sky-600 to-blue-600',
     bg: 'bg-sky-50',
   },
   {
     icon: HeadphonesIcon,
-    title: 'Post-Launch Partnership',
-    desc: 'Our work doesn’t stop at deployment. We offer ongoing optimization and maintenance because digital success is a continuous process of scaling.',
+    title: 'Long Term Partnership',
+    desc: 'We work as an extension of your team, providing ongoing guidance, support, and strategic recommendations as your business evolves.',
     color: 'from-blue-600 to-cyan-500',
     bg: 'bg-blue-50',
   },
   {
     icon: Handshake,
-    title: 'Your Dedicated Growth Partner',
-    desc: 'We act as an extension of your team. When you win, we win. We are fully invested in the long-term profitability of your business.',
+    title: 'Solutions That Scale',
+    desc: 'Whether you\'re launching a new business, expanding into new markets, or growing an established brand, we build solutions that adapt to your next stage of growth.',
     color: 'from-blue-700 to-blue-500',
     bg: 'bg-blue-50',
   },
@@ -89,7 +89,7 @@ export default function WhyClientsChoose() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            The Rankovio Edge
+            Why Businesses Choose Us
           </div>
           <h2
             id="why-clients-heading"
@@ -99,8 +99,7 @@ export default function WhyClientsChoose() {
             <span className="text-gradient">Rankovio</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            Beyond deliverables — here is why e-commerce brands and businesses 
-            trust us to scale their revenue and dominate their niche.
+            Businesses choose Rankovio because we combine strategy, creativity, technology, and measurable execution to deliver digital experiences that support long term growth.
           </p>
         </div>
 
@@ -131,13 +130,13 @@ export default function WhyClientsChoose() {
         {/* CTA nudge */}
         <div className="mt-14 text-center">
           <p className="text-slate-500 mb-4">
-            Ready to experience the Rankovio difference?
+            Ready to Build Something That Delivers Real Results?
           </p>
           <Link
             href="/#contact"
             className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300"
           >
-            Get a Free Growth Consultation
+            Book a Free Consultation
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
