@@ -117,7 +117,7 @@ export default function AboutHero() {
           {[
             { label: 'Approach', value: 'Growth Strategy' },
             { label: 'Expertise', value: 'Performance Marketing' },
-            { label: 'Solutions', value: 'Website Development' },
+            { label: 'Solutions', value: 'Web Development' },
             { label: 'Outcome', value: 'Measurable Results' },
           ].map((item) => (
             <div
