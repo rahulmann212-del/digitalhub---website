@@ -16,47 +16,47 @@ const services = [
   {
     icon: MousePointerClick,
     title: 'Performance Marketing',
-    desc: 'Data-driven Google & Meta ad campaigns optimized for maximizing ROI, lowering customer acquisition costs (CAC), and driving profitable sales.',
+    desc: 'Run highly optimized campaigns across leading advertising platforms to maximize conversions, reduce acquisition costs, and generate measurable business growth.',
     color: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
     tag: 'Most Popular',
   },
   {
     icon: Search,
-    title: 'Advanced SEO Strategies',
-    desc: 'Technical and content-led SEO to dominate organic search rankings, ensuring long-term visibility and highly qualified traffic for your brand.',
+    title: 'Search Visibility',
+    desc: 'Increase your online presence with technical excellence, content strategy, and authority-building that drives qualified traffic and long-term business growth.',
     color: 'from-sky-500 to-blue-500',
     lightBg: 'bg-sky-50',
     tag: null,
   },
   {
     icon: TrendingUp,
-    title: 'D2C Brand Scaling & CRO',
-    desc: 'End-to-end conversion rate optimization (CRO) and funnel structuring to minimize RTO costs and exponentially scale your direct-to-consumer brand.',
+    title: 'Conversion Optimization',
+    desc: 'Turn more visitors into customers by improving landing pages, user journeys, and conversion funnels through continuous testing and data-backed optimization.',
     color: 'from-blue-600 to-indigo-500',
     lightBg: 'bg-blue-50',
     tag: null,
   },
   {
     icon: Megaphone,
-    title: 'Short-Form Video Campaigns',
-    desc: 'Engaging, hook-driven short-form video content and scripts designed for modern social platforms to build brand authority and hyper-engagement.',
+    title: 'Content That Connects',
+    desc: 'Create engaging videos, visuals, and written content that captures attention, builds trust, and keeps your audience coming back for more.',
     color: 'from-cyan-500 to-blue-500',
     lightBg: 'bg-cyan-50',
     tag: null,
   },
   {
     icon: ShoppingCart,
-    title: 'Multi-Vendor & E-Com Dev',
-    desc: 'Scalable, high-converting e-commerce platforms and robust multi-vendor marketplaces engineered specifically for massive transaction volumes.',
+    title: 'E-Commerce Solutions',
+    desc: 'Build scalable online stores and marketplace platforms designed to simplify operations, improve customer experiences, and support long-term business expansion.',
     color: 'from-blue-500 to-sky-400',
     lightBg: 'bg-blue-50',
     tag: null,
   },
   {
     icon: Code2,
-    title: 'Custom Web Development',
-    desc: 'Lightning-fast, secure, and modern web applications that act as the perfect foundation to support your aggressive digital marketing efforts.',
+    title: 'Website Development',
+    desc: 'Design and develop fast, secure, and conversion-focused websites that create exceptional user experiences and provide a strong foundation for business growth.',
     color: 'from-sky-600 to-blue-600',
     lightBg: 'bg-sky-50',
     tag: null,
@@ -86,11 +86,13 @@ export default function ServicesSection() {
             id="services-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            Growth Engines Built for{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Real Revenue</span>
+            Solutions That Deliver{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Measurable Growth</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            We fuse aggressive performance marketing with high-converting e-commerce development to give ambitious brands the ultimate competitive advantage.
+            From strategy to execution, we help businesses attract the right
+audience, generate qualified leads, strengthen their brand, and achieve
+sustainable digital growth.
           </p>
         </div>
 
