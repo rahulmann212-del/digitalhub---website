@@ -137,10 +137,10 @@ export default function ServicesSection() {
             
             <div className="relative z-10 max-w-2xl text-center md:text-left">
               <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
-                Ready to Dominate Your Market?
+                Ready to Grow Your Business?
               </h3>
               <p className="text-blue-200 text-sm md:text-base leading-relaxed">
-                Let's audit your current digital strategy and uncover the bottlenecks stopping your business from scaling profitably.
+                Let's build a tailored strategy that helps your brand attract more customers, strengthen its presence, and achieve measurable, long-term growth.
               </p>
             </div>
             
@@ -148,7 +148,7 @@ export default function ServicesSection() {
               href="/contact"
               className="relative z-10 shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-900 text-sm font-bold rounded-xl hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300"
             >
-              Start Scaling Today
+              Lets Connect
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
