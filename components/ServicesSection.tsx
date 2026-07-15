@@ -90,9 +90,7 @@ export default function ServicesSection() {
             <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Measurable Growth</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            From strategy to execution, we help businesses attract the right
-audience, generate qualified leads, strengthen their brand, and achieve
-sustainable digital growth.
+            From strategy to execution, we help businesses attract the right audience, generate qualified leads, strengthen their brand, and achieve sustainable digital growth.
           </p>
         </div>
 
