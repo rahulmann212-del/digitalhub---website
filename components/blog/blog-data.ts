@@ -59,22 +59,20 @@ export const authors: Record<string, Author> = {
 export const articles: Article[] = [
   {
     id: '1',
-    slug: 'core-web-vitals-2025-guide',
-    title: 'Core Web Vitals in 2025: A Practical Guide for Business Websites',
-    excerpt:
-      'Google\'s Core Web Vitals directly influence your search rankings and your visitors\' experience. Here is what each metric means, why it matters, and the concrete steps you can take to improve your scores this year.',
-    content:
-      'Core Web Vitals are three specific factors that Google considers essential to a webpage\'s overall user experience: Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift. In 2025, these metrics remain a confirmed ranking factor, meaning that a slow or janky website does not just frustrate users — it actively harms your visibility in search results.\n\nLargest Contentful Paint (LCP) measures loading performance. A good LCP score is under 2.5 seconds for 75% of page loads. The most common causes of poor LCP are slow server response times, render-blocking JavaScript and CSS, and oversized hero images. Practical fixes include optimising your images (use modern formats like WebP, serve appropriately sized images, and lazy-load below-the-fold assets), upgrading your hosting or using a CDN, and deferring non-critical JavaScript.\n\nInteraction to Next Paint (INP) replaced First Input Delay in 2024 and measures interactivity. A good INP is under 200 milliseconds. INP assesses how quickly your page responds to user input — clicks, taps, and key presses. Long JavaScript tasks, heavy third-party scripts, and unoptimised event handlers are the usual culprits. Breaking long tasks into smaller chunks, reducing JavaScript execution time, and using web workers for heavy computation all help.\n\nCumulative Layout Shift (CLS) measures visual stability. A good CLS is under 0.1. Nothing frustrates a visitor more than a page that jumps as it loads — buttons that move, text that shifts, images that push content down. Always set width and height dimensions on images and videos, reserve space for ads and embeds, and avoid inserting content above existing content.\n\nThe business case for Core Web Vitals is straightforward: better scores mean better rankings, lower bounce rates, and higher conversion rates. Start by measuring your current performance in Google Search Console, PageSpeed Insights, or Lighthouse, then prioritise fixes based on impact and effort.',
-    category: 'Performance',
-    categoryId: 'performance',
-    author: authors.dev,
-    date: '2025-01-12',
-    readTime: 8,
+    slug: 'scale-ecommerce-sales-d2c-strategy-2026',
+    title: 'How to Scale E-Commerce Sales and Protect Profit Margins in 2026',
+    excerpt: 'Driving traffic is only half the battle. Discover the proven strategies to increase your e-commerce conversion rates, reduce RTO costs, and build a highly profitable D2C brand this year.',
+    content: 'Many D2C brands focus entirely on acquiring new traffic, but true scalability lies in maximizing the value of every visitor while protecting your bottom line. In 2026, running a successful e-commerce business or multi-vendor marketplace requires a dual approach: aggressive growth marketing and strict operational efficiency.\n\nHere are the core strategies to dramatically increase your e-commerce sales and safeguard your profit margins:\n\n**1. Aggressively Manage Return-to-Origin (RTO) Costs**\nHigh sales volumes mean nothing if your return-to-origin (RTO) rates are eating into your profit margins. In markets heavily reliant on Cash on Delivery (COD), failed deliveries can cripple a scaling brand. Implement rigorous address verification, incentivize prepaid orders with slight discounts, and use automated WhatsApp confirmations before dispatching items. Controlling RTO is the fastest way to instantly boost your net profitability without spending an extra dollar on ads.\n\n**2. Leverage Short-Form Video Content**\nStatic images are no longer enough to close a sale. Integrate short-form video campaigns and dynamic promotional visual concepts directly into your product pages and social media funnels. Showing the product in action through fast-paced, high-quality video drastically reduces buyer hesitation and builds instant trust. Structured video sequences act as a 24/7 salesperson for your brand.\n\n**3. Streamline the Checkout Experience**\nFriction is the enemy of conversion. The average e-commerce cart abandonment rate sits dangerously close to 70%. Implement one-click checkouts, offer multiple digital wallet options, and remove unnecessary form fields. If a customer has to think during the checkout process, you have already lost them.\n\n**4. Optimize for High-Intent Search Queries**\nStop bidding on broad, expensive keywords. Focus your SEO and Google Ads budget on high-intent, long-tail keywords where the customer is already in the buying phase. Pair this with retargeting campaigns that show personalized dynamic product ads to users who abandoned their carts.\n\nScaling an e-commerce brand requires a deep understanding of both high-conversion web development and ROI-focused marketing. If your current traffic isn\'t converting into revenue, it might be time for a comprehensive growth audit.',
+    category: 'E-Commerce',
+    categoryId: 'ecommerce',
+    author: authors.rankovio,
+    date: '2026-07-15',
+    readTime: 6,
     featured: true,
     popular: true,
     cover: { from: '#2563eb', to: '#0ea5e9' },
-    icon: Gauge,
-    tags: ['Core Web Vitals', 'Page Speed', 'SEO', 'LCP', 'INP', 'CLS'],
+    icon: ShoppingCart,
+    tags: ['E-Commerce', 'D2C Scaling', 'Conversion Rate', 'RTO Management', 'Video Marketing'],
   },
   {
     id: '2',
