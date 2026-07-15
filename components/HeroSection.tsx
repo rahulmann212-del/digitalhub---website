@@ -73,13 +73,13 @@ export default function HeroSection() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900"
             >
-              Scale Your Brand With{' '}
-              <span className="text-gradient block">Data-Driven Growth</span>
+              Helping Businesses Grow Faster Through{' '}
+              <span className="text-gradient block">Smarter Digital Experiences</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg text-slate-500 leading-relaxed max-w-lg">
-              Rankovio is a performance marketing and e-commerce development agency. We engineer high-converting storefronts and run advanced digital campaigns to optimize your ROI, slash RTO costs, and scale your D2C brand exponentially.
+              We combine strategy, creativity, and technology to help businesses attract customers, build trust, and achieve sustainable growth in competitive markets.
             </p>
 
             {/* CTAs */}
