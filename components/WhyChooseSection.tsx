@@ -14,53 +14,53 @@ import {
 const features = [
   {
     icon: TrendingUp,
-    title: 'ROI-Obsessed Marketing',
-    desc: 'We focus on metrics that matter—lowering CAC, optimizing ROAS, and maximizing your profit margins.',
+    title: 'Results-Focused Approach',
+    desc: 'Every strategy is designed with clear business objectives, helping you generate measurable growth instead of chasing vanity metrics.',
     color: 'from-blue-600 to-blue-700',
     bg: 'bg-blue-50',
   },
   {
     icon: Search,
-    title: 'Search Dominance',
-    desc: 'Technical SEO and content architectures built to outrank competitors and drive high-intent organic traffic.',
+    title: 'Greater Online Visibility',
+    desc: 'Build a stronger digital presence that helps your business reach the right audience, increase credibility, and stay ahead of the competition.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
   },
   {
     icon: ShoppingCart,
-    title: 'Conversion Optimized',
-    desc: 'E-commerce storefronts designed with user psychology to reduce cart abandonment and boost conversions.',
+    title: 'Customer-Centric Experiences',
+    desc: 'Create seamless digital experiences that engage visitors, build trust, and turn more prospects into loyal customers.',
     color: 'from-blue-500 to-sky-400',
     bg: 'bg-blue-50',
   },
   {
     icon: BarChart,
     title: 'Data-Driven Decisions',
-    desc: 'Transparent reporting and deep analytics. Every move we make is backed by hard data, not guesswork.',
+    desc: 'Every recommendation is guided by analytics and real-world insights, ensuring smarter decisions and continuous improvement.',
     color: 'from-indigo-500 to-blue-600',
     bg: 'bg-indigo-50',
   },
   {
     icon: Server,
-    title: 'High-Volume Scale',
-    desc: 'Robust development infrastructure built to handle massive traffic spikes and multi-vendor transactions seamlessly.',
+    title: 'Scalable Digital Solutions',
+    desc: 'From business websites to e-commerce platforms, we build flexible digital solutions designed to support your long-term growth.',
     color: 'from-cyan-500 to-blue-500',
     bg: 'bg-cyan-50',
   },
   {
     icon: ShieldCheck,
-    title: 'Operator Mindset',
-    desc: 'We treat your business like our own, strategizing beyond digital marketing to optimize your overall unit economics.',
+    title: 'Dedicated Partnership',
+    desc: 'We work as an extension of your team, providing proactive guidance, dependable support, and strategies that evolve with your business.',
     color: 'from-sky-600 to-blue-600',
     bg: 'bg-sky-50',
   },
 ];
 
 const keyPoints = [
-  'Transparent ROI & ROAS reporting',
-  'Data-backed growth strategies',
-  'End-to-end funnel optimization',
-  'Built by e-commerce operators',
+  'Tailored strategies built around your business goals',
+  'Transparent communication with measurable outcomes',
+  'Creative ideas backed by data and market insights',
+  'End-to-end support from planning to execution',
 ];
 
 export default function WhyChooseSection() {
@@ -87,11 +87,11 @@ export default function WhyChooseSection() {
                 id="why-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
               >
-                An Operator Mindset for{' '}
-                <span className="text-gradient">Real Growth</span>
+                Your Growth Partner,{' '}
+                <span className="text-gradient">Not Just Another Agency</span>
               </h2>
               <p className="mt-5 text-lg text-slate-600 leading-relaxed">
-                We aren't just a traditional agency. We are growth partners. We combine aggressive digital marketing, SEO, and high-performance development to scale your brand profitably.
+                We combine strategy, creativity, technology, and data to help businesses build stronger brands, attract the right customers, and achieve measurable, long-term growth.
               </p>
             </div>
 
@@ -110,9 +110,9 @@ export default function WhyChooseSection() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-4">
               {[
-                { value: '50+', label: 'Brands Scaled' },
-                { value: '7+', label: 'Years Expertise' },
-                { value: '98%', label: 'Client Retention' },
+                { value: '100+', label: 'Projects Delivered' },
+                { value: '8+', label: 'Years of Experience' },
+                { value: '95%', label: 'Client Satisfaction' },
               ].map((stat) => (
                 <div
                   key={stat.label}
