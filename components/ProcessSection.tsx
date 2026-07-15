@@ -5,8 +5,8 @@ import { ChevronRight } from 'lucide-react';
 const steps = [
   {
     number: '01',
-    title: 'Audit & Economics',
-    desc: 'Deep-dive into your current unit economics, CAC, RTO rates, and historical data to find exact bottlenecks in your funnel.',
+    title: 'Audit & Growth Analysis',
+    desc: 'We analyze your acquisition costs, conversion data, customer journey, and profitability to uncover the biggest opportunities for sustainable growth.',
     color: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-600',
@@ -14,23 +14,23 @@ const steps = [
   {
     number: '02',
     title: 'E-Com Infrastructure',
-    desc: 'Upgrading or developing a high-converting, lightning-fast storefront optimized specifically for seamless user checkouts.',
+    desc: 'We build or optimize a fast, conversion-focused online store designed to deliver a seamless shopping experience and maximize every visitor.',
     color: 'from-sky-500 to-blue-500',
     lightBg: 'bg-sky-50',
     dotColor: 'bg-sky-500',
   },
   {
     number: '03',
-    title: 'Performance Launch',
-    desc: 'Deploying highly targeted, data-driven Meta and Google Ad campaigns along with a solid technical SEO foundation.',
+    title: 'Performance Marketing',
+    desc: 'We launch highly targeted Meta and Google campaigns supported by technical SEO to attract qualified traffic and generate measurable results.',
     color: 'from-blue-600 to-indigo-500',
     lightBg: 'bg-indigo-50',
     dotColor: 'bg-indigo-500',
   },
   {
     number: '04',
-    title: 'CRO & Optimization',
-    desc: 'Continuous A/B testing and funnel structuring to minimize drop-offs, reduce return-to-origin (RTO), and boost ROAS.',
+    title: 'Conversion Optimization',
+    desc: 'We continuously improve landing pages, funnels, and user journeys through testing and data analysis to increase conversions and improve return on ad spend.',
     color: 'from-cyan-500 to-blue-500',
     lightBg: 'bg-cyan-50',
     dotColor: 'bg-cyan-600',
@@ -38,15 +38,15 @@ const steps = [
   {
     number: '05',
     title: 'Brand Authority',
-    desc: 'Scaling organic reach through hook-driven short-form video campaigns and content that builds intense community engagement.',
+    desc: 'We strengthen your brand with valuable content, short form videos, and organic strategies that build trust, increase visibility, and create lasting customer relationships.',
     color: 'from-blue-500 to-sky-400',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-500',
   },
   {
     number: '06',
-    title: 'Aggressive Scaling',
-    desc: 'Once the funnel is highly profitable, we inject strategic budgets to scale your brand locally and globally without breaking ROI.',
+    title: 'Scalable Growth',
+    desc: 'Once your marketing system delivers consistent results, we scale strategically while protecting profitability and maintaining sustainable growth.',
     color: 'from-blue-600 to-blue-700',
     lightBg: 'bg-blue-50',
     dotColor: 'bg-blue-700',
@@ -68,17 +68,17 @@ export default function ProcessSection() {
         <div className="text-center max-w-2xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-blue-700 mb-6 shadow-sm">
             <ChevronRight className="w-4 h-4" />
-            Our Execution Blueprint
+            How We Scale Brands
           </div>
           <h2
             id="process-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            The Exact Framework We Use To{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Scale Brands</span>
+            The Proven Framework Behind Consistent{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">Brand Growth</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            A battle-tested, transparent workflow designed to fix unit economics, increase conversions, and drive massive revenue growth.
+            A clear, data-driven process that helps you improve profitability, increase conversions, and build a business that scales with confidence.
           </p>
         </div>
 
