@@ -48,7 +48,8 @@ export default function WhyWeStarted() {
               </h2>
               <p className="mt-4 text-slate-500 leading-relaxed">
                 Many businesses invest in digital marketing without seeing meaningful progress. Campaigns lack direction, websites underperform, and reporting often fails to connect marketing efforts with real business outcomes.</p>
-                <p> We started Rankovio with a different approach. Our goal is to combine strategy, creativity, technology, and performance marketing into solutions that help businesses grow with confidence.
+                
+                <p className="mt-4 text-slate-500 leading-relaxed"> We started Rankovio with a different approach. Our goal is to combine strategy, creativity, technology, and performance marketing into solutions that help businesses grow with confidence.
               </p>
             </div>
 
