@@ -45,22 +45,22 @@ export default function MissionVision() {
                   Our Mission
                 </div>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-snug">
-                  Drive Profitable Growth for E-commerce & D2C Brands
+                  Helping Businesses Grow Through Digital Excellence
                 </h3>
               </div>
 
               <p className="text-blue-100/80 leading-relaxed text-base">
-                Our mission is to transform e-commerce businesses into highly profitable brands. We do this by engineering high-converting storefronts, executing data-driven performance marketing, and ruthlessly optimizing unit economics.
+                Our mission is to help businesses build a stronger digital presence through thoughtful strategy, creative execution, and measurable marketing. We combine website development, performance marketing, SEO, branding, and content to create solutions that support sustainable business growth.
               </p>
 
               <p className="text-blue-100/80 leading-relaxed text-base">
-                We measure our success strictly by your bottom line, delivering measurable ROI through transparent, end-to-end digital growth strategies.
+                Every project is driven by transparency, collaboration, and a commitment to delivering meaningful results that create long-term value for our clients.
               </p>
 
               {/* Decorative divider */}
               <div className="pt-4 border-t border-white/15">
                 <div className="flex gap-2">
-                  {['Performance', 'D2C Scaling', 'ROI-Focused'].map((tag) => (
+                  {['Digital Strategy', 'Performance Marketing', 'Business Growth'].map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-xs text-white font-medium"
@@ -94,21 +94,21 @@ export default function MissionVision() {
                   Our Vision
                 </div>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-snug">
-                  To Be the Ultimate Growth Engine for Global Commerce
+                  To Be the Growth Partner Businesses Trust
                 </h3>
               </div>
 
               <p className="text-slate-400 leading-relaxed text-base">
-                We envision a digital landscape where ambitious brands don&apos;t just survive, but dominate their respective markets. We aim to be the operational backbone that scales multi-vendor platforms and D2C brands globally.
+                We envision a future where every business, regardless of its size or industry, has access to digital strategies that drive real business outcomes. Our goal is to help organizations adapt, compete, and grow in an ever-evolving digital landscape.
               </p>
 
               <p className="text-slate-400 leading-relaxed text-base">
-                Not just another agency, but a true growth partner built by operators, for operators — known for turning complex data into exponential revenue.
+                We strive to build lasting partnerships by delivering innovative solutions, measurable performance, and experiences that help businesses move forward with confidence.
               </p>
 
               <div className="pt-4 border-t border-white/10">
                 <div className="flex gap-2">
-                  {['Market Dominance', 'E-Commerce', 'Global Scaling'].map((tag) => (
+                  {['Innovation', 'Long Term Growth', 'Trusted Partnership'].map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1.5 bg-white/8 border border-white/12 rounded-full text-xs text-slate-300 font-medium"
