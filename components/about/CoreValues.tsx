@@ -13,48 +13,48 @@ import {
 const values = [
   {
     icon: ShieldCheck,
-    title: 'Integrity',
-    desc: 'We say what we mean and do what we say. Honest communication and realistic expectations are the foundation of every engagement we take on.',
+    title: 'Strategic Thinking',
+    desc: 'Every recommendation starts with understanding your business goals. We focus on strategies that solve real challenges and create measurable opportunities for growth.',
     color: 'from-blue-500 to-blue-700',
     bg: 'bg-blue-50',
     accent: 'border-blue-200',
   },
   {
     icon: Lightbulb,
-    title: 'Innovation',
-    desc: 'We stay ahead of the curve — constantly learning, experimenting, and applying modern tools and techniques to solve real business challenges.',
+    title: 'Results That Matter',
+    desc: 'Success isn\'t measured by clicks or impressions alone. We prioritize meaningful outcomes that help your business generate leads, strengthen its brand, and achieve sustainable growth.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
     accent: 'border-sky-200',
   },
   {
     icon: Star,
-    title: 'Excellence',
-    desc: 'Good enough is never good enough. We hold our work to the highest standard — every pixel, every line of code, every strategy is crafted with care.',
+    title: 'Quality Without Compromise',
+    desc: 'From website development to digital marketing campaigns, we pay attention to every detail to deliver work that performs, builds trust, and reflects your brand.',
     color: 'from-blue-600 to-indigo-500',
     bg: 'bg-indigo-50',
     accent: 'border-indigo-200',
   },
   {
     icon: Users2,
-    title: 'Collaboration',
-    desc: 'We treat our clients as partners, not just customers. Your insight into your business combined with our digital expertise is what creates great outcomes.',
+    title: 'Collaborative Partnership',
+    desc: 'The best results come from working together. We combine your industry expertise with our digital experience to create solutions tailored to your business.',
     color: 'from-cyan-500 to-blue-600',
     bg: 'bg-cyan-50',
     accent: 'border-cyan-200',
   },
   {
     icon: MessageSquare,
-    title: 'Transparency',
-    desc: 'No black boxes. You always know where your project stands, what decisions are being made, and why. Clear, proactive communication throughout.',
+    title: 'Honest Communication',
+    desc: 'We believe transparency builds lasting relationships. You\'ll always know what we\'re doing, why we\'re doing it, and how your project is progressing.',
     color: 'from-blue-500 to-sky-400',
     bg: 'bg-blue-50',
     accent: 'border-blue-200',
   },
   {
     icon: TrendingUp,
-    title: 'Impact',
-    desc: 'We measure our success by yours. Every decision — design, development, or marketing — is evaluated against one question: does this move the needle for the client?',
+    title: 'Continuous Improvement',
+    desc: 'Digital marketing never stands still, and neither do we. We continuously learn, test, and refine our strategies to help your business stay competitive in a changing digital landscape.',
     color: 'from-blue-700 to-blue-500',
     bg: 'bg-blue-50',
     accent: 'border-blue-200',
@@ -84,12 +84,11 @@ export default function CoreValues() {
             id="values-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            Our Core{' '}
-            <span className="text-gradient">Values</span>
+            The Values Behind Every{' '}
+            <span className="text-gradient">Partnership</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            These aren&apos;t words on a wall. They are the principles that
-            guide every project, every decision, and every interaction we have.
+            Our values shape how we think, collaborate, and deliver results. They guide every decision we make and every partnership we build.
           </p>
         </div>
 
