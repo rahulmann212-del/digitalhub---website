@@ -39,10 +39,10 @@ export default function Navbar() {
   return (
     <header
       role="banner"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-md border-b ${
         scrolled
-          ? 'glass shadow-lg shadow-blue-500/5 border-b border-white/50'
-          : 'bg-transparent'
+          ? 'shadow-lg shadow-blue-500/10 border-slate-200'
+          : 'border-slate-100'
       }`}
     >
       <nav
@@ -125,7 +125,7 @@ export default function Navbar() {
             isOpen ? 'max-h-[28rem] opacity-100 pb-4' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="glass rounded-2xl p-4 mt-2 shadow-xl">
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 mt-2 shadow-xl border border-slate-100">
             <ul className="flex flex-col gap-1" role="list">
               {navLinks.map((link) => (
                 <li key={link.label}>
