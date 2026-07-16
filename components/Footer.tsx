@@ -49,7 +49,7 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Linkedin,    label: 'LinkedIn',   href: 'https://linkedin.com' },
+  { icon: Linkedin,     label: 'LinkedIn',   href: 'https://linkedin.com' },
   { icon: Facebook,   label: 'Facebook',   href: 'https://facebook.com' },
   { icon: Instagram,  label: 'Instagram',  href: 'https://instagram.com' },
   { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918318724647' }, 
@@ -93,9 +93,9 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-6">
             
             <Link href="/" className="inline-block group mb-2" aria-label="Anviaan — Go to homepage">
-              {/* CSS Filter added (brightness-0 invert) to make logo pure white without background */}
+              {/* Updated Logo path to /ANVIAAN.png */}
               <img 
-                src="/Anviaanlogo.png" 
+                src="/ANVIAAN.png" 
                 alt="Anviaan Logo" 
                 className="w-48 lg:w-56 h-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" 
               />
