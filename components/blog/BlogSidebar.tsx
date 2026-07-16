@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Mail, CheckCircle2, ArrowRight, Flame, FolderOpen } from 'lucide-react';
 import { categories, articles } from './blog-data';
-import BlogCard from './BlogCard';
 
 interface BlogSidebarProps {
   activeCategory: string;
@@ -47,7 +46,7 @@ export default function BlogSidebar({ activeCategory, onCategoryChange }: BlogSi
                   : 'text-slate-600 hover:bg-blue-50 hover:text-blue-700'
               }`}
             >
-              <span>All Articles</span>
+              <span>All Playbooks</span>
               <span className={`text-xs px-2 py-0.5 rounded-full ${
                 activeCategory === 'all' ? 'bg-white/20' : 'bg-slate-100'
               }`}>
@@ -94,17 +93,16 @@ export default function BlogSidebar({ activeCategory, onCategoryChange }: BlogSi
           <div className="w-11 h-11 bg-white/15 backdrop-blur-sm border border-white/25 rounded-2xl flex items-center justify-center mb-5">
             <Mail className="w-5 h-5 text-blue-300" />
           </div>
-          <h3 className="text-lg font-extrabold text-white mb-2">Stay in the Loop</h3>
+          <h3 className="text-lg font-extrabold text-white mb-2">Access The Growth Lab</h3>
           <p className="text-sm text-blue-100/70 leading-relaxed mb-5">
-            Get our best articles on web design, SEO, and digital growth delivered
-            to your inbox. No spam, ever.
+            Get exclusive playbooks on performance marketing, AEO, and scaling strategies delivered to your inbox. No fluff, just tactics.
           </p>
 
           {submitted ? (
             <div className="flex items-center gap-2.5 px-4 py-3 bg-emerald-500/15 border border-emerald-400/30 rounded-xl">
               <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
               <span className="text-sm font-semibold text-emerald-300">
-                You&apos;re subscribed. Welcome aboard!
+                You&apos;re in. Check your inbox soon.
               </span>
             </div>
           ) : (
@@ -113,7 +111,7 @@ export default function BlogSidebar({ activeCategory, onCategoryChange }: BlogSi
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@company.com"
+                placeholder="founder@company.com"
                 aria-label="Email address"
                 required
                 className="w-full px-4 py-3 text-sm text-white bg-white/10 border border-white/15 rounded-xl placeholder:text-blue-200/40 focus:outline-none focus:ring-2 focus:ring-blue-400/40 focus:border-blue-400/40"
@@ -122,14 +120,14 @@ export default function BlogSidebar({ activeCategory, onCategoryChange }: BlogSi
                 type="submit"
                 className="group w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-bold text-slate-900 bg-white rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
               >
-                Subscribe Free
+                Join The Lab
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
           )}
 
-          <p className="text-xs text-blue-300/50 mt-4">
-            Join 2,000+ business owners. Unsubscribe anytime.
+          <p className="text-xs text-blue-300/50 mt-4 text-center">
+            Join 2,000+ Founders & CMOs. Unsubscribe anytime.
           </p>
         </div>
       </div>
@@ -140,7 +138,7 @@ export default function BlogSidebar({ activeCategory, onCategoryChange }: BlogSi
           <div className="w-9 h-9 bg-gradient-to-br from-orange-500 to-rose-500 rounded-xl flex items-center justify-center">
             <Flame className="w-4 h-4 text-white" strokeWidth={2} />
           </div>
-          <h3 className="font-bold text-slate-800">Popular Posts</h3>
+          <h3 className="font-bold text-slate-800">Trending Playbooks</h3>
         </div>
 
         <div className="space-y-4">
