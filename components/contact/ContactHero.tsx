@@ -6,7 +6,8 @@ import { Home, ChevronRight, Sparkles, Send, CalendarCheck } from 'lucide-react'
 export default function ContactHero() {
   return (
     <section
-      className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
+      // Padding top aur bottom ko kam kiya gaya hai (pt-32 pb-20 -> pt-28 pb-12)
+      className="relative pt-28 pb-12 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
       aria-labelledby="contact-hero-heading"
     >
       {/* Background */}
@@ -29,8 +30,8 @@ export default function ContactHero() {
       <div className="absolute top-1/2 right-8 -translate-y-1/2 w-[340px] h-[340px] border border-white/5 rounded-full hidden lg:block" />
       <div className="absolute top-1/2 right-8 -translate-y-1/2 w-[220px] h-[220px] border border-blue-500/15 rounded-full hidden lg:block" />
 
-      {/* Digital marketing illustration — no people, abstract */}
-      <div className="absolute right-8 lg:right-24 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center">
+      {/* Digital marketing illustration */}
+      <div className="absolute right-8 lg:right-24 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center scale-90">
         <div className="relative w-72 h-72">
           {/* Central dashboard card */}
           <div className="absolute inset-0 m-auto w-44 h-44 bg-white/8 backdrop-blur-sm border border-white/15 rounded-3xl flex flex-col items-center justify-center gap-3 animate-float">
@@ -79,7 +80,7 @@ export default function ContactHero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-blue-300/70 mb-8">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-blue-300/70 mb-6">
           <Link href="/" className="flex items-center gap-1 hover:text-blue-300 transition-colors">
             <Home className="w-3.5 h-3.5" />
             Home
@@ -88,38 +89,37 @@ export default function ContactHero() {
           <span className="text-blue-300 font-medium">Contact</span>
         </nav>
 
-        <div className="max-w-2xl space-y-7">
+        {/* Space-y kam karke compact banaya gaya hai */}
+        <div className="max-w-2xl space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
             <Send className="w-4 h-4 text-blue-400" />
-            Get in Touch
+            The Aviaan Strategy
           </div>
 
           <h1
             id="contact-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white"
           >
-            Let&apos;s Grow Your{' '}
+            Initiate Your{' '}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              Business Together
+              Scaling Strategy
             </span>
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            Whether you need better search rankings, more qualified leads, Google
-            Ads management, social media marketing, or a professional website,
-            Rankovio is ready to help.
+            Whether you need high-converting digital architectures, Generative Engine Optimization (GEO), or ROI-obsessed performance marketing, Aviaan is your dedicated growth partner.
           </p>
 
-          {/* Trust pills */}
-          <div className="flex flex-wrap gap-4 pt-2">
+          {/* Trust pills upgraded */}
+          <div className="flex flex-wrap gap-3 pt-2">
             {[
-              'Free 30-min consultation',
-              'Response within 1 business day',
-              'No obligation, no pressure',
+              'Bespoke Growth Audit',
+              'Direct Strategist Access',
+              'Data-Driven Execution',
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-2.5 px-4 py-2.5 bg-white/8 border border-white/10 rounded-2xl backdrop-blur-sm"
+                className="flex items-center gap-2.5 px-4 py-2 bg-white/8 border border-white/10 rounded-xl backdrop-blur-sm"
               >
                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                 <span className="text-sm font-medium text-blue-100">{item}</span>
