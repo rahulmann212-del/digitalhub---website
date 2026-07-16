@@ -18,7 +18,7 @@ export default function FeaturedArticle({ article }: FeaturedArticleProps) {
   const Icon = article.icon;
 
   return (
-    <section className="relative py-16 bg-white" aria-label="Featured article">
+    <section className="relative py-16 bg-white" aria-label="Featured playbook">
       <div className="absolute inset-0 bg-grid opacity-20" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
@@ -26,9 +26,9 @@ export default function FeaturedArticle({ article }: FeaturedArticleProps) {
         <div className="flex items-center gap-2 mb-8">
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs font-bold rounded-full shadow-md">
             <ChevronRight className="w-3 h-3" />
-            Featured Article
+            Featured Playbook
           </span>
-          <span className="text-sm text-slate-400">Editor&apos;s pick of the week</span>
+          <span className="text-sm text-slate-400">Lead Strategist&apos;s pick of the week</span>
         </div>
 
         <article className="group relative grid lg:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
@@ -104,7 +104,7 @@ export default function FeaturedArticle({ article }: FeaturedArticleProps) {
               href={`/blog/${article.slug}`}
               className="group/btn inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-bold rounded-2xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 self-start"
             >
-              Read Full Article
+              Access Full Playbook
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
           </div>
