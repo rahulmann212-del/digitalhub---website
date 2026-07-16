@@ -68,15 +68,18 @@ export default function IndustriesHero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 flex flex-col items-center text-center">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-sm text-blue-300/70 mb-8">
-          <Link href="/" className="flex items-center gap-1 hover:text-blue-300 transition-colors">
-            <Home className="w-3.5 h-3.5" />
-            Home
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-blue-400/40" />
-          <span className="text-blue-300 font-medium">Industries</span>
-        </nav>
+        
+        {/* Breadcrumb - Moved to Left Edge */}
+        <div className="w-full flex justify-start mb-8">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-blue-300/70">
+            <Link href="/" className="flex items-center gap-1 hover:text-blue-300 transition-colors">
+              <Home className="w-3.5 h-3.5" />
+              Home
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-blue-400/40" />
+            <span className="text-blue-300 font-medium">Industries</span>
+          </nav>
+        </div>
 
         <div className="max-w-3xl space-y-7 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
