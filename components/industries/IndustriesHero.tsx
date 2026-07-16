@@ -1,18 +1,20 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, ChevronRight, ArrowRight, Globe2, Layers } from 'lucide-react';
+import { Home, ChevronRight, ArrowRight, Globe2, Target } from 'lucide-react';
 
 const sectorPills = [
-  'Healthcare', 'Education', 'Finance', 'Real Estate', 'Restaurants',
-  'Retail', 'Construction', 'Manufacturing', 'Travel', 'Technology',
+  { name: 'E-Commerce', id: 'ecommerce-d2c' },
+  { name: 'Health & Beauty', id: 'health-beauty-wellness' },
+  { name: 'SaaS & Tech', id: 'saas-technology' },
+  { name: 'B2B Enterprise', id: 'b2b-enterprise' },
 ];
 
 export default function IndustriesHero() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 100;
+      const y = el.getBoundingClientRect().top - 100;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
@@ -89,32 +91,30 @@ export default function IndustriesHero() {
 
         <div className="max-w-2xl space-y-7">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
-            <Layers className="w-4 h-4 text-blue-400" />
-            10 Sectors Served
+            <Target className="w-4 h-4 text-blue-400" />
+            Specialized Growth Partner
           </div>
 
           <h1
             id="industries-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white"
           >
-            Digital Solutions for{' '}
+            Precision Growth for{' '}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              Every Industry
+              High-Stakes Brands
             </span>
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            We understand that every sector has unique challenges, audiences, and
-            success metrics. Our work is shaped around the specific needs of your
-            industry — not a generic agency template.
+            We don't do generic templates. Aviaan engineers bespoke digital architectures, next-gen AI search visibility, and ROI-driven marketing specifically for industries built to scale.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">
             <Link
-              href="/#contact"
+              href="/contact"
               className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-900 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
-              Get a Free Consultation
+              Scale Your Industry
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -123,16 +123,16 @@ export default function IndustriesHero() {
         {/* Industry pills — quick jump */}
         <div className="mt-14">
           <p className="text-xs font-bold text-blue-300/50 uppercase tracking-widest mb-4">
-            Jump to your industry
+            Explore our specializations
           </p>
           <div className="flex flex-wrap gap-2">
             {sectorPills.map((sector) => (
               <button
-                key={sector}
-                onClick={() => scrollTo(sector.toLowerCase().replace(/\s+/g, '-'))}
+                key={sector.id}
+                onClick={() => scrollTo(sector.id)}
                 className="px-4 py-2 bg-white/8 border border-white/12 rounded-xl text-sm font-medium text-blue-200 hover:bg-white/15 hover:border-white/25 hover:text-white transition-all duration-200"
               >
-                {sector}
+                {sector.name}
               </button>
             ))}
           </div>
