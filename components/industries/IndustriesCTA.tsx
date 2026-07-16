@@ -38,12 +38,12 @@ export default function IndustriesCTA() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
-        {/* Universal approach cards -> Aviaan Growth Architecture */}
+        {/* Universal approach cards -> Anviaan Growth Architecture */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-5">
               <ChevronRight className="w-4 h-4" />
-              The Aviaan Growth Architecture
+              The Anviaan Growth Architecture
             </div>
             <h2
               id="industries-cta-heading"

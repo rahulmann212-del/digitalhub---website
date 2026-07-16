@@ -6,7 +6,7 @@ const milestones = [
   {
     year: '2019',
     title: 'The Beginning',
-    desc: 'Rankovio was established with a vision to help businesses navigate the evolving digital landscape through practical strategies, transparent collaboration, and measurable results.',
+    desc: 'Anviaan was established with a vision to help businesses navigate the evolving digital landscape through practical strategies, transparent collaboration, and measurable results.',
     icon: Lightbulb,
     color: 'from-blue-500 to-blue-600',
   },
@@ -27,7 +27,7 @@ const milestones = [
   {
     year: '2024',
     title: 'Driving Long Term Partnerships',
-    desc: 'Today, Rankovio works with businesses across multiple industries, helping them strengthen their online presence, generate qualified leads, and achieve sustainable business growth through tailored digital solutions.',
+    desc: 'Today, Anviaan works with businesses across multiple industries, helping them strengthen their online presence, generate qualified leads, and achieve sustainable business growth through tailored digital solutions.',
     icon: Users,
     color: 'from-cyan-500 to-blue-500',
   },
@@ -63,7 +63,7 @@ export default function CompanyStory() {
 
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg">
-                Rankovio was founded with a simple belief that great marketing should create measurable business impact, not just impressive reports. We saw too many businesses investing in digital marketing without a clear strategy, transparent communication, or meaningful results.
+                Anviaan was founded with a simple belief that great marketing should create measurable business impact, not just impressive reports. We saw too many businesses investing in digital marketing without a clear strategy, transparent communication, or meaningful results.
               </p>
               <p>
                 From day one, our mission has been to build growth strategies tailored to each business. By combining creative thinking, data-driven decisions, and technical expertise, we help organizations strengthen their digital presence, attract the right audience, and achieve sustainable growth.

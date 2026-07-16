@@ -91,7 +91,7 @@ export default function AboutHero() {
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            At Rankovio, we help businesses build a stronger digital presence, attract the right audience, and turn more visitors into customers. From strategy and website development to performance marketing and SEO, we create tailored solutions that support measurable growth across industries.
+            At Anviaan, we help businesses build a stronger digital presence, attract the right audience, and turn more visitors into customers. From strategy and website development to performance marketing and SEO, we create tailored solutions that support measurable growth across industries.
           </p>
 
           {/* CTA row */}

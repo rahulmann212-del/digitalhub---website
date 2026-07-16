@@ -68,7 +68,7 @@ export default function BlogHero({ onSearch, searchQuery, totalArticles, totalCa
         <div className="max-w-3xl space-y-7">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
             <Target className="w-4 h-4 text-blue-400" />
-            The Aviaan Growth Lab
+            The Anviaan Growth Lab
           </div>
 
           <h1

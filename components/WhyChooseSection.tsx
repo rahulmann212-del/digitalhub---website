@@ -81,7 +81,7 @@ export default function WhyChooseSection() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-blue-100 rounded-full text-sm font-bold text-blue-700 mb-6 shadow-sm">
                 <ChevronRight className="w-4 h-4" />
-                Why Rankovio
+                Why Anviaan
               </div>
               <h2
                 id="why-heading"

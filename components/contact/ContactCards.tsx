@@ -6,8 +6,8 @@ const contactMethods = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'inquiry@aviaan.com',
-    href: 'mailto:inquiry@aviaan.com',
+    value: 'inquiry@Anviaan.com',
+    href: 'mailto:inquiry@Anviaan.com',
     color: 'from-blue-500 to-blue-700',
     bg: 'bg-blue-50',
     border: 'border-blue-100',
@@ -156,7 +156,7 @@ export default function ContactCards() {
                 </div>
               </div>
               <div className="mt-3 px-4 py-2 bg-white rounded-xl shadow-lg border border-slate-100 text-center">
-                <p className="text-xs font-bold text-slate-800">Aviaan HQ</p>
+                <p className="text-xs font-bold text-slate-800">Anviaan HQ</p>
                 <p className="text-xs text-slate-500">Aditya World City</p>
               </div>
             </div>

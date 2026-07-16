@@ -40,7 +40,7 @@ export default function ContactFAQ() {
         <div
           className="space-y-3"
           role="list"
-          aria-label="Frequently asked questions about partnering with Aviaan"
+          aria-label="Frequently asked questions about partnering with Anviaan"
         >
           {contactFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -108,10 +108,10 @@ export default function ContactFAQ() {
             Our Strategy team is happy to clarify any operational details.
           </p>
           <a
-            href="mailto:inquiry@aviaan.com"
+            href="mailto:inquiry@Anviaan.com"
             className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            inquiry@aviaan.com
+            inquiry@Anviaan.com
           </a>
         </div>
       </div>

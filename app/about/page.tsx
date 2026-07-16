@@ -12,18 +12,18 @@ import FAQSection from '@/components/about/FAQSection';
 import AboutCTA from '@/components/about/AboutCTA';
 
 export const metadata: Metadata = {
-  title: 'About Rankovio | Scaling Brands Through Data-Driven Marketing & Dev',
+  title: 'About Anviaan | Scaling Brands Through Data-Driven Marketing & Dev',
   description:
-    'Meet Rankovio — the growth partners for e-commerce brands. We combine high-ROI marketing with high-conversion development to scale your revenue. See how we drive results.',
+    'Meet Anviaan — the growth partners for e-commerce brands. We combine high-ROI marketing with high-conversion development to scale your revenue. See how we drive results.',
   keywords:
-    'about Rankovio, growth marketing agency, e-commerce scaling, ROI-driven marketing, web development for e-commerce, digital transformation partner',
+    'about Anviaan, growth marketing agency, e-commerce scaling, ROI-driven marketing, web development for e-commerce, digital transformation partner',
   openGraph: {
-    title: 'About Rankovio — Your Partner in Explosive Brand Growth',
+    title: 'About Anviaan — Your Partner in Explosive Brand Growth',
     description:
-      'We don’t just build websites; we build revenue engines. Learn how Rankovio helps e-commerce brands scale with data-backed marketing and expert development.',
+      'We don’t just build websites; we build revenue engines. Learn how Anviaan helps e-commerce brands scale with data-backed marketing and expert development.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Rankovio',
+    siteName: 'Anviaan',
   },
 };
 

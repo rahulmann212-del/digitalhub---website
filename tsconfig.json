@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "ignoreDeprecations": "6.0",  // <--- Bas ye line add kar do
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -11,8 +12,8 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "incremental": true,
+    "jsx": "preserve",
     "plugins": [
       {
         "name": "next"

@@ -94,14 +94,14 @@ export default function ServicesComparison() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            The Aviaan Standard
+            The Anviaan Standard
           </div>
           <h2
             id="comparison-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
             Why Brands{' '}
-            <span className="text-gradient">Choose Aviaan</span>
+            <span className="text-gradient">Choose Anviaan</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
             The difference is not just in what we deliver — it is in how we approach your growth. Here is what you can expect when you partner with us.
@@ -122,7 +122,7 @@ export default function ServicesComparison() {
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </div>
                     <div>
-                      <div className="text-sm font-extrabold text-blue-700">Aviaan</div>
+                      <div className="text-sm font-extrabold text-blue-700">Anviaan</div>
                       <div className="text-xs text-slate-400 font-normal">Our high-performance standard</div>
                     </div>
                   </div>

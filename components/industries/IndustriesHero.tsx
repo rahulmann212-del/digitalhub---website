@@ -98,7 +98,7 @@ export default function IndustriesHero() {
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-2xl">
-            We don't do generic templates. Aviaan engineers bespoke digital architectures, next-gen AI search visibility, and ROI-driven marketing specifically for industries built to scale.
+            We don't do generic templates. Anviaan engineers bespoke digital architectures, next-gen AI search visibility, and ROI-driven marketing specifically for industries built to scale.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-4">

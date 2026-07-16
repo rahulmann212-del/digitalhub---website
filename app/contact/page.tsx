@@ -4,23 +4,23 @@ import Footer from '@/components/Footer';
 import ContactHero from '@/components/contact/ContactHero';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactCards from '@/components/contact/ContactCards';
-// Note: Rename your file in components/contact to WhyContactAviaan.tsx to match this import
-import WhyContactAviaan from '@/components/contact/WhyContactAviaan';
+// Note: Rename your file in components/contact to WhyContactAnviaan.tsx to match this import
+import WhyContactAnviaan from '@/components/contact/WhyContactAnviaan';
 import ContactFAQ from '@/components/contact/ContactFAQ';
 
 export const metadata: Metadata = {
-  title: 'Contact Aviaan | Claim Your Free Growth Audit',
+  title: 'Contact Anviaan | Claim Your Free Growth Audit',
   description:
-    'Partner with Aviaan for high-ticket performance marketing, generative engine optimization (GEO), and scalable e-commerce architectures. Book a strategy call today.',
+    'Partner with Anviaan for high-ticket performance marketing, generative engine optimization (GEO), and scalable e-commerce architectures. Book a strategy call today.',
   keywords:
-    'contact Aviaan, performance marketing agency, AEO consultation, GEO services, e-commerce scaling, high-ticket marketing audit, growth strategy call, Aviaan digital',
+    'contact Anviaan, performance marketing agency, AEO consultation, GEO services, e-commerce scaling, high-ticket marketing audit, growth strategy call, Anviaan digital',
   openGraph: {
-    title: 'Contact Aviaan | Claim Your Free Growth Audit',
+    title: 'Contact Anviaan | Claim Your Free Growth Audit',
     description:
-      'Ready to scale your brand? Connect with Aviaan to discuss bespoke digital architectures and ROI-driven marketing strategies.',
+      'Ready to scale your brand? Connect with Anviaan to discuss bespoke digital architectures and ROI-driven marketing strategies.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Aviaan',
+    siteName: 'Anviaan',
   },
 };
 
@@ -62,8 +62,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs text-slate-400">Email</p>
-                      <a href="mailto:inquiry@aviaan.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
-                        inquiry@aviaan.com
+                      <a href="mailto:inquiry@Anviaan.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
+                        inquiry@Anviaan.com
                       </a>
                     </div>
                   </li>
@@ -121,7 +121,7 @@ export default function ContactPage() {
       </section>
 
       <ContactCards />
-      <WhyContactAviaan />
+      <WhyContactAnviaan />
       <ContactFAQ />
       <Footer />
     </main>

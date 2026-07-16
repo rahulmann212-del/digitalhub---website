@@ -8,18 +8,18 @@ import ServicesComparison from '@/components/services/ServicesComparison';
 import ServicesCTA from '@/components/services/ServicesCTA';
 
 export const metadata: Metadata = {
-  title: 'Performance Marketing, Next-Gen SEO & Web Solutions | Aviaan',
+  title: 'Performance Marketing, Next-Gen SEO & Web Solutions | Anviaan',
   description:
-    'Scale your brand with Aviaan. We specialize in ROI-driven Performance Marketing, Next-Gen AI Search (AEO & GEO), and high-conversion E-commerce development to turn traffic into profit.',
+    'Scale your brand with Anviaan. We specialize in ROI-driven Performance Marketing, Next-Gen AI Search (AEO & GEO), and high-conversion E-commerce development to turn traffic into profit.',
   keywords:
-    'Aviaan digital services, performance marketing agency, answer engine optimization AEO, generative engine optimization GEO, AI search visibility, high-conversion e-commerce development, Google Ads ROI, short-form video marketing, D2C growth agency',
+    'Anviaan digital services, performance marketing agency, answer engine optimization AEO, generative engine optimization GEO, AI search visibility, high-conversion e-commerce development, Google Ads ROI, short-form video marketing, D2C growth agency',
   openGraph: {
-    title: 'Aviaan Growth Services | Scale Your Revenue with Data-Driven Marketing',
+    title: 'Anviaan Growth Services | Scale Your Revenue with Data-Driven Marketing',
     description:
-      'Stop settling for outdated strategies. Aviaan provides a complete growth suite—from next-gen AI search visibility (AEO/GEO) to high-performance e-commerce development.',
+      'Stop settling for outdated strategies. Anviaan provides a complete growth suite—from next-gen AI search visibility (AEO/GEO) to high-performance e-commerce development.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Aviaan',
+    siteName: 'Anviaan',
   },
 };
 

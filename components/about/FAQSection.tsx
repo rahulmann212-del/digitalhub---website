@@ -5,7 +5,7 @@ import { ChevronRight, Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What types of businesses does Rankovio work with?',
+    question: 'What types of businesses does Anviaan work with?',
     answer:
       'We work with a wide range of clients — from early-stage startups and local service businesses to established brands and growing e-commerce stores. Our process is designed to adapt to your specific industry, goals, and budget. If you need a professional digital presence or growth strategy, we are the right partner.',
   },
@@ -160,10 +160,10 @@ export default function FAQSection() {
             We are happy to answer anything not covered here.
           </p>
           <a
-            href="mailto:inquiry@rankovio.com"
+            href="mailto:inquiry@Anviaan.com"
             className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            inquiry@rankovio.com
+            inquiry@Anviaan.com
           </a>
         </div>
       </div>

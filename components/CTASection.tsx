@@ -68,14 +68,14 @@ export default function CTASection() {
             {/* Right — Buttons */}
             <div className="flex flex-col gap-4 flex-shrink-0">
               <Link
-                href="mailto:inquiry@rankovio.com"
+                href="mailto:inquiry@Anviaan.com"
                 className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold text-base rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 Get Your Growth Proposal
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="mailto:inquiry@rankovio.com"
+                href="mailto:inquiry@Anviaan.com"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white font-bold text-base rounded-2xl border-2 border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300"
               >
                 Talk to an Expert

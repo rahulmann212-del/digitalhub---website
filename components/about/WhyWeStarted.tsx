@@ -49,7 +49,7 @@ export default function WhyWeStarted() {
               <p className="mt-4 text-slate-500 leading-relaxed">
                 Many businesses invest in digital marketing without seeing meaningful progress. Campaigns lack direction, websites underperform, and reporting often fails to connect marketing efforts with real business outcomes.</p>
                 
-                <p className="mt-4 text-slate-500 leading-relaxed"> We started Rankovio with a different approach. Our goal is to combine strategy, creativity, technology, and performance marketing into solutions that help businesses grow with confidence.
+                <p className="mt-4 text-slate-500 leading-relaxed"> We started Anviaan with a different approach. Our goal is to combine strategy, creativity, technology, and performance marketing into solutions that help businesses grow with confidence.
               </p>
             </div>
 
@@ -76,7 +76,7 @@ export default function WhyWeStarted() {
               <div className="flex items-center gap-2 mb-4">
                 <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span className="text-sm font-bold text-blue-700">
-                  The Rankovio Approach
+                  The Anviaan Approach
                 </span>
               </div>
               <ul className="space-y-2.5" role="list">
@@ -97,7 +97,7 @@ export default function WhyWeStarted() {
                 Digital success isn't about using more tools or following trends. It's about understanding your business, identifying the right opportunities, and executing strategies that deliver measurable results.
               </p>
               <p>
-                At Rankovio, we become an extension of your team. Whether you're building your online presence, generating qualified leads, or strengthening your brand, we create digital solutions designed around your goals—not a predefined template.
+                At Anviaan, we become an extension of your team. Whether you're building your online presence, generating qualified leads, or strengthening your brand, we create digital solutions designed around your goals—not a predefined template.
               </p>
               <p>
                 Every project is guided by collaboration, transparency, and continuous optimization because sustainable growth comes from making smarter decisions over time.
@@ -111,7 +111,7 @@ export default function WhyWeStarted() {
               <div className="relative z-10">
                 <div className="text-4xl text-white/30 font-serif leading-none mb-2">&ldquo;</div>
                 <p className="text-white font-semibold text-base leading-relaxed">
-                  Rankovio was built on a simple belief. Every business deserves a digital partner that listens, thinks strategically, and delivers work that creates measurable impact. 
+                  Anviaan was built on a simple belief. Every business deserves a digital partner that listens, thinks strategically, and delivers work that creates measurable impact. 
                   — Vijay Mishra, Founder
                 </p>
               </div>

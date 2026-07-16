@@ -33,7 +33,7 @@ export default function StickyMobileCTA({
         <div className="flex items-center gap-3 p-3">
           <a
             href={phoneHref}
-            aria-label="Call Rankovio"
+            aria-label="Call Anviaan"
             className="flex items-center justify-center w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0"
           >
             <Phone className="w-5 h-5" />

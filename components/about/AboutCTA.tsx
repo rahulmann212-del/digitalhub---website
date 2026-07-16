@@ -40,7 +40,7 @@ export default function AboutCTA() {
               </h2>
 
               <p className="mt-5 text-lg text-blue-100/70 leading-relaxed">
-                Now that you know how we drive growth at Rankovio — let&apos;s talk about your 
+                Now that you know how we drive growth at Anviaan — let&apos;s talk about your 
                 specific goals. No pressure, no fluff. Just an honest discussion on how we can 
                 scale your online presence.
               </p>
@@ -73,7 +73,7 @@ export default function AboutCTA() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="mailto:inquiry@rankovio.com"
+                href="mailto:inquiry@Anviaan.com"
                 className="group flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white font-bold text-base rounded-2xl border-2 border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-300"
               >
                 <FileText className="w-5 h-5" />

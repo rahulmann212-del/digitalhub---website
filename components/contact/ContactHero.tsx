@@ -93,7 +93,7 @@ export default function ContactHero() {
         <div className="max-w-2xl space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
             <Send className="w-4 h-4 text-blue-400" />
-            The Aviaan Strategy
+            The Anviaan Strategy
           </div>
 
           <h1
@@ -107,7 +107,7 @@ export default function ContactHero() {
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            Whether you need high-converting digital architectures, Generative Engine Optimization (GEO), or ROI-obsessed performance marketing, Aviaan is your dedicated growth partner.
+            Whether you need high-converting digital architectures, Generative Engine Optimization (GEO), or ROI-obsessed performance marketing, Anviaan is your dedicated growth partner.
           </p>
 
           {/* Trust pills upgraded */}

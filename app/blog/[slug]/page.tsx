@@ -12,12 +12,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   if (!article) {
     return {
-      title: 'Playbook Not Found | Aviaan',
+      title: 'Playbook Not Found | Anviaan',
     };
   }
 
   return {
-    title: `${article.title} | Aviaan Growth Lab`,
+    title: `${article.title} | Anviaan Growth Lab`,
     description: article.excerpt,
     openGraph: {
       title: article.title,

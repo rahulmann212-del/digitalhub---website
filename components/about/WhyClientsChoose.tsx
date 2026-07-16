@@ -96,10 +96,10 @@ export default function WhyClientsChoose() {
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
             Why Clients Choose{' '}
-            <span className="text-gradient">Rankovio</span>
+            <span className="text-gradient">Anviaan</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            Businesses choose Rankovio because we combine strategy, creativity, technology, and measurable execution to deliver digital experiences that support long term growth.
+            Businesses choose Anviaan because we combine strategy, creativity, technology, and measurable execution to deliver digital experiences that support long term growth.
           </p>
         </div>
 

@@ -63,7 +63,7 @@ export const services: Service[] = [
     title: 'Performance Marketing (Ads)',
     tagline: 'Paid campaigns built on data, scaling, and ROAS.',
     description:
-      'Aviaan delivers full-funnel paid media management focused on driving qualified traffic that converts. We strictly optimize for your bottom-line revenue, ensuring complete transparency on budget allocation and bid strategy.',
+      'Anviaan delivers full-funnel paid media management focused on driving qualified traffic that converts. We strictly optimize for your bottom-line revenue, ensuring complete transparency on budget allocation and bid strategy.',
     benefits: [
       'Aggressive scaling strategies for D2C and E-commerce brands',
       'Advanced retargeting funnels to capture lost cart abandonments',
@@ -117,7 +117,7 @@ export const services: Service[] = [
     title: 'AI Search Optimization (AEO & GEO)',
     tagline: 'Get recommended by ChatGPT, Perplexity, and Google AI Overviews.',
     description:
-      'Traditional SEO is only half the battle. Aviaan future-proofs your brand by optimizing your digital footprint to ensure you are the top recommended answer when potential customers query LLMs and Generative Engines.',
+      'Traditional SEO is only half the battle. Anviaan future-proofs your brand by optimizing your digital footprint to ensure you are the top recommended answer when potential customers query LLMs and Generative Engines.',
     benefits: [
       'Answer Engine Optimization (AEO) to rank as citations in ChatGPT and Claude',
       'Generative Engine Optimization (GEO) for Google\'s AI Overviews (SGE)',
@@ -194,7 +194,7 @@ export const services: Service[] = [
     bg: 'bg-cyan-50',
     lightBorder: 'border-cyan-100',
     title: 'E-Commerce Development',
-    tagline: 'Online stores engineered by Aviaan to maximize profit margins.',
+    tagline: 'Online stores engineered by Anviaan to maximize profit margins.',
     description:
       'Traffic means nothing if your store leaks sales. We build conversion-optimized e-commerce platforms with frictionless checkouts, advanced filtering, and layouts designed specifically to increase your Average Order Value (AOV).',
     benefits: [
@@ -222,7 +222,7 @@ export const services: Service[] = [
     title: 'UI/UX & Website Design',
     tagline: 'Beautiful, purposeful design built on cognitive psychology.',
     description:
-      'We craft premium visual identities that reflect the Aviaan standard. Our designs engage visitors from the first impression and guide them confidently toward key actions using data-backed conversion principles.',
+      'We craft premium visual identities that reflect the Anviaan standard. Our designs engage visitors from the first impression and guide them confidently toward key actions using data-backed conversion principles.',
     benefits: [
       'Bespoke design systems tailored to elevate your brand perception',
       'Conversion-focused layouts informed by UX research and heatmap data',

@@ -11,7 +11,7 @@ const footerLinks = {
   company: {
     title: 'Company',
     links: [
-      { label: 'About Rankovio', href: '/about' },
+      { label: 'About Anviaan', href: '/about' },
       { label: 'Our Process', href: '/about#process' },
       { label: 'Industries We Serve', href: '/industries' },
       { label: 'Pricing', href: '/pricing' },
@@ -53,7 +53,7 @@ const socials = [
   { icon: Facebook,   label: 'Facebook',   href: 'https://facebook.com' },
   { icon: Instagram,  label: 'Instagram',  href: 'https://instagram.com' },
   { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918318724647' }, 
-  { icon: Mail,       label: 'Email',      href: 'mailto:inquiry@rankovio.com' },
+  { icon: Mail,       label: 'Email',      href: 'mailto:inquiry@Anviaan.com' },
 ];
 
 const legalLinks = [
@@ -92,28 +92,28 @@ export default function Footer() {
           {/* Brand + contact */}
           <div className="lg:col-span-2 space-y-6">
             
-            <Link href="/" className="inline-block group mb-2" aria-label="Rankovio — Go to homepage">
+            <Link href="/" className="inline-block group mb-2" aria-label="Anviaan — Go to homepage">
               {/* CSS Filter added (brightness-0 invert) to make logo pure white without background */}
               <img 
-                src="/rankoviologo.png" 
-                alt="Rankovio Logo" 
+                src="/Anviaanlogo.png" 
+                alt="Anviaan Logo" 
                 className="w-48 lg:w-56 h-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" 
               />
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-              Rankovio helps businesses increase search visibility, generate
+              Anviaan helps businesses increase search visibility, generate
               qualified leads, and grow online revenue through customized SEO
               and digital marketing strategies.
             </p>
 
             <div className="space-y-3">
               <a
-                href="mailto:inquiry@rankovio.com"
+                href="mailto:inquiry@Anviaan.com"
                 className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                inquiry@rankovio.com
+                inquiry@Anviaan.com
               </a>
               
               <a
@@ -209,7 +209,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500 text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Rankovio. All rights reserved.
+            &copy; {new Date().getFullYear()} Anviaan. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-500">
             {legalLinks.map((link, i) => (

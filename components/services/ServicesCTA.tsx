@@ -14,7 +14,7 @@ const actions = [
     icon: FileText,
     title: 'Request a Proposal',
     desc: 'Share your project details and we will send a detailed, transparent proposal with scope and investment.',
-    href: 'mailto:inquiry@rankovio.com',
+    href: 'mailto:inquiry@Anviaan.com',
     primary: false,
     label: 'Get a Proposal',
   },
@@ -22,7 +22,7 @@ const actions = [
     icon: Phone,
     title: 'Ask a Question',
     desc: 'Not sure which service fits your needs? Send us a message and we will point you in the right direction.',
-    href: 'mailto:inquiry@rankovio.com',
+    href: 'mailto:inquiry@Anviaan.com',
     primary: false,
     label: 'Send a Message',
   },
@@ -70,7 +70,7 @@ export default function ServicesCTA() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="mailto:inquiry@rankovio.com"
+                href="mailto:inquiry@Anviaan.com"
                 className="inline-flex items-center gap-2 px-8 py-4 text-white font-bold border-2 border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-300"
               >
                 Send a Message

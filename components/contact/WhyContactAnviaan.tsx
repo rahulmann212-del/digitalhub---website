@@ -45,7 +45,7 @@ const reasons = [
   },
 ];
 
-export default function WhyContactAviaan() {
+export default function WhyContactAnviaan() {
   return (
     <section
       className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden"
@@ -60,14 +60,14 @@ export default function WhyContactAviaan() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            The Aviaan Advantage
+            The Anviaan Advantage
           </div>
           <h2
             id="why-contact-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
             Why Partner with{' '}
-            <span className="text-gradient">Aviaan?</span>
+            <span className="text-gradient">Anviaan?</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
             We don’t do traditional agency guesswork. We engineer predictable, data-driven scaling architectures for high-stakes brands.
@@ -108,7 +108,7 @@ export default function WhyContactAviaan() {
                 Initiate your custom performance blueprint.
               </p>
               <a
-                href="mailto:inquiry@aviaan.com"
+                href="mailto:inquiry@Anviaan.com"
                 className="group inline-flex items-center gap-2 px-6 py-3.5 w-full justify-center text-sm font-bold text-slate-900 bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               >
                 Secure Your Audit

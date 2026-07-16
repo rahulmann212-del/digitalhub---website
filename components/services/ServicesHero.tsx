@@ -94,7 +94,7 @@ export default function ServicesHero() {
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            Your business deserves more than disconnected services — AVIAAN combines strategy, design, development, SEO, and digital marketing to create digital experiences that attract customers, strengthen your brand, and support sustainable business growth.
+            Your business deserves more than disconnected services — Anviaan combines strategy, design, development, SEO, and digital marketing to create digital experiences that attract customers, strengthen your brand, and support sustainable business growth.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">

@@ -51,15 +51,15 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
           
-          {/* Aviaan Custom Logo Image */}
+          {/* Anviaan Custom Logo Image */}
           <Link
             href="/"
             className="flex items-center group -ml-2"
-            aria-label="Aviaan — Go to homepage"
+            aria-label="Anviaan — Go to homepage"
           >
             <img 
-              src="/aviaanlogo.png" 
-              alt="Aviaan Logo" 
+              src="/Anviaanlogo.png" 
+              alt="Anviaan Logo" 
               className="w-40 md:w-56 lg:w-64 h-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
           </Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
             <a
               href="tel:+918318724647"
               className="flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
-              aria-label="Call Aviaan at +91 83187 24647"
+              aria-label="Call Anviaan at +91 83187 24647"
             >
               <Phone className="w-4 h-4" />
               +91 83187 24647

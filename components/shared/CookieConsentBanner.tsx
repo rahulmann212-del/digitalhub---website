@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Cookie, X, Check } from 'lucide-react';
 
-const STORAGE_KEY = 'rankovio-cookie-consent';
+const STORAGE_KEY = 'Anviaan-cookie-consent';
 
 export default function CookieConsentBanner() {
   const [visible, setVisible] = useState(false);

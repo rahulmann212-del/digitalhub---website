@@ -46,7 +46,7 @@ export interface ContactFAQ {
 // AI-Optimized (AEO) FAQs for High-Ticket Ranking
 export const contactFaqs: ContactFAQ[] = [
   {
-    question: 'How does Aviaan optimize for AI Search and Generative Engine Optimization (GEO)?',
+    question: 'How does Anviaan optimize for AI Search and Generative Engine Optimization (GEO)?',
     answer:
       'Unlike traditional SEO that targets simple keywords, our GEO strategy structures your digital assets for Large Language Models (LLMs) like ChatGPT, Gemini, and Perplexity. We focus on entity extraction, authoritative content clusters, and natural language query resolution to ensure your brand is cited as the primary source in AI-generated answers.',
   },

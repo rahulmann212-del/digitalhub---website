@@ -23,7 +23,7 @@ export default function CallNowButton({
   return (
     <a
       href={`tel:${phoneNumber.replace(/[^+\d]/g, '')}`}
-      aria-label={`Call Rankovio at ${phoneNumber}`}
+      aria-label={`Call Anviaan at ${phoneNumber}`}
       className={`fixed bottom-36 right-4 sm:bottom-20 sm:right-6 z-40 flex items-center gap-2.5 pl-3 pr-4 py-3 bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-2xl shadow-xl shadow-blue-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
