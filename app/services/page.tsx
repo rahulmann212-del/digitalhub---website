@@ -8,18 +8,18 @@ import ServicesComparison from '@/components/services/ServicesComparison';
 import ServicesCTA from '@/components/services/ServicesCTA';
 
 export const metadata: Metadata = {
-  title: 'Growth Services: SEO, Ads & High-Conversion Web Dev | Rankovio',
+  title: 'Performance Marketing, Next-Gen SEO & Web Solutions | Aviaan',
   description:
-    'Scale your business with Rankovio’s result-driven services. Expert Google & Meta Ads, performance-based SEO, and high-conversion e-commerce web development to turn your traffic into profit.',
+    'Scale your brand with Aviaan. We specialize in ROI-driven Performance Marketing, Next-Gen AI Search (AEO & GEO), and high-conversion E-commerce development to turn traffic into profit.',
   keywords:
-    'growth marketing services, high-conversion web development, e-commerce development agency, Google Ads ROI management, SEO services for scaling, lead generation agency, Rankovio digital services',
+    'Aviaan digital services, performance marketing agency, answer engine optimization AEO, generative engine optimization GEO, AI search visibility, high-conversion e-commerce development, Google Ads ROI, short-form video marketing, D2C growth agency',
   openGraph: {
-    title: 'Rankovio Growth Services | Turn Your Website Into a Revenue Machine',
+    title: 'Aviaan Growth Services | Scale Your Revenue with Data-Driven Marketing',
     description:
-      'Stop settling for "just a website." Rankovio provides the complete growth suite—from aggressive marketing strategy to high-performance development—to help you scale revenue.',
+      'Stop settling for outdated strategies. Aviaan provides a complete growth suite—from next-gen AI search visibility (AEO/GEO) to high-performance e-commerce development.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Rankovio',
+    siteName: 'Aviaan',
   },
 };
 
@@ -30,8 +30,8 @@ export default function ServicesPage() {
       <ServicesHero />
       <CategoryNav />
       {/* 
-        Note: Ensure your ServicesGrid and ServicesComparison components 
-        also reflect this shift from 'Design' to 'Conversion/Revenue'.
+        ServicesGrid will now automatically pull the updated 3-category structure
+        from your services-data.ts file.
       */}
       <ServicesGrid />
       <ServicesComparison />
