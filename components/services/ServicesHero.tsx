@@ -79,24 +79,22 @@ export default function ServicesHero() {
         <div className="max-w-2xl space-y-7">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
             <Layers className="w-4 h-4 text-blue-400" />
-            13 Services
+            Digital Marketing & Development Services
           </div>
 
           <h1
             id="services-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white"
           >
-            Everything Your{' '}
+            Digital Solutions{' '}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              Business Needs
+              That Help
             </span>{' '}
-            Online
+            Businesses Grow
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-xl">
-            From the first wireframe to the hundredth optimization — we provide
-            the complete spectrum of digital services that growing businesses
-            rely on to compete and convert online.
+            Your business deserves more than disconnected services — AVIAAN combines strategy, design, development, SEO, and digital marketing to create digital experiences that attract customers, strengthen your brand, and support sustainable business growth.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">
@@ -104,14 +102,14 @@ export default function ServicesHero() {
               href="/#contact"
               className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-900 bg-white rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
-              Get a Free Consultation
+              Book a Free Consultation
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="#web"
               className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white border-2 border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-300"
             >
-              Explore Services
+              Explore Our Services
             </Link>
           </div>
         </div>
@@ -119,10 +117,10 @@ export default function ServicesHero() {
         {/* Bottom info pills */}
         <div className="mt-14 flex flex-wrap gap-4">
           {[
-            { v: 'Web Solutions',      d: '7 services' },
-            { v: 'SEO & Growth',       d: '2 services' },
-            { v: 'Digital Marketing',  d: '2 services' },
-            { v: 'Performance & Security', d: '2 services' },
+            { v: 'Digital Marketing',      d: '2 services' },
+            { v: 'SEO & Organic Growth',       d: '2 services' },
+            { v: 'Branding & Creative',  d: '2 services' },
+            { v: 'Website Development', d: '7 services' },
           ].map((item) => (
             <div
               key={item.v}
