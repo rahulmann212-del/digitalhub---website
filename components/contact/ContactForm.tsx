@@ -57,17 +57,17 @@ export default function ContactForm() {
           <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/25">
             <CheckCircle2 className="w-8 h-8 text-white" strokeWidth={2} />
           </div>
-          <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Message Sent Successfully</h3>
+          <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Request Received Successfully</h3>
           <p className="text-slate-500 leading-relaxed max-w-md mb-8">
-            Thank you for reaching out to Rankovio. A member of our team will
-            personally review your enquiry and respond within one business day.
-            We look forward to helping you grow.
+            Thank you for reaching out to Aviaan. A Senior Growth Strategist will
+            personally review your details and respond within one business day.
+            We look forward to scaling your business.
           </p>
           <button
             onClick={() => setStatus('idle')}
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
           >
-            Send Another Message
+            Submit Another Request
           </button>
         </div>
       </div>
@@ -81,10 +81,9 @@ export default function ContactForm() {
         <div className="absolute inset-0 bg-grid opacity-15" />
         <div className="absolute -top-8 -right-8 w-36 h-36 bg-white/8 rounded-full" />
         <div className="relative z-10">
-          <h3 className="text-xl font-extrabold text-white">Tell Us About Your Project</h3>
+          <h3 className="text-xl font-extrabold text-white">Tell Us About Your Scaling Goals</h3>
           <p className="mt-1.5 text-sm text-white/75 leading-relaxed">
-            Fill out the form below and we will prepare a custom proposal or
-            schedule your free strategy call.
+            Fill out the form below and we will prepare a custom performance blueprint or schedule your strategy call.
           </p>
         </div>
       </div>
@@ -141,7 +140,7 @@ export default function ContactForm() {
               id="email"
               name="email"
               required
-              placeholder="jane@acme.com"
+              placeholder="founder@company.com"
               className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 focus:bg-white transition-all duration-200"
             />
           </div>
@@ -168,7 +167,7 @@ export default function ContactForm() {
             type="url"
             id="website_url"
             name="website_url"
-            placeholder="https://www.acme.com"
+            placeholder="https://www.company.com"
             className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 focus:bg-white transition-all duration-200"
           />
         </div>
@@ -215,7 +214,7 @@ export default function ContactForm() {
             id="message"
             name="message"
             rows={4}
-            placeholder="Tell us about your business goals, current challenges, and what you are hoping to achieve..."
+            placeholder="Tell us about your business goals, current bottlenecks, and what you are hoping to achieve..."
             className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 focus:bg-white transition-all duration-200 resize-none"
           />
         </div>
@@ -270,7 +269,7 @@ export default function ContactForm() {
               ) : (
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               )}
-              Request Free Proposal
+              Request Custom Blueprint
             </button>
             <button
               type="submit"
@@ -283,11 +282,11 @@ export default function ContactForm() {
               ) : (
                 <CalendarCheck className="w-4 h-4" />
               )}
-              Schedule Free Consultation
+              Book Strategy Call
             </button>
           </div>
           <p className="text-center text-xs text-slate-400">
-            We respond within one business day. Your information is never shared with third parties.
+            We respond within one business day. Your data is strictly confidential.
           </p>
         </div>
       </form>
