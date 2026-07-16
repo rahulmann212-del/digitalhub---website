@@ -27,13 +27,12 @@ export default function ContactFAQ() {
             id="contact-faq-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            Contact &amp;{' '}
-            <span className="text-gradient">Engagement</span>{' '}
+            Engagement &amp;{' '}
+            <span className="text-gradient">Partnership</span>{' '}
             Questions
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            Answers to the questions we hear most often before working with a new
-            client. If yours is not here, just reach out.
+            Clear answers to common questions about our scaling process, timelines, and how we engage with new clients.
           </p>
         </div>
 
@@ -41,7 +40,7 @@ export default function ContactFAQ() {
         <div
           className="space-y-3"
           role="list"
-          aria-label="Frequently asked questions about contacting Rankovio"
+          aria-label="Frequently asked questions about partnering with Aviaan"
         >
           {contactFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -106,13 +105,13 @@ export default function ContactFAQ() {
             Still have a question?
           </p>
           <p className="text-sm text-slate-500 mb-4">
-            We are happy to answer anything not covered here.
+            Our Strategy team is happy to clarify any operational details.
           </p>
           <a
-            href="mailto:inquiry@rankovio.com"
+            href="mailto:inquiry@aviaan.com"
             className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            inquiry@rankovio.com
+            inquiry@aviaan.com
           </a>
         </div>
       </div>
