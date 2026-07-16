@@ -1,9 +1,33 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { articles } from '../../../components/blog/blog-data';
+import { articles } from '@/components/blog/blog-data';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import Navbar from '../../../components/Navbar';
-import Footer from '../../../components/Footer';
+import { ArrowLeft, Calendar, Clock, Hash } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+// Dynamic SEO Metadata Generator for each Playbook
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const article = articles.find((a) => a.slug === params.slug);
+
+  if (!article) {
+    return {
+      title: 'Playbook Not Found | Aviaan',
+    };
+  }
+
+  return {
+    title: `${article.title} | Aviaan Growth Lab`,
+    description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      type: 'article',
+      publishedTime: article.date,
+      authors: [article.author.name],
+    },
+  };
+}
 
 export function generateStaticParams() {
   return articles.map((article) => ({
@@ -20,7 +44,6 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <main>
-      {/* Ye raha aapka Navbar */}
       <Navbar />
       
       <div className="min-h-screen bg-slate-50 pt-32 pb-24">
@@ -28,14 +51,15 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8 font-medium transition-colors"
+            className="group inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8 font-bold transition-colors"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to all articles
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
+            Back to all playbooks
           </Link>
 
           <header className="mb-12">
             <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-6">
-              <span className={`px-3 py-1 ${article.category === 'E-Commerce' ? 'bg-violet-100 text-violet-700' : 'bg-blue-100 text-blue-700'} rounded-full font-bold`}>
+              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-bold uppercase tracking-wider text-xs">
                 {article.category}
               </span>
               <span>•</span>
@@ -44,7 +68,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               <span className="flex items-center gap-1.5"><Clock className="w-4 h-4"/> {article.readTime} min read</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 mb-8 leading-[1.15] tracking-tight">
               {article.title}
             </h1>
             
@@ -60,16 +84,31 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </header>
 
           <div className="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-100">
+            {/* Content Area */}
             <div 
-              className="prose prose-lg prose-blue max-w-none text-slate-700 leading-relaxed whitespace-pre-wrap"
+              className="prose prose-lg prose-blue max-w-none text-slate-700 leading-relaxed whitespace-pre-wrap mb-12"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
+            
+            {/* Tags Section */}
+            <div className="pt-8 border-t border-slate-100">
+              <div className="flex flex-wrap gap-2">
+                {article.tags.map((tag) => (
+                  <span 
+                    key={tag} 
+                    className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-50 border border-slate-100 text-slate-600 rounded-lg text-sm font-medium"
+                  >
+                    <Hash className="w-3.5 h-3.5 text-slate-400" />
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
           
         </article>
       </div>
 
-      {/* Ye raha aapka Footer */}
       <Footer />
     </main>
   );

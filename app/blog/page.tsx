@@ -4,18 +4,18 @@ import Footer from '@/components/Footer';
 import BlogContent from '@/components/blog/BlogContent';
 
 export const metadata: Metadata = {
-  title: 'Rankovio Growth Blog | E-commerce Scaling, Ads & SEO Insights',
+  title: 'The Aviaan Growth Lab | E-commerce Scaling, GEO & AEO Insights',
   description:
-    'Master your digital growth with actionable insights. From high-converting e-commerce web development to aggressive Google & Meta Ads strategies—get the knowledge to scale your revenue.',
+    'Master your digital growth with high-ticket scaling playbooks. From high-converting e-commerce architectures to aggressive Generative Engine Optimization (GEO) strategies.',
   keywords:
-    'growth marketing blog, e-commerce scaling tips, SEO strategies for growth, Google Ads ROI, Meta Ads scaling, conversion rate optimization, Rankovio blog, digital growth insights',
+    'Aviaan growth lab, performance marketing playbooks, e-commerce scaling strategies, GEO strategies, AEO, Google Ads ROAS, conversion architecture, Aviaan digital insights',
   openGraph: {
-    title: 'Rankovio Growth Blog | Strategies to Scale Your Business Online',
+    title: 'The Aviaan Growth Lab | Strategies for High-Stakes Brands',
     description:
-      'Practical, ROI-focused articles on marketing, e-commerce development, and SEO. Learn how to turn your website into a high-revenue machine.',
+      'Deep-dive playbooks on AEO, ROI-obsessed performance marketing, and high-conversion web architectures engineered for modern brands.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Rankovio',
+    siteName: 'Aviaan',
   },
 };
 
