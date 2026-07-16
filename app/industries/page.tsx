@@ -6,18 +6,18 @@ import IndustriesGrid from '@/components/industries/IndustriesGrid';
 import IndustriesCTA from '@/components/industries/IndustriesCTA';
 
 export const metadata: Metadata = {
-  title: 'Rankovio Industries | Expert Growth Marketing & Dev for Your Sector',
+  title: 'High-Ticket Growth Marketing for E-commerce, Tech & B2B | Aviaan',
   description:
-    'From E-commerce and Retail to Healthcare and Finance — Rankovio delivers industry-specific marketing strategies and high-conversion web development designed to scale your revenue.',
+    'Aviaan engineers bespoke digital architectures, AI search visibility (AEO/GEO), and ROI-driven performance marketing for E-commerce, Health & Beauty, SaaS, and B2B Enterprise brands.',
   keywords:
-    'growth marketing for industries, e-commerce web development, healthcare SEO, retail marketing strategies, finance digital growth, construction web design, industry-specific marketing agency, Rankovio industries',
+    'Aviaan industries, e-commerce growth marketing, health and beauty digital marketing, SaaS AEO strategies, generative engine optimization, B2B enterprise SEO, high-ticket marketing agency, next-gen search visibility',
   openGraph: {
-    title: 'Industries We Serve — Expert Growth Strategies by Rankovio',
+    title: 'Industries We Scale — Precision Growth by Aviaan',
     description:
-      'We don’t believe in one-size-fits-all. Get customized marketing and development solutions tailored to your specific industry’s growth metrics.',
+      'We do not do generic templates. Get specialized digital architectures and performance marketing strategies engineered for high-growth sectors.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Rankovio',
+    siteName: 'Aviaan',
   },
 };
 
