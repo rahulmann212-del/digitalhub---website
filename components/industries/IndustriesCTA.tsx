@@ -1,26 +1,26 @@
 import Link from 'next/link';
-import { ArrowRight, Globe2, MessageSquare, Lightbulb, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, Sparkles, Zap, TrendingUp, Rocket } from 'lucide-react';
 
 const universals = [
   {
-    icon: Globe2,
-    title: 'Industry-Specific Strategy',
-    desc: 'We research your sector before we write a line of code — understanding your competitive landscape, customer expectations, and the specific digital levers that drive results.',
+    icon: Sparkles,
+    title: 'Next-Gen AI Search',
+    desc: 'We future-proof your digital presence with Generative Engine Optimization (GEO) and AEO, ensuring you rank not just on Google, but in AI chatbots and LLMs.',
     color: 'from-blue-500 to-blue-700',
     bg: 'bg-blue-50',
   },
   {
-    icon: Lightbulb,
-    title: 'Sector-Informed UX',
-    desc: 'User expectations vary significantly between industries. We design with your sector\'s conventions and trust signals in mind — not a generic template applied to every client.',
+    icon: Zap,
+    title: 'Conversion-Obsessed UX',
+    desc: 'We do not build digital brochures. Our e-commerce and B2B architectures are engineered to eliminate friction, reduce cart abandonment, and maximize your Average Order Value.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
   },
   {
-    icon: MessageSquare,
-    title: 'Honest, Relevant Communication',
-    desc: 'Every industry has its own language and audience. Our content and UX writing is aligned with how your customers think, search, and decide — not generic marketing copy.',
-    color: 'from-blue-600 to-indigo-500',
+    icon: TrendingUp,
+    title: 'ROI-Driven Performance',
+    desc: 'Traffic without revenue is just vanity. Our short-form video campaigns and targeted ad strategies are strictly optimized for ROAS and bottom-line profit margins.',
+    color: 'from-indigo-500 to-purple-600',
     bg: 'bg-indigo-50',
   },
 ];
@@ -38,23 +38,22 @@ export default function IndustriesCTA() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
-        {/* Universal approach cards */}
+        {/* Universal approach cards -> Aviaan Growth Architecture */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-5">
               <ChevronRight className="w-4 h-4" />
-              Our Approach
+              The Aviaan Growth Architecture
             </div>
             <h2
               id="industries-cta-heading"
               className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight"
             >
-              Industry Knowledge Meets{' '}
-              <span className="text-gradient">Digital Expertise</span>
+              Where Precision Tech Meets{' '}
+              <span className="text-gradient">Aggressive Scaling</span>
             </h2>
             <p className="mt-4 text-slate-500 leading-relaxed">
-              Whatever sector you operate in, our process starts with understanding
-              your business context before recommending any digital solution.
+              Every digital asset we build is purposefully engineered to capture high-intent traffic, build immediate trust, and accelerate your sales cycle.
             </p>
           </div>
 
@@ -68,18 +67,18 @@ export default function IndustriesCTA() {
                 >
                   <div className={`w-11 h-11 ${u.bg} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <div className={`w-6 h-6 bg-gradient-to-br ${u.color} rounded-lg flex items-center justify-center`}>
-                      <Icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
+                      <Icon className="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
                     </div>
                   </div>
-                  <h3 className="font-bold text-slate-800 text-sm mb-2">{u.title}</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">{u.desc}</p>
+                  <h3 className="font-bold text-slate-900 text-sm mb-2">{u.title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed font-medium">{u.desc}</p>
                 </div>
               );
             })}
           </div>
         </div>
 
-        {/* Dark banner CTA */}
+        {/* Dark banner CTA -> Exclusive Growth Partner */}
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 p-10 md:p-16 shadow-2xl shadow-slate-900/25">
           <div className="absolute inset-0 bg-grid opacity-10" />
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500/12 rounded-full blur-3xl" />
@@ -90,22 +89,22 @@ export default function IndustriesCTA() {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
             <div className="text-center lg:text-left max-w-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300 mb-5">
-                <Globe2 className="w-4 h-4" />
-                Don&apos;t See Your Sector?
+                <Rocket className="w-4 h-4" />
+                Ready to Scale?
               </div>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
-                We Work Across{' '}
+                Partner With a Dedicated{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-                  Many More Industries
+                  Growth Engine
                 </span>
               </h3>
               <p className="mt-4 text-blue-100/70 leading-relaxed">
-                If your sector is not listed, that does not mean we cannot help.
-                Reach out and tell us about your business — we will give you an
-                honest assessment of how we can support your growth online.
+                We partner selectively with high-volume e-commerce brands, tech innovators, and enterprise B2B companies looking for aggressive, data-driven scaling.
               </p>
+              
+              {/* Premium Focus Pills */}
               <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
-                {['Legal & Professional Services', 'Non-Profit', 'Automotive', 'Beauty & Wellness', 'Events'].map(
+                {['Sub-Second Load Times', 'AEO & GEO Ready', 'ROAS Optimization', 'Frictionless Checkouts', 'Short-Form Video'].map(
                   (s) => (
                     <span
                       key={s}
@@ -115,28 +114,28 @@ export default function IndustriesCTA() {
                     </span>
                   )
                 )}
-                <span className="px-3 py-1.5 bg-white/8 border border-white/12 rounded-full text-xs text-blue-200 font-medium">
-                  + many more
+                <span className="px-3 py-1.5 bg-blue-500/20 border border-blue-400/30 rounded-full text-xs text-blue-100 font-bold">
+                  + Full-Funnel Analytics
                 </span>
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 flex-shrink-0 w-full lg:w-auto">
+            <div className="flex flex-col gap-4 flex-shrink-0 w-full lg:w-auto mt-4 lg:mt-0">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold text-base rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
-                Discuss Your Industry
+                Claim Your Free Audit
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/services"
                 className="flex items-center justify-center gap-2 px-8 py-4 text-white font-bold border-2 border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-300"
               >
-                View Our Services
+                View Our Architecture
               </Link>
               <p className="text-center text-xs text-blue-300/50">
-                Free consultation · No obligation
+                Direct strategy · No obligations
               </p>
             </div>
           </div>
