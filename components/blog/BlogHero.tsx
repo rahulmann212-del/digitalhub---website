@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Home, ChevronRight, Search, X, Newspaper, Sparkles } from 'lucide-react';
+import { Home, ChevronRight, Search, X, Newspaper, Sparkles, Target } from 'lucide-react';
 
 interface BlogHeroProps {
   onSearch: (query: string) => void;
@@ -67,24 +67,22 @@ export default function BlogHero({ onSearch, searchQuery, totalArticles, totalCa
 
         <div className="max-w-3xl space-y-7">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/25 rounded-full text-sm font-medium text-blue-300">
-            <Newspaper className="w-4 h-4 text-blue-400" />
-            Rankovio Journal
+            <Target className="w-4 h-4 text-blue-400" />
+            The Aviaan Growth Lab
           </div>
 
           <h1
             id="blog-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-white"
           >
-            Insights on{' '}
+            Insights for{' '}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              Web, SEO & Growth
+              High-Stakes Scaling
             </span>
           </h1>
 
           <p className="text-lg text-blue-100/70 leading-relaxed max-w-2xl">
-            Practical, no-nonsense articles on web design, development, SEO, and
-            digital marketing — written for business owners who want to make
-            smarter decisions about their online presence.
+            Deep-dive playbooks on Generative Engine Optimization (GEO), ROI-obsessed performance marketing, and high-conversion web architectures engineered for modern brands.
           </p>
 
           {/* Search bar */}
@@ -95,7 +93,7 @@ export default function BlogHero({ onSearch, searchQuery, totalArticles, totalCa
                 type="search"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Search articles by title, topic, or keyword..."
+                placeholder="Search playbooks, AEO strategies, or growth tactics..."
                 aria-label="Search blog articles"
                 className="w-full pl-14 pr-32 py-4 text-base text-slate-800 bg-white rounded-2xl shadow-2xl border-0 focus:outline-none focus:ring-4 focus:ring-blue-500/30 placeholder:text-slate-400"
               />
@@ -122,7 +120,7 @@ export default function BlogHero({ onSearch, searchQuery, totalArticles, totalCa
           <div className="flex flex-wrap gap-4 pt-2">
             <div className="flex items-center gap-2.5 px-4 py-2.5 bg-white/8 border border-white/10 rounded-2xl backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-white">{totalArticles} Articles</span>
+              <span className="text-sm font-semibold text-white">{totalArticles} Playbooks</span>
             </div>
             <div className="flex items-center gap-2.5 px-4 py-2.5 bg-white/8 border border-white/10 rounded-2xl backdrop-blur-sm">
               <Newspaper className="w-4 h-4 text-blue-400" />
