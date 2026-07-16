@@ -53,14 +53,14 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
   if (filtered.length === 0) {
     return (
       <div id="blog-grid" className="text-center py-20">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-3xl mb-6">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-3xl mb-6 shadow-inner">
           <SearchX className="w-7 h-7 text-slate-400" />
         </div>
-        <h3 className="text-xl font-bold text-slate-800 mb-2">No articles found</h3>
-        <p className="text-sm text-slate-500 max-w-md mx-auto">
+        <h3 className="text-xl font-bold text-slate-800 mb-2">No Playbooks Found</h3>
+        <p className="text-sm text-slate-500 max-w-md mx-auto leading-relaxed">
           {searchQuery
-            ? `Nothing matched "${searchQuery}". Try a different keyword or browse a category.`
-            : 'No articles in this category yet. Check back soon.'}
+            ? `Nothing matched "${searchQuery}". Try a different keyword or explore our core growth categories.`
+            : 'No playbooks in this category yet. Our strategists are actively engineering new insights.'}
         </p>
       </div>
     );
@@ -72,7 +72,7 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
       <div className="flex items-center justify-between mb-6">
         <p className="text-sm text-slate-500">
           Showing <span className="font-bold text-slate-800">{visible.length}</span> of{' '}
-          <span className="font-bold text-slate-800">{filtered.length}</span> articles
+          <span className="font-bold text-slate-800">{filtered.length}</span> playbooks
           {searchQuery && (
             <>
               {' '}for <span className="font-bold text-blue-600">&ldquo;{searchQuery}&rdquo;</span>
@@ -91,7 +91,7 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
       {/* Pagination */}
       {totalPages > 1 && (
         <nav
-          aria-label="Blog pagination"
+          aria-label="Playbook pagination"
           className="flex items-center justify-center gap-2 mt-12"
         >
           <button
