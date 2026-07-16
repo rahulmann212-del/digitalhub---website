@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
 
-// Pricing ko yahan se hamesha ke liye remove kar diya gaya hai
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
@@ -51,14 +50,14 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
           
-          {/* Anviaan Custom Logo Image */}
+          {/* Updated Anviaan Custom Logo Image */}
           <Link
             href="/"
             className="flex items-center group -ml-2"
             aria-label="Anviaan — Go to homepage"
           >
             <img 
-              src="/Anviaanlogo.png" 
+              src="/ANVIAAN.png" 
               alt="Anviaan Logo" 
               className="w-40 md:w-56 lg:w-64 h-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
