@@ -31,7 +31,7 @@ export default function BlogContent() {
         totalCategories={categories.length}
       />
 
-      {/* Featured article — only visible when no filter is applied */}
+      {/* Featured playbook — only visible when no filter is applied */}
       {!searchQuery && activeCategory === 'all' && (
         <FeaturedArticle article={featured} />
       )}
@@ -47,7 +47,7 @@ export default function BlogContent() {
               <div className="flex items-center gap-2 mb-8">
                 <span className="w-1.5 h-6 bg-gradient-to-b from-blue-600 to-blue-400 rounded-full" />
                 <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
-                  {searchQuery || activeCategory !== 'all' ? 'Search Results' : 'Latest Articles'}
+                  {searchQuery || activeCategory !== 'all' ? 'Search Results' : 'Latest Playbooks'}
                 </h2>
               </div>
 

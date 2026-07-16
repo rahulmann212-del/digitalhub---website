@@ -20,7 +20,7 @@ export default function BlogCard({ article, compact = false }: BlogCardProps) {
 
   return (
     <article
-      className={`group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/8 transition-all duration-500 ${
+      className={`group flex flex-col bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 ${
         compact ? 'flex-row' : ''
       }`}
     >
@@ -82,7 +82,7 @@ export default function BlogCard({ article, compact = false }: BlogCardProps) {
             href={`/blog/${article.slug}`}
             className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors mt-auto"
           >
-            Read more
+            Access Playbook
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         )}
