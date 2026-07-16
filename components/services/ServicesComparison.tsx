@@ -2,77 +2,77 @@ import { ChevronRight, Check, X } from 'lucide-react';
 
 const rows = [
   {
-    topic: 'Design Approach',
-    us: 'Custom-designed to your brand, audience, and conversion goals',
-    typical: 'Template-based with surface-level customization',
+    topic: 'Marketing Focus',
+    us: 'Strictly optimized for ROI, ROAS, and bottom-line revenue',
+    typical: 'Focused on vanity metrics like impressions and generic clicks',
     weight: true,
   },
   {
-    topic: 'SEO Integration',
-    us: 'Technical SEO is built into every project from day one',
-    typical: 'Added as a plugin or separate afterthought',
+    topic: 'Search Visibility',
+    us: 'Next-Gen SEO, AEO, and GEO to rank in AI tools & Google Overviews',
+    typical: 'Outdated, traditional SEO strategies from 5 years ago',
     weight: false,
   },
   {
-    topic: 'Performance',
-    us: 'Core Web Vitals and load time are treated as design constraints',
-    typical: 'Performance reviewed only if a client complains',
+    topic: 'E-Commerce Strategy',
+    us: 'Frictionless checkouts and aggressive RTO management for scaling',
+    typical: 'Generic store templates with high cart abandonment rates',
     weight: false,
   },
   {
-    topic: 'Communication',
-    us: 'Structured check-ins, shared project boards, and proactive updates',
-    typical: 'Sparse updates — you have to chase for progress',
+    topic: 'Content & Ads',
+    us: 'Dynamic short-form video campaigns and high-intent keyword targeting',
+    typical: 'Static stock images and broad, budget-wasting keywords',
     weight: true,
   },
   {
-    topic: 'Post-Launch',
-    us: 'Long-term partner: maintenance, growth, and ongoing support',
-    typical: 'Project closes at launch; support is ad hoc or unavailable',
+    topic: 'Web Performance',
+    us: 'Sub-second load times built to boost Google Ads Quality Scores',
+    typical: 'Sluggish load times that frustrate users and waste ad spend',
     weight: false,
   },
   {
-    topic: 'Code Quality',
-    us: 'Clean, documented, maintainable code any developer can work with',
-    typical: 'Proprietary builders or undocumented legacy code',
+    topic: 'Code Architecture',
+    us: 'Clean, headless-ready component architecture (React/Next.js)',
+    typical: 'Bloated page builders (Elementor/Divi) that break easily',
     weight: true,
   },
   {
-    topic: 'Pricing Transparency',
-    us: 'Detailed proposals with clear line items — no hidden fees',
-    typical: 'Vague estimates with scope creep billing surprises',
+    topic: 'Pricing & Scoping',
+    us: 'Detailed ROI mapping with clear line items — zero hidden fees',
+    typical: 'Vague estimates with scope creep and percentage-of-spend surprises',
     weight: false,
   },
   {
-    topic: 'Accessibility',
-    us: 'WCAG-compliant markup built in as a standard practice',
-    typical: 'Accessibility rarely considered or checked',
+    topic: 'Analytics Tracking',
+    us: 'Full-funnel attribution tracking tied directly to business sales',
+    typical: 'Confusing analytics dashboards with no real business context',
     weight: true,
   },
 ];
 
 const pillars = [
   {
-    title: 'Outcomes Over Outputs',
-    desc: 'We track what matters to your business — leads, sales, rankings, and revenue — not just deliverables ticked off a list.',
+    title: 'Revenue Over Traffic',
+    desc: 'We track what actually matters to your business — qualified leads, actual sales, and profit margins — not just meaningless traffic spikes.',
     color: 'from-blue-500 to-blue-700',
     bg: 'bg-blue-50',
   },
   {
-    title: 'No Vendor Lock-in',
-    desc: 'You own everything we build: code, accounts, content, and assets. We never hold your project hostage to keep you paying.',
+    title: 'Future-Proof Tech',
+    desc: 'From generative AI search visibility to modern component-based code, we build assets that keep you ahead of the digital curve.',
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
   },
   {
-    title: 'Honest Scoping',
-    desc: 'We would rather give you a realistic timeline and budget upfront than win the project with optimistic numbers we cannot deliver.',
+    title: 'Total Transparency',
+    desc: 'We would rather give you a realistic strategy upfront than win your business with optimistic numbers we cannot deliver.',
     color: 'from-blue-600 to-indigo-500',
     bg: 'bg-indigo-50',
   },
   {
-    title: 'Right-Sized for You',
-    desc: 'We scale our approach to your goals — a startup gets focused, high-impact work; a growing company gets a comprehensive strategy.',
+    title: 'True Partnership',
+    desc: 'You own everything we build: code, ad accounts, and assets. We never hold your digital infrastructure hostage.',
     color: 'from-cyan-500 to-blue-600',
     bg: 'bg-cyan-50',
   },
@@ -94,18 +94,17 @@ export default function ServicesComparison() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
             <ChevronRight className="w-4 h-4" />
-            The Rankovio Standard
+            The Aviaan Standard
           </div>
           <h2
             id="comparison-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
-            Why Businesses{' '}
-            <span className="text-gradient">Choose Rankovio</span>
+            Why Brands{' '}
+            <span className="text-gradient">Choose Aviaan</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-            The difference is not just in what we deliver — it is in how we
-            work. Here is what you can expect when you partner with us.
+            The difference is not just in what we deliver — it is in how we approach your growth. Here is what you can expect when you partner with us.
           </p>
         </div>
 
@@ -123,8 +122,8 @@ export default function ServicesComparison() {
                       <Check className="w-4 h-4 text-white" strokeWidth={3} />
                     </div>
                     <div>
-                      <div className="text-sm font-extrabold text-blue-700">Rankovio</div>
-                      <div className="text-xs text-slate-400 font-normal">Our standard approach</div>
+                      <div className="text-sm font-extrabold text-blue-700">Aviaan</div>
+                      <div className="text-xs text-slate-400 font-normal">Our high-performance standard</div>
                     </div>
                   </div>
                 </th>
