@@ -8,18 +8,18 @@ import WhyContactRankovio from '@/components/contact/WhyContactRankovio';
 import ContactFAQ from '@/components/contact/ContactFAQ';
 
 export const metadata: Metadata = {
-  title: 'Contact Rankovio — Let\'s Grow Your Business Together',
+  title: 'Contact Aviaan | Claim Your Free Growth Audit',
   description:
-    'Get in touch with Rankovio for SEO, Local SEO, Google Ads management, social media marketing, website development, and content marketing. Request a free proposal or schedule a free consultation today.',
+    'Partner with Aviaan for high-ticket performance marketing, generative engine optimization (GEO), and scalable e-commerce architectures. Book a strategy call today.',
   keywords:
-    'contact digital marketing agency, SEO consultation, free marketing proposal, Google Ads management, social media marketing services, website development enquiry, content marketing',
+    'contact Aviaan, performance marketing agency, AEO consultation, GEO services, e-commerce scaling, high-ticket marketing audit, growth strategy call, Aviaan digital',
   openGraph: {
-    title: 'Contact Rankovio — Let\'s Grow Your Business Together',
+    title: 'Contact Aviaan | Claim Your Free Growth Audit',
     description:
-      'Whether you need better search rankings, more qualified leads, or a professional website, Rankovio is ready to help. Request a free proposal or schedule a consultation.',
+      'Ready to scale your brand? Connect with Aviaan to discuss bespoke digital architectures and ROI-driven marketing strategies.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Rankovio',
+    siteName: 'Aviaan',
   },
 };
 
@@ -39,7 +39,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-2 mb-8">
                 <span className="w-1.5 h-6 bg-gradient-to-b from-blue-600 to-blue-400 rounded-full" />
                 <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
-                  Send Us a Message
+                  Request Your Growth Strategy
                 </h2>
               </div>
               <ContactForm />
@@ -50,7 +50,7 @@ export default function ContactPage() {
               {/* Quick contact */}
               <div className="p-6 bg-white border border-slate-100 rounded-3xl shadow-sm">
                 <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">
-                  Quick Contact
+                  Direct Access
                 </h3>
                 <ul className="space-y-4" role="list">
                   <li className="flex items-center gap-3">
@@ -61,8 +61,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs text-slate-400">Email</p>
-                      <a href="mailto:inquiry@rankovio.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
-                        inquiry@rankovio.com
+                      <a href="mailto:inquiry@aviaan.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
+                        inquiry@aviaan.com
                       </a>
                     </div>
                   </li>
@@ -104,8 +104,7 @@ export default function ContactPage() {
                     Our Response Promise
                   </h3>
                   <p className="text-sm text-blue-100/70 leading-relaxed mb-4">
-                    Every enquiry receives a personal response from a real member
-                    of our team — not an autoresponder — within one business day.
+                    Every enquiry receives a direct, personal response from a senior growth strategist — not an autoresponder — within one business day.
                   </p>
                   <div className="flex items-center gap-2 px-3 py-2 bg-emerald-500/15 border border-emerald-400/25 rounded-xl">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
