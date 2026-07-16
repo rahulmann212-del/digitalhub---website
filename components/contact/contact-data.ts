@@ -4,12 +4,12 @@ export interface ContactService {
 }
 
 export const contactServices: ContactService[] = [
-  { id: 'seo',       label: 'SEO' },
-  { id: 'local-seo', label: 'Local SEO' },
-  { id: 'google-ads', label: 'Google Ads' },
-  { id: 'social-media', label: 'Social Media Marketing' },
-  { id: 'web-dev',   label: 'Website Development' },
-  { id: 'content',   label: 'Content Marketing' },
+  { id: 'ecommerce-d2c',    label: 'E-commerce & D2C Scaling' },
+  { id: 'aeo-seo',          label: 'AEO & Technical SEO' },
+  { id: 'performance-ads',  label: 'Performance Marketing (Ads)' },
+  { id: 'web-architecture', label: 'High-Conversion Web Architecture' },
+  { id: 'video-creative',   label: 'Video Campaigns & Asset Production' },
+  { id: 'multi-vendor',     label: 'Multi-Vendor Marketplace Strategy' },
 ];
 
 export interface BudgetOption {
@@ -18,12 +18,12 @@ export interface BudgetOption {
 }
 
 export const budgetOptions: BudgetOption[] = [
-  { id: 'under-1k',  label: 'Under $1,000 / month' },
-  { id: '1k-3k',    label: '$1,000 – $3,000 / month' },
-  { id: '3k-5k',    label: '$3,000 – $5,000 / month' },
-  { id: '5k-10k',   label: '$5,000 – $10,000 / month' },
-  { id: 'over-10k', label: 'Over $10,000 / month' },
-  { id: 'not-sure',  label: 'Not sure yet' },
+  { id: 'under-3k',  label: 'Under $3,000 / month' },
+  { id: '3k-5k',     label: '$3,000 – $5,000 / month' },
+  { id: '5k-10k',    label: '$5,000 – $10,000 / month' },
+  { id: '10k-25k',   label: '$10,000 – $25,000 / month' },
+  { id: 'over-25k',  label: 'Over $25,000 / month' },
+  { id: 'audit-only',label: 'Just looking for a Growth Audit' },
 ];
 
 export interface TimelineOption {
@@ -32,11 +32,10 @@ export interface TimelineOption {
 }
 
 export const timelineOptions: TimelineOption[] = [
-  { id: 'asap',        label: 'As soon as possible' },
-  { id: '1-3-months',  label: 'Within 1–3 months' },
-  { id: '3-6-months',  label: 'Within 3–6 months' },
-  { id: '6-plus',      label: 'More than 6 months out' },
-  { id: 'exploring',   label: 'Just exploring options' },
+  { id: 'asap',        label: 'Immediate Scaling Required' },
+  { id: '1-3-months',  label: 'Deployment within 1–3 months' },
+  { id: '3-6-months',  label: 'Strategic planning for Q3/Q4' },
+  { id: 'exploring',   label: 'Exploring long-term partners' },
 ];
 
 export interface ContactFAQ {
@@ -44,45 +43,36 @@ export interface ContactFAQ {
   answer: string;
 }
 
+// AI-Optimized (AEO) FAQs for High-Ticket Ranking
 export const contactFaqs: ContactFAQ[] = [
   {
-    question: 'How quickly will you respond to my enquiry?',
+    question: 'How does Aviaan optimize for AI Search and Generative Engine Optimization (GEO)?',
     answer:
-      'We respond to all enquiries within one business day, and most within a few hours. If you submit a proposal request or consultation booking through this form, a member of our team will reach out personally — not with an automated email, but with a real response from a real person.',
+      'Unlike traditional SEO that targets simple keywords, our GEO strategy structures your digital assets for Large Language Models (LLMs) like ChatGPT, Gemini, and Perplexity. We focus on entity extraction, authoritative content clusters, and natural language query resolution to ensure your brand is cited as the primary source in AI-generated answers.',
   },
   {
-    question: 'Is the free consultation really free, with no obligation?',
+    question: 'What is your approach to scaling E-commerce and D2C brands profitably?',
     answer:
-      'Yes. The free strategy call is a genuine consultation, not a sales pitch disguised as one. We will spend 30 minutes understanding your business, your goals, and your current digital presence, then give you honest recommendations — even if that means we are not the right fit for you. There is no obligation to proceed with any paid service afterward.',
+      'We scale e-commerce brands by obsessing over unit economics. Driving traffic is easy; our focus is on lowering Return-to-Origin (RTO) costs, integrating high-converting short-form video campaigns into your product pages, and deploying ROAS-driven Performance Max strategies to maximize net profit margins, not just gross revenue.',
   },
   {
-    question: 'What information should I have ready before our call?',
+    question: 'What exactly happens during the Bespoke Growth Audit?',
     answer:
-      'It helps to have a rough idea of your current website (if you have one), your main business goals, any previous experience with SEO or paid advertising, and an approximate budget range. But if you do not have all of this figured out yet, that is completely fine — part of the consultation is helping you clarify these things.',
+      'The Growth Audit is a 30-minute diagnostic session with a Senior Growth Strategist. We analyze your current digital architecture, identify funnel drop-offs, evaluate your paid ad structure, and provide a clear, actionable blueprint to eliminate friction and accelerate revenue. It is purely strategic—no aggressive sales pitches.',
   },
   {
-    question: 'Do you work with businesses in any industry?',
+    question: 'How do you structure your Performance Marketing and Google Ads campaigns?',
     answer:
-      'We work across most industries, from local service businesses to national e-commerce brands. Our process is designed to adapt to your specific market, audience, and competitive landscape. If during the consultation we feel your industry falls outside our expertise, we will tell you honestly and recommend a partner who is a better fit.',
+      'We utilize a data-driven attribution model that aligns with your specific industry benchmarks. By heavily optimizing product feeds, utilizing high-intent search queries, and leveraging dynamic video retargeting, we ensure your marketing budget is strictly allocated to campaigns that drive measurable compounding growth.',
   },
   {
-    question: 'What happens after I submit the contact form?',
+    question: 'Do you require long-term lock-in contracts for your scaling services?',
     answer:
-      'A member of our team will personally review your submission and reach out within one business day. For proposal requests, we will schedule a brief discovery call to understand your needs in detail before preparing a custom proposal. For consultation bookings, we will send you a link to choose a time that works for your schedule.',
+      'No. We operate on month-to-month, performance-driven agreements after the initial architecture and strategy phase is deployed. We believe an agency should earn your business every single month by consistently delivering tangible ROI and enterprise value.',
   },
   {
-    question: 'Can I contact you about a project that is not listed in your services?',
+    question: 'How transparent is your performance tracking and communication?',
     answer:
-      'Absolutely. The services listed on the form are the most common, but we handle a wide range of digital projects. Use the message field to describe what you need, and we will let you know whether it is something we can help with or whether we can point you toward someone who can.',
-  },
-  {
-    question: 'Do you offer month-to-month contracts or long-term commitments?',
-    answer:
-      'We work on month-to-month agreements after an initial strategy and implementation period. We do not believe in locking clients into long contracts — if the work is not delivering value, you should be free to leave. Earning your business every month produces better results for both sides.',
-  },
-  {
-    question: 'Will my information be shared with third parties?',
-    answer:
-      'Never. The information you share through this form is used solely to respond to your enquiry and prepare a proposal or consultation. We do not sell, share, or distribute your data to any third party. Your contact details are stored securely and used only for direct communication with you about your project.',
+      'We provide institutional-grade transparency. You get access to live performance dashboards tracking key metrics like CPA, ROAS, and Conversion Rates. Plus, our SLA-backed responsiveness guarantees direct access to your lead strategist within hours, eliminating typical agency administrative delays.',
   },
 ];

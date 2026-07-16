@@ -4,7 +4,8 @@ import Footer from '@/components/Footer';
 import ContactHero from '@/components/contact/ContactHero';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactCards from '@/components/contact/ContactCards';
-import WhyContactRankovio from '@/components/contact/WhyContactRankovio';
+// Note: Rename your file in components/contact to WhyContactAviaan.tsx to match this import
+import WhyContactAviaan from '@/components/contact/WhyContactAviaan';
 import ContactFAQ from '@/components/contact/ContactFAQ';
 
 export const metadata: Metadata = {
@@ -120,7 +121,7 @@ export default function ContactPage() {
       </section>
 
       <ContactCards />
-      <WhyContactRankovio />
+      <WhyContactAviaan />
       <ContactFAQ />
       <Footer />
     </main>

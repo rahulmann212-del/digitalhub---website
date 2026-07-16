@@ -6,12 +6,12 @@ const contactMethods = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'inquiry@rankovio.com',
-    href: 'mailto:inquiry@rankovio.com',
+    value: 'inquiry@aviaan.com',
+    href: 'mailto:inquiry@aviaan.com',
     color: 'from-blue-500 to-blue-700',
     bg: 'bg-blue-50',
     border: 'border-blue-100',
-    description: 'For proposals, questions, and general enquiries.',
+    description: 'For strategic audits, partnerships, and executive inquiries.',
   },
   {
     icon: Phone,
@@ -21,7 +21,7 @@ const contactMethods = [
     color: 'from-sky-500 to-blue-500',
     bg: 'bg-sky-50',
     border: 'border-sky-100',
-    description: 'Speak directly with a member of our team.',
+    description: 'Speak directly with a Senior Growth Strategist.',
   },
   {
     icon: MessageCircle,
@@ -31,7 +31,7 @@ const contactMethods = [
     color: 'from-emerald-500 to-teal-600',
     bg: 'bg-emerald-50',
     border: 'border-emerald-100',
-    description: 'Quick questions and fast responses on the go.',
+    description: 'Direct line for rapid execution and operational queries.',
   },
 ];
 
@@ -65,7 +65,7 @@ export default function ContactCards() {
           </h2>
           <p className="mt-4 text-slate-500 leading-relaxed">
             Choose the method that works best for you. We are available across
-            email, phone, and WhatsApp.
+            email, phone, and WhatsApp for your convenience.
           </p>
         </div>
 
@@ -126,7 +126,7 @@ export default function ContactCards() {
             <div className="mt-5 flex items-center gap-2 px-4 py-2.5 bg-emerald-50 border border-emerald-100 rounded-xl">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
               <span className="text-xs font-semibold text-emerald-700">
-                Currently open — typical response within 1 business day
+                Typically responds within 1 business day
               </span>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function ContactCards() {
                 </div>
               </div>
               <div className="mt-3 px-4 py-2 bg-white rounded-xl shadow-lg border border-slate-100 text-center">
-                <p className="text-xs font-bold text-slate-800">Rankovio HQ</p>
+                <p className="text-xs font-bold text-slate-800">Aviaan HQ</p>
                 <p className="text-xs text-slate-500">Aditya World City</p>
               </div>
             </div>
