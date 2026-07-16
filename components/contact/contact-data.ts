@@ -9,7 +9,7 @@ export const contactServices: ContactService[] = [
   { id: 'performance-ads',  label: 'Performance Marketing (Ads)' },
   { id: 'web-architecture', label: 'High-Conversion Web Architecture' },
   { id: 'video-creative',   label: 'Video Campaigns & Asset Production' },
-  { id: 'multi-vendor',     label: 'Multi-Vendor Marketplace Strategy' },
+  { id: 'multi-vendor',     label: 'Web Development' },
 ];
 
 export interface BudgetOption {
