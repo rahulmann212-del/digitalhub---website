@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
 
+// Pricing ko yahan se hamesha ke liye remove kar diya gaya hai
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Industries', href: '/industries' },
-  { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -51,15 +51,15 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
           
-          {/* Custom Logo Image - Made significantly larger using fixed width */}
+          {/* Aviaan Custom Logo Image */}
           <Link
             href="/"
             className="flex items-center group -ml-2"
-            aria-label="Rankovio — Go to homepage"
+            aria-label="Aviaan — Go to homepage"
           >
             <img 
-              src="/rankoviologo.png" 
-              alt="Rankovio Logo" 
+              src="/aviaanlogo.png" 
+              alt="Aviaan Logo" 
               className="w-40 md:w-56 lg:w-64 h-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             />
           </Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
             <a
               href="tel:+918318724647"
               className="flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
-              aria-label="Call Rankovio at +91 83187 24647"
+              aria-label="Call Aviaan at +91 83187 24647"
             >
               <Phone className="w-4 h-4" />
               +91 83187 24647
