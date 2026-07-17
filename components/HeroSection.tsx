@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import Link from 'next/link';
 import {
   TrendingUp,
@@ -44,13 +44,19 @@ const trustItems = [
 ];
 
 export default function HeroSection() {
-  // Mouse position state for the spotlight effect
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  // State for Parallax Cursor Movement
+  const [transform, setTransform] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const { currentTarget, clientX, clientY } = e;
-    const { left, top } = currentTarget.getBoundingClientRect();
-    setMousePos({ x: clientX - left, y: clientY - top });
+  const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    // Calculate distance from center (divided by a factor to make it subtle)
+    const x = (e.clientX - centerX) / 40;
+    const y = (e.clientY - centerY) / 40;
+    
+    setTransform({ x, y });
   };
 
   return (
@@ -71,24 +77,39 @@ export default function HeroSection() {
       <section
         id="home"
         onMouseMove={handleMouseMove}
-        // CHANGED: Soft premium light background, not pure white
-        className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#f4f7fb] via-[#ffffff] to-[#f4f7fb] pt-28 lg:pt-32 pb-12 lg:pb-16 transition-colors duration-500"
+        // CHANGED: Explicitly set background to slate-50 (tinted) and added a bottom border to differentiate from the next white section
+        className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-slate-50 border-b border-slate-200/80 pt-28 lg:pt-32 pb-12 lg:pb-16 transition-colors duration-500"
         aria-labelledby="hero-heading"
       >
-        {/* INTERACTIVE SPOTLIGHT (Hidden on mobile) */}
+        
+        {/* PARALLAX LAYER 1: Interactive Dot Pattern Grid */}
         <div
-          className="pointer-events-none absolute inset-0 z-0 hidden lg:block transition-opacity duration-300"
+          className="absolute inset-0 z-0 pointer-events-none transition-transform duration-200 ease-out opacity-40"
           style={{
-            background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(6, 58, 154, 0.06), transparent 40%)`,
+            transform: `translate(${transform.x}px, ${transform.y}px)`,
+            backgroundImage: 'radial-gradient(circle at 2px 2px, #063A9A 2px, transparent 0)',
+            backgroundSize: '48px 48px'
           }}
         />
 
-        {/* Background Grid & Static Blobs */}
-        <div className="absolute inset-0 bg-grid opacity-[0.03] pointer-events-none" />
-        
-        {/* Floating background colors */}
-        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-300/30 rounded-full blur-[80px] animate-float pointer-events-none" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-orange-300/20 rounded-full blur-[80px] animate-float-delayed pointer-events-none" />
+        {/* PARALLAX LAYER 2: Fast moving floating shapes for 3D effect */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none transition-transform duration-200 ease-out"
+          style={{
+            transform: `translate(${transform.x * -1.5}px, ${transform.y * -1.5}px)`,
+          }}
+        >
+          {/* Floating Orange Circle */}
+          <div className="absolute top-[20%] left-[10%] w-8 h-8 rounded-full border-[3px] border-[#FF6600]/20" />
+          {/* Floating Blue Plus */}
+          <div className="absolute top-[60%] right-[15%] text-[#063A9A]/10 text-4xl font-bold">+</div>
+          {/* Floating Orange Dot */}
+          <div className="absolute bottom-[20%] left-[40%] w-3 h-3 rounded-full bg-[#FF6600]/20" />
+        </div>
+
+        {/* Static Ambient Glow Blobs */}
+        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-300/20 rounded-full blur-[80px] animate-float pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-orange-300/15 rounded-full blur-[80px] animate-float-delayed pointer-events-none" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -136,14 +157,14 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Right — Actionable Animated Dashboard (Kept Dark for Contrast) */}
+            {/* Right — Actionable Animated Dashboard (Dark Contrast Maintained) */}
             <div className="relative flex items-center justify-center mt-12 lg:mt-0">
               {/* Outer spinning rings */}
               <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[420px] lg:h-[420px] border border-blue-200 rounded-full animate-spin-slow pointer-events-none" />
               <div className="absolute w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] lg:w-[340px] lg:h-[340px] border border-orange-200 rounded-full pointer-events-none" style={{ animationDirection: 'reverse' }} />
 
               {/* Main Interactive Card */}
-              <div className="relative w-[290px] sm:w-[340px] lg:w-[380px] bg-[#020b1e] rounded-2xl lg:rounded-3xl shadow-2xl shadow-blue-900/20 p-4 lg:p-6 border border-slate-700/50 hover:border-[#FF6600]/50 transition-colors duration-500 animate-float z-10">
+              <div className="relative w-[290px] sm:w-[340px] lg:w-[380px] bg-[#020b1e] rounded-2xl lg:rounded-3xl shadow-[0_20px_50px_rgba(6,58,154,0.15)] p-4 lg:p-6 border border-slate-700/50 hover:border-[#FF6600]/50 transition-colors duration-500 animate-float z-10">
                 
                 {/* Browser bar */}
                 <div className="flex items-center justify-between mb-4">
@@ -204,7 +225,7 @@ export default function HeroSection() {
               </div>
 
               {/* Floating mini cards */}
-              <div className="absolute -top-4 -left-2 sm:-left-6 lg:-left-10 bg-white/90 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-delayed z-20">
+              <div className="absolute -top-4 -left-2 sm:-left-6 lg:-left-10 bg-white/95 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-delayed z-20">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <div className="w-7 h-7 lg:w-9 lg:h-9 bg-green-100 rounded-lg flex items-center justify-center">
                     <TrendingUp className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-green-600" />
@@ -216,7 +237,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -right-2 sm:-right-6 lg:-right-10 bg-white/90 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-slow z-20">
+              <div className="absolute -bottom-4 -right-2 sm:-right-6 lg:-right-10 bg-white/95 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-slow z-20">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <div className="w-7 h-7 lg:w-9 lg:h-9 bg-orange-100 rounded-lg flex items-center justify-center">
                     <Target className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#FF6600]" />
@@ -230,12 +251,12 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Cards (Patla / Horizontal layout, Light Theme) */}
+          {/* Trust Cards (Horizontal Layout) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mt-16 lg:mt-24">
             {trustItems.map((item) => (
               <div
                 key={item.label}
-                className="group bg-white hover:bg-slate-50 rounded-xl p-3 lg:p-4 border border-slate-200 hover:border-[#063A9A] hover:shadow-[0_8px_30px_rgba(6,58,154,0.1)] transition-all duration-300 cursor-pointer flex items-center gap-3 lg:gap-4 shadow-sm"
+                className="group bg-white hover:bg-[#fafafa] rounded-xl p-3 lg:p-4 border border-slate-200 hover:border-[#063A9A] hover:shadow-[0_8px_30px_rgba(6,58,154,0.1)] transition-all duration-300 cursor-pointer flex items-center gap-3 lg:gap-4 shadow-sm"
               >
                 <div
                   className={`flex-shrink-0 w-10 h-10 lg:w-12 lg:h-12 ${item.bg} group-hover:scale-105 transition-transform duration-300 rounded-lg lg:rounded-xl flex items-center justify-center`}
