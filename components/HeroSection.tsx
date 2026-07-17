@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import {
   TrendingUp,
@@ -17,35 +18,43 @@ const trustItems = [
     label: 'Performance Ads',
     desc: 'High ROI & Lower CAC',
     color: 'from-[#063A9A] to-blue-500',
-    bg: 'bg-blue-900/20',
+    bg: 'bg-blue-100',
   },
   {
     icon: BarChart2,
     label: 'Advanced SEO',
     desc: 'Dominate organic search',
     color: 'from-blue-500 to-cyan-400',
-    bg: 'bg-cyan-900/20',
+    bg: 'bg-cyan-100',
   },
   {
     icon: LayoutGrid,
     label: 'E-com Development',
     desc: 'High-converting storefronts',
     color: 'from-[#063A9A] to-[#FF6600]',
-    bg: 'bg-orange-900/20',
+    bg: 'bg-orange-100',
   },
   {
     icon: Target,
     label: 'D2C Brand Scaling',
     desc: 'Profitable growth funnels',
     color: 'from-[#FF6600] to-orange-400',
-    bg: 'bg-orange-900/20',
+    bg: 'bg-orange-100',
   },
 ];
 
 export default function HeroSection() {
+  // Mouse position state for the spotlight effect
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const { currentTarget, clientX, clientY } = e;
+    const { left, top } = currentTarget.getBoundingClientRect();
+    setMousePos({ x: clientX - left, y: clientY - top });
+  };
+
   return (
     <>
-      {/* CHANGED: New "Growth" Animation instead of Equalizer */}
       <style jsx>{`
         @keyframes revenue-growth {
           0% { transform: scaleY(0); opacity: 0; }
@@ -61,24 +70,33 @@ export default function HeroSection() {
 
       <section
         id="home"
-        className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#020B1E] via-[#05173B] to-[#010612] pt-24 lg:pt-28 pb-10"
+        onMouseMove={handleMouseMove}
+        // CHANGED: Soft premium light background, not pure white
+        className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#f4f7fb] via-[#ffffff] to-[#f4f7fb] pt-28 lg:pt-32 pb-12 lg:pb-16 transition-colors duration-500"
         aria-labelledby="hero-heading"
       >
-        {/* Background Grid & Glow */}
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        <div className="absolute inset-0 hero-glow opacity-50" />
+        {/* INTERACTIVE SPOTLIGHT (Hidden on mobile) */}
+        <div
+          className="pointer-events-none absolute inset-0 z-0 hidden lg:block transition-opacity duration-300"
+          style={{
+            background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(6, 58, 154, 0.06), transparent 40%)`,
+          }}
+        />
 
-        {/* Floating blobs for depth */}
-        <div className="absolute top-10 right-10 w-72 h-72 bg-[#063A9A]/20 rounded-full blur-[100px] animate-float" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#FF6600]/15 rounded-full blur-[100px] animate-float-delayed" />
+        {/* Background Grid & Static Blobs */}
+        <div className="absolute inset-0 bg-grid opacity-[0.03] pointer-events-none" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        {/* Floating background colors */}
+        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-300/30 rounded-full blur-[80px] animate-float pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-orange-300/20 rounded-full blur-[80px] animate-float-delayed pointer-events-none" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left Content */}
-            <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-950/50 border border-blue-800/50 rounded-full text-xs md:text-sm font-medium text-blue-200 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-blue-100 rounded-full text-xs md:text-sm font-semibold text-[#063A9A] shadow-sm shadow-blue-100/50">
                 <Sparkles className="w-4 h-4 text-[#FF6600]" />
                 E-commerce Growth & Marketing Agency
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse ml-1" />
@@ -87,43 +105,45 @@ export default function HeroSection() {
               {/* Headline */}
               <h1
                 id="hero-heading"
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight text-white"
+                className="text-4xl sm:text-5xl lg:text-[4rem] font-extrabold leading-[1.15] tracking-tight text-slate-900"
               >
                 Helping Businesses Grow Faster Through{' '}
-                <span className="text-gradient block mt-1 lg:mt-2">Smarter Digital Experiences</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#063A9A] to-[#FF6600] block mt-2">
+                  Smarter Digital Experiences
+                </span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-base lg:text-lg text-slate-400 leading-relaxed max-w-lg">
+              <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 We combine strategy, creativity, and technology to help businesses attract customers, build trust, and achieve sustainable growth in competitive markets.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
                   href="#contact"
-                  className="group inline-flex items-center gap-2 px-6 py-3 lg:px-7 lg:py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#063A9A] to-blue-600 rounded-xl lg:rounded-2xl shadow-lg shadow-[#063A9A]/30 hover:shadow-[#063A9A]/60 hover:-translate-y-1 transition-all duration-300 border border-blue-500/30"
+                  className="group inline-flex justify-center items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 text-sm font-bold text-white bg-gradient-to-r from-[#063A9A] to-blue-600 rounded-xl shadow-lg shadow-[#063A9A]/20 hover:shadow-[#063A9A]/40 hover:-translate-y-1 transition-all duration-300"
                 >
                   Start Scaling Today
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="#services"
-                  className="inline-flex items-center gap-2 px-6 py-3 lg:px-7 lg:py-3.5 text-sm font-bold text-white bg-slate-800/40 border border-slate-700/50 rounded-xl lg:rounded-2xl shadow-sm hover:border-[#FF6600]/50 hover:text-[#FF6600] hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm"
+                  className="inline-flex justify-center items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-[#FF6600]/50 hover:text-[#FF6600] hover:-translate-y-1 transition-all duration-300"
                 >
                   Explore Services
                 </Link>
               </div>
             </div>
 
-            {/* Right — Actionable Animated Dashboard */}
-            <div className="relative flex items-center justify-center mt-8 lg:mt-0">
+            {/* Right — Actionable Animated Dashboard (Kept Dark for Contrast) */}
+            <div className="relative flex items-center justify-center mt-12 lg:mt-0">
               {/* Outer spinning rings */}
-              <div className="absolute w-72 h-72 lg:w-[420px] lg:h-[420px] border border-[#063A9A]/30 rounded-full animate-spin-slow" />
-              <div className="absolute w-56 h-56 lg:w-[340px] lg:h-[340px] border border-[#FF6600]/20 rounded-full" style={{ animationDirection: 'reverse' }} />
+              <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[420px] lg:h-[420px] border border-blue-200 rounded-full animate-spin-slow pointer-events-none" />
+              <div className="absolute w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] lg:w-[340px] lg:h-[340px] border border-orange-200 rounded-full pointer-events-none" style={{ animationDirection: 'reverse' }} />
 
               {/* Main Interactive Card */}
-              <div className="relative w-[280px] lg:w-[380px] bg-[#030d22]/80 backdrop-blur-xl rounded-2xl lg:rounded-3xl shadow-[0_0_40px_rgba(6,58,154,0.3)] p-5 lg:p-6 border border-slate-700/50 hover:border-[#063A9A] transition-colors duration-500 animate-float">
+              <div className="relative w-[290px] sm:w-[340px] lg:w-[380px] bg-[#020b1e] rounded-2xl lg:rounded-3xl shadow-2xl shadow-blue-900/20 p-4 lg:p-6 border border-slate-700/50 hover:border-[#FF6600]/50 transition-colors duration-500 animate-float z-10">
                 
                 {/* Browser bar */}
                 <div className="flex items-center justify-between mb-4">
@@ -148,7 +168,7 @@ export default function HeroSection() {
                       { val: '99%', label: 'SEO', color: 'text-blue-400' },
                       { val: '48%', label: 'Conv.', color: 'text-green-400' }
                     ].map((stat, i) => (
-                      <div key={i} className="bg-[#020816]/60 rounded-lg lg:rounded-xl p-2 lg:p-3 text-center border border-slate-700/50 hover:border-slate-500 transition-colors">
+                      <div key={i} className="bg-[#020816]/80 rounded-lg lg:rounded-xl p-2 lg:p-3 text-center border border-slate-700/50 hover:border-slate-500 transition-colors">
                         <div className={`font-black text-base lg:text-lg ${stat.color}`}>{stat.val}</div>
                         <div className="text-slate-400 text-[9px] lg:text-[10px] uppercase font-bold tracking-wider mt-0.5 lg:mt-1">{stat.label}</div>
                       </div>
@@ -156,7 +176,7 @@ export default function HeroSection() {
                   </div>
 
                   {/* Animated Chart area */}
-                  <div className="bg-[#020816]/60 rounded-lg lg:rounded-xl p-3 lg:p-4 border border-slate-700/50">
+                  <div className="bg-[#020816]/80 rounded-lg lg:rounded-xl p-3 lg:p-4 border border-slate-700/50">
                     <div className="flex items-center justify-between text-xs mb-3">
                       <span className="text-slate-300 font-medium flex items-center gap-1">
                         <Activity className="w-3 h-3 text-[#FF6600]" /> Revenue Growth
@@ -164,7 +184,7 @@ export default function HeroSection() {
                       <span className="text-green-400 font-bold bg-green-400/10 px-2 py-0.5 rounded-full">+185%</span>
                     </div>
                     
-                    {/* CHANGED: Cascade Left-to-Right True Growth Chart */}
+                    {/* Cascade Left-to-Right True Growth Chart */}
                     <div className="flex items-end gap-1 lg:gap-1.5 h-12 lg:h-16 border-b border-slate-700/50 pb-1">
                       {[15, 25, 30, 45, 55, 60, 75, 80, 85, 90, 95, 100].map(
                         (h, i) => (
@@ -173,7 +193,7 @@ export default function HeroSection() {
                             className="flex-1 rounded-t-sm bg-gradient-to-t from-[#063A9A] to-[#FF6600] animate-revenue"
                             style={{ 
                               height: `${h}%`,
-                              animationDelay: `${i * 0.15}s` // Left-to-right staggered delay
+                              animationDelay: `${i * 0.15}s`
                             }}
                           />
                         )
@@ -184,25 +204,25 @@ export default function HeroSection() {
               </div>
 
               {/* Floating mini cards */}
-              <div className="absolute -top-3 -left-2 lg:-left-6 bg-slate-900/90 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-700 animate-float-delayed">
+              <div className="absolute -top-4 -left-2 sm:-left-6 lg:-left-10 bg-white/90 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-delayed z-20">
                 <div className="flex items-center gap-2 lg:gap-3">
-                  <div className="w-6 h-6 lg:w-8 lg:h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-3 h-3 lg:w-4 lg:h-4 text-green-400" />
+                  <div className="w-7 h-7 lg:w-9 lg:h-9 bg-green-100 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-[10px] lg:text-xs font-bold text-white">Monthly Sales</div>
-                    <div className="text-[10px] lg:text-xs text-green-400 font-semibold">Scaling Fast</div>
+                    <div className="text-[10px] lg:text-xs font-bold text-slate-800">Monthly Sales</div>
+                    <div className="text-[10px] lg:text-xs text-green-600 font-semibold">Scaling Fast</div>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute -bottom-3 -right-2 lg:-right-6 bg-slate-900/90 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-700 animate-float-slow">
+              <div className="absolute -bottom-4 -right-2 sm:-right-6 lg:-right-10 bg-white/90 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-slow z-20">
                 <div className="flex items-center gap-2 lg:gap-3">
-                  <div className="w-6 h-6 lg:w-8 lg:h-8 bg-[#FF6600]/20 rounded-lg flex items-center justify-center">
-                    <Target className="w-3 h-3 lg:w-4 lg:h-4 text-[#FF6600]" />
+                  <div className="w-7 h-7 lg:w-9 lg:h-9 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Target className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#FF6600]" />
                   </div>
                   <div>
-                    <div className="text-[10px] lg:text-xs font-bold text-white">RTO Rate</div>
+                    <div className="text-[10px] lg:text-xs font-bold text-slate-800">RTO Rate</div>
                     <div className="text-[10px] lg:text-xs text-[#FF6600] font-semibold">Optimized</div>
                   </div>
                 </div>
@@ -210,23 +230,23 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* CHANGED: Made cards "patla" (horizontal layout) and added Gradient Background */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 lg:mt-16">
+          {/* Cards (Patla / Horizontal layout, Light Theme) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mt-16 lg:mt-24">
             {trustItems.map((item) => (
               <div
                 key={item.label}
-                className="group bg-gradient-to-br from-[#0a193a] to-[#020816] hover:from-[#0f2552] hover:to-[#040e24] rounded-xl p-3 lg:p-4 border border-slate-800/80 hover:border-[#063A9A] hover:shadow-[0_0_20px_rgba(6,58,154,0.2)] transition-all duration-300 cursor-pointer flex items-center gap-3 lg:gap-4"
+                className="group bg-white hover:bg-slate-50 rounded-xl p-3 lg:p-4 border border-slate-200 hover:border-[#063A9A] hover:shadow-[0_8px_30px_rgba(6,58,154,0.1)] transition-all duration-300 cursor-pointer flex items-center gap-3 lg:gap-4 shadow-sm"
               >
                 <div
                   className={`flex-shrink-0 w-10 h-10 lg:w-12 lg:h-12 ${item.bg} group-hover:scale-105 transition-transform duration-300 rounded-lg lg:rounded-xl flex items-center justify-center`}
                 >
-                  <div className={`w-5 h-5 lg:w-6 lg:h-6 bg-gradient-to-br ${item.color} rounded-md flex items-center justify-center shadow-lg`}>
+                  <div className={`w-5 h-5 lg:w-6 lg:h-6 bg-gradient-to-br ${item.color} rounded-md flex items-center justify-center shadow-md`}>
                     <item.icon className="w-3 h-3 lg:w-3.5 lg:h-3.5 text-white" strokeWidth={2.5} />
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-sm lg:text-base group-hover:text-[#FF6600] transition-colors leading-tight">{item.label}</h3>
-                  <p className="text-[11px] lg:text-xs text-slate-400 mt-1 leading-snug">{item.desc}</p>
+                  <h3 className="font-bold text-slate-900 text-sm lg:text-base group-hover:text-[#FF6600] transition-colors leading-tight">{item.label}</h3>
+                  <p className="text-[11px] lg:text-xs text-slate-500 mt-0.5 lg:mt-1 leading-snug">{item.desc}</p>
                 </div>
               </div>
             ))}
