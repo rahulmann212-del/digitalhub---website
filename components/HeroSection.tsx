@@ -45,21 +45,22 @@ const trustItems = [
 export default function HeroSection() {
   return (
     <>
-      {/* Custom inline style for the growing bar animation */}
+      {/* CHANGED: New "Growth" Animation instead of Equalizer */}
       <style jsx>{`
-        @keyframes grow-bar {
-          0%, 100% { transform: scaleY(0.3); opacity: 0.6; }
-          50% { transform: scaleY(1); opacity: 1; }
+        @keyframes revenue-growth {
+          0% { transform: scaleY(0); opacity: 0; }
+          15% { transform: scaleY(1); opacity: 1; }
+          85% { transform: scaleY(1); opacity: 1; }
+          100% { transform: scaleY(0); opacity: 0; }
         }
-        .animate-grow {
+        .animate-revenue {
           transform-origin: bottom;
-          animation: grow-bar 2.5s ease-in-out infinite;
+          animation: revenue-growth 5s ease-out infinite;
         }
       `}</style>
 
       <section
         id="home"
-        /* CHANGED: Background updated to Deep Navy Blue Gradient and height reduced to 90vh */
         className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#020B1E] via-[#05173B] to-[#010612] pt-24 lg:pt-28 pb-10"
         aria-labelledby="hero-heading"
       >
@@ -163,16 +164,16 @@ export default function HeroSection() {
                       <span className="text-green-400 font-bold bg-green-400/10 px-2 py-0.5 rounded-full">+185%</span>
                     </div>
                     
-                    {/* CHANGED: Live Growing Bars Animation */}
+                    {/* CHANGED: Cascade Left-to-Right True Growth Chart */}
                     <div className="flex items-end gap-1 lg:gap-1.5 h-12 lg:h-16 border-b border-slate-700/50 pb-1">
-                      {[40, 60, 45, 75, 50, 85, 65, 90, 70, 95, 80, 100].map(
+                      {[15, 25, 30, 45, 55, 60, 75, 80, 85, 90, 95, 100].map(
                         (h, i) => (
                           <div
                             key={i}
-                            className="flex-1 rounded-t-sm bg-gradient-to-t from-[#063A9A] to-[#FF6600] animate-grow"
+                            className="flex-1 rounded-t-sm bg-gradient-to-t from-[#063A9A] to-[#FF6600] animate-revenue"
                             style={{ 
                               height: `${h}%`,
-                              animationDelay: `${i * 0.1}s` // Staggered delay for wave effect
+                              animationDelay: `${i * 0.15}s` // Left-to-right staggered delay
                             }}
                           />
                         )
@@ -209,22 +210,24 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* CHANGED: Reduced margin-top (mt-12) to bring cards closer and fit in one screen */}
+          {/* CHANGED: Made cards "patla" (horizontal layout) and added Gradient Background */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 lg:mt-16">
             {trustItems.map((item) => (
               <div
                 key={item.label}
-                className="group bg-[#040e24] hover:bg-[#061435] rounded-xl lg:rounded-2xl p-5 border border-slate-800 hover:border-[#063A9A] hover:shadow-[0_0_20px_rgba(6,58,154,0.2)] transition-all duration-300 cursor-pointer"
+                className="group bg-gradient-to-br from-[#0a193a] to-[#020816] hover:from-[#0f2552] hover:to-[#040e24] rounded-xl p-3 lg:p-4 border border-slate-800/80 hover:border-[#063A9A] hover:shadow-[0_0_20px_rgba(6,58,154,0.2)] transition-all duration-300 cursor-pointer flex items-center gap-3 lg:gap-4"
               >
                 <div
-                  className={`w-10 h-10 lg:w-12 lg:h-12 ${item.bg} group-hover:scale-110 transition-transform duration-300 rounded-lg lg:rounded-xl flex items-center justify-center mb-3 lg:mb-4`}
+                  className={`flex-shrink-0 w-10 h-10 lg:w-12 lg:h-12 ${item.bg} group-hover:scale-105 transition-transform duration-300 rounded-lg lg:rounded-xl flex items-center justify-center`}
                 >
                   <div className={`w-5 h-5 lg:w-6 lg:h-6 bg-gradient-to-br ${item.color} rounded-md flex items-center justify-center shadow-lg`}>
                     <item.icon className="w-3 h-3 lg:w-3.5 lg:h-3.5 text-white" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="font-bold text-white text-sm lg:text-base group-hover:text-[#FF6600] transition-colors">{item.label}</h3>
-                <p className="text-xs lg:text-sm text-slate-400 mt-1 leading-relaxed">{item.desc}</p>
+                <div>
+                  <h3 className="font-bold text-white text-sm lg:text-base group-hover:text-[#FF6600] transition-colors leading-tight">{item.label}</h3>
+                  <p className="text-[11px] lg:text-xs text-slate-400 mt-1 leading-snug">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
