@@ -24,6 +24,12 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        // Aapke Brand Colors (Custom Use ke liye)
+        anviaan: {
+          blue: '#063A9A',
+          orange: '#FF6600',
+        },
+        // Niche ke System Colors ko hum globals.css se control karenge
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
