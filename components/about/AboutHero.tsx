@@ -4,11 +4,33 @@ import Link from 'next/link';
 import { Home, ChevronRight, ArrowRight, Building2, Globe2, Sparkles } from 'lucide-react';
 
 export default function AboutHero() {
+  // SEO AboutPage Schema Data
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Anviaan",
+      "url": "https://www.anviaan.com",
+      "description": "Anviaan is a premier Digital Marketing and Web Development Company dedicated to helping businesses achieve measurable digital growth.",
+      "founder": {
+        "@type": "Person",
+        "name": "Vijay Mishra"
+      }
+    }
+  };
+
   return (
     <section
       className="relative min-h-[72vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
       aria-labelledby="about-hero-heading"
     >
+      {/* Schema injected for About Page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+
       {/* Background layers */}
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div className="absolute inset-0"
