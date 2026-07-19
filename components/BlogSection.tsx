@@ -85,12 +85,46 @@ function BlogCardIllustration({
 }
 
 export default function BlogSection() {
+  // SEO Blog Schema Data (Dynamically generated from the blogPosts array)
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Anviaan Blog",
+    "description": "Insights, guides, and strategies on web development, SEO, and digital marketing from Anviaan.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Anviaan",
+      "url": "https://www.anviaan.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.anviaan.com/logo.png"
+      }
+    },
+    "blogPost": blogPosts.map((post) => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "articleSection": post.category,
+      "timeRequired": `PT${post.readTime.split(' ')[0]}M`, // Automatically converts "5 min read" to standard ISO format "PT5M"
+      "author": {
+        "@type": "Organization",
+        "name": "Anviaan"
+      }
+    }))
+  };
+
   return (
     <section
       id="blog"
       className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden"
       aria-labelledby="blog-heading"
     >
+      {/* Schema injected for Blog Section */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
       <div className="absolute inset-0 bg-grid opacity-40" />
       <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100/20 rounded-full blur-3xl" />
 
