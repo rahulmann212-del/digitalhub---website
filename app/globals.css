@@ -4,38 +4,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Pure White */
-    --foreground: 222 47% 11%; /* Dark Slate text */
-    
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
     --primary: 219 92% 31%; /* #063A9A */
     --accent: 24 100% 50%;  /* #FF6600 */
-    
     --border: 214 32% 91%;
-    --radius: 0.75rem;
   }
 
-  /* Global Heading Styling */
+  /* Global Headings: Force Brand Blue */
   h1, h2, h3, h4, h5, h6 {
-    color: #063A9A; /* Force Brand Blue */
-    font-weight: 800;
+    color: #063A9A !important; 
+    font-weight: 800 !important;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-plus-jakarta), var(--font-inter), system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 }
 
 @layer utilities {
-  /* Brand Gradient Utility */
-  .text-gradient {
-    background: linear-gradient(135deg, #063A9A 0%, #FF6600 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Saffron Highlight for specific words in headings */
+  .text-saffron {
+    color: #FF6600 !important;
   }
 
-  /* Grid Pattern for Section backgrounds */
+  /* Grid Background */
   .bg-grid {
     background-image:
       linear-gradient(rgba(6, 58, 154, 0.05) 1px, transparent 1px),
@@ -43,6 +37,7 @@
     background-size: 48px 48px;
   }
 
+  /* Card Effects */
   .card-hover {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
   }
