@@ -82,7 +82,6 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      // Wapas purana light gradient background kar diya
       className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden"
       aria-labelledby="services-heading"
     >
