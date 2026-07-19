@@ -64,6 +64,21 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  // SEO Service Schema Data
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@graph": services.map((service) => ({
+      "@type": "Service",
+      "name": service.title,
+      "description": service.desc,
+      "provider": {
+        "@type": "Organization",
+        "name": "Anviaan",
+        "url": "https://www.anviaan.com"
+      }
+    }))
+  };
+
   return (
     <section
       id="services"
@@ -71,6 +86,12 @@ export default function ServicesSection() {
       className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden"
       aria-labelledby="services-heading"
     >
+      {/* Schema injected for Services */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* Background decorations */}
       <div className="absolute inset-0 bg-grid opacity-50" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#063A9A]/5 rounded-full blur-3xl" />
