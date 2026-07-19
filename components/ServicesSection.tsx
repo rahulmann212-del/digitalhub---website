@@ -89,7 +89,7 @@ export default function ServicesSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
           >
             Solutions That Deliver{' '}
-            <span className="bg-gradient-to-r from-[#063A9A] to-[#FF6600] bg-clip-text text-transparent">Measurable Growth</span>
+            <span className="text-saffron">Measurable Growth</span>
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
             From strategy to execution, we help businesses attract the right audience, generate qualified leads, strengthen their brand, and achieve sustainable digital growth.
