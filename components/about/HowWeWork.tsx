@@ -67,7 +67,7 @@ const pillars = [
       'Conversion optimization',
       'Performance reporting',
       'Strategy refinement',
-      'Ongoing growth support',
+      'Ongoing maintenance and growth support',
     ],
     color: 'from-cyan-500 to-blue-600',
     bg: 'bg-cyan-50',
