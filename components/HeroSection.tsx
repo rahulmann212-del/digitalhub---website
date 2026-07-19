@@ -77,18 +77,20 @@ export default function HeroSection() {
       <section
         id="home"
         onMouseMove={handleMouseMove}
-        // CHANGED: Explicitly set background to slate-50 (tinted) and added a bottom border to differentiate from the next white section
         className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-slate-50 border-b border-slate-200/80 pt-28 lg:pt-32 pb-12 lg:pb-16 transition-colors duration-500"
         aria-labelledby="hero-heading"
       >
         
-        {/* PARALLAX LAYER 1: Interactive Dot Pattern Grid */}
+        {/* CHANGED: Premium Minimalist Square Grid Pattern instead of Dots */}
         <div
-          className="absolute inset-0 z-0 pointer-events-none transition-transform duration-200 ease-out opacity-40"
+          className="absolute inset-0 z-0 pointer-events-none transition-transform duration-200 ease-out"
           style={{
             transform: `translate(${transform.x}px, ${transform.y}px)`,
-            backgroundImage: 'radial-gradient(circle at 2px 2px, #063A9A 2px, transparent 0)',
-            backgroundSize: '48px 48px'
+            backgroundImage: `
+              linear-gradient(rgba(6, 58, 154, 0.05) 1px, transparent 1px), 
+              linear-gradient(90deg, rgba(6, 58, 154, 0.05) 1px, transparent 1px)
+            `,
+            backgroundSize: '64px 64px'
           }}
         />
 
@@ -157,7 +159,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Right — Actionable Animated Dashboard (Dark Contrast Maintained) */}
+            {/* Right — Actionable Animated Dashboard */}
             <div className="relative flex items-center justify-center mt-12 lg:mt-0">
               {/* Outer spinning rings */}
               <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[420px] lg:h-[420px] border border-blue-200 rounded-full animate-spin-slow pointer-events-none" />
@@ -224,7 +226,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Floating mini cards */}
+              {/* Floating mini card - Kept only the Sales one to make it cleaner */}
               <div className="absolute -top-4 -left-2 sm:-left-6 lg:-left-10 bg-white/95 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-delayed z-20">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <div className="w-7 h-7 lg:w-9 lg:h-9 bg-green-100 rounded-lg flex items-center justify-center">
@@ -233,18 +235,6 @@ export default function HeroSection() {
                   <div>
                     <div className="text-[10px] lg:text-xs font-bold text-slate-800">Monthly Sales</div>
                     <div className="text-[10px] lg:text-xs text-green-600 font-semibold">Scaling Fast</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-4 -right-2 sm:-right-6 lg:-right-10 bg-white/95 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-slow z-20">
-                <div className="flex items-center gap-2 lg:gap-3">
-                  <div className="w-7 h-7 lg:w-9 lg:h-9 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#FF6600]" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] lg:text-xs font-bold text-slate-800">RTO Rate</div>
-                    <div className="text-[10px] lg:text-xs text-[#FF6600] font-semibold">Optimized</div>
                   </div>
                 </div>
               </div>
