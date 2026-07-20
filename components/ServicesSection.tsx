@@ -151,24 +151,24 @@ export default function ServicesSection() {
             </article>
           ))}
 
-          {/* Full-Width CTA Banner */}
-          <div className="sm:col-span-2 lg:col-span-3 mt-4 relative bg-gradient-to-br from-[#061435] via-[#063A9A] to-[#020816] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-grid opacity-10" />
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#FF6600]/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
+          {/* Full-Width High-Contrast Light CTA Banner */}
+          <div className="sm:col-span-2 lg:col-span-3 mt-4 relative bg-slate-50 border border-blue-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-grid opacity-30" />
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#FF6600]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-200/40 rounded-full blur-3xl pointer-events-none" />
             
             <div className="relative z-10 max-w-2xl text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-extrabold text-[#063A9A] mb-3">
                 Ready to Grow Your Business?
               </h3>
-              <p className="text-blue-100 text-sm md:text-base leading-relaxed">
+              <p className="text-slate-700 text-sm md:text-base leading-relaxed font-medium">
                 Let's build a tailored strategy that helps your brand attract more customers, strengthen its presence, and achieve measurable, long-term growth.
               </p>
             </div>
             
             <Link
               href="/contact"
-              className="relative z-10 shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF6600] to-orange-500 text-white text-sm font-bold rounded-xl hover:shadow-[0_0_20px_rgba(255,102,0,0.4)] hover:-translate-y-1 transition-all duration-300"
+              className="relative z-10 shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF6600] to-orange-500 text-white text-sm font-bold rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-1 transition-all duration-300"
             >
               Let's Connect
               <ArrowRight className="w-5 h-5" />
