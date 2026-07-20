@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   Mail, Phone, MapPin, ChevronRight,
-  Linkedin, Facebook, Instagram, MessageCircle, Send,
+  Linkedin, Facebook, Instagram, MessageCircle, Send, Globe, Pin,
 } from 'lucide-react';
 
 const footerLinks = {
@@ -49,11 +49,13 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Linkedin,     label: 'LinkedIn',   href: 'https://linkedin.com' },
-  { icon: Facebook,   label: 'Facebook',   href: 'https://facebook.com' },
-  { icon: Instagram,  label: 'Instagram',  href: 'https://instagram.com' },
-  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918318724647' }, 
-  { icon: Mail,       label: 'Email',      href: 'mailto:inquiry@Anviaan.com' },
+  { icon: Linkedin,      label: 'LinkedIn',   href: 'https://www.linkedin.com/company/anviaan' },
+  { icon: Facebook,      label: 'Facebook',   href: 'https://www.facebook.com/profile.php?id=61592047228193' },
+  { icon: Instagram,     label: 'Instagram',  href: 'https://www.instagram.com/anviaan.co/' },
+  { icon: Globe,         label: 'X (Twitter)',href: 'https://x.com/anviaanhq' },
+  { icon: Pin,           label: 'Pinterest',  href: 'https://in.pinterest.com/anviaan/' },
+  { icon: MessageCircle, label: 'WhatsApp',   href: 'https://wa.me/918318724647' }, 
+  { icon: Mail,          label: 'Email',      href: 'mailto:info@anviaan.com' },
 ];
 
 const legalLinks = [
@@ -93,7 +95,6 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-6">
             
             <Link href="/" className="inline-block group mb-2" aria-label="Anviaan — Go to homepage">
-              {/* Updated Logo path to /ANVIAAN.png */}
               <img 
                 src="/ANVIAAN.png" 
                 alt="Anviaan Logo" 
@@ -131,13 +132,15 @@ export default function Footer() {
             </div>
 
             {/* Social links */}
-            <div className="flex gap-2.5" role="list" aria-label="Social media links">
+            <div className="flex flex-wrap gap-2.5" role="list" aria-label="Social media links">
               {socials.map((social) => {
                 const Icon = social.icon;
                 return (
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`Follow us on ${social.label}`}
                     className="w-9 h-9 bg-slate-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
                   >
