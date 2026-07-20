@@ -43,7 +43,7 @@ export default function CookiePolicy() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">4. More Information</h2>
             <p>
-              If you have any questions about our use of cookies, please contact us at <a href="mailto:info@Anviaan.com" className="text-blue-400 hover:underline">info@anviaan.com</a>.
+              If you have any questions about our use of cookies, please contact us at <a href="mailto:info@anviaan.com" className="text-blue-400 hover:underline">info@anviaan.com</a>.
             </p>
           </section>
         </div>

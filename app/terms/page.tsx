@@ -47,7 +47,7 @@ export default function TermsAndConditions() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-white">5. Contact Information</h2>
             <p>
-              For any questions regarding these Terms, reach out to us at <a href="mailto:info@anviaan.com" className="text-blue-400 hover:underline">inquiry@Anviaan.com</a>.
+              For any questions regarding these Terms, reach out to us at <a href="mailto:info@anviaan.com" className="text-blue-400 hover:underline">info@anviaan.com</a>.
             </p>
           </section>
         </div>
