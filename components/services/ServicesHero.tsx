@@ -4,11 +4,37 @@ import Link from 'next/link';
 import { Home, ChevronRight, ArrowRight, Layers, TrendingUp } from 'lucide-react';
 
 export default function ServicesHero() {
+  // SEO Breadcrumb Schema Data for Google
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.anviaan.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.anviaan.com/services"
+      }
+    ]
+  };
+
   return (
     <section
       className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
       aria-labelledby="services-hero-heading"
     >
+      {/* Schema injected for Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Background layers */}
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div
