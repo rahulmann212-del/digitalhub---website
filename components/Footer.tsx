@@ -53,7 +53,7 @@ const socials = [
   { icon: Globe,         label: 'X (Twitter)',href: 'https://x.com/anviaanhq' },
   { icon: Pin,           label: 'Pinterest',  href: 'https://in.pinterest.com/anviaan/' },
   { icon: MessageCircle, label: 'WhatsApp',   href: 'https://wa.me/918318724647' }, 
-  { icon: Mail,          label: 'Email',      href: 'mailto:inquiry@Anviaan.com' },
+  { icon: Mail,          label: 'Email',      href: 'mailto:info@anviaan.com' },
 ];
 
 const legalLinks = [
