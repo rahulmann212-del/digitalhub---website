@@ -18,15 +18,15 @@ const services = [
     title: 'Performance Marketing',
     desc: 'Run highly optimized campaigns across leading advertising platforms to maximize conversions, reduce acquisition costs, and generate measurable business growth.',
     color: 'from-[#063A9A] to-blue-600',
-    lightBg: 'bg-blue-50',
+    lightBg: 'bg-blue-100',
     tag: 'Most Popular',
   },
   {
     icon: Search,
     title: 'Search Visibility',
     desc: 'Increase your online presence with technical excellence, content strategy, and authority-building that drives qualified traffic and long-term business growth.',
-    color: 'from-blue-500 to-sky-400',
-    lightBg: 'bg-sky-50',
+    color: 'from-blue-500 to-[#FF6600]',
+    lightBg: 'bg-orange-100',
     tag: null,
   },
   {
@@ -34,7 +34,7 @@ const services = [
     title: 'Conversion Optimization',
     desc: 'Turn more visitors into customers by improving landing pages, user journeys, and conversion funnels through continuous testing and data-backed optimization.',
     color: 'from-[#063A9A] to-[#FF6600]',
-    lightBg: 'bg-blue-50',
+    lightBg: 'bg-blue-100',
     tag: null,
   },
   {
@@ -42,7 +42,7 @@ const services = [
     title: 'Content That Connects',
     desc: 'Create engaging videos, visuals, and written content that captures attention, builds trust, and keeps your audience coming back for more.',
     color: 'from-[#FF6600] to-orange-400',
-    lightBg: 'bg-orange-50',
+    lightBg: 'bg-orange-100',
     tag: null,
   },
   {
@@ -50,15 +50,15 @@ const services = [
     title: 'E-Commerce Solutions',
     desc: 'Build scalable online stores and marketplace platforms designed to simplify operations, improve customer experiences, and support long-term business expansion.',
     color: 'from-[#063A9A] to-blue-400',
-    lightBg: 'bg-blue-50',
+    lightBg: 'bg-blue-100',
     tag: null,
   },
   {
     icon: Code2,
     title: 'Website Development',
     desc: 'Design and develop fast, secure, and conversion-focused websites that create exceptional user experiences and provide a strong foundation for business growth.',
-    color: 'from-sky-500 to-blue-600',
-    lightBg: 'bg-sky-50',
+    color: 'from-sky-500 to-[#063A9A]',
+    lightBg: 'bg-blue-100',
     tag: null,
   },
 ];
@@ -99,19 +99,18 @@ export default function ServicesSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-[#063A9A] mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] mb-6 shadow-sm">
             <ChevronRight className="w-4 h-4 text-[#FF6600]" />
             Our Core Expertise
           </div>
           <h2
             id="services-heading"
-            // Text color explicitly slate-900 (Dark) kar diya hai taaki global white text se mix na ho
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#063A9A] leading-tight tracking-tight"
           >
             Solutions That Deliver{' '}
-            <span className="text-saffron">Measurable Growth</span>
+            <span className="text-[#FF6600] block mt-1">Measurable Growth</span>
           </h2>
-          <p className="mt-5 text-lg text-slate-500 leading-relaxed">
+          <p className="mt-5 text-lg text-slate-700 leading-relaxed font-medium">
             From strategy to execution, we help businesses attract the right audience, generate qualified leads, strengthen their brand, and achieve sustainable digital growth.
           </p>
         </div>
@@ -121,8 +120,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <article
               key={service.title}
-              // Cards wapas white kar diye hain
-              className={`group relative bg-white border border-slate-200 rounded-3xl p-7 card-hover shine-border ${
+              className={`group relative bg-white border border-slate-200 rounded-3xl p-7 card-hover shine-border shadow-sm hover:border-[#063A9A] transition-all duration-300 ${
                 index === 0 ? 'ring-2 ring-[#063A9A]/20' : ''
               }`}
             >
@@ -143,17 +141,17 @@ export default function ServicesSection() {
                 </div>
               </div>
 
-              {/* Explicit dark text for cards */}
-              <h3 className="text-lg font-bold text-slate-800 mb-2.5 group-hover:text-[#063A9A] transition-colors">
+              {/* Headings with Deep Blue & Orange Theme */}
+              <h3 className="text-lg font-bold text-[#063A9A] mb-2.5 group-hover:text-[#FF6600] transition-colors">
                 {service.title}
               </h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed font-medium">
                 {service.desc}
               </p>
             </article>
           ))}
 
-          {/* Full-Width CTA Banner - Ye pehle ki tarah dark hi rakha hai kyunki highlight hona chahiye */}
+          {/* Full-Width CTA Banner */}
           <div className="sm:col-span-2 lg:col-span-3 mt-4 relative bg-gradient-to-br from-[#061435] via-[#063A9A] to-[#020816] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden shadow-2xl">
             <div className="absolute inset-0 bg-grid opacity-10" />
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#FF6600]/20 rounded-full blur-3xl" />
