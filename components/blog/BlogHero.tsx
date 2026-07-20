@@ -29,11 +29,37 @@ export default function BlogHero({ onSearch, searchQuery, totalArticles, totalCa
     onSearch('');
   };
 
+  // SEO Breadcrumb Schema Data for Google
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.anviaan.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.anviaan.com/blog"
+      }
+    ]
+  };
+
   return (
     <section
       className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
       aria-labelledby="blog-hero-heading"
     >
+      {/* Schema injected for Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div
