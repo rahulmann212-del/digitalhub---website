@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
 
@@ -50,17 +51,22 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
           
-          {/* Updated Anviaan Custom Logo Image */}
+          {/* Optimized Anviaan Logo with Next.js Image & Priority */}
           <Link
             href="/"
             className="flex items-center group -ml-2"
             aria-label="Anviaan — Go to homepage"
           >
-            <img 
-              src="/ANVIAAN.png" 
-              alt="Anviaan Logo" 
-              className="w-40 md:w-56 lg:w-64 h-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-            />
+            <div className="relative w-40 md:w-56 lg:w-64 h-10 md:h-14">
+              <Image 
+                src="/ANVIAAN.png" 
+                alt="Anviaan Logo" 
+                fill
+                priority
+                sizes="(max-width: 768px) 160px, (max-width: 1024px) 224px, 256px"
+                className="object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
+            </div>
           </Link>
 
           {/* Desktop Links */}
