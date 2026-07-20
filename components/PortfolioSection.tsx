@@ -17,18 +17,18 @@ export default function PortfolioSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
-            <ChevronRight className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] mb-6 shadow-sm">
+            <ChevronRight className="w-4 h-4 text-[#FF6600]" />
             Portfolio
           </div>
           <h2
             id="portfolio-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#063A9A] leading-tight tracking-tight"
           >
             Client{' '}
-            <span className="text-gradient">Success Stories</span>
+            <span className="text-[#FF6600]">Success Stories</span>
           </h2>
-          <p className="mt-5 text-lg text-slate-500 leading-relaxed">
+          <p className="mt-5 text-lg text-slate-700 leading-relaxed font-medium">
             We let our work speak for itself. Our portfolio is a curated collection
             of impactful digital experiences built for growing businesses.
           </p>
@@ -36,7 +36,7 @@ export default function PortfolioSection() {
 
         {/* Coming Soon card */}
         <div className="relative max-w-3xl mx-auto">
-          <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-sky-500 rounded-3xl p-12 md:p-16 text-center shadow-2xl shadow-blue-500/25">
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#063A9A] via-blue-600 to-[#FF6600] rounded-3xl p-12 md:p-16 text-center shadow-2xl shadow-blue-500/25">
             <div className="absolute inset-0 bg-grid opacity-20" />
             <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full" />
             <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-white/10 rounded-full" />
@@ -68,7 +68,7 @@ export default function PortfolioSection() {
                 Our Client Success Stories
               </h3>
 
-              <p className="text-blue-100 leading-relaxed max-w-xl mx-auto text-base">
+              <p className="text-blue-100 leading-relaxed max-w-xl mx-auto text-base font-medium">
                 We are currently curating our portfolio showcase to present our
                 best work in the most impactful way. Each case study will highlight
                 real challenges, our strategic approach, and the measurable results
@@ -80,7 +80,7 @@ export default function PortfolioSection() {
                   (tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1.5 bg-white/15 border border-white/25 rounded-full text-sm text-white font-medium"
+                      className="px-3 py-1.5 bg-white/15 border border-white/25 rounded-full text-sm text-white font-semibold"
                     >
                       {tag}
                     </span>
@@ -91,9 +91,9 @@ export default function PortfolioSection() {
           </div>
 
           {/* Bottom note */}
-          <p className="text-center text-sm text-slate-400 mt-6">
+          <p className="text-center text-sm text-slate-600 mt-6 font-semibold">
             Have a project in mind?{' '}
-            <a href="#contact" className="text-blue-600 font-semibold hover:underline">
+            <a href="#contact" className="text-[#063A9A] font-bold hover:text-[#FF6600] underline transition-colors">
               Let&apos;s discuss it
             </a>{' '}
             — your success story could be next.

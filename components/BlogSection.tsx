@@ -9,7 +9,7 @@ const blogPosts = [
     title: '10 Web Design Trends That Will Dominate in 2025',
     excerpt:
       'Explore the cutting-edge design trends shaping modern websites — from micro-animations and glassmorphism to AI-driven personalization and immersive scroll experiences.',
-    gradient: 'from-blue-600 to-sky-500',
+    gradient: 'from-[#063A9A] to-[#FF6600]',
     pattern: 'circles',
   },
   {
@@ -18,7 +18,7 @@ const blogPosts = [
     title: 'The Complete Guide to Technical SEO for Business Websites',
     excerpt:
       'Master the technical foundations of SEO — Core Web Vitals, schema markup, site architecture, and crawlability — to achieve sustainable organic growth.',
-    gradient: 'from-sky-500 to-cyan-500',
+    gradient: 'from-[#063A9A] to-blue-500',
     pattern: 'grid',
   },
   {
@@ -27,7 +27,7 @@ const blogPosts = [
     title: 'How to Build a High-Converting Landing Page in 2025',
     excerpt:
       'A step-by-step breakdown of the psychological principles, design decisions, and technical elements that turn landing page visitors into paying customers.',
-    gradient: 'from-blue-700 to-blue-500',
+    gradient: 'from-blue-700 to-[#FF6600]',
     pattern: 'dots',
   },
 ];
@@ -97,7 +97,7 @@ export default function BlogSection() {
       "url": "https://www.anviaan.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.anviaan.com/logo.png"
+        "url": "https://www.anviaan.com/ANVIAAN.png"
       }
     },
     "blogPost": blogPosts.map((post) => ({
@@ -105,7 +105,7 @@ export default function BlogSection() {
       "headline": post.title,
       "description": post.excerpt,
       "articleSection": post.category,
-      "timeRequired": `PT${post.readTime.split(' ')[0]}M`, // Automatically converts "5 min read" to standard ISO format "PT5M"
+      "timeRequired": `PT${post.readTime.split(' ')[0]}M`,
       "author": {
         "@type": "Organization",
         "name": "Anviaan"
@@ -132,25 +132,25 @@ export default function BlogSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-medium text-blue-700 mb-6">
-              <ChevronRight className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] mb-6 shadow-sm">
+              <ChevronRight className="w-4 h-4 text-[#FF6600]" />
               Insights & Resources
             </div>
             <h2
               id="blog-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#063A9A] leading-tight tracking-tight"
             >
               Stay Ahead with{' '}
-              <span className="text-gradient">Expert Insights</span>
+              <span className="text-[#FF6600] block mt-1">Expert Insights</span>
             </h2>
-            <p className="mt-4 text-lg text-slate-500 leading-relaxed">
+            <p className="mt-4 text-lg text-slate-700 leading-relaxed font-medium">
               Practical guides, industry trends, and actionable strategies to
               help your business thrive online.
             </p>
           </div>
           <a
             href="#blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors whitespace-nowrap group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#063A9A] hover:text-[#FF6600] transition-colors whitespace-nowrap group"
           >
             View All Articles
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -162,7 +162,7 @@ export default function BlogSection() {
           {blogPosts.map((post) => (
             <article
               key={post.title}
-              className="group bg-white border border-slate-100 rounded-3xl overflow-hidden card-hover shadow-sm"
+              className="group bg-white border border-slate-200 rounded-3xl overflow-hidden card-hover shadow-sm hover:border-[#063A9A] transition-all duration-300"
             >
               <BlogCardIllustration
                 gradient={post.gradient}
@@ -172,30 +172,30 @@ export default function BlogSection() {
 
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-2.5 py-1 text-xs font-semibold text-blue-700 bg-blue-50 rounded-full">
+                  <span className="px-2.5 py-1 text-xs font-bold text-[#063A9A] bg-blue-50 border border-blue-100 rounded-full">
                     {post.category}
                   </span>
-                  <span className="flex items-center gap-1 text-xs text-slate-400">
-                    <Clock className="w-3 h-3" />
+                  <span className="flex items-center gap-1 text-xs text-slate-500 font-medium">
+                    <Clock className="w-3 h-3 text-[#FF6600]" />
                     {post.readTime}
                   </span>
                 </div>
 
-                <h3 className="font-bold text-slate-800 text-base leading-snug mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                <h3 className="font-bold text-[#063A9A] text-base leading-snug mb-3 group-hover:text-[#FF6600] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
 
-                <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 mb-5">
+                <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-5 font-medium">
                   {post.excerpt}
                 </p>
 
                 <a
                   href="#blog"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:gap-2.5 transition-all duration-200 group/link"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#063A9A] hover:gap-2.5 transition-all duration-200 group/link"
                   aria-label={`Read article: ${post.title}`}
                 >
                   Read Article
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform text-[#FF6600]" />
                 </a>
               </div>
             </article>
