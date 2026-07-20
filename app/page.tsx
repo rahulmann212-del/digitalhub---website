@@ -39,7 +39,7 @@ export default function HomePage() {
   };
 
   return (
-    <main>
+    <>
       {/* Schema injected directly into the HTML head by Next.js */}
       <script
         type="application/ld+json"
@@ -47,15 +47,19 @@ export default function HomePage() {
       />
       
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <ProcessSection />
-      <TechnologySection />
-      <PortfolioSection />
-      <BlogSection />
-      <CTASection />
+      
+      <main id="main-content" tabIndex={-1}>
+        <HeroSection />
+        <ServicesSection />
+        <WhyChooseSection />
+        <ProcessSection />
+        <TechnologySection />
+        <PortfolioSection />
+        <BlogSection />
+        <CTASection />
+      </main>
+
       <Footer />
-    </main>
+    </>
   );
 }
