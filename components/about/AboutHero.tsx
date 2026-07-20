@@ -42,7 +42,7 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative min-h-[72vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
+      className="relative min-h-[72vh] flex flex-col justify-center overflow-hidden bg-slate-50 border-b border-slate-200/80 pt-28 pb-20"
       aria-labelledby="about-hero-heading"
     >
       {/* Schemas injected for About Page & Breadcrumbs */}
@@ -55,88 +55,71 @@ export default function AboutHero() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
-      <div className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 90% 70% at 60% 120%, rgba(37,99,235,0.35) 0%, transparent 65%)',
-        }}
-      />
-      <div className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 60% 50% at 10% 20%, rgba(14,165,233,0.18) 0%, transparent 60%)',
-        }}
-      />
+      {/* Background Grid and Glow Elements matching Homepage */}
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+      <div className="absolute top-10 right-10 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-5 left-10 w-80 h-80 bg-orange-200/20 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Floating orbs */}
-      <div className="absolute top-24 right-16 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-float pointer-events-none" />
-      <div className="absolute bottom-16 left-16 w-64 h-64 bg-sky-400/10 rounded-full blur-3xl animate-float-delayed pointer-events-none" />
-
-      {/* Decorative rings */}
-      <div className="absolute top-1/2 right-8 -translate-y-1/2 w-[500px] h-[500px] border border-white/5 rounded-full hidden lg:block pointer-events-none" />
-      <div className="absolute top-1/2 right-8 -translate-y-1/2 w-[380px] h-[380px] border border-white/5 rounded-full hidden lg:block pointer-events-none" />
-      <div className="absolute top-1/2 right-8 -translate-y-1/2 w-[260px] h-[260px] border border-blue-500/15 rounded-full hidden lg:block pointer-events-none" />
-
-      {/* Abstract illustration — right side */}
+      {/* Abstract illustration — right side (Light Theme adjusted) */}
       <div className="absolute right-8 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-64 h-64 pointer-events-none">
         <div className="relative w-48 h-48">
           {/* Central node */}
-          <div className="absolute inset-0 m-auto w-20 h-20 bg-gradient-to-br from-[#063A9A] to-blue-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/40 animate-float">
+          <div className="absolute inset-0 m-auto w-20 h-20 bg-gradient-to-br from-[#063A9A] to-blue-600 rounded-3xl flex items-center justify-center shadow-xl shadow-blue-500/20 animate-float">
             <Building2 className="w-9 h-9 text-white" />
           </div>
           {/* Orbiting nodes */}
           {[
             { icon: Globe2, top: '0%', left: '50%', delay: '0s', color: 'from-[#063A9A] to-blue-500' },
-            { icon: Sparkles, top: '50%', left: '90%', delay: '0.5s', color: 'from-blue-700 to-[#FF6600]' },
-            { icon: ArrowRight, top: '85%', left: '20%', delay: '1s', color: 'from-[#FF6600] to-orange-500' },
+            { icon: Sparkles, top: '50%', left: '90%', delay: '0.5s', color: 'from-blue-600 to-[#FF6600]' },
+            { icon: ArrowRight, top: '85%', left: '20%', delay: '1s', color: 'from-[#FF6600] to-orange-400' },
           ].map((node, i) => (
             <div
               key={i}
-              className={`absolute w-10 h-10 bg-gradient-to-br ${node.color} rounded-2xl flex items-center justify-center shadow-lg`}
+              className={`absolute w-10 h-10 bg-gradient-to-br ${node.color} rounded-2xl flex items-center justify-center shadow-md`}
               style={{ top: node.top, left: node.left, transform: 'translate(-50%,-50%)', animationDelay: node.delay }}
             >
               <node.icon className="w-5 h-5 text-white" />
             </div>
           ))}
           {/* Connection lines */}
-          <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 200 200">
-            <line x1="100" y1="100" x2="100" y2="0" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
-            <line x1="100" y1="100" x2="180" y2="100" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
-            <line x1="100" y1="100" x2="40" y2="170" stroke="white" strokeWidth="1" strokeDasharray="4 4" />
+          <svg className="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 200 200">
+            <line x1="100" y1="100" x2="100" y2="0" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
+            <line x1="100" y1="100" x2="180" y2="100" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
+            <line x1="100" y1="100" x2="40" y2="170" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
           </svg>
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-blue-200/80 mb-8 font-medium">
-          <Link href="/" className="flex items-center gap-1 hover:text-white transition-colors">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-600 mb-8 font-medium">
+          <Link href="/" className="flex items-center gap-1 hover:text-[#063A9A] transition-colors">
             <Home className="w-3.5 h-3.5" />
             Home
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-blue-400/50" />
-          <span className="text-white font-bold">About</span>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <span className="text-[#063A9A] font-bold">About</span>
         </nav>
 
         <div className="max-w-2xl space-y-7">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/30 rounded-full text-sm font-bold text-blue-200 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] shadow-sm">
             <Sparkles className="w-4 h-4 text-[#FF6600]" />
             Growth Focused Digital Marketing Agency
           </div>
 
-          {/* Heading */}
+          {/* Heading with Homepage Style (Deep Blue & Orange) */}
           <h1
             id="about-hero-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-white"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-[#063A9A]"
           >
-            Helping Businesses Grow with{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-[#FF6600] bg-clip-text text-transparent">
+            Helping Businesses Grow Through{' '}
+            <span className="text-[#FF6600] block mt-1">
               Smarter Digital Strategies
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl font-medium">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-xl font-medium">
             At Anviaan, we help businesses build a stronger digital presence, attract the right audience, and turn more visitors into customers. From strategy and website development to performance marketing and SEO, we create tailored solutions that support measurable growth across industries.
           </p>
 
@@ -151,7 +134,7 @@ export default function AboutHero() {
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-white/10 border-2 border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/15 transition-all duration-300 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-[#063A9A] bg-white border-2 border-slate-200 rounded-2xl hover:border-[#063A9A] hover:bg-blue-50 transition-all duration-300 shadow-sm"
             >
               Explore Our Services
             </Link>
@@ -168,10 +151,10 @@ export default function AboutHero() {
           ].map((item) => (
             <div
               key={item.label}
-              className="flex items-center gap-3 px-5 py-3 bg-white/10 border border-white/15 rounded-2xl backdrop-blur-md shadow-sm"
+              className="flex items-center gap-3 px-5 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm"
             >
-              <div className="text-sm sm:text-base font-extrabold text-white">{item.value}</div>
-              <div className="text-xs sm:text-sm text-blue-200/80 font-semibold">{item.label}</div>
+              <div className="text-sm sm:text-base font-extrabold text-[#063A9A]">{item.value}</div>
+              <div className="text-xs sm:text-sm text-slate-500 font-semibold">{item.label}</div>
             </div>
           ))}
         </div>
