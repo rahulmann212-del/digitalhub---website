@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, ChevronRight, ArrowRight, Globe2, Target } from 'lucide-react';
+import { Home, ChevronRight, ArrowRight, Target } from 'lucide-react';
 
 const sectorPills = [
   { name: 'E-Commerce', id: 'ecommerce-d2c' },
@@ -19,11 +19,37 @@ export default function IndustriesHero() {
     }
   };
 
+  // SEO Breadcrumb Schema Data for Google
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.anviaan.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Industries",
+        "item": "https://www.anviaan.com/industries"
+      }
+    ]
+  };
+
   return (
     <section
       className="relative min-h-[72vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
       aria-labelledby="industries-hero-heading"
     >
+      {/* Schema injected for Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div
