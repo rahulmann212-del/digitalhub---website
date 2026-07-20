@@ -16,11 +16,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Anviaan | Growth Marketing & E-commerce Agency',
   description: 'Anviaan specializes in performance marketing, D2C brand scaling, advanced SEO, and high-converting e-commerce development to drive exponential revenue growth.',
-  keywords: 'growth marketing agency, e-commerce development, performance marketing, D2C brand scaling, multi-vendor marketplaces, SEO services, Anviaan',
+  keywords: 'digital marketing agency, web development company, performance marketing, SEO services, growth marketing agency, e-commerce development, performance marketing, D2C brand scaling, multi-vendor marketplaces, SEO services, Anviaan',
   authors: [{ name: 'Anviaan Agency' }],
+  icons: {
+    icon: '/icon.png',
+  },
   openGraph: {
-    title: 'Anviaan | Growth Marketing & E-commerce Agency',
-    description: 'Scale your brand and dominate e-commerce with Anviaan.',
+    title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
+    description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Anviaan',
