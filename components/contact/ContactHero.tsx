@@ -4,12 +4,38 @@ import Link from 'next/link';
 import { Home, ChevronRight, Sparkles, Send, CalendarCheck } from 'lucide-react';
 
 export default function ContactHero() {
+  // SEO Breadcrumb Schema Data for Google
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.anviaan.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://www.anviaan.com/contact"
+      }
+    ]
+  };
+
   return (
     <section
       // Padding top aur bottom ko kam kiya gaya hai (pt-32 pb-20 -> pt-28 pb-12)
       className="relative pt-28 pb-12 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900"
       aria-labelledby="contact-hero-heading"
     >
+      {/* Schema injected for Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div
