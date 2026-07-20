@@ -81,7 +81,7 @@ export default function HeroSection() {
         aria-labelledby="hero-heading"
       >
         
-        {/* CHANGED: Premium Minimalist Square Grid Pattern instead of Dots */}
+        {/* Premium Minimalist Square Grid Pattern */}
         <div
           className="absolute inset-0 z-0 pointer-events-none transition-transform duration-200 ease-out"
           style={{
@@ -125,19 +125,19 @@ export default function HeroSection() {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse ml-1" />
               </div>
 
-              {/* Headline */}
+              {/* Headline with Deep Blue & Orange Theme */}
               <h1
                 id="hero-heading"
-                className="text-4xl sm:text-5xl lg:text-[4rem] font-extrabold leading-[1.15] tracking-tight text-slate-900"
+                className="text-4xl sm:text-5xl lg:text-[4rem] font-extrabold leading-[1.15] tracking-tight text-[#063A9A]"
               >
                 Helping Businesses Grow Faster Through{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#063A9A] to-[#FF6600] block mt-2">
+                <span className="text-[#FF6600] block mt-2">
                   Smarter Digital Experiences
                 </span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
+              <p className="text-base lg:text-lg text-slate-700 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
                 We combine strategy, creativity, and technology to help businesses attract customers, build trust, and achieve sustainable growth in competitive markets.
               </p>
 
@@ -152,7 +152,7 @@ export default function HeroSection() {
                 </Link>
                 <Link
                   href="#services"
-                  className="inline-flex justify-center items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-[#FF6600]/50 hover:text-[#FF6600] hover:-translate-y-1 transition-all duration-300"
+                  className="inline-flex justify-center items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 text-sm font-bold text-slate-700 bg-white border border-slate-300 rounded-xl shadow-sm hover:border-[#FF6600] hover:text-[#FF6600] hover:-translate-y-1 transition-all duration-300"
                 >
                   Explore Services
                 </Link>
@@ -226,7 +226,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Floating mini card - Kept only the Sales one to make it cleaner */}
+              {/* Floating mini card */}
               <div className="absolute -top-4 -left-2 sm:-left-6 lg:-left-10 bg-white/95 backdrop-blur-md rounded-xl lg:rounded-2xl px-3 py-2 lg:px-4 lg:py-3 shadow-xl border border-slate-200 animate-float-delayed z-20">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <div className="w-7 h-7 lg:w-9 lg:h-9 bg-green-100 rounded-lg flex items-center justify-center">
@@ -241,7 +241,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Trust Cards (Horizontal Layout) */}
+          {/* Trust Cards (Horizontal Layout) with optimized H3 tags */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mt-16 lg:mt-24">
             {trustItems.map((item) => (
               <div
@@ -256,8 +256,12 @@ export default function HeroSection() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 text-sm lg:text-base group-hover:text-[#FF6600] transition-colors leading-tight">{item.label}</h3>
-                  <p className="text-[11px] lg:text-xs text-slate-500 mt-0.5 lg:mt-1 leading-snug">{item.desc}</p>
+                  <h3 className="font-bold text-[#063A9A] text-sm lg:text-base group-hover:text-[#FF6600] transition-colors leading-tight">
+                    {item.label}
+                  </h3>
+                  <p className="text-[11px] lg:text-xs text-slate-600 mt-0.5 lg:mt-1 leading-snug font-medium">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
