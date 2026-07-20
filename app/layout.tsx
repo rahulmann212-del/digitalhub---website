@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.png', // Dhyan rahe, aapki image ka naam "icon.png" hi hona chahiye
   },
+  // Google Search Console Verification Added Here
+  verification: {
+    google: '3cByKEPpKaGQftVkK4gU8or_YSbgGFLdAT5ZKJ4_NEw',
+  },
   openGraph: {
     title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
     description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
