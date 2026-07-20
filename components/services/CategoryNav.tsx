@@ -6,11 +6,12 @@ import { categories } from './services-data';
 export default function CategoryNav() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Scroll event listener to detect when to shrink the nav
   useEffect(() => {
     const handleScrollEvent = () => {
-      // Jab screen 200px se jyada scroll ho, tab isko thin kar do
-      if (window.scrollY > 200) {
+      // Jab user screen ka 50% (half height) scroll kar lega tab trigger hoga
+      const threshold = window.innerHeight * 0.5;
+      
+      if (window.scrollY > threshold) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -18,26 +19,36 @@ export default function CategoryNav() {
     };
 
     window.addEventListener('scroll', handleScrollEvent);
+    // Initial check on load
+    handleScrollEvent();
+    
     return () => window.removeEventListener('scroll', handleScrollEvent);
   }, []);
 
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      // Offset adjusted dynamically based on sticky header height
-      const y = el.getBoundingClientRect().top + window.scrollY - (isScrolled ? 100 : 130);
+      // Scroll offset logic adjusted so it lands perfectly on the section
+      const y = el.getBoundingClientRect().top + window.scrollY - (isScrolled ? 90 : 140);
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className={`sticky top-16 md:top-20 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm transition-all duration-300`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div 
+      className={`sticky top-16 md:top-20 z-40 backdrop-blur-xl border-b transition-all duration-500 ease-in-out ${
+        isScrolled 
+          ? 'bg-white/95 border-slate-200 shadow-md py-2.5' 
+          : 'bg-white/80 border-slate-200/50 shadow-sm py-4'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav
           aria-label="Service categories"
-          // Scroll hone par padding kam ho jayegi (py-5 se py-2.5)
-          className={`flex md:grid md:grid-cols-3 gap-3 md:gap-4 overflow-x-auto scrollbar-none transition-all duration-300 ${
-            isScrolled ? 'py-2.5' : 'py-5'
+          className={`flex items-center overflow-x-auto scrollbar-none transition-all duration-500 ease-in-out ${
+            isScrolled 
+              ? 'gap-3 justify-start md:justify-center' // Centered pill buttons when scrolled
+              : 'gap-4 justify-start md:grid md:grid-cols-3' // Full grid when expanded
           }`}
           style={{ scrollbarWidth: 'none' }}
         >
@@ -45,25 +56,34 @@ export default function CategoryNav() {
             <button
               key={cat.id}
               onClick={() => handleScroll(cat.id)}
-              // Scroll hone par card ki inner padding bhi shrink hogi
-              className={`group relative overflow-hidden flex-shrink-0 md:flex-shrink w-[75vw] sm:w-[260px] md:w-full flex flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/60 border border-blue-100 shadow-sm hover:shadow-md hover:border-[#063A9A]/30 hover:-translate-y-0.5 transition-all duration-300 text-center ${
-                isScrolled ? 'px-4 py-2.5' : 'px-5 py-4'
+              className={`group relative overflow-hidden flex flex-col items-center justify-center transition-all duration-500 ease-in-out flex-shrink-0 text-center border hover:shadow-md hover:-translate-y-0.5 hover:border-[#063A9A]/30 ${
+                isScrolled 
+                  ? 'w-auto px-6 py-2.5 rounded-full bg-white border-slate-200 shadow-sm' // Compact Pill Button Mode
+                  : 'w-[75vw] sm:w-[280px] md:w-full px-5 py-5 rounded-[1.5rem] bg-gradient-to-br from-white via-white to-blue-50/60 border-blue-100 shadow-sm' // Expanded Card Mode
               }`}
             >
-              {/* Colorful Highlight Bar at the Top */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#063A9A] to-[#FF6600] opacity-80 group-hover:opacity-100 transition-opacity" />
+              {/* Highlight Bar - Only visible in expanded card mode */}
+              <div 
+                className={`absolute top-0 left-0 right-0 bg-gradient-to-r from-[#063A9A] to-[#FF6600] opacity-80 group-hover:opacity-100 transition-all duration-500 ${
+                  isScrolled ? 'h-0' : 'h-1.5'
+                }`} 
+              />
               
-              {/* Title Text */}
-              <span className={`font-black text-[#063A9A] group-hover:text-[#FF6600] transition-colors whitespace-nowrap mt-0.5 ${
-                isScrolled ? 'text-sm' : 'text-sm md:text-base'
-              }`}>
+              {/* Title - Deep Blue to Orange on Hover */}
+              <span 
+                className={`font-black text-[#063A9A] group-hover:text-[#FF6600] transition-colors whitespace-nowrap ${
+                  isScrolled ? 'text-sm' : 'text-sm md:text-base mt-1.5'
+                }`}
+              >
                 {cat.label}
               </span>
               
-              {/* Description Text - Ye scroll hone par puri tarah GAYAB (hidden) ho jayega space bachane ke liye */}
-              <div className={`transition-all duration-300 overflow-hidden ${
-                isScrolled ? 'max-h-0 opacity-0 mt-0' : 'max-h-10 opacity-100 mt-1.5'
-              }`}>
+              {/* Description - Hides smoothly without squishing the box */}
+              <div 
+                className={`transition-all duration-500 overflow-hidden flex justify-center w-full ${
+                  isScrolled ? 'max-h-0 opacity-0 mt-0' : 'max-h-20 opacity-100 mt-1.5'
+                }`}
+              >
                 <span className="text-xs font-semibold text-slate-500 group-hover:text-slate-700 hidden sm:block">
                   {cat.desc}
                 </span>
