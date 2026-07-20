@@ -180,10 +180,10 @@ export default function FAQSection() {
             We are happy to answer anything not covered here.
           </p>
           <a
-            href="mailto:inquiry@Anviaan.com"
+            href="mailto:info@anviaan.com"
             className="inline-flex items-center gap-2 text-sm font-extrabold text-[#063A9A] hover:text-[#FF6600] transition-colors"
           >
-            inquiry@Anviaan.com &rarr;
+            info@anviaan.com &rarr;
           </a>
         </div>
       </div>
