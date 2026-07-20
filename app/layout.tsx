@@ -1,6 +1,7 @@
 import './globals.css'; // Agar ye line dobara error de, toh isko hata kar import '@/app/globals.css'; likh dena
 import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import Script from 'next/script';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -49,6 +50,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${inter.variable}`}>
+      <head>
+        {/* Google Analytics (GA4) Scripts */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-FE8JZG7LMS"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FE8JZG7LMS');
+            `,
+          }}
+        />
+      </head>
       <body className="font-plus-jakarta antialiased">{children}</body>
     </html>
   );
