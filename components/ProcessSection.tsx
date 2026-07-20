@@ -74,12 +74,12 @@ export default function ProcessSection() {
           </div>
           <h2
             id="process-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#063A9A] leading-tight tracking-tight"
           >
             The Proven Framework Behind Consistent{' '}
-            <span className="bg-gradient-to-r from-[#063A9A] to-[#FF6600] bg-clip-text text-transparent">Brand Growth</span>
+            <span className="text-[#FF6600] block mt-1">Brand Growth</span>
           </h2>
-          <p className="mt-5 text-lg text-slate-500 leading-relaxed">
+          <p className="mt-5 text-lg text-slate-700 leading-relaxed font-medium">
             A clear, data-driven process that helps you improve profitability, increase conversions, and build a business that scales with confidence.
           </p>
         </div>
@@ -114,13 +114,13 @@ export default function ProcessSection() {
 
                   {/* Content */}
                   <div
-                    className={`text-center p-4 ${step.lightBg} rounded-2xl border border-white shadow-sm w-full h-full group-hover:shadow-md transition-shadow duration-300`}
+                    className={`text-center p-4 ${step.lightBg} rounded-2xl border border-slate-200 shadow-sm w-full h-full group-hover:shadow-md transition-shadow duration-300`}
                   >
                     {/* Step Title in Brand Deep Blue */}
                     <h3 className="font-bold text-[#063A9A] text-sm mb-2 group-hover:text-[#FF6600] transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed font-medium">
                       {step.desc}
                     </p>
                   </div>
@@ -150,10 +150,10 @@ export default function ProcessSection() {
 
               {/* Right — content */}
               <div
-                className={`flex-1 pb-4 p-4 ${step.lightBg} rounded-2xl border border-white shadow-sm group-hover:shadow-md transition-shadow duration-300`}
+                className={`flex-1 pb-4 p-4 ${step.lightBg} rounded-2xl border border-slate-200 shadow-sm group-hover:shadow-md transition-shadow duration-300`}
               >
                 <h3 className="font-bold text-[#063A9A] mb-1 group-hover:text-[#FF6600] transition-colors">{step.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed font-medium">
                   {step.desc}
                 </p>
               </div>
