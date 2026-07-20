@@ -79,11 +79,11 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative bg-slate-900 text-white"
+      className="relative bg-slate-900 text-white z-20"
       role="contentinfo"
       aria-label="Site footer"
     >
-      <div className="absolute inset-0 bg-grid opacity-5" />
+      <div className="absolute inset-0 bg-grid opacity-5 pointer-events-none" />
 
       {/* Main footer */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-10">
@@ -207,16 +207,19 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-slate-800 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500 text-center sm:text-left">
+          <p className="text-xs text-slate-400 text-center sm:text-left">
             &copy; {new Date().getFullYear()} Anviaan. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-slate-500">
+          <div className="flex items-center gap-4 text-xs">
             {legalLinks.map((link, i) => (
               <span key={link.label} className="flex items-center gap-4">
                 {i > 0 && <span className="w-1 h-1 bg-slate-600 rounded-full" />}
-                <Link href={link.href} className="hover:text-blue-400 transition-colors">
+                <Link 
+                  href={link.href} 
+                  className="text-slate-300 hover:text-blue-400 hover:underline transition-colors cursor-pointer relative z-30"
+                >
                   {link.label}
                 </Link>
               </span>
