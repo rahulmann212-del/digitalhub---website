@@ -12,9 +12,7 @@ const footerLinks = {
     title: 'Company',
     links: [
       { label: 'About Anviaan', href: '/about' },
-      { label: 'Our Process', href: '/about#process' },
       { label: 'Industries We Serve', href: '/industries' },
-      { label: 'Pricing', href: '/pricing' },
       { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/contact' },
     ],
@@ -55,7 +53,7 @@ const socials = [
   { icon: Globe,         label: 'X (Twitter)',href: 'https://x.com/anviaanhq' },
   { icon: Pin,           label: 'Pinterest',  href: 'https://in.pinterest.com/anviaan/' },
   { icon: MessageCircle, label: 'WhatsApp',   href: 'https://wa.me/918318724647' }, 
-  { icon: Mail,          label: 'Email',      href: 'mailto:info@anviaan.com' },
+  { icon: Mail,          label: 'Email',      href: 'mailto:inquiry@Anviaan.com' },
 ];
 
 const legalLinks = [
