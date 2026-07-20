@@ -35,8 +35,8 @@ export default function CategoryNav() {
     <div 
       className={`sticky top-16 md:top-[76px] lg:top-20 z-40 backdrop-blur-xl border-b transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 border-slate-200 shadow-md py-3' // Proper vertical spacing when scrolled
-          : 'bg-white/80 border-slate-200/50 shadow-sm py-5' // Larger spacing when expanded
+          ? 'bg-white/95 border-slate-200 shadow-md py-3' 
+          : 'bg-white/80 border-slate-200/50 shadow-sm py-5' 
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,11 +48,11 @@ export default function CategoryNav() {
             <button
               key={cat.id}
               onClick={() => handleScroll(cat.id)}
-              // overflow-hidden prevents anything from bleeding out, fixed heights prevent squishing
+              // isScrolled hone par solid deep blue background aur white text ho jayega taaki ekdum saaf dikhe
               className={`group relative flex flex-col items-center justify-center text-center border transition-all duration-300 w-full overflow-hidden ${
                 isScrolled 
-                  ? 'rounded-xl bg-white border-slate-200 shadow-sm h-12' // FIXED HEIGHT for scrolled state (No clipping!)
-                  : 'rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/60 border-blue-100 shadow-sm hover:shadow-md h-[90px] md:h-[100px]' // FIXED HEIGHT for expanded state
+                  ? 'rounded-xl bg-[#063A9A] border-[#063A9A] shadow-md hover:bg-[#FF6600] hover:border-[#FF6600] h-12' // Solid professional look when shrunk
+                  : 'rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/60 border-blue-100 shadow-sm hover:shadow-md h-[90px] md:h-[100px]' // Light expanded state
               }`}
             >
               {/* Top Colorful Accent Line */}
@@ -62,21 +62,23 @@ export default function CategoryNav() {
                 }`} 
               />
               
-              {/* Main Title Text */}
+              {/* Main Title Text - White when scrolled for high contrast, Deep Blue when expanded */}
               <span 
-                className={`font-black text-[#063A9A] group-hover:text-[#FF6600] transition-all duration-300 w-full px-2 ${
-                  isScrolled ? 'text-sm translate-y-0' : 'text-sm md:text-base'
+                className={`font-black transition-all duration-300 w-full px-2 ${
+                  isScrolled 
+                    ? 'text-xs sm:text-sm text-white group-hover:text-white' 
+                    : 'text-sm md:text-base text-[#063A9A] group-hover:text-[#FF6600]'
                 }`}
               >
                 {cat.label}
               </span>
               
-              {/* Description Text - Uses Absolute positioning when hiding to keep title centered perfectly */}
+              {/* Description Text */}
               <div 
                 className={`transition-all duration-300 w-full px-4 ${
                   isScrolled 
-                    ? 'absolute opacity-0 pointer-events-none translate-y-4' // Drops down and fades out invisibly
-                    : 'relative opacity-100 translate-y-0 mt-1.5' // Stays in place when expanded
+                    ? 'absolute opacity-0 pointer-events-none translate-y-4' 
+                    : 'relative opacity-100 translate-y-0 mt-1.5' 
                 }`}
               >
                 <span className="text-[11px] md:text-xs font-semibold text-slate-500 group-hover:text-slate-700 hidden sm:block line-clamp-1">
