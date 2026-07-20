@@ -2,7 +2,6 @@
 
 import { services, categories } from './services-data';
 import ServiceCard from './ServiceCard';
-import { ChevronRight } from 'lucide-react';
 
 export default function ServicesGrid() {
   return (
@@ -16,7 +15,7 @@ export default function ServicesGrid() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         {categories.map((cat, index) => {
           const catServices = services.filter((s) => s.categoryId === cat.id);
-          // Alternating background for sections so they don't blend together as "all white"
+          // Alternating background for sections
           const isEven = index % 2 === 0;
 
           return (
@@ -29,19 +28,17 @@ export default function ServicesGrid() {
                   : 'bg-slate-100/80 border-slate-300/60 shadow-inner'
               }`}
             >
-              {/* Category heading */}
+              {/* Category heading (Cleaned up, no repetitive pills) */}
               <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] mb-4 shadow-sm">
-                    <ChevronRight className="w-4 h-4 text-[#FF6600]" />
-                    {cat.label}
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#063A9A] tracking-tight leading-tight">
+                  <h2 className="text-3xl sm:text-4xl font-extrabold text-[#063A9A] tracking-tight leading-tight">
                     {cat.label}
                   </h2>
-                  <p className="mt-2 text-slate-700 text-sm sm:text-base font-medium max-w-2xl">{cat.desc}</p>
+                  <p className="mt-3 text-slate-700 text-sm sm:text-base font-medium max-w-2xl">
+                    {cat.desc}
+                  </p>
                 </div>
-                <span className="text-xs sm:text-sm text-slate-600 font-bold bg-white px-3 py-1.5 rounded-full border border-slate-200 shadow-sm flex-shrink-0">
+                <span className="text-xs sm:text-sm text-slate-600 font-bold bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm flex-shrink-0">
                   {catServices.length} service{catServices.length !== 1 ? 's' : ''} available
                 </span>
               </div>
