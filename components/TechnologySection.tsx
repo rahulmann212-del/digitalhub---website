@@ -4,35 +4,35 @@ import { ChevronRight, Megaphone, MonitorSmartphone } from 'lucide-react';
 
 // Combined for the Marquee
 const technologies = [
-  { name: 'Google Ads', category: 'Performance', abbr: 'Ga', color: 'from-[#063A9A] to-blue-600' },
+  { name: 'Google Ads', category: 'Performance', abbr: 'Ga', color: 'from-blue-500 to-blue-600' },
   { name: 'Meta Ads', category: 'Social', abbr: 'Me', color: 'from-blue-600 to-indigo-600' },
-  { name: 'Shopify', category: 'E-Commerce', abbr: 'Sh', color: 'from-green-500 to-green-700' },
-  { name: 'GA4 & GTM', category: 'Tracking', abbr: 'G4', color: 'from-yellow-500 to-[#FF6600]' },
-  { name: 'Semrush', category: 'SEO', abbr: 'Se', color: 'from-[#FF6600] to-red-600' },
-  { name: 'Next.js', category: 'Framework', abbr: 'Nx', color: 'from-slate-800 to-black' },
-  { name: 'React', category: 'Frontend', abbr: 'Re', color: 'from-cyan-500 to-[#063A9A]' },
-  { name: 'Klaviyo', category: 'Email', abbr: 'Kl', color: 'from-emerald-600 to-teal-700' },
-  { name: 'WooCommerce', category: 'E-Commerce', abbr: 'Wo', color: 'from-purple-600 to-purple-800' },
+  { name: 'Shopify', category: 'E-Commerce', abbr: 'Sh', color: 'from-green-400 to-green-600' },
+  { name: 'GA4 & GTM', category: 'Tracking', abbr: 'G4', color: 'from-yellow-500 to-orange-500' },
+  { name: 'Semrush', category: 'SEO', abbr: 'Se', color: 'from-orange-500 to-red-500' },
+  { name: 'Next.js', category: 'Framework', abbr: 'Nx', color: 'from-slate-700 to-slate-900' },
+  { name: 'React', category: 'Frontend', abbr: 'Re', color: 'from-cyan-400 to-blue-500' },
+  { name: 'Klaviyo', category: 'Email', abbr: 'Kl', color: 'from-emerald-500 to-teal-600' },
+  { name: 'WooCommerce', category: 'E-Commerce', abbr: 'Wo', color: 'from-purple-500 to-purple-700' },
 ];
 
 // Marketing Specific Tools
 const marketingTools = [
-  { name: 'Google Ads', category: 'PPC / Search', abbr: 'Ga', color: 'from-[#063A9A] to-blue-600' },
+  { name: 'Google Ads', category: 'PPC / Search', abbr: 'Ga', color: 'from-blue-500 to-blue-600' },
   { name: 'Meta Ads', category: 'Paid Social', abbr: 'Me', color: 'from-blue-600 to-indigo-600' },
-  { name: 'Semrush', category: 'Technical SEO', abbr: 'Se', color: 'from-[#FF6600] to-red-600' },
-  { name: 'Ahrefs', category: 'Organic Growth', abbr: 'Ah', color: 'from-amber-500 to-[#FF6600]' },
-  { name: 'GA4 & GTM', category: 'Analytics', abbr: 'G4', color: 'from-yellow-500 to-[#FF6600]' },
-  { name: 'Klaviyo', category: 'Retention', abbr: 'Kl', color: 'from-emerald-600 to-teal-700' },
+  { name: 'Semrush', category: 'Technical SEO', abbr: 'Se', color: 'from-orange-500 to-red-500' },
+  { name: 'Ahrefs', category: 'Organic Growth', abbr: 'Ah', color: 'from-orange-400 to-orange-500' },
+  { name: 'GA4 & GTM', category: 'Analytics', abbr: 'G4', color: 'from-yellow-500 to-orange-500' },
+  { name: 'Klaviyo', category: 'Retention', abbr: 'Kl', color: 'from-emerald-500 to-teal-600' },
 ];
 
 // Development Specific Tools
 const devTools = [
-  { name: 'Shopify', category: 'D2C Storefront', abbr: 'Sh', color: 'from-green-500 to-green-700' },
-  { name: 'WooCommerce', category: 'E-Commerce', abbr: 'Wo', color: 'from-purple-600 to-purple-800' },
-  { name: 'Next.js', category: 'React Framework', abbr: 'Nx', color: 'from-slate-800 to-black' },
-  { name: 'React', category: 'Modern UI', abbr: 'Re', color: 'from-cyan-500 to-[#063A9A]' },
-  { name: 'Tailwind', category: 'Styling', abbr: 'Tw', color: 'from-sky-500 to-cyan-600' },
-  { name: 'Node.js', category: 'Backend Dev', abbr: 'No', color: 'from-green-600 to-emerald-800' },
+  { name: 'Shopify', category: 'D2C Storefront', abbr: 'Sh', color: 'from-green-400 to-green-600' },
+  { name: 'WooCommerce', category: 'E-Commerce', abbr: 'Wo', color: 'from-purple-500 to-purple-700' },
+  { name: 'Next.js', category: 'React Framework', abbr: 'Nx', color: 'from-slate-700 to-slate-900' },
+  { name: 'React', category: 'Modern UI', abbr: 'Re', color: 'from-cyan-400 to-blue-500' },
+  { name: 'Tailwind', category: 'Styling', abbr: 'Tw', color: 'from-sky-400 to-cyan-500' },
+  { name: 'Node.js', category: 'Backend Dev', abbr: 'No', color: 'from-green-500 to-green-700' },
 ];
 
 export default function TechnologySection() {
@@ -66,7 +66,7 @@ export default function TechnologySection() {
           </p>
         </div>
 
-        {/* Scrolling marquee */}
+        {/* Scrolling marquee (Original structure restored) */}
         <div className="relative overflow-hidden mb-20">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
