@@ -1,16 +1,13 @@
-import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
+import WhyChooseSection from '@/components/WhyChooseSection';
+import ProcessSection from '@/components/ProcessSection';
+import TechnologySection from '@/components/TechnologySection';
+import PortfolioSection from '@/components/PortfolioSection';
+import BlogSection from '@/components/BlogSection';
+import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
-
-// Lazy load below-the-fold sections using dynamic import for blazing-fast mobile performance
-const ServicesSection = dynamic(() => import('@/components/ServicesSection'));
-const WhyChooseSection = dynamic(() => import('@/components/WhyChooseSection'));
-const ProcessSection = dynamic(() => import('@/components/ProcessSection'));
-const TechnologySection = dynamic(() => import('@/components/TechnologySection'));
-const PortfolioSection = dynamic(() => import('@/components/PortfolioSection'));
-const BlogSection = dynamic(() => import('@/components/BlogSection'));
-const CTASection = dynamic(() => import('@/components/CTASection'));
 
 export default function HomePage() {
   // SEO Schema Data Object
