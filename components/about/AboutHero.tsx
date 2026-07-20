@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, ChevronRight, ArrowRight, Building2, Globe2, Sparkles } from 'lucide-react';
+import { Home, ChevronRight, ArrowRight, Building2, Globe2, Sparkles, TrendingUp, Target, Code, CheckCircle2 } from 'lucide-react';
 
 export default function AboutHero() {
   // SEO AboutPage Schema Data
@@ -60,7 +60,7 @@ export default function AboutHero() {
       <div className="absolute top-10 right-10 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-5 left-10 w-80 h-80 bg-orange-200/20 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Abstract illustration — right side (Light Theme adjusted) */}
+      {/* Abstract illustration — right side */}
       <div className="absolute right-8 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-64 h-64 pointer-events-none">
         <div className="relative w-48 h-48">
           {/* Central node */}
@@ -108,7 +108,7 @@ export default function AboutHero() {
             Growth Focused Digital Marketing Agency
           </div>
 
-          {/* Heading with Homepage Style (Deep Blue & Orange) */}
+          {/* Heading with Homepage Style */}
           <h1
             id="about-hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-[#063A9A]"
@@ -141,22 +141,30 @@ export default function AboutHero() {
           </div>
         </div>
 
-        {/* Bottom pill stats row */}
-        <div className="mt-14 flex flex-wrap gap-4">
+        {/* Bottom pill stats row - Colorful & Highlighted */}
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: 'Approach', value: 'Growth Strategy' },
-            { label: 'Expertise', value: 'Performance Marketing' },
-            { label: 'Solutions', value: 'Web Development' },
-            { label: 'Outcome', value: 'Measurable Results' },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="flex items-center gap-3 px-5 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm"
-            >
-              <div className="text-sm sm:text-base font-extrabold text-[#063A9A]">{item.value}</div>
-              <div className="text-xs sm:text-sm text-slate-500 font-semibold">{item.label}</div>
-            </div>
-          ))}
+            { label: 'Approach', value: 'Growth Strategy', icon: Target, borderColor: 'border-l-blue-600', bgColor: 'bg-blue-50/50' },
+            { label: 'Expertise', value: 'Performance Marketing', icon: TrendingUp, borderColor: 'border-l-[#FF6600]', bgColor: 'bg-orange-50/50' },
+            { label: 'Solutions', value: 'Web Development', icon: Code, borderColor: 'border-l-indigo-600', bgColor: 'bg-indigo-50/50' },
+            { label: 'Outcome', value: 'Measurable Results', icon: CheckCircle2, borderColor: 'border-l-emerald-600', bgColor: 'bg-emerald-50/50' },
+          ].map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={item.label}
+                className={`flex items-center gap-3.5 p-4 bg-white border border-slate-200/80 rounded-2xl shadow-sm border-l-4 ${item.borderColor} hover:shadow-md transition-all duration-300`}
+              >
+                <div className={`w-10 h-10 rounded-xl ${item.bgColor} flex items-center justify-center flex-shrink-0`}>
+                  <IconComponent className="w-5 h-5 text-[#063A9A]" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-wider font-bold text-slate-400">{item.label}</div>
+                  <div className="text-sm sm:text-base font-extrabold text-[#063A9A]">{item.value}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
