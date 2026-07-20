@@ -1,4 +1,4 @@
-import './globals.css';
+import './globals.css'; // Agar ye line dobara error de, toh isko hata kar import '@/app/globals.css'; likh dena
 import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 
@@ -14,18 +14,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Anviaan | Growth Marketing & E-commerce Agency',
-  description: 'Anviaan specializes in performance marketing, D2C brand scaling, advanced SEO, and high-converting e-commerce development to drive exponential revenue growth.',
-  keywords: 'digital marketing agency, web development company, performance marketing, SEO services, growth marketing agency, e-commerce development, performance marketing, D2C brand scaling, multi-vendor marketplaces, SEO services, Anviaan',
+  title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
+  description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
+  keywords: [
+    'Digital Marketing Agency',
+    'Web Development Company',
+    'Performance Marketing',
+    'SEO Services',
+    'E-commerce Solutions',
+    'Business Growth',
+    'Anviaan'
+  ],
   authors: [{ name: 'Anviaan Agency' }],
   icons: {
-    icon: '/icon.png',
+    icon: '/icon.png', // Dhyan rahe, aapki image ka naam "icon.png" hi hona chahiye
   },
   openGraph: {
     title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
     description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IN', // India target audience ke liye US ki jagah IN kar diya hai
     siteName: 'Anviaan',
   },
 };
