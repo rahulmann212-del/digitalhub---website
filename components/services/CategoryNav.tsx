@@ -8,9 +8,8 @@ export default function CategoryNav() {
 
   useEffect(() => {
     const handleScrollEvent = () => {
-      // Jab user screen ka 50% (half height) scroll kar lega tab trigger hoga
+      // 50% screen scroll hone par trigger hoga
       const threshold = window.innerHeight * 0.5;
-      
       if (window.scrollY > threshold) {
         setIsScrolled(true);
       } else {
@@ -19,7 +18,6 @@ export default function CategoryNav() {
     };
 
     window.addEventListener('scroll', handleScrollEvent);
-    // Initial check on load
     handleScrollEvent();
     
     return () => window.removeEventListener('scroll', handleScrollEvent);
@@ -28,63 +26,57 @@ export default function CategoryNav() {
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      // Scroll offset logic adjusted so it lands perfectly on the section
-      const y = el.getBoundingClientRect().top + window.scrollY - (isScrolled ? 90 : 140);
+      const y = el.getBoundingClientRect().top + window.scrollY - (isScrolled ? 90 : 130);
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   return (
     <div 
-      className={`sticky top-16 md:top-20 z-40 backdrop-blur-xl border-b transition-all duration-500 ease-in-out ${
+      className={`sticky top-16 md:top-20 z-40 backdrop-blur-xl border-b transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 border-slate-200 shadow-md py-2.5' 
+          ? 'bg-white/95 border-slate-200 shadow-md py-2' 
           : 'bg-white/80 border-slate-200/50 shadow-sm py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav
           aria-label="Service categories"
-          className={`flex items-center overflow-x-auto scrollbar-none transition-all duration-500 ease-in-out ${
-            isScrolled 
-              ? 'gap-3 justify-start md:justify-center' // Centered pill buttons when scrolled
-              : 'gap-4 justify-start md:grid md:grid-cols-3' // Full grid when expanded
-          }`}
-          style={{ scrollbarWidth: 'none' }}
+          className="grid grid-cols-3 gap-3 md:gap-4 w-full"
         >
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => handleScroll(cat.id)}
-              className={`group relative overflow-hidden flex flex-col items-center justify-center transition-all duration-500 ease-in-out flex-shrink-0 text-center border hover:shadow-md hover:-translate-y-0.5 hover:border-[#063A9A]/30 ${
+              className={`group relative overflow-hidden flex flex-col items-center justify-center text-center border transition-all duration-300 w-full ${
                 isScrolled 
-                  ? 'w-auto px-6 py-2.5 rounded-full bg-white border-slate-200 shadow-sm' // Compact Pill Button Mode
-                  : 'w-[75vw] sm:w-[280px] md:w-full px-5 py-5 rounded-[1.5rem] bg-gradient-to-br from-white via-white to-blue-50/60 border-blue-100 shadow-sm' // Expanded Card Mode
+                  ? 'px-2 py-2 rounded-xl bg-white border-slate-200 shadow-sm' // Scrolled: Compact button layout
+                  : 'px-4 py-4 rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/60 border-blue-100 shadow-sm hover:shadow-md' // Expanded layout
               }`}
             >
-              {/* Highlight Bar - Only visible in expanded card mode */}
+              {/* Top Accent Line - Only when expanded */}
               <div 
-                className={`absolute top-0 left-0 right-0 bg-gradient-to-r from-[#063A9A] to-[#FF6600] opacity-80 group-hover:opacity-100 transition-all duration-500 ${
-                  isScrolled ? 'h-0' : 'h-1.5'
+                className={`absolute top-0 left-0 right-0 bg-gradient-to-r from-[#063A9A] to-[#FF6600] transition-all duration-300 ${
+                  isScrolled ? 'h-0 opacity-0' : 'h-1 opacity-80 group-hover:opacity-100'
                 }`} 
               />
               
-              {/* Title - Deep Blue to Orange on Hover */}
+              {/* Title Text */}
               <span 
-                className={`font-black text-[#063A9A] group-hover:text-[#FF6600] transition-colors whitespace-nowrap ${
-                  isScrolled ? 'text-sm' : 'text-sm md:text-base mt-1.5'
+                className={`font-black text-[#063A9A] group-hover:text-[#FF6600] transition-colors truncate w-full ${
+                  isScrolled ? 'text-xs sm:text-sm' : 'text-xs sm:text-base'
                 }`}
               >
                 {cat.label}
               </span>
               
-              {/* Description - Hides smoothly without squishing the box */}
+              {/* Description Text - Hidden when scrolled to save vertical space */}
               <div 
-                className={`transition-all duration-500 overflow-hidden flex justify-center w-full ${
-                  isScrolled ? 'max-h-0 opacity-0 mt-0' : 'max-h-20 opacity-100 mt-1.5'
+                className={`transition-all duration-300 overflow-hidden w-full ${
+                  isScrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100 mt-1'
                 }`}
               >
-                <span className="text-xs font-semibold text-slate-500 group-hover:text-slate-700 hidden sm:block">
+                <span className="text-[11px] font-semibold text-slate-500 group-hover:text-slate-700 hidden sm:block truncate">
                   {cat.desc}
                 </span>
               </div>
