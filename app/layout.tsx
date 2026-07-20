@@ -15,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.anviaan.com'),
   title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
   description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
   keywords: [
@@ -28,18 +29,35 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Anviaan Agency' }],
   icons: {
-    icon: '/icon.png', // Dhyan rahe, aapki image ka naam "icon.png" hi hona chahiye
+    icon: '/icon.png',
   },
   // Google Search Console Verification Added Here
   verification: {
     google: '3cByKEPpKaGQftVkK4gU8or_YSbgGFLdAT5ZKJ4_NEw',
   },
+  // OpenGraph (OG) Tags for WhatsApp, LinkedIn, Facebook preview
   openGraph: {
     title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
     description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
-    type: 'website',
-    locale: 'en_IN', // India target audience ke liye US ki jagah IN kar diya hai
+    url: 'https://www.anviaan.com',
     siteName: 'Anviaan',
+    images: [
+      {
+        url: '/icon.png', // remove if banner shift here 1200x630 pixels ka bada banner bhi laga sakte hain
+        width: 800,
+        height: 600,
+        alt: 'Anviaan Agency Preview',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  // Twitter Card Tags for X (Twitter) preview
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Anviaan | Premier Digital Marketing & Web Development Agency',
+    description: 'Anviaan helps businesses scale with data-driven performance marketing, advanced SEO, and high-converting web development solutions tailored for growth.',
+    images: ['/icon.png'],
   },
 };
 
