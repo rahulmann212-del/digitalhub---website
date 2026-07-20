@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, MessageSquare, FileText, Phone } from 'lucide-react';
 
@@ -34,29 +36,29 @@ export default function ServicesCTA() {
       className="relative py-24 bg-gradient-to-b from-slate-50 to-white overflow-hidden"
       aria-labelledby="services-cta-heading"
     >
-      <div className="absolute inset-0 bg-grid opacity-30" />
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Dark CTA banner */}
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 p-10 md:p-16 shadow-2xl shadow-slate-900/30 mb-16">
-          <div className="absolute inset-0 bg-grid opacity-10" />
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500/12 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl" />
-          <div className="absolute top-8 right-8 w-44 h-44 border border-white/5 rounded-full" />
-          <div className="absolute bottom-8 left-8 w-32 h-32 border border-white/5 rounded-full" />
+        {/* High-visibility clean light CTA banner */}
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-50 border border-blue-200 p-10 md:p-16 shadow-xl mb-16">
+          <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+          <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-orange-200/40 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-8 right-8 w-44 h-44 border border-slate-200 rounded-full" />
+          <div className="absolute bottom-8 left-8 w-32 h-32 border border-slate-200 rounded-full" />
 
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
             <h2
               id="services-cta-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#063A9A] leading-tight tracking-tight"
             >
               Not Sure Which Service{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
+              <span className="text-[#FF6600] block mt-1">
                 You Need?
               </span>
             </h2>
-            <p className="text-lg text-blue-100/70 leading-relaxed">
+            <p className="text-lg text-slate-700 leading-relaxed font-medium">
               Most clients come to us with a business goal, not a service list.
               Tell us what you are trying to achieve — we will recommend the
               right combination and give you a clear path forward.
@@ -64,19 +66,19 @@ export default function ServicesCTA() {
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link
                 href="/#contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF6600] to-orange-500 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-1 transition-all duration-300"
               >
                 Talk to Us First
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="mailto:inquiry@Anviaan.com"
-                className="inline-flex items-center gap-2 px-8 py-4 text-white font-bold border-2 border-white/20 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 text-[#063A9A] font-bold bg-white border-2 border-slate-200 rounded-2xl hover:border-[#063A9A] hover:bg-blue-50 transition-all duration-300 shadow-sm"
               >
                 Send a Message
               </Link>
             </div>
-            <p className="text-sm text-blue-300/50">
+            <p className="text-sm text-slate-500 font-semibold">
               Free consultation · No obligation · Respond within 4 business hours
             </p>
           </div>
@@ -89,10 +91,10 @@ export default function ServicesCTA() {
             return (
               <div
                 key={action.title}
-                className={`group p-7 rounded-3xl border card-hover ${
+                className={`group p-7 rounded-3xl border card-hover transition-all duration-300 ${
                   action.primary
-                    ? 'bg-gradient-to-br from-blue-600 to-blue-700 border-blue-500 shadow-xl shadow-blue-500/20'
-                    : 'bg-white border-slate-100'
+                    ? 'bg-gradient-to-br from-[#063A9A] to-blue-700 border-[#063A9A] shadow-xl shadow-blue-900/15 text-white'
+                    : 'bg-white border-slate-200 shadow-sm hover:border-[#063A9A]'
                 }`}
               >
                 <div
@@ -101,20 +103,20 @@ export default function ServicesCTA() {
                   }`}
                 >
                   <Icon
-                    className={`w-5 h-5 ${action.primary ? 'text-white' : 'text-blue-600'}`}
+                    className={`w-5 h-5 ${action.primary ? 'text-white' : 'text-[#063A9A]'}`}
                     strokeWidth={2}
                   />
                 </div>
                 <h3
                   className={`font-bold text-base mb-2 ${
-                    action.primary ? 'text-white' : 'text-slate-800'
+                    action.primary ? 'text-white' : 'text-[#063A9A]'
                   }`}
                 >
                   {action.title}
                 </h3>
                 <p
-                  className={`text-sm leading-relaxed mb-5 ${
-                    action.primary ? 'text-blue-100/70' : 'text-slate-500'
+                  className={`text-sm leading-relaxed mb-5 font-medium ${
+                    action.primary ? 'text-blue-100/90' : 'text-slate-600'
                   }`}
                 >
                   {action.desc}
@@ -124,7 +126,7 @@ export default function ServicesCTA() {
                   className={`inline-flex items-center gap-2 text-sm font-bold group/link ${
                     action.primary
                       ? 'text-white hover:gap-3'
-                      : 'text-blue-600 hover:text-blue-700 hover:gap-3'
+                      : 'text-[#063A9A] hover:text-[#FF6600] hover:gap-3'
                   } transition-all duration-200`}
                 >
                   {action.label}

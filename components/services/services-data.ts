@@ -13,7 +13,7 @@ import {
   Share2,
   Zap,
   ShieldCheck,
-  Sparkles // Added Sparkles icon for AI/GEO
+  Sparkles
 } from 'lucide-react';
 
 export interface ProcessStep {
@@ -42,7 +42,6 @@ export interface Category {
   desc: string;
 }
 
-// 1. Categories ko 3 sharp focused tabs mein merge aur re-order kiya gaya hai
 export const categories: Category[] = [
   { id: 'marketing',   label: 'Digital & Performance',   desc: 'Paid ads, video & ROI-driven growth' },
   { id: 'seo',         label: 'Next-Gen Search & AI',    desc: 'SEO, AEO & Generative Engine visibility' },
@@ -50,14 +49,12 @@ export const categories: Category[] = [
 ];
 
 export const services: Service[] = [
-  
-  // ── 1. Digital & Performance Marketing (Top Priority) ─────────────────────
   {
     id: 'google-ads',
     category: 'Digital & Performance',
     categoryId: 'marketing',
     icon: MousePointerClick,
-    color: 'from-blue-500 to-blue-600',
+    color: 'from-[#063A9A] to-blue-600',
     bg: 'bg-blue-50',
     lightBorder: 'border-blue-100',
     title: 'Performance Marketing (Ads)',
@@ -83,9 +80,9 @@ export const services: Service[] = [
     category: 'Digital & Performance',
     categoryId: 'marketing',
     icon: Share2,
-    color: 'from-sky-500 to-blue-500',
-    bg: 'bg-sky-50',
-    lightBorder: 'border-sky-100',
+    color: 'from-blue-600 to-[#FF6600]',
+    bg: 'bg-orange-50/50',
+    lightBorder: 'border-orange-100',
     title: 'Social & Short-Form Video',
     tagline: 'Hook attention, build trust, and drive immediate sales.',
     description:
@@ -104,16 +101,14 @@ export const services: Service[] = [
       { step: 'Optimization', desc: 'Analyzing watch-time drop-offs and iterating hooks for better retention' },
     ],
   },
-
-  // ── 2. Next-Gen Search & AI (SEO + AEO + GEO) ───────────────────────────
   {
     id: 'ai-search-optimization',
     category: 'Next-Gen Search & AI',
     categoryId: 'seo',
-    icon: Sparkles, // Using the new AI Sparkles icon
-    color: 'from-indigo-500 to-purple-600',
-    bg: 'bg-indigo-50',
-    lightBorder: 'border-indigo-100',
+    icon: Sparkles,
+    color: 'from-[#063A9A] to-[#FF6600]',
+    bg: 'bg-blue-50',
+    lightBorder: 'border-blue-100',
     title: 'AI Search Optimization (AEO & GEO)',
     tagline: 'Get recommended by ChatGPT, Perplexity, and Google AI Overviews.',
     description:
@@ -137,9 +132,9 @@ export const services: Service[] = [
     category: 'Next-Gen Search & AI',
     categoryId: 'seo',
     icon: Search,
-    color: 'from-blue-500 to-cyan-500',
-    bg: 'bg-cyan-50',
-    lightBorder: 'border-cyan-100',
+    color: 'from-[#063A9A] to-blue-600',
+    bg: 'bg-blue-50',
+    lightBorder: 'border-blue-100',
     title: 'Technical & Organic SEO',
     tagline: 'The structural foundation for undeniable search dominance.',
     description:
@@ -163,9 +158,9 @@ export const services: Service[] = [
     category: 'Next-Gen Search & AI',
     categoryId: 'seo',
     icon: MapPin,
-    color: 'from-sky-600 to-blue-600',
-    bg: 'bg-sky-50',
-    lightBorder: 'border-sky-100',
+    color: 'from-blue-600 to-[#FF6600]',
+    bg: 'bg-orange-50/50',
+    lightBorder: 'border-orange-100',
     title: 'Local SEO & Dominance',
     tagline: 'Capture the market right in your backyard.',
     description:
@@ -183,16 +178,14 @@ export const services: Service[] = [
       { step: 'Management', desc: 'Monthly GBP posts, Q&A seeding, and review response management' },
     ],
   },
-
-  // ── 3. Web & E-Commerce Solutions (The Foundation) ──────────────────────
   {
     id: 'ecommerce',
     category: 'Web & E-Commerce',
     categoryId: 'web',
     icon: ShoppingCart,
-    color: 'from-cyan-500 to-blue-500',
-    bg: 'bg-cyan-50',
-    lightBorder: 'border-cyan-100',
+    color: 'from-[#063A9A] to-[#FF6600]',
+    bg: 'bg-blue-50',
+    lightBorder: 'border-blue-100',
     title: 'E-Commerce Development',
     tagline: 'Online stores engineered by Anviaan to maximize profit margins.',
     description:
@@ -216,7 +209,7 @@ export const services: Service[] = [
     category: 'Web & E-Commerce',
     categoryId: 'web',
     icon: Paintbrush2,
-    color: 'from-blue-500 to-blue-700',
+    color: 'from-[#063A9A] to-blue-600',
     bg: 'bg-blue-50',
     lightBorder: 'border-blue-100',
     title: 'UI/UX & Website Design',
@@ -241,9 +234,9 @@ export const services: Service[] = [
     category: 'Web & E-Commerce',
     categoryId: 'web',
     icon: Code2,
-    color: 'from-sky-500 to-blue-600',
-    bg: 'bg-sky-50',
-    lightBorder: 'border-sky-100',
+    color: 'from-blue-600 to-[#FF6600]',
+    bg: 'bg-orange-50/50',
+    lightBorder: 'border-orange-100',
     title: 'Custom Web Development',
     tagline: 'Fast, clean architecture engineered to perform and scale.',
     description:
@@ -266,9 +259,9 @@ export const services: Service[] = [
     category: 'Web & E-Commerce',
     categoryId: 'web',
     icon: LayoutTemplate,
-    color: 'from-blue-500 to-sky-400',
-    bg: 'bg-blue-50',
-    lightBorder: 'border-blue-100',
+    color: 'from-[#FF6600] to-orange-500',
+    bg: 'bg-orange-50',
+    lightBorder: 'border-orange-100',
     title: 'High-Converting Landing Pages',
     tagline: 'Single-goal pages built to squeeze ROI out of every click.',
     description:
@@ -291,7 +284,7 @@ export const services: Service[] = [
     category: 'Web & E-Commerce',
     categoryId: 'web',
     icon: ShieldCheck,
-    color: 'from-blue-700 to-blue-500',
+    color: 'from-[#063A9A] to-blue-700',
     bg: 'bg-blue-50',
     lightBorder: 'border-blue-100',
     title: 'Speed & Security Hardening',
