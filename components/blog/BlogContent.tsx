@@ -22,6 +22,10 @@ export default function BlogContent() {
     setActiveCategory(id);
   };
 
+  // LOGICAL FIX: Agar search active hai ya category selected hai, toh SARE articles grid me bhejo.
+  // Nahi toh sirf non-featured bhejo (kyunki featured upar alag se dikh raha hoga).
+  const gridArticles = (searchQuery || activeCategory !== 'all') ? articles : nonFeatured;
+
   return (
     <>
       <BlogHero
@@ -56,7 +60,7 @@ export default function BlogContent() {
               </div>
 
               <BlogGrid
-                articles={nonFeatured}
+                articles={gridArticles} // <-- FIX: Yahan 'nonFeatured' ki jagah 'gridArticles' pass kiya gaya hai
                 searchQuery={searchQuery}
                 activeCategory={activeCategory}
               />
