@@ -29,25 +29,26 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                <Icon className="w-6 h-6 text-white" strokeWidth={2.5} />
+                <Icon className="w-6 h-6 !text-white" strokeWidth={2.5} />
               </div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-xs font-bold text-white backdrop-blur-sm shadow-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-xs font-bold !text-white backdrop-blur-sm shadow-sm">
                 <ChevronRight className="w-3.5 h-3.5" />
                 Industry Focus
               </span>
             </div>
             
-            {/* FIXED: Explicitly set text-white for visibility on dark gradient */}
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+            {/* FIXED: Using !text-white to force override global CSS and added drop-shadow */}
+            <h2 className="text-2xl sm:text-3xl font-extrabold !text-white leading-tight drop-shadow-sm">
               {industry.name}
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-white/90 font-medium leading-relaxed max-w-lg">
+            {/* FIXED: Using !text-white to force override global CSS paragraph styles */}
+            <p className="mt-2 text-sm sm:text-base !text-white font-medium leading-relaxed max-w-lg drop-shadow-sm">
               {industry.tagline}
             </p>
           </div>
 
           {/* Index number watermark */}
-          <div className="text-6xl sm:text-7xl font-black text-white/15 select-none leading-none flex-shrink-0 mt-1">
+          <div className="text-6xl sm:text-7xl font-black !text-white/20 select-none leading-none flex-shrink-0 mt-1">
             {String(index + 1).padStart(2, '0')}
           </div>
         </div>
@@ -111,12 +112,12 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
 
         {/* ── Card footer CTA ── */}
         <div className="pt-6 border-t border-slate-100 flex items-center justify-between gap-4 flex-wrap mt-auto">
-          <p className="text-sm font-extrabold text-slate-400">
+          <p className="text-sm font-extrabold text-slate-500">
             Ready to grow your {industry.name.toLowerCase()} business online?
           </p>
           <Link
             href="/contact"
-            className={`group/btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${industry.color} text-white text-sm font-extrabold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0`}
+            className={`group/btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${industry.color} !text-white text-sm font-extrabold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0`}
           >
             Start a Project
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
