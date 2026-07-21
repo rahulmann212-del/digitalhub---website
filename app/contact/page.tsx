@@ -63,7 +63,7 @@ export default function ContactPage() {
                     <div className="min-w-0">
                       <p className="text-xs text-slate-400">Email</p>
                       <a href="mailto:inquiry@Anviaan.com" className="text-sm font-semibold text-slate-700 hover:text-blue-700 transition-colors truncate">
-                        inquiry@Anviaan.com
+                        info@Anviaan.com
                       </a>
                     </div>
                   </li>
