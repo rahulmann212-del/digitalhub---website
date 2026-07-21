@@ -52,14 +52,18 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
 
   if (filtered.length === 0) {
     return (
-      <div id="blog-grid" className="text-center py-20">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-3xl mb-6 shadow-inner">
-          <SearchX className="w-7 h-7 text-slate-400" />
+      <div id="blog-grid" className="text-center py-24 px-4 bg-white border border-slate-200/80 rounded-3xl shadow-sm">
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-50 border border-orange-100 rounded-3xl mb-6 shadow-sm">
+          <SearchX className="w-10 h-10 text-[#FF6600]" strokeWidth={2} />
         </div>
-        <h3 className="text-xl font-bold text-slate-800 mb-2">No Playbooks Found</h3>
-        <p className="text-sm text-slate-500 max-w-md mx-auto leading-relaxed">
+        <h3 className="text-2xl font-extrabold text-[#063A9A] mb-3">No Playbooks Found</h3>
+        <p className="text-base text-slate-600 font-medium max-w-md mx-auto leading-relaxed">
           {searchQuery
-            ? `Nothing matched "${searchQuery}". Try a different keyword or explore our core growth categories.`
+            ? (
+              <>
+                Nothing matched <span className="text-[#FF6600] font-bold">"{searchQuery}"</span>. Try a different keyword or explore our core growth categories.
+              </>
+            )
             : 'No playbooks in this category yet. Our strategists are actively engineering new insights.'}
         </p>
       </div>
@@ -69,20 +73,20 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
   return (
     <div id="blog-grid">
       {/* Result count */}
-      <div className="flex items-center justify-between mb-6">
-        <p className="text-sm text-slate-500">
-          Showing <span className="font-bold text-slate-800">{visible.length}</span> of{' '}
-          <span className="font-bold text-slate-800">{filtered.length}</span> playbooks
+      <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-200/80">
+        <p className="text-sm sm:text-base font-medium text-slate-600">
+          Showing <span className="font-extrabold text-[#063A9A]">{visible.length}</span> of{' '}
+          <span className="font-extrabold text-[#063A9A]">{filtered.length}</span> playbooks
           {searchQuery && (
             <>
-              {' '}for <span className="font-bold text-blue-600">&ldquo;{searchQuery}&rdquo;</span>
+              {' '}for <span className="font-extrabold text-[#FF6600]">&ldquo;{searchQuery}&rdquo;</span>
             </>
           )}
         </p>
       </div>
 
       {/* Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {visible.map((article) => (
           <BlogCard key={article.id} article={article} />
         ))}
@@ -92,43 +96,48 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
       {totalPages > 1 && (
         <nav
           aria-label="Playbook pagination"
-          className="flex items-center justify-center gap-2 mt-12"
+          className="flex items-center justify-center gap-2.5 mt-16"
         >
           <button
             onClick={() => goToPage(safePage - 1)}
             disabled={safePage === 1}
-            className="inline-flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-blue-200 hover:text-blue-700 hover:bg-blue-50 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-slate-600 disabled:hover:border-slate-200 transition-all duration-200"
+            className="group inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-bold rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-[#063A9A]/30 hover:text-[#FF6600] hover:bg-orange-50 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-slate-600 disabled:hover:border-slate-200 transition-all duration-300 shadow-sm"
             aria-label="Previous page"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
             Prev
           </button>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5 hidden sm:flex">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <button
                 key={page}
                 onClick={() => goToPage(page)}
                 aria-current={page === safePage ? 'page' : undefined}
-                className={`w-10 h-10 text-sm font-bold rounded-xl transition-all duration-200 ${
+                className={`w-11 h-11 text-sm font-extrabold rounded-xl transition-all duration-300 shadow-sm flex items-center justify-center ${
                   page === safePage
-                    ? 'bg-gradient-to-br from-blue-600 to-blue-500 text-white shadow-lg shadow-blue-500/25'
-                    : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-200 hover:text-blue-700 hover:bg-blue-50'
+                    ? 'bg-gradient-to-br from-[#063A9A] to-blue-700 !text-white shadow-md shadow-blue-900/20 border border-[#063A9A]'
+                    : 'bg-white text-slate-700 border border-slate-200 hover:border-[#063A9A]/30 hover:text-[#FF6600] hover:bg-orange-50'
                 }`}
               >
                 {page}
               </button>
             ))}
           </div>
+          
+          {/* Mobile indicator for pages when hidden */}
+          <div className="sm:hidden px-4 py-2.5 text-sm font-bold text-[#063A9A] bg-blue-50 rounded-xl border border-blue-100">
+            {safePage} / {totalPages}
+          </div>
 
           <button
             onClick={() => goToPage(safePage + 1)}
             disabled={safePage === totalPages}
-            className="inline-flex items-center gap-1 px-4 py-2.5 text-sm font-semibold rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-blue-200 hover:text-blue-700 hover:bg-blue-50 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-slate-600 disabled:hover:border-slate-200 transition-all duration-200"
+            className="group inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-bold rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-[#063A9A]/30 hover:text-[#FF6600] hover:bg-orange-50 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-slate-600 disabled:hover:border-slate-200 transition-all duration-300 shadow-sm"
             aria-label="Next page"
           >
             Next
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </button>
         </nav>
       )}
