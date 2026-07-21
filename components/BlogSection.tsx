@@ -147,13 +147,13 @@ export default function BlogSection() {
             <Link href={`/blog/${post.slug}`} key={post.id} className="group h-full">
               <article className="bg-white border border-slate-200 rounded-3xl overflow-hidden card-hover shadow-sm group-hover:border-[#063A9A] transition-all duration-300 h-full flex flex-col">
                 
-                {/* Image Handle: Agar article.image hai to img dikhao, warna Illustration */}
+                {/* Image Handle: Fix applied here to show image without cutting */}
                 {post.image ? (
-                   <div className="h-48 w-full overflow-hidden">
+                   <div className="h-52 w-full bg-slate-900 overflow-hidden flex items-center justify-center">
                      <img 
                        src={post.image} 
                        alt={post.title}
-                       className="w-full h-full object-cover rounded-t-3xl group-hover:scale-105 transition-transform duration-500"
+                       className="w-full h-full object-contain rounded-t-3xl group-hover:scale-105 transition-transform duration-500"
                      />
                    </div>
                 ) : (
