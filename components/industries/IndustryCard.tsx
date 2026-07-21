@@ -17,7 +17,7 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
       id={industry.id}
       className="group flex flex-col bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 scroll-mt-32"
     >
-      {/* ── Gradient header (Colors dynamically pulled from data file) ── */}
+      {/* ── Gradient header ── */}
       <div
         className={`relative bg-gradient-to-br ${industry.color} p-7 sm:p-8 overflow-hidden`}
       >
@@ -36,6 +36,8 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
                 Industry Focus
               </span>
             </div>
+            
+            {/* FIXED: Explicitly set text-white for visibility on dark gradient */}
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
               {industry.name}
             </h2>
@@ -51,16 +53,13 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
         </div>
       </div>
 
-      {/* ── Card body ─────────────────────────────────────────────────── */}
+      {/* ── Card body ── */}
       <div className="flex flex-col flex-1 p-7 sm:p-8 gap-8">
-        {/* Description */}
         <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed border-b border-slate-100 pb-6">
           {industry.description}
         </p>
 
-        {/* Three columns: Challenges | Solutions | Benefits */}
         <div className="grid md:grid-cols-3 gap-6 flex-1">
-
           {/* Challenges */}
           <div className="flex flex-col gap-4">
             <div className={`inline-flex items-center gap-2 px-3 py-1.5 ${industry.challengeAccent} border rounded-xl w-fit shadow-sm`}>
@@ -110,7 +109,7 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
           </div>
         </div>
 
-        {/* ── Card footer CTA ─────────────────────────────────────────── */}
+        {/* ── Card footer CTA ── */}
         <div className="pt-6 border-t border-slate-100 flex items-center justify-between gap-4 flex-wrap mt-auto">
           <p className="text-sm font-extrabold text-slate-400">
             Ready to grow your {industry.name.toLowerCase()} business online?
@@ -118,7 +117,6 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
           <Link
             href="/contact"
             className={`group/btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${industry.color} text-white text-sm font-extrabold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0`}
-            aria-label={`Start a project for the ${industry.name} industry`}
           >
             Start a Project
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -126,10 +124,7 @@ export default function IndustryCard({ industry, index }: IndustryCardProps) {
         </div>
       </div>
 
-      {/* Bottom accent bar on hover */}
-      <div
-        className={`h-1.5 bg-gradient-to-r ${industry.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-      />
+      <div className={`h-1.5 bg-gradient-to-r ${industry.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
     </article>
   );
 }
