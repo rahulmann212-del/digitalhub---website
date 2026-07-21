@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, ChevronRight, ArrowRight, Building2, Globe2, Sparkles, TrendingUp, Target, Code, CheckCircle2 } from 'lucide-react';
+import { Home, ChevronRight, ArrowRight, Building2, Globe2, Sparkles, Target, TrendingUp, Code, CheckCircle2 } from 'lucide-react';
 
 export default function AboutHero() {
   // SEO AboutPage Schema Data
@@ -42,7 +42,7 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative min-h-[72vh] flex flex-col justify-center overflow-hidden bg-slate-50 border-b border-slate-200/80 pt-28 pb-20"
+      className="relative pt-28 pb-12 overflow-hidden bg-gradient-to-b from-blue-50/70 via-slate-100 to-slate-200/60 border-b border-slate-300/60 shadow-sm"
       aria-labelledby="about-hero-heading"
     >
       {/* Schemas injected for About Page & Breadcrumbs */}
@@ -55,44 +55,14 @@ export default function AboutHero() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Background Grid and Glow Elements matching Homepage */}
+      {/* Background Glow Elements matching Contact/Home */}
       <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
-      <div className="absolute top-10 right-10 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-5 left-10 w-80 h-80 bg-orange-200/20 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Abstract illustration — right side */}
-      <div className="absolute right-8 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-64 h-64 pointer-events-none">
-        <div className="relative w-48 h-48">
-          {/* Central node */}
-          <div className="absolute inset-0 m-auto w-20 h-20 bg-gradient-to-br from-[#063A9A] to-blue-600 rounded-3xl flex items-center justify-center shadow-xl shadow-blue-500/20 animate-float">
-            <Building2 className="w-9 h-9 text-white" />
-          </div>
-          {/* Orbiting nodes */}
-          {[
-            { icon: Globe2, top: '0%', left: '50%', delay: '0s', color: 'from-[#063A9A] to-blue-500' },
-            { icon: Sparkles, top: '50%', left: '90%', delay: '0.5s', color: 'from-blue-600 to-[#FF6600]' },
-            { icon: ArrowRight, top: '85%', left: '20%', delay: '1s', color: 'from-[#FF6600] to-orange-400' },
-          ].map((node, i) => (
-            <div
-              key={i}
-              className={`absolute w-10 h-10 bg-gradient-to-br ${node.color} rounded-2xl flex items-center justify-center shadow-md`}
-              style={{ top: node.top, left: node.left, transform: 'translate(-50%,-50%)', animationDelay: node.delay }}
-            >
-              <node.icon className="w-5 h-5 text-white" />
-            </div>
-          ))}
-          {/* Connection lines */}
-          <svg className="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 200 200">
-            <line x1="100" y1="100" x2="100" y2="0" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
-            <line x1="100" y1="100" x2="180" y2="100" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
-            <line x1="100" y1="100" x2="40" y2="170" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
-          </svg>
-        </div>
-      </div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-80 h-80 bg-orange-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-600 mb-8 font-medium">
+        {/* Breadcrumb with proper spacing */}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 mb-6 font-medium">
           <Link href="/" className="flex items-center gap-1 hover:text-[#063A9A] transition-colors">
             <Home className="w-3.5 h-3.5" />
             Home
@@ -101,48 +71,77 @@ export default function AboutHero() {
           <span className="text-[#063A9A] font-bold">About</span>
         </nav>
 
-        <div className="max-w-2xl space-y-7">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#FF6600]" />
-            Growth Focused Digital Marketing Agency
+        {/* Split Grid Layout: Text Left, Illustration Right (No empty space in between) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          {/* Left Column: Heading & Content */}
+          <div className="lg:col-span-7 space-y-4">
+            <h1
+              id="about-hero-heading"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-[#063A9A]"
+            >
+              Helping Businesses Grow Through{' '}
+              <span className="text-[#FF6600] block mt-1">
+                Smarter Digital Strategies
+              </span>
+            </h1>
+
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium max-w-xl">
+              At Anviaan, we help businesses build a stronger digital presence, attract the right audience, and turn more visitors into customers. From strategy and website development to performance marketing and SEO, we create tailored solutions that support measurable growth across industries.
+            </p>
+
+            {/* CTA row */}
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Link
+                href="/#contact"
+                className="group inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#FF6600] to-orange-500 rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Book a Free Consultation
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-bold text-[#063A9A] bg-white border border-slate-200/90 rounded-xl hover:border-[#063A9A] hover:bg-blue-50/50 transition-all duration-300 shadow-sm"
+              >
+                Explore Our Services
+              </Link>
+            </div>
           </div>
 
-          {/* Heading with Homepage Style */}
-          <h1
-            id="about-hero-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-[#063A9A]"
-          >
-            Helping Businesses Grow Through{' '}
-            <span className="text-[#FF6600] block mt-1">
-              Smarter Digital Strategies
-            </span>
-          </h1>
-
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-xl font-medium">
-            At Anviaan, we help businesses build a stronger digital presence, attract the right audience, and turn more visitors into customers. From strategy and website development to performance marketing and SEO, we create tailored solutions that support measurable growth across industries.
-          </p>
-
-          {/* CTA row */}
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Link
-              href="/#contact"
-              className="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#FF6600] to-orange-500 rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-1 transition-all duration-300"
-            >
-              Book a Free Consultation
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-[#063A9A] bg-white border-2 border-slate-200 rounded-2xl hover:border-[#063A9A] hover:bg-blue-50 transition-all duration-300 shadow-sm"
-            >
-              Explore Our Services
-            </Link>
+          {/* Right Column: Clean Floating Illustration pinned to the Right */}
+          <div className="lg:col-span-5 hidden lg:flex items-center justify-end">
+            <div className="relative w-64 h-64">
+              {/* Central node */}
+              <div className="absolute inset-0 m-auto w-24 h-24 bg-gradient-to-br from-[#063A9A] to-blue-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/20 animate-float">
+                <Building2 className="w-10 h-10 text-white" />
+              </div>
+              {/* Orbiting nodes */}
+              {[
+                { icon: Globe2, top: '10%', left: '20%', delay: '0s', color: 'from-[#063A9A] to-blue-500' },
+                { icon: Sparkles, top: '20%', left: '85%', delay: '0.5s', color: 'from-blue-600 to-[#FF6600]' },
+                { icon: ArrowRight, top: '80%', left: '15%', delay: '1s', color: 'from-[#FF6600] to-orange-400' },
+              ].map((node, i) => (
+                <div
+                  key={i}
+                  className={`absolute w-11 h-11 bg-gradient-to-br ${node.color} rounded-2xl flex items-center justify-center shadow-md animate-float`}
+                  style={{ top: node.top, left: node.left, transform: 'translate(-50%,-50%)', animationDelay: node.delay }}
+                >
+                  <node.icon className="w-5 h-5 text-white" />
+                </div>
+              ))}
+              {/* Connection lines */}
+              <svg className="absolute inset-0 w-full h-full opacity-25 pointer-events-none" viewBox="0 0 200 200">
+                <line x1="100" y1="100" x2="60" y2="40" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="100" y1="100" x2="170" y2="50" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
+                <line x1="100" y1="100" x2="40" y2="160" stroke="#063A9A" strokeWidth="1" strokeDasharray="4 4" />
+              </svg>
+            </div>
           </div>
+
         </div>
 
-        {/* Bottom pill stats row - Colorful & Highlighted */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Bottom pill stats row */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { label: 'Approach', value: 'Growth Strategy', icon: Target, borderColor: 'border-l-blue-600', bgColor: 'bg-blue-50/50' },
             { label: 'Expertise', value: 'Performance Marketing', icon: TrendingUp, borderColor: 'border-l-[#FF6600]', bgColor: 'bg-orange-50/50' },
@@ -153,19 +152,20 @@ export default function AboutHero() {
             return (
               <div
                 key={item.label}
-                className={`flex items-center gap-3.5 p-4 bg-white border border-slate-200/80 rounded-2xl shadow-sm border-l-4 ${item.borderColor} hover:shadow-md transition-all duration-300`}
+                className={`flex items-center gap-3.5 p-3.5 bg-white/90 backdrop-blur-sm border border-slate-200/90 rounded-2xl shadow-sm border-l-4 ${item.borderColor} hover:shadow-md transition-all duration-300`}
               >
                 <div className={`w-10 h-10 rounded-xl ${item.bgColor} flex items-center justify-center flex-shrink-0`}>
                   <IconComponent className="w-5 h-5 text-[#063A9A]" />
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-wider font-bold text-slate-400">{item.label}</div>
-                  <div className="text-sm sm:text-base font-extrabold text-[#063A9A]">{item.value}</div>
+                  <div className="text-[11px] uppercase tracking-wider font-bold text-slate-400">{item.label}</div>
+                  <div className="text-xs sm:text-sm font-extrabold text-[#063A9A]">{item.value}</div>
                 </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );
