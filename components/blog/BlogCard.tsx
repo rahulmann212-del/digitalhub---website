@@ -28,21 +28,30 @@ export default function BlogCard({ article, compact = false }: BlogCardProps) {
     >
       {/* Visual / Thumbnail Area */}
       <div
-        className={`relative overflow-hidden flex-shrink-0 ${
+        className={`relative overflow-hidden flex-shrink-0 bg-slate-100 ${
           compact ? 'w-32 h-32' : 'h-48'
         }`}
-        style={{ background: `linear-gradient(135deg, ${article.cover.from} 0%, ${article.cover.to} 100%)` }}
+        style={!article.image ? { background: `linear-gradient(135deg, ${article.cover.from} 0%, ${article.cover.to} 100%)` } : {}}
       >
-        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-        <div className="absolute -top-6 -right-6 w-24 h-24 bg-white/10 rounded-full pointer-events-none" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className={`bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-sm ${
-            compact ? 'w-12 h-12' : 'w-16 h-16'
-          }`}>
-            {/* FIXED: Added !text-white to ensure icon is always visible over dark gradients */}
-            <Icon className={`!text-white ${compact ? 'w-5 h-5' : 'w-7 h-7'}`} strokeWidth={2} />
-          </div>
-        </div>
+        {article.image ? (
+          <img 
+            src={article.image} 
+            alt={article.title} 
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-white/10 rounded-full pointer-events-none" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className={`bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-sm ${
+                compact ? 'w-12 h-12' : 'w-16 h-16'
+              }`}>
+                <Icon className={`!text-white ${compact ? 'w-5 h-5' : 'w-7 h-7'}`} strokeWidth={2} />
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Content Area */}

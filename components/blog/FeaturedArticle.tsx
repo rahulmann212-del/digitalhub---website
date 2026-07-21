@@ -39,34 +39,41 @@ export default function FeaturedArticle({ article }: FeaturedArticleProps) {
 
         <article className="group relative grid lg:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-slate-200/80 shadow-xl shadow-[#063A9A]/5 hover:shadow-2xl hover:shadow-[#063A9A]/10 transition-all duration-500 bg-white">
           
-          {/* ── Left Side: Dark Visual Block ── */}
+          {/* ── Left Side: Dark Visual Block or Custom Image ── */}
           <div
-            className="relative min-h-[300px] lg:min-h-[440px] overflow-hidden"
-            style={{ background: `linear-gradient(135deg, ${article.cover.from} 0%, ${article.cover.to} 100%)` }}
+            className="relative min-h-[300px] lg:min-h-[440px] overflow-hidden bg-slate-900"
+            style={!article.image ? { background: `linear-gradient(135deg, ${article.cover.from} 0%, ${article.cover.to} 100%)` } : {}}
           >
-            <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-            <div className="absolute -top-12 -right-12 w-56 h-56 bg-white/10 rounded-full pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-black/10 rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-white/10 rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white/15 rounded-full pointer-events-none" />
+            {article.image ? (
+              <img 
+                src={article.image} 
+                alt={article.title} 
+                className="absolute inset-0 w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700" 
+              />
+            ) : (
+              <>
+                <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+                <div className="absolute -top-12 -right-12 w-56 h-56 bg-white/10 rounded-full pointer-events-none" />
+                <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-black/10 rounded-full pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-white/10 rounded-full pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white/15 rounded-full pointer-events-none" />
 
-            <div className="relative z-10 h-full flex flex-col items-center justify-center p-10 text-center">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-md border border-white/30 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                {/* FIXED: !text-white for icon visibility on dark gradient */}
-                <Icon className="w-10 h-10 !text-white drop-shadow-md" strokeWidth={2} />
-              </div>
-              
-              <div>
-                {/* FIXED: !text-white/90 for category visibility */}
-                <div className="text-xs font-extrabold !text-white/90 uppercase tracking-widest mb-3 drop-shadow-sm">
-                  {article.category}
+                <div className="relative z-10 h-full flex flex-col items-center justify-center p-10 text-center">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-md border border-white/30 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Icon className="w-10 h-10 !text-white drop-shadow-md" strokeWidth={2} />
+                  </div>
+                  
+                  <div>
+                    <div className="text-xs font-extrabold !text-white/90 uppercase tracking-widest mb-3 drop-shadow-sm">
+                      {article.category}
+                    </div>
+                    <div className="text-xl lg:text-2xl font-black !text-white max-w-sm leading-snug drop-shadow-md">
+                      {article.title}
+                    </div>
+                  </div>
                 </div>
-                {/* FIXED: !text-white for title visibility on dark gradient */}
-                <div className="text-xl lg:text-2xl font-black !text-white max-w-sm leading-snug drop-shadow-md">
-                  {article.title}
-                </div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
 
           {/* ── Right Side: Content Block ── */}
