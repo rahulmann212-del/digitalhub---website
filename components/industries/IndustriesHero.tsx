@@ -100,9 +100,9 @@ export default function IndustriesHero() {
             </div>
           </div>
 
-          {/* Right Column: Clean Floating Illustration pinned to the Right */}
+          {/* Right Column: Moving Floating Illustration pinned to the Right */}
           <div className="lg:col-span-5 hidden lg:flex items-center justify-end">
-            <div className="relative w-72 h-72 pointer-events-none">
+            <div className="relative w-72 h-72 pointer-events-none animate-float">
               <svg viewBox="0 0 280 280" className="w-full h-full" fill="none">
                 <circle cx="140" cy="140" r="120" stroke="#063A9A" strokeWidth="1" strokeDasharray="6 4" opacity="0.15" />
                 <circle cx="140" cy="140" r="85"  stroke="#063A9A" strokeWidth="1" opacity="0.2" />
