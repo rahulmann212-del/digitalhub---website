@@ -108,7 +108,8 @@ export default function BlogGrid({ articles, searchQuery, activeCategory }: Blog
             Prev
           </button>
 
-          <div className="flex items-center gap-1.5 hidden sm:flex">
+          {/* FIXED ERROR HERE: Changed 'flex items-center gap-1.5 hidden sm:flex' to 'hidden sm:flex items-center gap-1.5' */}
+          <div className="hidden sm:flex items-center gap-1.5">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <button
                 key={page}
