@@ -39,21 +39,22 @@ export interface Article {
   tags: string[];
 }
 
+// THEME UPDATE: All categories strictly aligned to Deep Blue (#063A9A) & Orange (#FF6600) variants.
 export const categories: Category[] = [
-  { id: 'web-design',       name: 'UX Architecture',      slug: 'ux-architecture',      icon: LayoutTemplate, color: 'from-blue-500 to-blue-700',    bg: 'bg-blue-50',  count: 4 },
-  { id: 'development',      name: 'Development',          slug: 'development',          icon: Code2,         color: 'from-sky-500 to-blue-500',    bg: 'bg-sky-50',   count: 4 },
-  { id: 'seo',              name: 'AEO & SEO',            slug: 'aeo-seo',              icon: Search,        color: 'from-cyan-500 to-blue-500',    bg: 'bg-cyan-50',  count: 3 },
-  { id: 'ecommerce',        name: 'E-Commerce',           slug: 'ecommerce',            icon: ShoppingCart, color: 'from-violet-500 to-purple-600', bg: 'bg-violet-50', count: 2 },
-  { id: 'performance',      name: 'Performance',          slug: 'performance',          icon: Gauge,         color: 'from-amber-500 to-orange-500',  bg: 'bg-amber-50',  count: 2 },
-  { id: 'security',         name: 'Security',             slug: 'security',             icon: ShieldCheck,   color: 'from-emerald-500 to-teal-600',  bg: 'bg-emerald-50', count: 1 },
-  { id: 'marketing',        name: 'Performance Marketing',slug: 'performance-marketing',icon: Share2,        color: 'from-rose-500 to-pink-600',    bg: 'bg-rose-50',  count: 3 },
+  { id: 'web-design',       name: 'UX Architecture',      slug: 'ux-architecture',      icon: LayoutTemplate, color: 'from-[#063A9A] to-blue-700',    bg: 'bg-blue-50',    count: 4 },
+  { id: 'development',      name: 'Development',          slug: 'development',          icon: Code2,         color: 'from-[#FF6600] to-orange-500',  bg: 'bg-orange-50',  count: 4 },
+  { id: 'seo',              name: 'AEO & SEO',            slug: 'aeo-seo',              icon: Search,        color: 'from-blue-700 to-[#063A9A]',    bg: 'bg-blue-50',    count: 3 },
+  { id: 'ecommerce',        name: 'E-Commerce',           slug: 'ecommerce',            icon: ShoppingCart,  color: 'from-orange-500 to-[#FF6600]',  bg: 'bg-orange-50',  count: 2 },
+  { id: 'performance',      name: 'Performance',          slug: 'performance',          icon: Gauge,         color: 'from-[#063A9A] to-blue-800',    bg: 'bg-blue-50',    count: 2 },
+  { id: 'security',         name: 'Security',             slug: 'security',             icon: ShieldCheck,   color: 'from-slate-700 to-slate-900',   bg: 'bg-slate-50',   count: 1 },
+  { id: 'marketing',        name: 'Performance Marketing',slug: 'performance-marketing',icon: Share2,        color: 'from-[#FF6600] to-orange-600',  bg: 'bg-orange-50',  count: 3 },
 ];
 
 export const authors: Record<string, Author> = {
-  Anviaan:   { name: 'Anviaan Strategists', role: 'Lead Strategy', initials: 'AS', color: 'from-blue-600 to-blue-500' },
-  design:   { name: 'UX Architecture',    role: 'Design Lab',    initials: 'UX', color: 'from-sky-500 to-blue-500' },
-  dev:      { name: 'Engineering Desk',   role: 'Architecture',  initials: 'ED', color: 'from-indigo-500 to-blue-600' },
-  growth:   { name: 'Performance Desk',   role: 'Growth Lab',    initials: 'PD', color: 'from-emerald-500 to-teal-600' },
+  Anviaan:   { name: 'Anviaan Strategists', role: 'Lead Strategy', initials: 'AS', color: 'from-[#063A9A] to-blue-700' },
+  design:   { name: 'UX Architecture',    role: 'Design Lab',    initials: 'UX', color: 'from-[#FF6600] to-orange-500' },
+  dev:      { name: 'Engineering Desk',   role: 'Architecture',  initials: 'ED', color: 'from-[#063A9A] to-blue-800' },
+  growth:   { name: 'Performance Desk',   role: 'Growth Lab',    initials: 'PD', color: 'from-orange-500 to-[#FF6600]' },
 };
 
 export const articles: Article[] = [
@@ -70,7 +71,8 @@ export const articles: Article[] = [
     readTime: 6,
     featured: true,
     popular: true,
-    cover: { from: '#2563eb', to: '#0ea5e9' },
+    // Theme Update: Deep Blue
+    cover: { from: '#063A9A', to: '#1d4ed8' },
     icon: ShoppingCart,
     tags: ['E-Commerce', 'D2C Scaling', 'Conversion Rate', 'RTO Management', 'Video Marketing'],
   },
@@ -89,7 +91,8 @@ export const articles: Article[] = [
     readTime: 7,
     featured: false,
     popular: true,
-    cover: { from: '#0ea5e9', to: '#2563eb' },
+    // Theme Update: Brand Orange
+    cover: { from: '#FF6600', to: '#ea580c' },
     icon: Code2,
     tags: ['WordPress', 'Headless CMS', 'Next.js', 'Architecture'],
   },
@@ -108,7 +111,8 @@ export const articles: Article[] = [
     readTime: 9,
     featured: false,
     popular: true,
-    cover: { from: '#0891b2', to: '#2563eb' },
+    // Theme Update: Deep Blue
+    cover: { from: '#063A9A', to: '#1e40af' },
     icon: Search,
     tags: ['Local SEO', 'AEO', 'Google Business Profile', 'Reviews'],
   },
@@ -127,7 +131,8 @@ export const articles: Article[] = [
     readTime: 6,
     featured: false,
     popular: true,
-    cover: { from: '#4f46e5', to: '#2563eb' },
+    // Theme Update: Brand Orange
+    cover: { from: '#FF6600', to: '#f97316' },
     icon: LayoutTemplate,
     tags: ['Conversion', 'UX Architecture', 'Design', 'CRO'],
   },
@@ -146,7 +151,8 @@ export const articles: Article[] = [
     readTime: 7,
     featured: false,
     popular: false,
-    cover: { from: '#e11d48', to: '#db2777' },
+    // Theme Update: Deep Blue
+    cover: { from: '#063A9A', to: '#1d4ed8' },
     icon: TrendingUp,
     tags: ['Google Ads', 'ROAS', 'PPC', 'Performance Max'],
   },
@@ -165,7 +171,8 @@ export const articles: Article[] = [
     readTime: 6,
     featured: false,
     popular: false,
-    cover: { from: '#f59e0b', to: '#ea580c' },
+    // Theme Update: Brand Orange
+    cover: { from: '#FF6600', to: '#ea580c' },
     icon: Zap,
     tags: ['Images', 'WebP', 'Performance', 'Core Web Vitals'],
   },
@@ -184,7 +191,8 @@ export const articles: Article[] = [
     readTime: 8,
     featured: false,
     popular: false,
-    cover: { from: '#0891b2', to: '#0d9488' },
+    // Theme Update: Deep Blue
+    cover: { from: '#063A9A', to: '#2563eb' },
     icon: Search,
     tags: ['Redesign', 'Redirects', 'SEO Migration', '301'],
   },
@@ -203,7 +211,8 @@ export const articles: Article[] = [
     readTime: 7,
     featured: false,
     popular: false,
-    cover: { from: '#8b5cf6', to: '#9333ea' },
+    // Theme Update: Brand Orange
+    cover: { from: '#FF6600', to: '#f97316' },
     icon: ShoppingCart,
     tags: ['E-Commerce', 'Checkout', 'CRO', 'Cart Abandonment'],
   },
@@ -222,7 +231,8 @@ export const articles: Article[] = [
     readTime: 9,
     featured: false,
     popular: false,
-    cover: { from: '#2563eb', to: '#4f46e5' },
+    // Theme Update: Deep Blue
+    cover: { from: '#063A9A', to: '#1e3a8a' },
     icon: LayoutTemplate,
     tags: ['Accessibility', 'WCAG', 'a11y', 'Inclusive Design'],
   },
@@ -241,7 +251,8 @@ export const articles: Article[] = [
     readTime: 10,
     featured: false,
     popular: false,
-    cover: { from: '#0d9488', to: '#0891b2' },
+    // Theme Update: Brand Orange
+    cover: { from: '#FF6600', to: '#ea580c' },
     icon: Search,
     tags: ['Technical SEO', 'Audit', 'Crawlability', 'Architecture'],
   },
@@ -260,7 +271,8 @@ export const articles: Article[] = [
     readTime: 8,
     featured: false,
     popular: false,
-    cover: { from: '#e11d48', to: '#f43f5e' },
+    // Theme Update: Deep Blue
+    cover: { from: '#063A9A', to: '#1d4ed8' },
     icon: Share2,
     tags: ['Social Media', 'Content Strategy', 'ROAS', 'Performance'],
   },
@@ -279,7 +291,8 @@ export const articles: Article[] = [
     readTime: 6,
     featured: false,
     popular: false,
-    cover: { from: '#0ea5e9', to: '#2563eb' },
+    // Theme Update: Brand Orange
+    cover: { from: '#FF6600', to: '#ea580c' },
     icon: Smartphone,
     tags: ['Responsive Design', 'Mobile', 'CSS Grid', 'UX Architecture'],
   },
