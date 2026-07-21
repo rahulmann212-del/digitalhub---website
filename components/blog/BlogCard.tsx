@@ -28,18 +28,20 @@ export default function BlogCard({ article, compact = false }: BlogCardProps) {
     >
       {/* Visual / Thumbnail Area */}
       <div
-        className={`relative overflow-hidden flex-shrink-0 bg-slate-100 ${
+        className={`relative overflow-hidden flex-shrink-0 bg-slate-900 flex items-center justify-center ${
           compact ? 'w-32 h-32' : 'h-48'
         }`}
         style={!article.image ? { background: `linear-gradient(135deg, ${article.cover.from} 0%, ${article.cover.to} 100%)` } : {}}
       >
         {article.image ? (
+          /* Grid Card Image Render */
           <img 
             src={article.image} 
             alt={article.title} 
             className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
           />
         ) : (
+          /* Fallback gradient if no image is provided */
           <>
             <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-white/10 rounded-full pointer-events-none" />

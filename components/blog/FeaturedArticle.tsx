@@ -41,14 +41,15 @@ export default function FeaturedArticle({ article }: FeaturedArticleProps) {
           
           {/* ── Left Side: Dark Visual Block or Custom Image ── */}
           <div
-            className="relative min-h-[300px] lg:min-h-[440px] overflow-hidden bg-slate-900"
+            className="relative min-h-[300px] lg:min-h-[440px] overflow-hidden bg-slate-900 flex items-center justify-center"
             style={!article.image ? { background: `linear-gradient(135deg, ${article.cover.from} 0%, ${article.cover.to} 100%)` } : {}}
           >
             {article.image ? (
+              /* FIXED: Changed from object-cover to object-contain so text/edges don't get cut off */
               <img 
                 src={article.image} 
                 alt={article.title} 
-                className="absolute inset-0 w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700" 
+                className="absolute inset-0 w-full h-full object-contain bg-slate-900 opacity-95 group-hover:scale-105 transition-transform duration-700" 
               />
             ) : (
               <>
@@ -109,7 +110,6 @@ export default function FeaturedArticle({ article }: FeaturedArticleProps) {
               </span>
             </div>
 
-            {/* Tags matching brand colors */}
             <div className="flex flex-wrap gap-2.5 mb-8">
               {article.tags.slice(0, 4).map((tag) => (
                 <span
