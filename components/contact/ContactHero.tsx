@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, ChevronRight, Send, CheckCircle2, Clock, ShieldCheck } from 'lucide-react';
+import { Home, ChevronRight, Clock, ShieldCheck } from 'lucide-react';
 
 export default function ContactHero() {
   const breadcrumbSchema = {
@@ -25,7 +25,7 @@ export default function ContactHero() {
 
   return (
     <section
-      className="relative pt-24 pb-10 overflow-hidden bg-gradient-to-b from-slate-100/80 to-slate-50 border-b border-slate-200/80"
+      className="relative pt-28 pb-10 overflow-hidden bg-gradient-to-b from-slate-100/80 to-slate-50 border-b border-slate-200/80"
       aria-labelledby="contact-hero-heading"
     >
       <script
@@ -39,8 +39,8 @@ export default function ContactHero() {
       <div className="absolute bottom-0 left-10 w-72 h-72 bg-orange-200/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 mb-4 font-medium">
+        {/* Breadcrumb with proper spacing from navbar */}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 mb-6 font-medium">
           <Link href="/" className="flex items-center gap-1 hover:text-[#063A9A] transition-colors">
             <Home className="w-3.5 h-3.5" />
             Home
@@ -49,16 +49,11 @@ export default function ContactHero() {
           <span className="text-[#063A9A] font-bold">Contact</span>
         </nav>
 
-        {/* Split Grid Layout for Professional Look */}
+        {/* Split Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          {/* Left Column: Heading & Value Prop */}
+          {/* Left Column: Heading & Value Prop (Badge removed completely) */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-[#063A9A] shadow-sm">
-              <Send className="w-3.5 h-3.5 text-[#FF6600]" />
-              Let's Build Something Exceptional
-            </div>
-
             <h1
               id="contact-hero-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-[#063A9A]"
@@ -71,7 +66,7 @@ export default function ContactHero() {
             </p>
           </div>
 
-          {/* Right Column: Sleek Mini Trust Cards (Replaces empty space with professional highlights) */}
+          {/* Right Column: Mini Trust Cards */}
           <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
             <div className="flex items-center gap-3.5 p-3.5 bg-white border border-slate-200/80 rounded-2xl shadow-sm">
               <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-[#063A9A] shrink-0">
