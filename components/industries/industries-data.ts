@@ -31,11 +31,11 @@ export const industries: Industry[] = [
     description:
       'In the hyper-competitive e-commerce space, traffic is meaningless if your store leaks sales. We engineer high-converting web architectures and deploy aggressive performance marketing to maximize your Average Order Value (AOV) and protect your bottom line.',
     icon: ShoppingBag,
-    color: 'from-violet-600 to-purple-800',
-    headerFrom: '#7c3aed',
-    headerTo: '#5b21b6',
-    // Text is strictly dark (slate-900) for high readability
-    challengeAccent: 'bg-violet-50 border-violet-200 text-slate-900 font-semibold',
+    color: 'from-[#063A9A] to-blue-700',
+    headerFrom: '#063A9A',
+    headerTo: '#1d4ed8', // blue-700
+    // Theme applied: Darker, highly readable text over subtle tinted backgrounds
+    challengeAccent: 'bg-orange-50 border-orange-200 text-slate-900 font-semibold',
     solutionAccent: 'bg-blue-50 border-blue-200 text-slate-900 font-semibold',
     benefitAccent: 'bg-emerald-50 border-emerald-200 text-slate-900 font-semibold',
     challenges: [
@@ -64,10 +64,10 @@ export const industries: Industry[] = [
     description:
       'The global beauty devices and aesthetic health market is rapidly scaling. We position premium wellness brands at the top of search engines and deploy visually stunning, short-form campaigns to build instant consumer trust and drive direct sales.',
     icon: Sparkles,
-    color: 'from-rose-500 to-pink-700',
-    headerFrom: '#f43f5e',
-    headerTo: '#be185d',
-    challengeAccent: 'bg-rose-50 border-rose-200 text-slate-900 font-semibold',
+    color: 'from-[#FF6600] to-orange-500',
+    headerFrom: '#FF6600',
+    headerTo: '#f97316', // orange-500
+    challengeAccent: 'bg-orange-50 border-orange-200 text-slate-900 font-semibold',
     solutionAccent: 'bg-blue-50 border-blue-200 text-slate-900 font-semibold',
     benefitAccent: 'bg-emerald-50 border-emerald-200 text-slate-900 font-semibold',
     challenges: [
@@ -96,11 +96,11 @@ export const industries: Industry[] = [
     description:
       'SaaS buyers are sophisticated. They bypass traditional ads and query AI engines directly. We optimize your brand for Answer Engine Optimization (AEO), build lightning-fast demo funnels, and position your software as the industry authority.',
     icon: Cpu,
-    color: 'from-blue-600 to-indigo-800',
-    headerFrom: '#2563eb',
-    headerTo: '#3730a3',
-    challengeAccent: 'bg-blue-50 border-blue-200 text-slate-900 font-semibold',
-    solutionAccent: 'bg-indigo-50 border-indigo-200 text-slate-900 font-semibold',
+    color: 'from-[#063A9A] to-[#FF6600]',
+    headerFrom: '#063A9A',
+    headerTo: '#FF6600',
+    challengeAccent: 'bg-orange-50 border-orange-200 text-slate-900 font-semibold',
+    solutionAccent: 'bg-blue-50 border-blue-200 text-slate-900 font-semibold',
     benefitAccent: 'bg-emerald-50 border-emerald-200 text-slate-900 font-semibold',
     challenges: [
       'Translating complex technical features into clear business value propositions',
@@ -128,10 +128,10 @@ export const industries: Industry[] = [
     description:
       'When a single lead is worth thousands of dollars, generic marketing fails. We build authoritative digital infrastructures, utilize deep technical SEO, and run hyper-targeted campaigns to capture decision-makers at the exact moment of intent.',
     icon: Building2,
-    color: 'from-slate-700 to-slate-900',
-    headerFrom: '#334155',
-    headerTo: '#0f172a',
-    challengeAccent: 'bg-slate-100 border-slate-300 text-slate-900 font-semibold',
+    color: 'from-blue-800 to-[#063A9A]',
+    headerFrom: '#1e40af', // blue-800
+    headerTo: '#063A9A',
+    challengeAccent: 'bg-orange-50 border-orange-200 text-slate-900 font-semibold',
     solutionAccent: 'bg-blue-50 border-blue-200 text-slate-900 font-semibold',
     benefitAccent: 'bg-emerald-50 border-emerald-200 text-slate-900 font-semibold',
     challenges: [
