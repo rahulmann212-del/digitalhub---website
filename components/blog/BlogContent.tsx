@@ -37,16 +37,20 @@ export default function BlogContent() {
       )}
 
       {/* Main content + sidebar */}
-      <section className="relative py-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="absolute inset-0 bg-grid opacity-25" />
+      <section className="relative py-20 bg-slate-50/50 border-t border-slate-200/80">
+        {/* Subtle Background Grid */}
+        <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1fr_340px] gap-10">
+          {/* Layout Grid: Main Content (Left) + Sidebar (Right) */}
+          <div className="grid lg:grid-cols-[1fr_340px] gap-10 lg:gap-14">
+            
             {/* Main column */}
             <div>
-              <div className="flex items-center gap-2 mb-8">
-                <span className="w-1.5 h-6 bg-gradient-to-b from-blue-600 to-blue-400 rounded-full" />
-                <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+              {/* Dynamic Heading styled with Brand Colors */}
+              <div className="flex items-center gap-3 mb-8">
+                <span className="w-2 h-7 bg-gradient-to-b from-[#FF6600] to-orange-500 rounded-full shadow-sm" />
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#063A9A] tracking-tight">
                   {searchQuery || activeCategory !== 'all' ? 'Search Results' : 'Latest Playbooks'}
                 </h2>
               </div>
