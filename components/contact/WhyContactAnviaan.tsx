@@ -115,7 +115,7 @@ export default function WhyContactAnviaan() {
                 Initiate your custom performance blueprint.
               </p>
               <a
-                href="mailto:inquiry@Anviaan.com"
+                href="mailto:info@anviaan.com"
                 className="group inline-flex items-center gap-2 px-6 py-3.5 w-full justify-center text-sm font-extrabold text-white bg-gradient-to-r from-[#FF6600] to-orange-500 rounded-xl shadow-lg hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300"
               >
                 Secure Your Audit
