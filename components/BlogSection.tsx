@@ -1,49 +1,25 @@
 'use client';
 
 import { Clock, ChevronRight, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
-const blogPosts = [
-  {
-    category: 'Web Development',
-    readTime: '5 min read',
-    title: '10 Web Design Trends That Will Dominate in 2025',
-    excerpt:
-      'Explore the cutting-edge design trends shaping modern websites — from micro-animations and glassmorphism to AI-driven personalization and immersive scroll experiences.',
-    gradient: 'from-[#063A9A] to-[#FF6600]',
-    pattern: 'circles',
-  },
-  {
-    category: 'SEO & Growth',
-    readTime: '7 min read',
-    title: 'The Complete Guide to Technical SEO for Business Websites',
-    excerpt:
-      'Master the technical foundations of SEO — Core Web Vitals, schema markup, site architecture, and crawlability — to achieve sustainable organic growth.',
-    gradient: 'from-[#063A9A] to-blue-500',
-    pattern: 'grid',
-  },
-  {
-    category: 'Digital Marketing',
-    readTime: '6 min read',
-    title: 'How to Build a High-Converting Landing Page in 2025',
-    excerpt:
-      'A step-by-step breakdown of the psychological principles, design decisions, and technical elements that turn landing page visitors into paying customers.',
-    gradient: 'from-blue-700 to-[#FF6600]',
-    pattern: 'dots',
-  },
-];
+// NOTE: Yahan apna sahi file path daal dijiyega jahan aapki 'articles' wali data file hai
+import { articles } from './blog/blog-data'; // Example: '@/components/data' ya '../blog/data'
 
 function BlogCardIllustration({
-  gradient,
+  from,
+  to,
   pattern,
   title,
 }: {
-  gradient: string;
+  from: string;
+  to: string;
   pattern: string;
   title: string;
 }) {
   return (
     <div
-      className={`relative w-full h-48 bg-gradient-to-br ${gradient} rounded-t-3xl overflow-hidden flex items-center justify-center`}
+      className={`relative w-full h-48 bg-gradient-to-br ${from} ${to} rounded-t-3xl overflow-hidden flex items-center justify-center`}
       role="img"
       aria-label={`Illustration for article: ${title}`}
     >
@@ -85,7 +61,13 @@ function BlogCardIllustration({
 }
 
 export default function BlogSection() {
-  // SEO Blog Schema Data (Dynamically generated from the blogPosts array)
+  // Yahan se latest 3 blogs fetch ho jayenge
+  const latestPosts = articles.slice(0, 3);
+  
+  // Patterns for fallback illustration
+  const patterns = ['circles', 'grid', 'dots'];
+
+  // SEO Blog Schema Data (Dynamically generated from the real articles array)
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -100,15 +82,15 @@ export default function BlogSection() {
         "url": "https://www.anviaan.com/ANVIAAN.png"
       }
     },
-    "blogPost": blogPosts.map((post) => ({
+    "blogPost": latestPosts.map((post) => ({
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt,
       "articleSection": post.category,
-      "timeRequired": `PT${post.readTime.split(' ')[0]}M`,
+      "timeRequired": `PT${post.readTime}M`,
       "author": {
         "@type": "Organization",
-        "name": "Anviaan"
+        "name": post.author.name
       }
     }))
   };
@@ -148,57 +130,68 @@ export default function BlogSection() {
               help your business thrive online.
             </p>
           </div>
-          <a
-            href="#blog"
+          {/* Main Blog Page Link Updated */}
+          <Link
+            href="/blog"
             className="inline-flex items-center gap-2 text-sm font-bold text-[#063A9A] hover:text-[#FF6600] transition-colors whitespace-nowrap group"
           >
             View All Articles
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
 
-        {/* Cards */}
+        {/* Dynamic Cards Section */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          {blogPosts.map((post) => (
-            <article
-              key={post.title}
-              className="group bg-white border border-slate-200 rounded-3xl overflow-hidden card-hover shadow-sm hover:border-[#063A9A] transition-all duration-300"
-            >
-              <BlogCardIllustration
-                gradient={post.gradient}
-                pattern={post.pattern}
-                title={post.title}
-              />
+          {latestPosts.map((post, index) => (
+            // Pure card ko Link me wrap kiya
+            <Link href={`/blog/${post.slug}`} key={post.id} className="group h-full">
+              <article className="bg-white border border-slate-200 rounded-3xl overflow-hidden card-hover shadow-sm group-hover:border-[#063A9A] transition-all duration-300 h-full flex flex-col">
+                
+                {/* Image Handle: Agar article.image hai to img dikhao, warna Illustration */}
+                {post.image ? (
+                   <div className="h-48 w-full overflow-hidden">
+                     <img 
+                       src={post.image} 
+                       alt={post.title}
+                       className="w-full h-full object-cover rounded-t-3xl group-hover:scale-105 transition-transform duration-500"
+                     />
+                   </div>
+                ) : (
+                  <BlogCardIllustration
+                    from={post.cover.from}
+                    to={post.cover.to}
+                    pattern={patterns[index % 3]} // Rotate patterns dynamically
+                    title={post.title}
+                  />
+                )}
 
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="px-2.5 py-1 text-xs font-bold text-[#063A9A] bg-blue-50 border border-blue-100 rounded-full">
-                    {post.category}
-                  </span>
-                  <span className="flex items-center gap-1 text-xs text-slate-500 font-medium">
-                    <Clock className="w-3 h-3 text-[#FF6600]" />
-                    {post.readTime}
-                  </span>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-2.5 py-1 text-xs font-bold text-[#063A9A] bg-blue-50 border border-blue-100 rounded-full">
+                      {post.category}
+                    </span>
+                    <span className="flex items-center gap-1 text-xs text-slate-500 font-medium">
+                      <Clock className="w-3 h-3 text-[#FF6600]" />
+                      {post.readTime} min read
+                    </span>
+                  </div>
+
+                  <h3 className="font-bold text-[#063A9A] text-base leading-snug mb-3 group-hover:text-[#FF6600] transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-5 font-medium flex-grow">
+                    {post.excerpt}
+                  </p>
+
+                  {/* NOTE: Isko <a> se hata kar <div> kiya hai, kyuki bahar already <Link> laga hua hai */}
+                  <div className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#063A9A] group-hover:gap-2.5 transition-all duration-200">
+                    Read Article
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#FF6600]" />
+                  </div>
                 </div>
-
-                <h3 className="font-bold text-[#063A9A] text-base leading-snug mb-3 group-hover:text-[#FF6600] transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
-
-                <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-5 font-medium">
-                  {post.excerpt}
-                </p>
-
-                <a
-                  href="#blog"
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#063A9A] hover:gap-2.5 transition-all duration-200 group/link"
-                  aria-label={`Read article: ${post.title}`}
-                >
-                  Read Article
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform text-[#FF6600]" />
-                </a>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
       </div>
