@@ -93,6 +93,7 @@ export const articles: Article[] = [
     popular: true,
     cover: { from: '#063A9A', to: '#1d4ed8' },
     icon: ShoppingCart,
+    image: '/ecommerce-sales.jpg', 
     tags: ['E-Commerce', 'D2C Scaling', 'Conversion Rate', 'RTO Management', 'Video Marketing'],
   },
   {
@@ -110,6 +111,7 @@ export const articles: Article[] = [
     popular: true,
     cover: { from: '#FF6600', to: '#ea580c' },
     icon: Code2,
+    image: '/wordpress-vs-headless.jpg',
     tags: ['WordPress', 'Headless CMS', 'Next.js', 'Architecture'],
   },
   {
