@@ -94,17 +94,21 @@ export default function IndustriesCTA() {
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="text-center lg:text-left max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-bold text-white mb-6 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-bold text-white mb-6 backdrop-blur-sm shadow-sm">
                 <Rocket className="w-4 h-4 text-[#FF6600]" />
                 Ready to Scale?
               </div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+              
+              {/* TEXT VISIBILITY FIX: Added drop-shadow-md and ensured pure text-white */}
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
                 Partner With a Dedicated{' '}
-                <span className="text-[#FF6600] block mt-1">
+                <span className="text-[#FF6600] block mt-1 drop-shadow-sm">
                   Growth Engine
                 </span>
               </h3>
-              <p className="mt-5 text-base sm:text-lg text-blue-50/90 font-medium leading-relaxed">
+              
+              {/* TEXT VISIBILITY FIX: Changed to pure white, font-semibold, and added drop-shadow */}
+              <p className="mt-5 text-base sm:text-lg text-white font-semibold leading-relaxed drop-shadow-sm">
                 We partner selectively with high-volume e-commerce brands, tech innovators, and enterprise B2B companies looking for aggressive, data-driven scaling.
               </p>
               
@@ -114,13 +118,13 @@ export default function IndustriesCTA() {
                   (s) => (
                     <span
                       key={s}
-                      className="px-4 py-2 bg-white/10 border border-white/15 rounded-full text-xs sm:text-sm text-white font-bold backdrop-blur-sm"
+                      className="px-4 py-2 bg-white/15 border border-white/25 rounded-full text-xs sm:text-sm text-white font-bold backdrop-blur-sm shadow-sm"
                     >
                       {s}
                     </span>
                   )
                 )}
-                <span className="px-4 py-2 bg-[#FF6600]/20 border border-[#FF6600]/40 rounded-full text-xs sm:text-sm text-white font-extrabold backdrop-blur-sm">
+                <span className="px-4 py-2 bg-[#FF6600]/30 border border-[#FF6600]/50 rounded-full text-xs sm:text-sm text-white font-extrabold backdrop-blur-sm shadow-sm">
                   + Full-Funnel Analytics
                 </span>
               </div>
@@ -140,7 +144,7 @@ export default function IndustriesCTA() {
               >
                 View Our Architecture
               </Link>
-              <p className="text-center text-xs font-semibold text-blue-200/60 mt-1">
+              <p className="text-center text-xs font-semibold text-blue-200/80 mt-1">
                 Direct strategy · No obligations
               </p>
             </div>
