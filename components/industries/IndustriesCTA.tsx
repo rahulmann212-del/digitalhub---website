@@ -39,7 +39,7 @@ export default function IndustriesCTA() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
-        {/* Universal approach cards */}
+        {/* Universal approach cards -> Anviaan Growth Architecture */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full text-sm font-bold text-[#063A9A] mb-6 shadow-sm">
@@ -74,7 +74,10 @@ export default function IndustriesCTA() {
                   <h3 className="text-lg font-extrabold text-[#063A9A] mb-2.5 relative z-10">{u.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed font-medium relative z-10">{u.desc}</p>
                   
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${u.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                  {/* Bottom accent line on hover */}
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${u.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  />
                 </div>
               );
             })}
@@ -95,19 +98,17 @@ export default function IndustriesCTA() {
                 <Rocket className="w-4 h-4 text-[#FF6600]" />
                 Ready to Scale?
               </div>
-              
-              {/* FIXED: text-white enforced here */}
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
                 Partner With a Dedicated{' '}
                 <span className="text-[#FF6600] block mt-1">
                   Growth Engine
                 </span>
               </h3>
-              {/* FIXED: text-white/90 enforced here */}
-              <p className="mt-5 text-base sm:text-lg text-white/90 font-medium leading-relaxed">
+              <p className="mt-5 text-base sm:text-lg text-blue-50/90 font-medium leading-relaxed">
                 We partner selectively with high-volume e-commerce brands, tech innovators, and enterprise B2B companies looking for aggressive, data-driven scaling.
               </p>
               
+              {/* Premium Focus Pills */}
               <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-2.5">
                 {['Sub-Second Load Times', 'AEO & GEO Ready', 'ROAS Optimization', 'Frictionless Checkouts', 'Short-Form Video'].map(
                   (s) => (
