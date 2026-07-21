@@ -1,6 +1,135 @@
-{/* Right Column: Floating Playbook Illustration */}
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { Home, ChevronRight, Search, X, Newspaper, Sparkles } from 'lucide-react';
+
+interface BlogHeroProps {
+  onSearch: (query: string) => void;
+  searchQuery: string;
+  totalArticles: number;
+  totalCategories: number;
+}
+
+export default function BlogHero({ onSearch, searchQuery, totalArticles, totalCategories }: BlogHeroProps) {
+  const [input, setInput] = useState(searchQuery);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSearch(input);
+    const grid = document.getElementById('blog-grid');
+    if (grid) {
+      const y = grid.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const clearSearch = () => {
+    setInput('');
+    onSearch('');
+  };
+
+  // SEO Breadcrumb Schema Data for Google
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.anviaan.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.anviaan.com/blog"
+      }
+    ]
+  };
+
+  return (
+    <section
+      className="relative pt-28 pb-12 overflow-hidden bg-gradient-to-b from-blue-50/70 via-slate-100 to-slate-200/60 border-b border-slate-300/60 shadow-sm"
+      aria-labelledby="blog-hero-heading"
+    >
+      {/* Schema injected for Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Background Grid and Light Glow Elements matching other pages */}
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-80 h-80 bg-orange-400/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Breadcrumb with proper spacing */}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 mb-6 font-medium">
+          <Link href="/" className="flex items-center gap-1 hover:text-[#063A9A] transition-colors">
+            <Home className="w-3.5 h-3.5" />
+            Home
+          </Link>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <span className="text-[#063A9A] font-bold">Blog</span>
+        </nav>
+
+        {/* Split Grid Layout: Text Left, Illustration Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          {/* Left Column: Heading & Search Bar */}
+          <div className="lg:col-span-7 space-y-4">
+            <h1
+              id="blog-hero-heading"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-[#063A9A]"
+            >
+              Insights for{' '}
+              <span className="text-[#FF6600] block mt-1">
+                High-Stakes Scaling
+              </span>
+            </h1>
+
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-xl font-medium">
+              Deep-dive playbooks on Generative Engine Optimization (GEO), ROI-obsessed performance marketing, and high-conversion web architectures engineered for modern brands.
+            </p>
+
+            {/* CLEAN SEARCH BAR DESIGN */}
+            <form onSubmit={handleSubmit} className="relative max-w-xl pt-2">
+              <div className="flex items-center w-full bg-white/90 backdrop-blur-sm border border-slate-200/90 rounded-full shadow-md shadow-blue-500/5 focus-within:ring-4 focus-within:ring-[#063A9A]/15 focus-within:border-[#063A9A]/30 transition-all p-1.5 pl-6">
+                <Search className="w-4.5 h-4.5 text-slate-400 shrink-0" />
+                <input
+                  type="search"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Search playbooks, AEO strategies..."
+                  aria-label="Search blog articles"
+                  className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-slate-800 text-xs sm:text-sm font-medium px-3 py-2 placeholder:text-slate-400 w-full"
+                />
+                {input && (
+                  <button
+                    type="button"
+                    onClick={clearSearch}
+                    className="p-1.5 text-slate-400 hover:text-[#FF6600] transition-colors shrink-0 mr-1"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4" strokeWidth={2.5} />
+                  </button>
+                )}
+                <button
+                  type="submit"
+                  className="shrink-0 px-5 py-2.5 text-xs sm:text-sm font-extrabold text-white bg-gradient-to-r from-[#FF6600] to-orange-500 rounded-full shadow-md hover:shadow-orange-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* Right Column: Clean Floating Playbook Illustration pinned to the Right */}
           <div className="lg:col-span-5 hidden lg:flex items-center justify-end">
-            <div className="relative w-72 h-72 pointer-events-none animate-float">
+            <div className="relative w-72 h-72 pointer-events-none">
               <svg viewBox="0 0 400 400" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="300" cy="100" r="60" fill="#FF6600" opacity="0.04" />
                 <circle cx="100" cy="300" r="80" fill="#063A9A" opacity="0.04" />
@@ -30,3 +159,26 @@
               </svg>
             </div>
           </div>
+
+        </div>
+
+        {/* Stats row at the bottom */}
+        <div className="mt-10 flex flex-wrap gap-3">
+          <div className="flex items-center gap-2 px-3.5 py-2 bg-white/90 backdrop-blur-sm border border-slate-200/90 rounded-xl shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#063A9A]" />
+            <span className="text-xs sm:text-sm font-extrabold text-slate-700">{totalArticles} Playbooks</span>
+          </div>
+          <div className="flex items-center gap-2 px-3.5 py-2 bg-white/90 backdrop-blur-sm border border-slate-200/90 rounded-xl shadow-sm">
+            <Newspaper className="w-3.5 h-3.5 text-[#063A9A]" />
+            <span className="text-xs sm:text-sm font-extrabold text-slate-700">{totalCategories} Categories</span>
+          </div>
+          <div className="flex items-center gap-2 px-3.5 py-2 bg-white/90 backdrop-blur-sm border border-slate-200/90 rounded-xl shadow-sm">
+            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-sm" />
+            <span className="text-xs sm:text-sm font-extrabold text-slate-700">Updated Weekly</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
