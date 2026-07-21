@@ -99,8 +99,8 @@ export default function IndustriesCTA() {
                 Ready to Scale?
               </div>
               
-              {/* TEXT VISIBILITY FIX: Added drop-shadow-md and ensured pure text-white */}
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
+              {/* USE !text-white TO FORCE WHITE COLOR AND OVERRIDE GLOBAL CSS */}
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold !text-white leading-tight drop-shadow-md">
                 Partner With a Dedicated{' '}
                 <span className="text-[#FF6600] block mt-1 drop-shadow-sm">
                   Growth Engine
