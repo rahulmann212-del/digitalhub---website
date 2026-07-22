@@ -108,11 +108,11 @@ export default function Footer() {
 
             <div className="space-y-3">
               <a
-                href="mailto:inquiry@Anviaan.com"
+                href="mailto:info@anviaan.com"
                 className="flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                inquiry@Anviaan.com
+                info@anviaan.com
               </a>
               
               <a
