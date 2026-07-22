@@ -58,176 +58,24 @@ export const authors: Record<string, Author> = {
 };
 
 export const articles: Article[] = [
-  // --- BRAND NEW ARTICLE ADDED HERE ---
+  // --- BRAND NEW ARTICLE ---
   {
     id: '14',
     slug: 'website-visitors-not-converting-customers',
     title: 'Your Website Is Getting Visitors. So Why Aren\'t They Becoming Customers?',
     excerpt: 'More website traffic doesn\'t automatically translate into more enquiries. Discover why visitors decide to leave and how to systematically turn interest into action.',
+    content: '<h3 class="text-xl font-bold mt-8 mb-3 text-gray-800">Key Takeaways</h3>\n<ul class="list-disc pl-6 mb-8 text-gray-700 space-y-2"><li>More website traffic doesn\'t automatically translate into more enquiries.</li><li>Visitors decide whether to contact a business long before they click a button or fill out a form.</li><li>Poor messaging, unclear positioning, and weak trust signals often reduce conversions more than low traffic.</li><li>Improving the customer experience can increase enquiries without increasing your marketing budget.</li><li>The highest-performing websites are designed to build confidence, not just attract visitors.</li></ul>\n\n<img src="/website-losing-leads-good-traffic.jpg" alt="Business website receiving high traffic but generating very few customer enquiries" class="w-full rounded-2xl my-8 shadow-md object-cover" />\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">More Traffic Was Never the Finish Line</h2>\nFor years, businesses measured digital success by one number: website traffic. If monthly visitors increased, marketing was considered successful. If search rankings improved, the strategy seemed to be working. Agencies proudly shared graphs showing upward trends, while business owners watched dashboards fill with encouraging numbers.\n\nBut something has changed over the last few years.\n\nMore companies are discovering that traffic alone tells an incomplete story. A website may attract thousands of visitors every month and still struggle to generate consistent enquiries. At the same time, another business with far fewer visitors can quietly build a steady pipeline of leads simply because its website does a better job of converting interest into action.\n\nThat difference is easy to overlook because traffic is visible. Lost opportunities are not.\n\nAnalytics platforms can tell you how many people visited your website, how long they stayed, and which pages they viewed. What they can\'t fully explain is why someone who seemed genuinely interested decided to leave without making contact. Those moments rarely leave behind a clear explanation. They simply become another exit in your reports.\n\nThis is why businesses often spend months trying to increase traffic when the bigger opportunity lies elsewhere. Before investing more in advertising or SEO, it\'s worth asking a different question.\n\n<strong>What happens after someone lands on your website?</strong>\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">The Gap Between Interest and Action</h2>\nEvery visitor arrives with a reason. Some are actively comparing service providers. Others are researching before making a decision. Many simply want reassurance that they are looking at a business they can trust.\n\nThe challenge is that interest and action are not the same thing.\n\nImagine you\'re searching for a construction company for a home renovation project. Within a few minutes, you\'ve opened four different websites. Each one offers similar services, claims years of experience, and promises quality workmanship. On paper, they all appear capable of doing the job.\n\nYet your decision won\'t be based on a checklist of services.\n\nYou\'ll naturally pay attention to details that help answer much bigger questions. Does this company seem organised? Are the completed projects genuine? Is the process clearly explained? Can you quickly understand what makes this business different from the others? Does contacting them feel like the logical next step?\n\nNone of these questions appear as pop-up surveys, but they quietly shape every purchasing decision. The same behaviour applies whether someone is looking for a dentist, an interior designer, a law firm, or a software company. Visitors are constantly evaluating credibility for <a href="https://www.anviaan.com/industries" class="text-[#063A9A] font-bold hover:text-[#FF6600] transition-colors underline">businesses across industries</a>.\n\nThat is why conversion is less about convincing people to buy and more about removing the uncertainty that prevents them from taking the first step.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Why Good Marketing Sometimes Produces Disappointing Results</h2>\nMarketing is designed to create opportunities.\n\n<a href="https://www.anviaan.com/services" class="text-[#063A9A] font-bold hover:text-[#FF6600] transition-colors underline">Search engine optimization</a> helps people discover your business. Paid advertising expands your reach. Social media keeps your brand visible, while content marketing builds awareness over time. Each of these channels plays an important role in bringing potential customers to your website.\n\nHowever, marketing cannot complete the conversation on its own. Think of it as inviting someone into your office for the first time. The invitation might be excellent, but the experience after they arrive determines whether they stay, ask questions, and eventually become a customer. A website works in exactly the same way.\n\nMany businesses invest heavily in attracting visitors but spend very little time improving the experience those visitors actually have. The homepage becomes overloaded with generic marketing language, service pages focus on features instead of customer concerns, and contact forms ask for unnecessary information before any relationship has been established.\n\nNone of these issues seem significant in isolation. Together, they create hesitation. And hesitation is one of the most expensive problems a business can have because it rarely appears in reports.\n\n<img src="/website-visitor-conversion-journey.jpg" alt="Website visitors leaving before reaching the contact page due to conversion friction" class="w-full rounded-2xl my-8 shadow-md object-cover" />\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Most Visitors Aren\'t Looking for Information. They\'re Looking for Confidence.</h2>\nOne of the biggest misconceptions in website design is the belief that visitors only want information. Information certainly matters, but confidence matters more.\n\nConsider how people make important buying decisions in everyday life. Before hiring an architect, choosing a financial advisor, or booking a medical consultation, most people spend time looking for reassurance rather than technical details. They read reviews, explore previous work, check credentials, compare experiences, and try to understand how the business approaches its clients.\n\nThey aren\'t collecting facts for the sake of it. They\'re trying to reduce risk. A business website serves exactly the same purpose.\n\nEvery project showcased, every testimonial displayed, every clearly explained process, and every transparent piece of communication helps answer a simple question: Can I trust this business enough to start a conversation?\n\nWhen these signals work together, visitors feel comfortable moving forward. When they are missing, even a well-designed website can struggle to convert interest into enquiries.\n\n<img src="/website-trust-signals.jpg" alt="Trust signals including portfolio reviews testimonials and certifications helping visitors gain confidence" class="w-full rounded-2xl my-8 shadow-md object-cover" />\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Where Most Websites Quietly Lose Potential Customers</h2>\nWhen business owners notice that enquiries have slowed down, their first instinct is often to look at their marketing efforts. They review advertising campaigns, search engine rankings, social media performance, and content strategy. While those areas deserve attention, they don\'t always explain the real problem. In many cases, people are already discovering the business. What changes is what happens after they arrive.\n\nOne of the reasons this problem is so difficult to identify is that traditional analytics platforms cannot measure hesitation. The companies that consistently generate enquiries understand that a website is not simply a collection of pages. It is part of the sales process. Every headline, every project image, every testimonial, and every section of content either strengthens confidence or introduces doubt.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Every Page Should Help the Visitor Make a Decision</h2>\nA common mistake on business websites is treating every page as an opportunity to describe services rather than guide decisions. Homepages often begin with broad statements about quality and experience, followed by long lists of services that any competitor could also claim to provide.\n\nConsider a construction company looking to attract residential clients. Simply listing services does very little to reduce uncertainty. A prospective client is usually asking more practical questions. How does the company manage projects? Who will be the primary point of contact? What happens if changes are requested after construction has started? The businesses that answer these practical questions naturally make visitors feel more comfortable.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Generic Marketing Language Has Lost Its Impact</h2>\nBrowse ten websites within the same industry and a familiar pattern quickly emerges. Most businesses describe themselves using almost identical language. They promise exceptional quality, customer satisfaction, experienced professionals, innovative solutions, and reliable service.\n\nThe challenge is that these phrases no longer communicate anything specific. Visitors have seen the same promises repeated across dozens of websites. Businesses rarely become memorable because they choose stronger adjectives. They become memorable because they communicate with greater precision.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Trust Is Built Long Before Someone Decides to Get in Touch</h2>\nMany business owners assume trust begins during the first phone call or meeting with a prospective customer. In reality, that process usually starts much earlier. Long before someone submits an enquiry form, they have already formed opinions about the business based on the information available on its website. Reviews, case studies, project photographs, certifications, team introductions, and a clearly explained process all contribute to answering those questions.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Small Improvements Often Deliver Bigger Results Than a Complete Redesign</h2>\nWhen enquiry numbers begin to decline, many businesses assume the website itself has become outdated. Their first reaction is to plan a complete redesign. While redesigns can certainly be valuable in some situations, they are rarely the first place to look.\n\nThis is <a href="https://www.anviaan.com/about" class="text-[#063A9A] font-bold hover:text-[#FF6600] transition-colors underline">our approach</a>: experienced marketers usually begin with optimisation rather than replacement. Before investing in a complete rebuild, they study how visitors behave, where they lose confidence, and which parts of the customer journey create unnecessary friction.\n\n<img src="/website-conversion-friction.jpg" alt="Website usability issues causing potential customers to leave before submitting an enquiry" class="w-full rounded-2xl my-8 shadow-md object-cover" />\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Every Second Shapes a Visitor\'s First Impression</h2>\nWebsite speed is often discussed as a technical metric, but visitors never experience it as a technical issue. They experience it as a reflection of the business itself. Google has repeatedly confirmed that page experience is one of the many signals considered in Search, while user behaviour studies consistently show that people become less patient as loading times increase. Improving website performance is rarely about chasing perfect benchmark scores. It is about removing unnecessary waiting.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Visitors Need Direction More Than Information</h2>\nOne of the easiest ways to lose potential enquiries is to assume that visitors already know what to do next. Rather than assuming visitors will discover pages themselves, successful websites make each next step obvious. Internal links, well-placed calls to action, related case studies, and thoughtfully structured navigation help people continue their journey without feeling lost.\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Trust Is Built Through Evidence, Not Claims</h2>\nEvery business wants to appear experienced, reliable, and professional. The challenge is that visitors rarely accept those qualities simply because they are written on a homepage. Trust develops when claims are supported by evidence. The businesses that answer questions clearly make the buying decision feel significantly less risky.\n\n<img src="/high-converting-business-website.jpg" alt="Modern business website guiding visitors through a seamless journey to become qualified leads" class="w-full rounded-2xl my-8 shadow-md object-cover" />\n\n<div class="overflow-x-auto my-10"><table class="w-full text-left border-collapse rounded-xl overflow-hidden shadow-sm"><thead><tr class="bg-blue-50 text-[#063A9A]"><th class="p-4 border border-blue-100 font-bold w-1/2">Before Optimisation</th><th class="p-4 border border-blue-100 font-bold w-1/2">After Optimisation</th></tr></thead><tbody class="text-gray-700 bg-white"><tr><td class="p-4 border border-gray-200">Slow loading pages</td><td class="p-4 border border-gray-200">Faster user experience</td></tr><tr class="bg-slate-50/50"><td class="p-4 border border-gray-200">Generic service descriptions</td><td class="p-4 border border-gray-200">Clear customer-focused messaging</td></tr><tr><td class="p-4 border border-gray-200">Few trust signals</td><td class="p-4 border border-gray-200">Reviews, case studies, project gallery</td></tr><tr class="bg-slate-50/50"><td class="p-4 border border-gray-200">Weak CTAs</td><td class="p-4 border border-gray-200">Guided user journey</td></tr><tr><td class="p-4 border border-gray-200">High visitor drop-off</td><td class="p-4 border border-gray-200">Better enquiry potential</td></tr></tbody></table></div>\n\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Your Contact Page Should Feel Like the Beginning of a Conversation</h2>\nMany contact pages are treated as little more than a form and a phone number. Technically, they allow visitors to get in touch, but they do very little to encourage that first interaction. A stronger approach is to recognise that someone reaching the contact page has already invested time learning about the business.\n\nRemoving uncertainty at this final stage often has a greater impact on conversions than adding another promotional headline or redesigning the page altogether.\n\n<div class="bg-blue-50 p-6 sm:p-8 rounded-2xl border border-blue-100 shadow-sm mt-4"><h3 class="text-xl font-bold text-[#063A9A] mb-2">Ready to turn your website visitors into actual customers?</h3><p class="text-gray-700 mb-6 font-medium">Looking to improve your website visibility and conversion rate?</p><a href="https://www.anviaan.com/contact" class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#FF6600] to-orange-500 rounded-xl shadow-md hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">Contact us<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>',
     category: 'UX Architecture',
     categoryId: 'web-design',
     author: authors.design,
     date: '2026-07-22',
     readTime: 11,
-    featured: true, // Promoted to feature
+    featured: true, 
     popular: true,
     cover: { from: '#FF6600', to: '#f97316' },
     icon: LayoutTemplate,
-    image: '/website-losing-leads-good-traffic.jpg', // Main blog card feature image
+    image: '/website-losing-leads-good-traffic.jpg', 
     tags: ['Conversion', 'UX Design', 'Customer Journey', 'Trust Signals'],
-    
-    // Backticks used here for flawless HTML multi-line formatting
-    content: `
-      <h3 class="text-xl font-bold mt-8 mb-3 text-gray-800">Key Takeaways</h3>
-      <ul class="list-disc pl-6 mb-8 text-gray-700 space-y-2">
-        <li>More website traffic doesn't automatically translate into more enquiries.</li>
-        <li>Visitors decide whether to contact a business long before they click a button or fill out a form.</li>
-        <li>Poor messaging, unclear positioning, and weak trust signals often reduce conversions more than low traffic.</li>
-        <li>Improving the customer experience can increase enquiries without increasing your marketing budget.</li>
-        <li>The highest-performing websites are designed to build confidence, not just attract visitors.</li>
-      </ul>
-
-      <img src="/website-losing-leads-good-traffic.jpg" alt="Business website receiving high traffic but generating very few customer enquiries" class="w-full rounded-2xl my-8 shadow-md object-cover" />
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">More Traffic Was Never the Finish Line</h2>
-      <p class="text-gray-700 mb-4">For years, businesses measured digital success by one number: website traffic. If monthly visitors increased, marketing was considered successful. If search rankings improved, the strategy seemed to be working. Agencies proudly shared graphs showing upward trends, while business owners watched dashboards fill with encouraging numbers.</p>
-      
-      <p class="text-gray-700 mb-4">But something has changed over the last few years.</p>
-      
-      <p class="text-gray-700 mb-4">More companies are discovering that traffic alone tells an incomplete story. A website may attract thousands of visitors every month and still struggle to generate consistent enquiries. At the same time, another business with far fewer visitors can quietly build a steady pipeline of leads simply because its website does a better job of converting interest into action.</p>
-      
-      <p class="text-gray-700 mb-4">That difference is easy to overlook because traffic is visible. Lost opportunities are not.</p>
-      
-      <p class="text-gray-700 mb-4">Analytics platforms can tell you how many people visited your website, how long they stayed, and which pages they viewed. What they can't fully explain is why someone who seemed genuinely interested decided to leave without making contact. Those moments rarely leave behind a clear explanation. They simply become another exit in your reports.</p>
-      
-      <p class="text-gray-700 mb-4">This is why businesses often spend months trying to increase traffic when the bigger opportunity lies elsewhere. Before investing more in advertising or SEO, it's worth asking a different question.</p>
-      
-      <p class="text-gray-700 font-bold mb-8">What happens after someone lands on your website?</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">The Gap Between Interest and Action</h2>
-      <p class="text-gray-700 mb-4">Every visitor arrives with a reason. Some are actively comparing service providers. Others are researching before making a decision. Many simply want reassurance that they are looking at a business they can trust.</p>
-      
-      <p class="text-gray-700 mb-4">The challenge is that interest and action are not the same thing.</p>
-      
-      <p class="text-gray-700 mb-4">Imagine you're searching for a construction company for a home renovation project. Within a few minutes, you've opened four different websites. Each one offers similar services, claims years of experience, and promises quality workmanship. On paper, they all appear capable of doing the job.</p>
-      
-      <p class="text-gray-700 mb-4">Yet your decision won't be based on a checklist of services.</p>
-      
-      <p class="text-gray-700 mb-4">You'll naturally pay attention to details that help answer much bigger questions. Does this company seem organised? Are the completed projects genuine? Is the process clearly explained? Can you quickly understand what makes this business different from the others? Does contacting them feel like the logical next step?</p>
-      
-      <p class="text-gray-700 mb-4">None of these questions appear as pop-up surveys, but they quietly shape every purchasing decision. The same behaviour applies whether someone is looking for a dentist, an interior designer, a law firm, or a software company. Visitors are constantly evaluating credibility for <a href="https://www.anviaan.com/industries" class="text-[#063A9A] font-bold hover:text-[#FF6600] transition-colors underline">businesses across industries</a>.</p>
-      
-      <p class="text-gray-700 mb-8">That is why conversion is less about convincing people to buy and more about removing the uncertainty that prevents them from taking the first step.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Why Good Marketing Sometimes Produces Disappointing Results</h2>
-      <p class="text-gray-700 mb-4">Marketing is designed to create opportunities.</p>
-      
-      <p class="text-gray-700 mb-4"><a href="https://www.anviaan.com/services" class="text-[#063A9A] font-bold hover:text-[#FF6600] transition-colors underline">Search engine optimization</a> helps people discover your business. Paid advertising expands your reach. Social media keeps your brand visible, while content marketing builds awareness over time. Each of these channels plays an important role in bringing potential customers to your website.</p>
-      
-      <p class="text-gray-700 mb-4">However, marketing cannot complete the conversation on its own. Think of it as inviting someone into your office for the first time. The invitation might be excellent, but the experience after they arrive determines whether they stay, ask questions, and eventually become a customer. A website works in exactly the same way.</p>
-      
-      <p class="text-gray-700 mb-4">Many businesses invest heavily in attracting visitors but spend very little time improving the experience those visitors actually have. The homepage becomes overloaded with generic marketing language, service pages focus on features instead of customer concerns, and contact forms ask for unnecessary information before any relationship has been established.</p>
-      
-      <p class="text-gray-700 mb-4">None of these issues seem significant in isolation. Together, they create hesitation. And hesitation is one of the most expensive problems a business can have because it rarely appears in reports.</p>
-
-      <img src="/website-visitor-conversion-journey.jpg" alt="Website visitors leaving before reaching the contact page due to conversion friction" class="w-full rounded-2xl my-8 shadow-md object-cover" />
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Most Visitors Aren't Looking for Information. They're Looking for Confidence.</h2>
-      <p class="text-gray-700 mb-4">One of the biggest misconceptions in website design is the belief that visitors only want information. Information certainly matters, but confidence matters more.</p>
-      
-      <p class="text-gray-700 mb-4">Consider how people make important buying decisions in everyday life. Before hiring an architect, choosing a financial advisor, or booking a medical consultation, most people spend time looking for reassurance rather than technical details. They read reviews, explore previous work, check credentials, compare experiences, and try to understand how the business approaches its clients.</p>
-      
-      <p class="text-gray-700 mb-4">They aren't collecting facts for the sake of it. They're trying to reduce risk. A business website serves exactly the same purpose.</p>
-      
-      <p class="text-gray-700 mb-4">Every project showcased, every testimonial displayed, every clearly explained process, and every transparent piece of communication helps answer a simple question: Can I trust this business enough to start a conversation?</p>
-      
-      <p class="text-gray-700 mb-8">When these signals work together, visitors feel comfortable moving forward. When they are missing, even a well-designed website can struggle to convert interest into enquiries.</p>
-
-      <img src="/website-trust-signals.jpg" alt="Trust signals including portfolio reviews testimonials and certifications helping visitors gain confidence" class="w-full rounded-2xl my-8 shadow-md object-cover" />
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Where Most Websites Quietly Lose Potential Customers</h2>
-      <p class="text-gray-700 mb-4">When business owners notice that enquiries have slowed down, their first instinct is often to look at their marketing efforts. They review advertising campaigns, search engine rankings, social media performance, and content strategy. While those areas deserve attention, they don't always explain the real problem. In many cases, people are already discovering the business. What changes is what happens after they arrive.</p>
-      
-      <p class="text-gray-700 mb-8">One of the reasons this problem is so difficult to identify is that traditional analytics platforms cannot measure hesitation. The companies that consistently generate enquiries understand that a website is not simply a collection of pages. It is part of the sales process. Every headline, every project image, every testimonial, and every section of content either strengthens confidence or introduces doubt.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Every Page Should Help the Visitor Make a Decision</h2>
-      <p class="text-gray-700 mb-4">A common mistake on business websites is treating every page as an opportunity to describe services rather than guide decisions. Homepages often begin with broad statements about quality and experience, followed by long lists of services that any competitor could also claim to provide.</p>
-      
-      <p class="text-gray-700 mb-8">Consider a construction company looking to attract residential clients. Simply listing services does very little to reduce uncertainty. A prospective client is usually asking more practical questions. How does the company manage projects? Who will be the primary point of contact? What happens if changes are requested after construction has started? The businesses that answer these practical questions naturally make visitors feel more comfortable.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Generic Marketing Language Has Lost Its Impact</h2>
-      <p class="text-gray-700 mb-4">Browse ten websites within the same industry and a familiar pattern quickly emerges. Most businesses describe themselves using almost identical language. They promise exceptional quality, customer satisfaction, experienced professionals, innovative solutions, and reliable service.</p>
-      
-      <p class="text-gray-700 mb-8">The challenge is that these phrases no longer communicate anything specific. Visitors have seen the same promises repeated across dozens of websites. Businesses rarely become memorable because they choose stronger adjectives. They become memorable because they communicate with greater precision.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Trust Is Built Long Before Someone Decides to Get in Touch</h2>
-      <p class="text-gray-700 mb-8">Many business owners assume trust begins during the first phone call or meeting with a prospective customer. In reality, that process usually starts much earlier. Long before someone submits an enquiry form, they have already formed opinions about the business based on the information available on its website. Reviews, case studies, project photographs, certifications, team introductions, and a clearly explained process all contribute to answering those questions.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Small Improvements Often Deliver Bigger Results Than a Complete Redesign</h2>
-      <p class="text-gray-700 mb-4">When enquiry numbers begin to decline, many businesses assume the website itself has become outdated. Their first reaction is to plan a complete redesign. While redesigns can certainly be valuable in some situations, they are rarely the first place to look.</p>
-      
-      <p class="text-gray-700 mb-8">This is <a href="https://www.anviaan.com/about" class="text-[#063A9A] font-bold hover:text-[#FF6600] transition-colors underline">our approach</a>: experienced marketers usually begin with optimisation rather than replacement. Before investing in a complete rebuild, they study how visitors behave, where they lose confidence, and which parts of the customer journey create unnecessary friction.</p>
-
-      <img src="/website-conversion-friction.jpg" alt="Website usability issues causing potential customers to leave before submitting an enquiry" class="w-full rounded-2xl my-8 shadow-md object-cover" />
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Every Second Shapes a Visitor's First Impression</h2>
-      <p class="text-gray-700 mb-8">Website speed is often discussed as a technical metric, but visitors never experience it as a technical issue. They experience it as a reflection of the business itself. Google has repeatedly confirmed that page experience is one of the many signals considered in Search, while user behaviour studies consistently show that people become less patient as loading times increase. Improving website performance is rarely about chasing perfect benchmark scores. It is about removing unnecessary waiting.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Visitors Need Direction More Than Information</h2>
-      <p class="text-gray-700 mb-8">One of the easiest ways to lose potential enquiries is to assume that visitors already know what to do next. Rather than assuming visitors will discover pages themselves, successful websites make each next step obvious. Internal links, well-placed calls to action, related case studies, and thoughtfully structured navigation help people continue their journey without feeling lost.</p>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Trust Is Built Through Evidence, Not Claims</h2>
-      <p class="text-gray-700 mb-8">Every business wants to appear experienced, reliable, and professional. The challenge is that visitors rarely accept those qualities simply because they are written on a homepage. Trust develops when claims are supported by evidence. The businesses that answer questions clearly make the buying decision feel significantly less risky.</p>
-
-      <img src="/high-converting-business-website.jpg" alt="Modern business website guiding visitors through a seamless journey to become qualified leads" class="w-full rounded-2xl my-8 shadow-md object-cover" />
-
-      <div class="overflow-x-auto my-10">
-        <table class="w-full text-left border-collapse rounded-xl overflow-hidden shadow-sm">
-          <thead>
-            <tr class="bg-blue-50 text-[#063A9A]">
-              <th class="p-4 border border-blue-100 font-bold w-1/2">Before Optimisation</th>
-              <th class="p-4 border border-blue-100 font-bold w-1/2">After Optimisation</th>
-            </tr>
-          </thead>
-          <tbody class="text-gray-700 bg-white">
-            <tr>
-              <td class="p-4 border border-gray-200">Slow loading pages</td>
-              <td class="p-4 border border-gray-200">Faster user experience</td>
-            </tr>
-            <tr class="bg-slate-50/50">
-              <td class="p-4 border border-gray-200">Generic service descriptions</td>
-              <td class="p-4 border border-gray-200">Clear customer-focused messaging</td>
-            </tr>
-            <tr>
-              <td class="p-4 border border-gray-200">Few trust signals</td>
-              <td class="p-4 border border-gray-200">Reviews, case studies, project gallery</td>
-            </tr>
-            <tr class="bg-slate-50/50">
-              <td class="p-4 border border-gray-200">Weak CTAs</td>
-              <td class="p-4 border border-gray-200">Guided user journey</td>
-            </tr>
-            <tr>
-              <td class="p-4 border border-gray-200">High visitor drop-off</td>
-              <td class="p-4 border border-gray-200">Better enquiry potential</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-800">Your Contact Page Should Feel Like the Beginning of a Conversation</h2>
-      <p class="text-gray-700 mb-4">Many contact pages are treated as little more than a form and a phone number. Technically, they allow visitors to get in touch, but they do very little to encourage that first interaction. A stronger approach is to recognise that someone reaching the contact page has already invested time learning about the business.</p>
-      
-      <p class="text-gray-700 mb-8">Removing uncertainty at this final stage often has a greater impact on conversions than adding another promotional headline or redesigning the page altogether.</p>
-
-      <div class="bg-blue-50 p-6 sm:p-8 rounded-2xl border border-blue-100 shadow-sm mt-4">
-        <h3 class="text-xl font-bold text-[#063A9A] mb-2">Ready to turn your website visitors into actual customers?</h3>
-        <p class="text-gray-700 mb-6 font-medium">Looking to improve your website visibility and conversion rate?</p>
-        <a href="https://www.anviaan.com/contact" class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#FF6600] to-orange-500 rounded-xl shadow-md hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">
-          Contact us
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
-      </div>
-    `,
   },
   // --- OLD ARTICLES BELOW ---
   {
