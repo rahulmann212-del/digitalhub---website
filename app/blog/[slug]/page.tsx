@@ -6,6 +6,9 @@ import { ArrowLeft, Calendar, Clock, Hash } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+// Naya component yahan import kiya gaya hai
+import BlogShareButtons from '@/components/BlogShareButtons';
+
 // Dynamic SEO Metadata Generator for each Playbook
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const article = articles.find((a) => a.slug === params.slug);
@@ -90,8 +93,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
             
+            {/* Social Share Section (Added Here) */}
+            <div className="pt-8 pb-6 border-t border-slate-100">
+              <BlogShareButtons title={article.title} slug={article.slug} />
+            </div>
+            
             {/* Tags Section */}
-            <div className="pt-8 border-t border-slate-100">
+            <div className="pt-6 border-t border-slate-100">
               <div className="flex flex-wrap gap-2">
                 {article.tags.map((tag) => (
                   <span 
@@ -104,6 +112,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 ))}
               </div>
             </div>
+
           </div>
           
         </article>
