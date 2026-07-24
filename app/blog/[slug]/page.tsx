@@ -6,10 +6,10 @@ import { ArrowLeft, Calendar, Clock, Hash } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-// Naya component yahan import kiya gaya hai
+// Naya Social Share Component
 import BlogShareButtons from '@/components/BlogShareButtons';
 
-// Dynamic SEO Metadata Generator for each Playbook
+// Dynamic SEO Metadata Generator for each Playbook (Updated with Social Images)
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const article = articles.find((a) => a.slug === params.slug);
 
@@ -18,6 +18,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: 'Playbook Not Found | Anviaan',
     };
   }
+
+  // Social share ke liye absolute URL zaroori hai
+  const siteUrl = 'https://www.anviaan.com';
+  // Article me image hai to wo use hogi, warna default
+  const ogImage = article.image ? `${siteUrl}${article.image}` : `${siteUrl}/default-og-image.jpg`;
 
   return {
     title: `${article.title} | Anviaan Growth Lab`,
@@ -28,6 +33,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       type: 'article',
       publishedTime: article.date,
       authors: [article.author.name],
+      url: `${siteUrl}/blog/${article.slug}`,
+      siteName: 'Anviaan',
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        }
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image', // Twitter par badi image ke liye
+      title: article.title,
+      description: article.excerpt,
+      images: [ogImage],
     },
   };
 }
@@ -93,7 +114,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
             
-            {/* Social Share Section (Added Here) */}
+            {/* Social Share Section (Imported Component) */}
             <div className="pt-8 pb-6 border-t border-slate-100">
               <BlogShareButtons title={article.title} slug={article.slug} />
             </div>
