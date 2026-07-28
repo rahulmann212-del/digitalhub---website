@@ -9,9 +9,16 @@ import Footer from '@/components/Footer';
 // Naya Social Share Component
 import BlogShareButtons from '@/components/BlogShareButtons';
 
-// Dynamic SEO Metadata Generator for each Playbook (Updated with Social Images)
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const article = articles.find((a) => a.slug === params.slug);
+// Next.js 16 requires params to be awaited
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+// Dynamic SEO Metadata Generator for each Playbook
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // ✅ Yahan await add kiya hai
+  const resolvedParams = await params;
+  const article = articles.find((a) => a.slug === resolvedParams.slug);
 
   if (!article) {
     return {
@@ -19,9 +26,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
-  // Social share ke liye absolute URL zaroori hai
   const siteUrl = 'https://www.anviaan.com';
-  // Article me image hai to wo use hogi, warna default
   const ogImage = article.image ? `${siteUrl}${article.image}` : `${siteUrl}/default-og-image.jpg`;
 
   return {
@@ -45,7 +50,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       ],
     },
     twitter: {
-      card: 'summary_large_image', // Twitter par badi image ke liye
+      card: 'summary_large_image',
       title: article.title,
       description: article.excerpt,
       images: [ogImage],
@@ -59,8 +64,10 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const article = articles.find((a) => a.slug === params.slug);
+// ✅ Component ko async bana diya aur await add kiya hai
+export default async function BlogPost({ params }: Props) {
+  const resolvedParams = await params;
+  const article = articles.find((a) => a.slug === resolvedParams.slug);
 
   if (!article) {
     notFound();
